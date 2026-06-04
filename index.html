@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Finance Tracker is a modern desktop finance app for tracking accounts, transactions, budgets, vendors, reconciliation, and financial reports."
+    />
+    <title>Finance Tracker | Confident Money Management</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+    <header class="site-header" data-header>
+      <a class="brand" href="#top" aria-label="Finance Tracker home">
+        <span class="brand-mark">FT</span>
+        <span>Finance Tracker</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" data-nav-toggle>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="primary-nav" id="primary-nav" data-nav>
+        <a href="#features">Features</a>
+        <a href="#workflow">Workflow</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a class="nav-cta" href="#buy">Get the App</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero section-shell">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Desktop-grade finance clarity</p>
+          <h1>Sell a calmer way to run personal and small-business finances.</h1>
+          <p class="hero-text">
+            Finance Tracker brings accounts, bank activity, budgets, vendors, recurring transactions,
+            reconciliation, and financial statements into one focused desktop workspace.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary magnetic" href="#buy">Start Selling</a>
+            <a class="button secondary" href="#product">See Product Tour</a>
+          </div>
+          <div class="trust-row" aria-label="Product strengths">
+            <span>Local desktop app</span>
+            <span>Clean reports</span>
+            <span>Built for daily bookkeeping</span>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal delay-1" id="product" aria-label="Finance Tracker product preview">
+          <div class="app-window tilt-card">
+            <div class="window-bar">
+              <span></span><span></span><span></span>
+              <strong>Finance Tracker</strong>
+            </div>
+            <div class="app-grid">
+              <aside class="mock-sidebar">
+                <div class="mock-logo"></div>
+                <p class="active">Dashboard</p>
+                <p>Transactions</p>
+                <p>Budgets</p>
+                <p>Reports</p>
+                <p>Reconcile</p>
+              </aside>
+              <div class="mock-content">
+                <div class="mock-topline">
+                  <span>Net Worth</span>
+                  <strong>$84,210</strong>
+                </div>
+                <div class="metric-row">
+                  <article><span>Income</span><strong>$9,840</strong></article>
+                  <article><span>Expenses</span><strong>$4,126</strong></article>
+                  <article><span>Remaining</span><strong>$5,714</strong></article>
+                </div>
+                <div class="chart-card">
+                  <div class="bar b1"></div>
+                  <div class="bar b2"></div>
+                  <div class="bar b3"></div>
+                  <div class="bar b4"></div>
+                  <div class="bar b5"></div>
+                  <div class="bar b6"></div>
+                </div>
+                <div class="transaction-list">
+                  <div><span></span>Mortgage payment <strong>-$1,840</strong></div>
+                  <div><span></span>Client deposit <strong>+$3,200</strong></div>
+                  <div><span></span>Software tools <strong>-$129</strong></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="floating-card card-one">
+            <span>Reconciled</span>
+            <strong>98%</strong>
+          </div>
+          <div class="floating-card card-two">
+            <span>Budget alert</span>
+            <strong>Under plan</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="stats section-shell reveal" aria-label="Product metrics">
+        <article>
+          <strong data-count="9">0</strong>
+          <span>core finance modules</span>
+        </article>
+        <article>
+          <strong data-count="2">0</strong>
+          <span>financial statements</span>
+        </article>
+        <article>
+          <strong data-count="100">0</strong>
+          <span>% focused on ownership</span>
+        </article>
+      </section>
+
+      <section class="section-shell split-section" id="features">
+        <div class="section-heading reveal">
+          <p class="eyebrow">What it does</p>
+          <h2>A complete command center for everyday money decisions.</h2>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card reveal">
+            <span>01</span>
+            <h3>Unified Dashboard</h3>
+            <p>Show net worth, monthly income, expenses, recent transactions, and budget status without spreadsheet chaos.</p>
+          </article>
+          <article class="feature-card reveal delay-1">
+            <span>02</span>
+            <h3>Transaction Control</h3>
+            <p>Categorize activity, manage transfers, review account feeds, filter rows, and keep every dollar traceable.</p>
+          </article>
+          <article class="feature-card reveal delay-2">
+            <span>03</span>
+            <h3>Budgets That Move</h3>
+            <p>Plan monthly spending by category, copy budgets forward, and spot over-budget categories before they drift.</p>
+          </article>
+          <article class="feature-card reveal">
+            <span>04</span>
+            <h3>Professional Reports</h3>
+            <p>Review Profit & Loss and Balance Sheet reports for clean, owner-friendly financial snapshots.</p>
+          </article>
+          <article class="feature-card reveal delay-1">
+            <span>05</span>
+            <h3>Reconciliation Workspace</h3>
+            <p>Match books against bank, credit card, and loan statements with history and completion records.</p>
+          </article>
+          <article class="feature-card reveal delay-2">
+            <span>06</span>
+            <h3>Vendors, Journals, Recurring</h3>
+            <p>Track vendor ledgers, recurring income or expenses, and journal entries for more complete bookkeeping.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-shell product-tour" id="workflow">
+        <div class="tour-copy reveal">
+          <p class="eyebrow">Workflow</p>
+          <h2>From raw activity to decision-ready numbers.</h2>
+          <p>
+            Finance Tracker is positioned for users who want the structure of accounting software without the weight of enterprise tools.
+          </p>
+          <div class="tour-tabs" role="tablist" aria-label="Workflow tabs">
+            <button class="tab active" type="button" data-tab="capture">Capture</button>
+            <button class="tab" type="button" data-tab="organize">Organize</button>
+            <button class="tab" type="button" data-tab="report">Report</button>
+          </div>
+        </div>
+        <div class="tour-panel reveal delay-1">
+          <article class="panel active" data-panel="capture">
+            <h3>Import, enter, and review transactions.</h3>
+            <p>Bring in day-to-day activity, search across records, and keep transfers, credit card payments, and account movements clear.</p>
+          </article>
+          <article class="panel" data-panel="organize">
+            <h3>Structure accounts, categories, vendors, and budgets.</h3>
+            <p>Create a chart of accounts, category ledgers, vendor ledgers, and monthly spending plans that fit real life.</p>
+          </article>
+          <article class="panel" data-panel="report">
+            <h3>Close the loop with reports and reconciliation.</h3>
+            <p>Confirm balances, review P&L, inspect the Balance Sheet, and understand where money is going.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-shell audience reveal">
+        <div>
+          <p class="eyebrow">Who it is for</p>
+          <h2>Built for financially serious people who want ownership.</h2>
+        </div>
+        <div class="audience-grid">
+          <article>
+            <h3>Households</h3>
+            <p>Track spending, budgets, credit cards, recurring bills, savings, loans, and net worth in one place.</p>
+          </article>
+          <article>
+            <h3>Freelancers</h3>
+            <p>Separate income, expenses, vendors, and reports so tax season and client cash flow are easier to understand.</p>
+          </article>
+          <article>
+            <h3>Small Operators</h3>
+            <p>Use ledgers, journal entries, reconciliation, and statements for practical books without overcomplication.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-shell pricing" id="pricing">
+        <div class="pricing-card reveal">
+          <div>
+            <p class="eyebrow">Simple offer</p>
+            <h2>Package it as a one-time desktop purchase.</h2>
+            <p>
+              The product is ideal for a clean paid download: private by design, fast to launch, and practical for users who do not want another bloated subscription dashboard.
+            </p>
+          </div>
+          <div class="price-box" id="buy">
+            <span>Launch Price</span>
+            <strong>$49</strong>
+            <p>Suggested starting point</p>
+            <a class="button primary magnetic" href="mailto:sales@example.com?subject=Finance%20Tracker%20Purchase">Request Access</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-shell faq" id="faq">
+        <div class="section-heading reveal">
+          <p class="eyebrow">FAQ</p>
+          <h2>Clear answers for buyers.</h2>
+        </div>
+        <div class="faq-list reveal delay-1">
+          <details open>
+            <summary>Is this for personal finance or business finance?</summary>
+            <p>Both. It covers household tracking while also including business-friendly tools like reports, ledgers, vendors, journal entries, and reconciliation.</p>
+          </details>
+          <details>
+            <summary>What makes it different from a spreadsheet?</summary>
+            <p>It gives users structured accounts, categorized transactions, budgets, recurring entries, and reports without manual spreadsheet maintenance.</p>
+          </details>
+          <details>
+            <summary>Can it support professional-looking financial snapshots?</summary>
+            <p>Yes. The app includes Profit & Loss and Balance Sheet reporting for understanding income, expenses, assets, liabilities, equity, and net worth.</p>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>Finance Tracker</strong>
+        <p>Modern desktop money management for people who want clearer books.</p>
+      </div>
+      <a href="#top">Back to top</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
