@@ -97,15 +97,10 @@ input {
 }
 
 .brand-mark {
-  display: grid;
   width: 38px;
   height: 38px;
-  place-items: center;
   border-radius: 14px;
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
-  color: #03100b;
-  font-size: 0.82rem;
-  box-shadow: 0 10px 35px rgba(38, 230, 163, 0.24);
+  object-fit: cover;
 }
 
 .primary-nav {

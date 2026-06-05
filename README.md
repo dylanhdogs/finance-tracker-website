@@ -1,6 +1,6 @@
-# Finance Tracker Website
+# Prism Website
 
-Static marketing site for the Finance Tracker app.
+Static marketing site for the Prism app.
 
 ## Local Preview
 
