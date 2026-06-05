@@ -813,6 +813,20 @@ h3 {
   font-size: 1.05rem;
 }
 
+.checksum-link {
+  display: inline-flex;
+  align-self: center;
+  margin-top: 12px;
+  color: var(--accent-3);
+  font-size: 0.78rem;
+  font-weight: 800;
+  transition: color 180ms ease;
+}
+
+.checksum-link:hover {
+  color: var(--text);
+}
+
 .other-platforms {
   display: flex;
   flex-wrap: wrap;
