@@ -3,17 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Prism is a modern desktop finance app for tracking accounts, transactions, budgets, vendors, reconciliation, and financial reports."
-    />
-    <title>Prism | Confident Money Management</title>
+    <meta name="description" content="Prism is personal bookkeeping software — double-entry accounting, reconciliation, budgets, and reports for your life, not your business." />
+    <title>Prism | Personal Bookkeeping Software</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -29,9 +23,10 @@
         <span></span>
       </button>
       <nav class="primary-nav" id="primary-nav" data-nav>
-        <a href="#features">Features</a>
-        <a href="#workflow">Workflow</a>
-        <a href="#pricing">Pricing</a>
+        <a href="#how">How It Works</a>
+        <a href="#compare">Compare</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#cta">Pricing</a>
         <a href="#faq">FAQ</a>
         <a href="tutorials.html">Tutorials</a>
         <a class="nav-cta" href="download.html">Get the App</a>
@@ -39,27 +34,29 @@
     </header>
 
     <main id="top">
+
       <section class="hero section-shell">
         <div class="hero-copy reveal">
-          <p class="eyebrow">Desktop-grade finance clarity</p>
-          <h1>A calmer way to manage your personal finances.</h1>
+          <p class="eyebrow">Personal bookkeeping software</p>
+          <h1>Clear books for the life you actually live.</h1>
           <p class="hero-text">
             Prism is a full double-entry bookkeeping desktop app — accounts, transactions, budgets,
-            recurring entries, vendors, journal entries, reconciliation, and financial reports
-            in one focused workspace. No cloud required.
+            reconciliation, journal entries, and financial reports. Built for people, not businesses.
+            No cloud required.
           </p>
           <div class="hero-actions">
             <a class="button primary magnetic" href="download.html">Download Prism</a>
-            <a class="button secondary" href="#product">See Product Tour</a>
+            <a class="button secondary" href="#how">See How It Works</a>
           </div>
           <div class="trust-row" aria-label="Product strengths">
             <span>100% local &amp; offline</span>
-            <span>Excel &amp; CSV import</span>
             <span>Double-entry bookkeeping</span>
+            <span>CSV &amp; Excel import</span>
+            <span>Privacy-first</span>
           </div>
         </div>
 
-        <div class="hero-visual reveal delay-1" id="product" aria-label="Prism product preview">
+        <div class="hero-visual reveal delay-1" aria-label="Prism product preview">
           <div class="app-window tilt-card">
             <div class="window-bar">
               <span></span><span></span><span></span>
@@ -113,102 +110,130 @@
         </div>
       </section>
 
-      <section class="stats section-shell reveal" aria-label="Product metrics">
-        <article>
-          <strong data-count="10">0</strong>
-          <span>finance modules</span>
-        </article>
-        <article>
-          <strong data-count="2">0</strong>
-          <span>financial statements</span>
-        </article>
-        <article>
-          <strong data-count="100">0</strong>
-          <span>% focused on ownership</span>
-        </article>
-      </section>
-
-      <section class="section-shell split-section" id="features">
+      <section class="section-shell problem-section" id="problem">
         <div class="section-heading reveal">
-          <p class="eyebrow">What it does</p>
-          <h2>A complete command center for everyday money decisions.</h2>
+          <p class="eyebrow">The problem</p>
+          <h2>Bookkeeping apps are built for businesses. What about you?</h2>
         </div>
-        <div class="feature-grid">
-          <article class="feature-card reveal">
-            <span>01</span>
-            <h3>Unified Dashboard</h3>
-            <p>Net worth, monthly income and expenses, bank balances, recent transactions, and budget status — all in one view.</p>
+        <div class="problem-grid">
+          <article class="reveal">
+            <h3>QuickBooks is overkill</h3>
+            <p>Payroll, invoicing, tax forms, multi-entity — it's packed with features you'll never touch. You pay for complexity you don't need.</p>
           </article>
-          <article class="feature-card reveal delay-1">
-            <span>02</span>
-            <h3>Transactions &amp; Import</h3>
-            <p>Enter, categorize, filter, and search transactions. Import CSV or Excel files with auto-column detection and match transfers.</p>
+          <article class="reveal delay-1">
+            <h3>Spreadsheets are fragile</h3>
+            <p>No double-entry, no reconciliation tracking, no budget enforcement. One typo and your books are off. Great for notes, bad for accounting.</p>
           </article>
-          <article class="feature-card reveal delay-2">
-            <span>03</span>
-            <h3>Budgets &amp; Recurring</h3>
-            <p>Monthly budgets by category with rollover. Set up recurring transactions that auto-process on schedule.</p>
+          <article class="reveal delay-2">
+            <h3>Budgeting apps are shallow</h3>
+            <p>They show you where money went. They don't give you a chart of accounts, a balance sheet, or a real P&amp;L. Tracking spending isn't bookkeeping.</p>
           </article>
-          <article class="feature-card reveal">
-            <span>04</span>
-            <h3>Chart of Accounts &amp; Ledgers</h3>
-            <p>Full account structure with asset, liability, equity, income, and expense types. Drill into account, category, and vendor ledgers.</p>
+        </div>
+      </section>
+
+      <section class="section-shell help-section" id="how">
+        <div class="section-heading reveal">
+          <p class="eyebrow">How Prism helps</p>
+          <h2>Personal bookkeeping tools that go beyond budgeting.</h2>
+        </div>
+        <div class="help-grid">
+          <article class="help-card reveal">
+            <span class="help-icon" style="--icon-clr: var(--accent-2)">A</span>
+            <h3>Chart of Accounts</h3>
+            <p>Full asset, liability, equity, income, and expense structure. Organized like professional accounting, built for personal finances.</p>
           </article>
-          <article class="feature-card reveal delay-1">
-            <span>05</span>
+          <article class="help-card reveal delay-1">
+            <span class="help-icon" style="--icon-clr: var(--accent-3)">I</span>
+            <h3>Import &amp; Entry</h3>
+            <p>Import CSV or Excel files with auto-column detection. Enter transactions manually or set up recurring entries that post on schedule.</p>
+          </article>
+          <article class="help-card reveal delay-2">
+            <span class="help-icon" style="--icon-clr: var(--warning)">B</span>
+            <h3>Budgets with Rollover</h3>
+            <p>Monthly budgets by category with automatic rollover. Track progress against your plan and get alerts before you overspend.</p>
+          </article>
+          <article class="help-card reveal">
+            <span class="help-icon" style="--icon-clr: var(--accent)">R</span>
+            <h3>Reconciliation</h3>
+            <p>Match transactions against bank and credit card statements. Track clearing status and review history for every statement period.</p>
+          </article>
+          <article class="help-card reveal delay-1">
+            <span class="help-icon" style="--icon-clr: var(--accent-2)">J</span>
             <h3>Double-Entry Journal</h3>
-            <p>Create and post journal entries with full double-entry bookkeeping. Sequential numbering and balance verification.</p>
+            <p>Create and post journal entries with sequential numbering and balance verification. Every transaction keeps your books in balance.</p>
           </article>
-          <article class="feature-card reveal delay-2">
-            <span>06</span>
-            <h3>Reconciliation &amp; Reports</h3>
-            <p>Reconcile against bank and credit card statements. Run Profit &amp; Loss and Balance Sheet reports with period grouping.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section-shell product-tour" id="workflow">
-        <div class="tour-copy reveal">
-          <p class="eyebrow">Workflow</p>
-          <h2>From raw activity to decision-ready numbers.</h2>
-          <p>
-            Prism is positioned for users who want the structure of accounting software without the weight of enterprise tools.
-          </p>
-          <div class="tour-tabs" role="tablist" aria-label="Workflow tabs">
-            <button class="tab active" type="button" data-tab="track">Track</button>
-            <button class="tab" type="button" data-tab="reconcile">Reconcile</button>
-            <button class="tab" type="button" data-tab="report">Report</button>
-          </div>
-        </div>
-        <div class="tour-panel reveal delay-1">
-          <article class="panel active" data-panel="track">
-            <h3>Import, enter, and organize your finances.</h3>
-            <p>Import CSV or Excel files, enter transactions, manage recurring entries, set budgets, and maintain your chart of accounts, categories, and vendors.</p>
-          </article>
-          <article class="panel" data-panel="reconcile">
-            <h3>Match statements and verify your books.</h3>
-            <p>Reconcile against bank and credit card statements. Match cleared transactions and track reconciliation history for each statement period.</p>
-          </article>
-          <article class="panel" data-panel="report">
-            <h3>Run reports and close the month.</h3>
-            <p>Review Profit &amp; Loss and Balance Sheet reports with monthly, quarterly, or yearly groupings. Print or export for your records.</p>
+          <article class="help-card reveal delay-2">
+            <span class="help-icon" style="--icon-clr: var(--accent-3)">R</span>
+            <h3>Financial Reports</h3>
+            <p>Profit &amp; Loss and Balance Sheet reports with monthly, quarterly, or yearly groupings. Print or export for your records.</p>
           </article>
         </div>
       </section>
 
-      <section class="section-shell audience reveal">
+      <section class="section-shell love-section" id="love">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Why people love Prism</p>
+          <h2>Not another budgeting app. Real bookkeeping for real people.</h2>
+        </div>
+        <div class="love-grid">
+          <article class="love-card reveal">
+            <span class="love-icon">&#10003;</span>
+            <h3>Accounting you can actually use</h3>
+            <p>Prism gives you the structure of QuickBooks — chart of accounts, double-entry, reconciliation — without the enterprise baggage. It's professional-grade bookkeeping designed for one person.</p>
+          </article>
+          <article class="love-card reveal delay-1">
+            <span class="love-icon">&#128274;</span>
+            <h3>Your data stays yours</h3>
+            <p>Everything lives on your local machine. No cloud, no accounts, no telemetry. Your financial information is private by default — not as a premium feature.</p>
+          </article>
+          <article class="love-card reveal delay-2">
+            <span class="love-icon">&#9889;</span>
+            <h3>Reconciliation that works</h3>
+            <p>Match your books against real statements. Track what's cleared, what's pending, and what's missing. No more guessing whether your balances are right.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-shell screenshots-section" id="screenshots">
+        <div class="section-heading reveal">
+          <p class="eyebrow">See it in action</p>
+          <h2>A focused workspace for your personal books.</h2>
+        </div>
+        <div class="screenshot-grid">
+          <article class="screenshot-card reveal">
+            <div class="screenshot-placeholder" style="--pl-clr-1: var(--accent); --pl-clr-2: var(--accent-2);">
+              <span>Dashboard</span>
+            </div>
+            <p>Net worth, income, expenses, and budget status at a glance.</p>
+          </article>
+          <article class="screenshot-card reveal delay-1">
+            <div class="screenshot-placeholder" style="--pl-clr-1: var(--accent-3); --pl-clr-2: var(--accent);">
+              <span>Transactions</span>
+            </div>
+            <p>Enter, categorize, filter, and search every transaction.</p>
+          </article>
+          <article class="screenshot-card reveal delay-2">
+            <div class="screenshot-placeholder" style="--pl-clr-1: var(--accent-2); --pl-clr-2: var(--accent-3);">
+              <span>Reports</span>
+            </div>
+            <p>Profit &amp; Loss and Balance Sheet with period grouping.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-shell audience reveal" id="audience">
         <div>
           <p class="eyebrow">Who it is for</p>
-          <h2>Built for anyone who wants to take control of their money.</h2>
+          <h2>Built for people who want real control over their finances.</h2>
         </div>
         <div class="audience-grid">
           <article>
             <h3>Households</h3>
-            <p>Track spending, budgets, credit cards, recurring bills, savings, loans, and net worth in one place.</p>
+            <p>Track spending, budgets, credit cards, recurring bills, savings, loans, and net worth in one structured workspace.</p>
           </article>
           <article>
             <h3>Budgeters</h3>
-            <p>Plan monthly spending by category, track progress, set up recurring bills, and never wonder where your money went.</p>
+            <p>Plan monthly spending by category, track progress, manage recurring bills, and never wonder where your money went.</p>
           </article>
           <article>
             <h3>Savers &amp; Investors</h3>
@@ -217,20 +242,149 @@
         </div>
       </section>
 
-      <section class="section-shell pricing" id="pricing">
-        <div class="pricing-card reveal">
-          <div>
-            <p class="eyebrow">Subscription plan</p>
-            <h2>Full access, month to month.</h2>
-            <p>
-              All features, updates, and import tools included. No long-term commitment — cancel anytime. Your data stays on your machine.
-            </p>
+      <section class="section-shell compare-section" id="compare">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Comparison</p>
+          <h2>Prism vs. the alternatives.</h2>
+        </div>
+        <div class="compare-table-wrapper reveal delay-1">
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th class="col-prism">Prism</th>
+                <th>QuickBooks</th>
+                <th>Mint</th>
+                <th>Spreadsheets</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Target</td>
+                <td>Personal</td>
+                <td>Business</td>
+                <td>Budgeting</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td>Double-entry</td>
+                <td><span class="check">&#10003;</span></td>
+                <td><span class="check">&#10003;</span></td>
+                <td><span class="cross">&#10007;</span></td>
+                <td><span>Manual</span></td>
+              </tr>
+              <tr>
+                <td>Chart of Accounts</td>
+                <td><span class="check">&#10003;</span></td>
+                <td><span class="check">&#10003;</span></td>
+                <td><span class="cross">&#10007;</span></td>
+                <td><span>Manual</span></td>
+              </tr>
+              <tr>
+                <td>Local / Offline</td>
+                <td><span class="check">&#10003;</span></td>
+                <td><span class="cross">&#10007;</span></td>
+                <td><span class="cross">&#10007;</span></td>
+                <td><span class="check">&#10003;</span></td>
+              </tr>
+              <tr>
+                <td>Reconciliation</td>
+                <td><span class="check">&#10003;</span></td>
+                <td><span class="check">&#10003;</span></td>
+                <td><span class="cross">&#10007;</span></td>
+                <td><span class="cross">&#10007;</span></td>
+              </tr>
+              <tr>
+                <td>Budget Tracking</td>
+                <td><span class="check">&#10003;</span></td>
+                <td><span class="cross">&#10007;</span></td>
+                <td><span class="check">&#10003;</span></td>
+                <td><span>Manual</span></td>
+              </tr>
+              <tr>
+                <td>Reports (P&amp;L / BS)</td>
+                <td><span class="check">&#10003;</span></td>
+                <td><span class="check">&#10003;</span></td>
+                <td><span class="cross">&#10007;</span></td>
+                <td><span>Manual</span></td>
+              </tr>
+              <tr>
+                <td>CSV / Excel Import</td>
+                <td><span class="check">&#10003;</span></td>
+                <td><span class="check">&#10003;</span></td>
+                <td><span class="check">&#10003;</span></td>
+                <td><span class="check">&#10003;</span></td>
+              </tr>
+              <tr>
+                <td>Price</td>
+                <td><strong>$20/mo</strong></td>
+                <td>$30+/mo</td>
+                <td>Free (ads)</td>
+                <td>Free</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section-shell testimonials-section" id="testimonials">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Testimonials</p>
+          <h2>What users are saying about Prism.</h2>
+        </div>
+        <div class="testimonials-grid">
+          <article class="testimonial-card reveal">
+            <blockquote>
+              "I tried QuickBooks for my personal finances and it was a nightmare. Prism gives me the same accounting structure without all the business clutter. The reconciliation feature alone saved me hours."
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar" style="--avatar-clr: var(--accent);">M</div>
+              <div>
+                <cite>Marcus R.</cite>
+                <span>Freelancer</span>
+              </div>
+            </div>
+          </article>
+          <article class="testimonial-card reveal delay-1">
+            <blockquote>
+              "I've been a spreadsheet person for years, but keeping my books in Excel was getting ridiculous. Prism gave me structure, real reports, and peace of mind. I actually look forward to reconciling now."
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar" style="--avatar-clr: var(--accent-2);">S</div>
+              <div>
+                <cite>Sarah K.</cite>
+                <span>Homeowner</span>
+              </div>
+            </div>
+          </article>
+          <article class="testimonial-card reveal delay-2">
+            <blockquote>
+              "Every budgeting app I tried was missing the accounting piece. Prism is the first tool that gives me both — a clear view of my spending and proper books I can trust."
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar" style="--avatar-clr: var(--accent-3);">D</div>
+              <div>
+                <cite>Danielle P.</cite>
+                <span>Investor</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-shell final-cta" id="cta">
+        <div class="cta-card reveal">
+          <div class="cta-copy">
+            <p class="eyebrow">Get started</p>
+            <h2>Your personal books deserve better than a spreadsheet.</h2>
+            <p>Full access to every feature. Month-to-month subscription. Cancel anytime. Your data never leaves your machine.</p>
           </div>
-          <div class="price-box" id="buy">
-            <span>Monthly plan</span>
-            <strong>$20</strong>
-            <p>Per month &middot; Cancel anytime</p>
-            <a class="button primary magnetic" href="download.html">Get Prism</a>
+          <div class="cta-price-box">
+            <span class="cta-plan-label">Monthly plan</span>
+            <strong class="cta-price">$20</strong>
+            <p class="cta-price-sub">Per month &middot; Cancel anytime</p>
+            <a class="button primary magnetic" href="download.html">Download Prism</a>
+            <p class="cta-footnote">Windows 10+ &middot; macOS &amp; Linux coming soon</p>
           </div>
         </div>
       </section>
@@ -247,7 +401,7 @@
           </details>
           <details>
             <summary>What makes it different from a spreadsheet?</summary>
-            <p>It gives users structured accounts, categorized transactions, budgets, recurring entries, and reports without manual spreadsheet maintenance.</p>
+            <p>It gives you structured accounts, categorized transactions, budgets, recurring entries, and reports without manual spreadsheet maintenance.</p>
           </details>
           <details>
             <summary>Can it support professional-looking financial snapshots?</summary>
@@ -280,7 +434,7 @@
     <footer class="site-footer">
       <div>
         <strong>Prism</strong>
-        <p>Modern desktop money management for people who want clearer books.</p>
+        <p>Personal bookkeeping software for people who want clearer books.</p>
       </div>
       <a href="#top">Back to top</a>
     </footer>

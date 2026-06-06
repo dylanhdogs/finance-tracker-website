@@ -760,6 +760,383 @@ h3 {
   to { transform: translateX(120%); }
 }
 
+/* ── Problem section ──────────────────────────── */
+
+.problem-section {
+  padding: 90px 0;
+}
+
+.problem-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.problem-grid article {
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: var(--card);
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(18px);
+}
+
+.problem-grid h3 {
+  margin-bottom: 12px;
+  font-size: 1.2rem;
+}
+
+.problem-grid p {
+  color: var(--muted);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ── How Prism Helps ─────────────────────────── */
+
+.help-section {
+  padding: 90px 0;
+}
+
+.help-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.help-card {
+  padding: 26px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(18px);
+  transition: transform 220ms ease, border-color 220ms ease;
+}
+
+.help-card:hover {
+  border-color: rgba(38, 230, 163, 0.34);
+  transform: translateY(-8px);
+}
+
+.help-icon {
+  display: inline-flex;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--icon-clr), rgba(255, 255, 255, 0.08));
+  font-weight: 900;
+  font-size: 1.15rem;
+}
+
+.help-card h3 {
+  margin-bottom: 12px;
+  font-size: 1.2rem;
+}
+
+.help-card p {
+  color: var(--muted);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ── Why People Love ─────────────────────────── */
+
+.love-section {
+  padding: 90px 0;
+}
+
+.love-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.love-card {
+  padding: 32px 26px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(18px);
+  transition: transform 220ms ease, border-color 220ms ease;
+}
+
+.love-card:hover {
+  border-color: rgba(124, 92, 255, 0.34);
+  transform: translateY(-8px);
+}
+
+.love-icon {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.love-card h3 {
+  font-size: 1.3rem;
+}
+
+.love-card p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* ── Screenshots ─────────────────────────────── */
+
+.screenshots-section {
+  padding: 90px 0;
+}
+
+.screenshot-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.screenshot-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(18px);
+  overflow: hidden;
+  transition: transform 220ms ease;
+}
+
+.screenshot-card:hover {
+  transform: translateY(-6px);
+}
+
+.screenshot-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 220px;
+  background: linear-gradient(135deg, var(--pl-clr-1), var(--pl-clr-2));
+  opacity: 0.5;
+}
+
+.screenshot-placeholder span {
+  padding: 8px 20px;
+  border-radius: 999px;
+  background: rgba(7, 16, 29, 0.6);
+  font-weight: 900;
+  font-size: 0.95rem;
+}
+
+.screenshot-card p {
+  padding: 20px 22px 24px;
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* ── Comparison Table ─────────────────────────── */
+
+.compare-section {
+  padding: 90px 0;
+}
+
+.compare-table-wrapper {
+  overflow-x: auto;
+}
+
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.compare-table th,
+.compare-table td {
+  padding: 16px 18px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  white-space: nowrap;
+}
+
+.compare-table th {
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: var(--muted);
+}
+
+.compare-table td {
+  color: var(--muted);
+}
+
+.compare-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.compare-table .col-prism {
+  color: var(--accent-2);
+}
+
+.compare-table td:first-child {
+  font-weight: 700;
+  color: var(--text);
+}
+
+.compare-table td:nth-child(2) {
+  color: var(--text);
+}
+
+.compare-table td strong {
+  color: var(--text);
+}
+
+.check {
+  color: var(--accent-2);
+  font-weight: 900;
+}
+
+.cross {
+  color: #ff6b6b;
+  font-weight: 900;
+}
+
+/* ── Testimonials ──────────────────────────────── */
+
+.testimonials-section {
+  padding: 90px 0;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 26px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(18px);
+  transition: transform 220ms ease, border-color 220ms ease;
+}
+
+.testimonial-card:hover {
+  border-color: rgba(38, 230, 163, 0.34);
+  transform: translateY(-8px);
+}
+
+.testimonial-card blockquote {
+  margin: 0 0 24px;
+  color: var(--text);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  flex: 1;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.testimonial-avatar {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--avatar-clr), rgba(255, 255, 255, 0.1));
+  font-weight: 900;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.testimonial-author cite {
+  font-style: normal;
+  font-weight: 900;
+  display: block;
+}
+
+.testimonial-author span {
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+/* ── Final CTA ────────────────────────────────── */
+
+.final-cta {
+  padding: 90px 0;
+}
+
+.cta-card {
+  display: flex;
+  justify-content: space-between;
+  gap: 28px;
+  padding: clamp(28px, 5vw, 54px);
+  border: 1px solid var(--line);
+  border-radius: 34px;
+  background:
+    linear-gradient(135deg, rgba(124, 92, 255, 0.2), rgba(38, 230, 163, 0.08)),
+    var(--card);
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(18px);
+}
+
+.cta-copy {
+  flex: 1;
+}
+
+.cta-copy h2 {
+  font-size: clamp(2rem, 4vw, 3.4rem);
+}
+
+.cta-copy p {
+  color: var(--muted);
+  line-height: 1.7;
+  max-width: 540px;
+}
+
+.cta-price-box {
+  min-width: 250px;
+  padding: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.08);
+  text-align: center;
+}
+
+.cta-plan-label {
+  color: var(--muted);
+  font-weight: 900;
+}
+
+.cta-price {
+  display: block;
+  margin: 8px 0 4px;
+  font-size: 4.4rem;
+  letter-spacing: -0.09em;
+}
+
+.cta-price-sub {
+  color: var(--muted);
+  margin: 0 0 16px;
+}
+
+.cta-price-box .button {
+  width: 100%;
+}
+
+.cta-footnote {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
 /* ── Download page ─────────────────────────────── */
 
 .download-hero {
@@ -1130,7 +1507,12 @@ h3 {
   }
 
   .feature-grid,
-  .audience-grid {
+  .audience-grid,
+  .problem-grid,
+  .help-grid,
+  .love-grid,
+  .screenshot-grid,
+  .testimonials-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -1145,12 +1527,14 @@ h3 {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .pricing-card {
+  .pricing-card,
+  .cta-card {
     align-items: stretch;
     flex-direction: column;
   }
 
-  .price-box {
+  .price-box,
+  .cta-price-box {
     min-width: 0;
   }
 
@@ -1215,7 +1599,12 @@ h3 {
   .metric-row,
   .stats,
   .feature-grid,
-  .audience-grid {
+  .audience-grid,
+  .problem-grid,
+  .help-grid,
+  .love-grid,
+  .screenshot-grid,
+  .testimonials-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1252,8 +1641,25 @@ h3 {
   .product-tour,
   .audience,
   .pricing,
-  .faq {
+  .faq,
+  .problem-section,
+  .help-section,
+  .love-section,
+  .screenshots-section,
+  .compare-section,
+  .testimonials-section,
+  .final-cta {
     padding: 64px 0;
+  }
+
+  .screenshot-placeholder {
+    height: 160px;
+  }
+
+  .compare-table th,
+  .compare-table td {
+    padding: 12px 14px;
+    font-size: 0.82rem;
   }
 
   .site-footer {
