@@ -1,19 +1,39 @@
 const header = document.querySelector('[data-header]');
 const nav = document.querySelector('[data-nav]');
 const navToggle = document.querySelector('[data-nav-toggle]');
-const revealItems = document.querySelectorAll('.reveal');
+const revealItems = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
 const counters = document.querySelectorAll('[data-count]');
 const tabs = document.querySelectorAll('[data-tab]');
 const panels = document.querySelectorAll('[data-panel]');
 const tiltCard = document.querySelector('.tilt-card');
 const magneticButtons = document.querySelectorAll('.magnetic');
+const navLinks = document.querySelectorAll('.primary-nav a[href^="#"]');
+const sections = document.querySelectorAll('section[id]');
 
 function updateHeader() {
   header.classList.toggle('scrolled', window.scrollY > 18);
 }
 
-window.addEventListener('scroll', updateHeader, { passive: true });
-updateHeader();
+function updateActiveNav() {
+  let current = '';
+  sections.forEach((section) => {
+    const top = section.offsetTop - 120;
+    if (window.scrollY >= top) {
+      current = section.getAttribute('id');
+    }
+  });
+  navLinks.forEach((link) => {
+    link.classList.toggle('active', link.getAttribute('href') === `#${current}`);
+  });
+}
+
+function onScroll() {
+  updateHeader();
+  updateActiveNav();
+}
+
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
 
 navToggle.addEventListener('click', () => {
   const isOpen = nav.classList.toggle('open');
@@ -27,11 +47,24 @@ nav.addEventListener('click', (event) => {
   }
 });
 
+navLinks.forEach((link) => {
+  link.addEventListener('click', (event) => {
+    event.preventDefault();
+    const target = document.querySelector(link.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+
 const revealObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
+        const delay = entry.target.dataset.delay || 0;
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, delay);
         revealObserver.unobserve(entry.target);
       }
     });
