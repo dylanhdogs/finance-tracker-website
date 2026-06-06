@@ -10,6 +10,8 @@ const features = [
   { title: "Planning", desc: "Decisions from real data.", pos: "lg:right-[29%] lg:bottom-0", line: "M 780 515 C 705 430, 680 365, 635 330" },
 ];
 
+const commandBars = ["42%", "68%", "54%", "82%", "62%", "88%"];
+
 export default function HowSection() {
   return (
     <section
@@ -48,44 +50,86 @@ export default function HowSection() {
           </defs>
         </svg>
 
-        <motion.div
-          initial={{ opacity: 0, scale: 0.94, y: 30 }}
-          whileInView={{ opacity: 1, scale: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
-          className="relative z-10 mx-auto w-full max-w-[640px] overflow-hidden rounded-[34px] bg-[#07101d]/52 shadow-[0_30px_120px_rgba(0,0,0,0.34),0_0_80px_rgba(38,230,163,0.08)] backdrop-blur-xl"
-        >
-          <div className="flex items-center justify-between px-5 py-4">
-            <div className="flex gap-2"><span className="w-3 h-3 rounded-full bg-[#ff6b6b]" /><span className="w-3 h-3 rounded-full bg-[#ffc857]" /><span className="w-3 h-3 rounded-full bg-accent-2" /></div>
-            <strong className="text-muted text-xs uppercase tracking-[0.18em]">Command center</strong>
-          </div>
-          <div className="grid sm:grid-cols-[0.8fr_1.2fr] min-h-[390px]">
-            <aside className="p-5 max-sm:border-b max-sm:border-white/10">
-              {features.map((feature, i) => (
-                <div key={feature.title} className={`mb-2.5 px-3 py-3 ${i === 1 ? "text-accent-2" : "text-muted"}`}>
-                  <span className="text-xs font-black uppercase tracking-[0.14em]">{feature.title}</span>
-                </div>
-              ))}
-            </aside>
-            <div className="p-6">
-              <div className="flex items-start justify-between gap-3 mb-6">
-                <div>
-                  <span className="text-muted text-xs font-black uppercase tracking-[0.16em]">June overview</span>
-                  <strong className="block text-3xl mt-2 tracking-tight">$84,210</strong>
-                </div>
-                <span className="px-3 py-1.5 rounded-full bg-accent-2/14 text-accent-2 text-xs font-black">Balanced</span>
-              </div>
-              <div className="space-y-3">
-                {["Checking reconciled", "Mortgage categorized", "Groceries budget 72%", "P&L ready to print"].map((item, i) => (
-                  <div key={item} className="flex items-center gap-3 px-1 py-3 border-b border-white/8 last:border-b-0">
-                    <span className={`w-2.5 h-2.5 rounded-full ${i === 2 ? "bg-warning" : "bg-accent-2"}`} />
-                    <span className="text-sm text-muted font-semibold">{item}</span>
-                  </div>
+        <div className="relative z-10 mx-auto w-full max-w-[700px] perspective-[1200px]">
+          <div className="absolute -inset-5 rounded-[38px] bg-[radial-gradient(circle_at_72%_24%,rgba(38,230,163,0.2),transparent_34%),radial-gradient(circle_at_18%_78%,rgba(93,216,255,0.2),transparent_32%)] blur-2xl" />
+          <motion.div
+            initial={{ opacity: 0, scale: 0.94, y: 30, rotateX: 5 }}
+            whileInView={{ opacity: 1, scale: 1, y: 0, rotateX: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
+            className="relative overflow-hidden border border-white/18 rounded-[30px] bg-gradient-to-br from-white/16 to-white/5 shadow-2xl backdrop-blur-xl"
+            style={{ transformStyle: "preserve-3d" }}
+          >
+            <div className="flex gap-2 items-center px-[18px] py-4 border-b border-white/14 bg-white/6">
+              <span className="w-[11px] h-[11px] rounded-full bg-[#ff6b6b]" />
+              <span className="w-[11px] h-[11px] rounded-full bg-[#ffd166]" />
+              <span className="w-[11px] h-[11px] rounded-full bg-[#26e6a3]" />
+              <strong className="ml-2.5 text-muted text-[0.82rem]">Prism Command Center</strong>
+            </div>
+            <div className="grid grid-cols-[165px_1fr] min-h-[430px] max-md:grid-cols-1">
+              <aside className="p-5 border-r border-white/14 bg-black/15 max-md:hidden">
+                <div className="w-[72px] h-[14px] mb-7 rounded-full bg-gradient-to-r from-accent to-accent-2" />
+                {["Dashboard", "Accounts", "Transactions", "Budgets", "Vendors", "Reports"].map((item, i) => (
+                  <p
+                    key={item}
+                    className={`m-0 mb-2 px-3 py-2.5 rounded-xl text-[0.78rem] font-extrabold ${
+                      i === 0 ? "bg-accent/22 text-text" : "text-muted"
+                    }`}
+                  >
+                    {item}
+                  </p>
                 ))}
+              </aside>
+              <div className="p-[22px]">
+                <div className="flex justify-between items-center mb-[18px]">
+                  <span className="text-muted text-[0.78rem] font-extrabold uppercase">June overview</span>
+                  <strong className="text-3xl tracking-tight">$84,210</strong>
+                </div>
+                <div className="grid grid-cols-3 gap-3 mb-[18px] max-sm:grid-cols-1">
+                  {[
+                    { label: "Accounts", val: "14" },
+                    { label: "Budget used", val: "72%" },
+                    { label: "Reports", val: "Ready" },
+                  ].map((metric) => (
+                    <article key={metric.label} className="p-4 border border-white/14 rounded-[18px] bg-white/6">
+                      <span className="text-muted text-[0.72rem] font-extrabold uppercase">{metric.label}</span>
+                      <strong className="block mt-2 text-[1.12rem]">{metric.val}</strong>
+                    </article>
+                  ))}
+                </div>
+                <div className="grid md:grid-cols-[1.15fr_0.85fr] gap-4">
+                  <div className="relative h-[185px] p-5 border border-white/14 rounded-2xl bg-gradient-to-b from-white/10 to-white/3.5 overflow-hidden">
+                    <div className="absolute inset-x-5 top-6 bottom-6 grid grid-rows-4 opacity-25">
+                      {[0, 1, 2, 3].map((line) => <span key={line} className="border-t border-white/20" />)}
+                    </div>
+                    <div className="relative z-10 flex items-end gap-3.5 h-full">
+                      {commandBars.map((height, i) => (
+                        <div
+                          key={`${height}-${i}`}
+                          className="flex-1 min-w-[16px] rounded-t-full bg-gradient-to-b from-accent-2 to-accent"
+                          style={{ height }}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                  <div className="rounded-2xl border border-white/14 bg-white/6 p-4">
+                    {[
+                      ["Checking reconciled", "Done"],
+                      ["Groceries budget", "72%"],
+                      ["P&L report", "Ready"],
+                    ].map(([label, value]) => (
+                      <div key={label} className="flex items-center gap-2.5 justify-between py-3 border-b border-white/8 text-muted text-[0.85rem] last:border-b-0">
+                        <span className="w-[9px] h-[9px] rounded-full bg-accent-2" />
+                        {label}
+                        <strong className="ml-auto text-text">{value}</strong>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
 
         <div className="mt-8 grid gap-3 lg:block lg:mt-0">
           {features.map((feature, i) => (

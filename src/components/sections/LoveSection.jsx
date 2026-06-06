@@ -38,11 +38,11 @@ function PillarVisual({ type }) {
 
   if (type === "lock") {
     return (
-        <div className="relative mx-auto flex h-[150px] w-[190px] items-end justify-center">
-        <div className="absolute top-3 h-24 w-28 rounded-t-[48px] border-[10px] border-accent-2/70 border-b-0" />
-        <div className="relative h-24 w-40 rounded-[24px] bg-accent-2/10 shadow-[0_0_55px_rgba(38,230,163,0.16)]">
-          <span className="absolute left-1/2 top-1/2 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent-2" />
-          <span className="absolute left-1/2 top-[58%] h-8 w-1.5 -translate-x-1/2 rounded-full bg-accent-2" />
+      <div className="relative mx-auto flex h-[150px] w-[190px] items-end justify-center">
+        <div className="absolute top-3 h-24 w-28 rounded-t-[34px] border-[10px] border-accent-2 border-b-0 shadow-[0_0_35px_rgba(38,230,163,0.18)]" />
+        <div className="relative h-24 w-40 rounded-[18px] border border-accent-2/45 bg-[#0b1f28] shadow-[0_0_55px_rgba(38,230,163,0.22)]">
+          <span className="absolute left-1/2 top-1/2 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-sm bg-accent-2" />
+          <span className="absolute left-1/2 top-[58%] h-8 w-1.5 -translate-x-1/2 rounded-sm bg-accent-2" />
         </div>
       </div>
     );
@@ -91,14 +91,13 @@ export default function LoveSection() {
               r.visual === "ledger"
                 ? "rounded-[14px_46px_28px_46px] shadow-[24px_24px_90px_rgba(124,92,255,0.10)]"
                 : r.visual === "lock"
-                  ? "rounded-full lg:rounded-[999px] shadow-[0_0_110px_rgba(38,230,163,0.13)]"
+                  ? "rounded-[28px_46px_28px_46px] shadow-[0_0_110px_rgba(38,230,163,0.13)]"
                   : "rounded-[46px_14px_46px_28px] shadow-[-24px_24px_90px_rgba(93,216,255,0.10)]"
             }`}
           >
             <div className={`absolute inset-0 -z-10 ${r.visual === "ledger" ? "bg-[radial-gradient(circle_at_22%_18%,rgba(124,92,255,0.16),transparent_45%)]" : r.visual === "lock" ? "bg-[radial-gradient(circle,rgba(38,230,163,0.14),transparent_62%)]" : "bg-[linear-gradient(145deg,rgba(93,216,255,0.13),transparent_58%)]"}`} />
             <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent via-accent-2/70 to-transparent" />
-            <span className="text-muted text-xs font-black uppercase tracking-[0.18em]">0{i + 1}</span>
-            <div className="mt-8 min-h-[170px]">
+            <div className="min-h-[170px]">
               <PillarVisual type={r.visual} />
             </div>
             <div className="mt-10">
