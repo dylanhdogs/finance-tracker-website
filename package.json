@@ -6,7 +6,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "vite build && copy /Y dist\\index.html index.html && xcopy /E /Y dist\\assets .\\assets\\"
+    "deploy": "vite build && xcopy /E /Y dist\\assets .\\assets\\"
   },
   "dependencies": {
     "motion": "^12.10.5",
