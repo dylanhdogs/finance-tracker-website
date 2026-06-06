@@ -51,7 +51,7 @@ export default function TestimonialsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-40px" }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="relative overflow-hidden rounded-[38px] border border-white/12 bg-[radial-gradient(circle_at_15%_15%,rgba(124,92,255,0.22),transparent_32%),linear-gradient(135deg,rgba(255,255,255,0.1),rgba(255,255,255,0.035))] p-8 sm:p-10 shadow-2xl"
+          className="relative overflow-hidden rounded-[38px] bg-[radial-gradient(circle_at_15%_15%,rgba(124,92,255,0.28),transparent_32%),linear-gradient(135deg,rgba(38,230,163,0.13),rgba(255,255,255,0.035))] p-8 sm:p-10 shadow-2xl"
         >
           <span className="absolute right-8 top-2 text-[9rem] leading-none text-white/5 font-serif">&ldquo;</span>
           <blockquote className="relative z-10 m-0 max-w-[720px] text-2xl sm:text-3xl lg:text-4xl font-black leading-tight tracking-tight">
@@ -71,8 +71,9 @@ export default function TestimonialsSection() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-40px" }}
               transition={{ duration: 0.58, delay: i * 0.12, ease: [0.16, 1, 0.3, 1] }}
-              className="relative rounded-[30px] border border-white/10 bg-white/5 p-6 overflow-hidden"
+              className="relative overflow-hidden rounded-[8px_30px_30px_8px] bg-white/[0.035] p-6 pl-8"
             >
+              <span className="absolute left-0 top-6 bottom-6 w-1 rounded-full bg-gradient-to-b from-accent-2 to-accent-3" />
               <span className="absolute right-5 top-1 text-6xl text-white/5 font-serif">&ldquo;</span>
               <blockquote className="relative z-10 m-0 text-muted leading-relaxed">{t.quote}</blockquote>
               <div className="relative z-10 mt-6 flex items-center gap-3">

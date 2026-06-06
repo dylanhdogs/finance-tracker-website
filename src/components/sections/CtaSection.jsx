@@ -12,7 +12,7 @@ export default function CtaSection() {
         whileInView={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
         viewport={{ once: true }}
         transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-        className="relative overflow-hidden grid md:grid-cols-[1fr_360px] gap-8 p-[clamp(28px,5vw,58px)] border border-white/14 rounded-[42px] bg-[radial-gradient(circle_at_14%_20%,rgba(124,92,255,0.28),transparent_34%),radial-gradient(circle_at_82%_70%,rgba(38,230,163,0.2),transparent_30%),linear-gradient(135deg,rgba(255,255,255,0.11),rgba(255,255,255,0.035))] shadow-2xl backdrop-blur-lg"
+        className="relative overflow-hidden grid md:grid-cols-[1fr_360px] gap-8 p-[clamp(28px,5vw,58px)] rounded-[42px] bg-[radial-gradient(circle_at_14%_20%,rgba(124,92,255,0.32),transparent_34%),radial-gradient(circle_at_82%_70%,rgba(38,230,163,0.24),transparent_30%),linear-gradient(135deg,rgba(255,255,255,0.13),rgba(255,255,255,0.035))] shadow-2xl backdrop-blur-lg"
       >
         <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent-2 to-transparent" />
         <div className="relative z-10 flex-1">

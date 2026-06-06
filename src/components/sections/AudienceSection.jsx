@@ -53,9 +53,10 @@ export default function AudienceSection() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-40px" }}
               transition={{ duration: 0.58, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
-              className="group grid gap-5 sm:grid-cols-[180px_1fr] items-center border-y border-white/12 py-7"
+              className="group relative grid gap-5 sm:grid-cols-[180px_1fr] items-center py-7 pl-5"
             >
-              <div className="rounded-[28px] border border-white/10 bg-gradient-to-br from-white/9 to-white/3 p-5 transition-transform duration-300 group-hover:scale-[1.03]">
+              <span className="absolute left-0 top-7 bottom-7 w-1 rounded-full bg-gradient-to-b from-accent-2 to-accent" />
+              <div className="relative rounded-full bg-[radial-gradient(circle,rgba(38,230,163,0.13),rgba(124,92,255,0.07)_58%,transparent_72%)] p-5 transition-transform duration-300 group-hover:scale-[1.03]">
                 <AudienceVisual type={a.visual} />
               </div>
               <div>

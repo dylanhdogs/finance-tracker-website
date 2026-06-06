@@ -95,13 +95,13 @@ export default function HowSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.48, delay: 0.25 + i * 0.08, ease: [0.16, 1, 0.3, 1] }}
-              className={`lg:absolute ${feature.pos} max-lg:flex max-lg:items-start max-lg:gap-4 max-lg:rounded-2xl max-lg:border max-lg:border-white/10 max-lg:bg-white/5 max-lg:p-4 lg:w-[210px]`}
+              className={`lg:absolute ${feature.pos} max-lg:flex max-lg:items-start max-lg:gap-4 max-lg:border-b max-lg:border-white/10 max-lg:pb-5 lg:w-[210px]`}
             >
-              <span className="inline-flex w-10 h-10 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-accent-2/30 to-accent/20 text-accent-2 font-black">
+              <span className="inline-flex shrink-0 items-center justify-center text-accent-2 font-black tracking-tight">
                 {String(i + 1).padStart(2, "0")}
               </span>
               <div className="lg:mt-3">
-                <h3 className="text-lg font-black mb-1">{feature.title}</h3>
+                <h3 className="text-lg font-black mb-1 flex items-center gap-2"><span className="hidden lg:inline-block w-2 h-2 rounded-full bg-accent-2 shadow-[0_0_16px_rgba(38,230,163,0.9)]" />{feature.title}</h3>
                 <p className="m-0 text-muted text-sm leading-relaxed">{feature.desc}</p>
               </div>
             </motion.div>

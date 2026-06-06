@@ -124,8 +124,8 @@ export default function ScreenshotsSection() {
 
       <div className="mt-10 grid gap-5 lg:hidden">
         {screens.map((s) => (
-          <div key={s.label} className="overflow-hidden rounded-[28px] border border-white/10 bg-[#07101d]/72">
-            <div className="flex items-center gap-2 border-b border-white/10 bg-white/6 px-4 py-3">
+          <div key={s.label} className="overflow-hidden rounded-[28px] bg-[linear-gradient(135deg,rgba(255,255,255,0.08),rgba(255,255,255,0.02))]">
+            <div className="flex items-center gap-2 px-4 py-3">
               <span className="w-2.5 h-2.5 rounded-full bg-[#ff6b6b]" />
               <span className="w-2.5 h-2.5 rounded-full bg-warning" />
               <span className="w-2.5 h-2.5 rounded-full bg-accent-2" />

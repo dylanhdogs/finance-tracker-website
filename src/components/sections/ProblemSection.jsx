@@ -32,7 +32,7 @@ export default function ProblemSection() {
           hidden: {},
           visible: { transition: { staggerChildren: 0.12 } },
         }}
-        className="relative mt-12 min-h-[560px] rounded-[42px] overflow-hidden border border-white/10 bg-[radial-gradient(circle_at_20%_20%,rgba(255,107,138,0.13),transparent_30%),radial-gradient(circle_at_76%_52%,rgba(38,230,163,0.16),transparent_30%)]"
+        className="relative mt-12 min-h-[560px] overflow-hidden rounded-[42px] bg-[radial-gradient(circle_at_18%_18%,rgba(255,107,138,0.18),transparent_31%),radial-gradient(circle_at_78%_54%,rgba(38,230,163,0.18),transparent_32%)]"
       >
         <svg className="absolute inset-0 w-full h-full opacity-80" viewBox="0 0 1200 560" preserveAspectRatio="none" aria-hidden="true">
           {[[150, 120], [295, 290], [180, 455], [860, 120], [935, 400]].map(([x, y], i) => (
@@ -67,11 +67,11 @@ export default function ProblemSection() {
               }}
               animate={{ y: [0, -8, 0] }}
               transition={{ duration: 4 + i * 0.25, repeat: Infinity, ease: "easeInOut" }}
-              className={`absolute ${item.pos} px-5 py-4 rounded-[20px] border border-white/12 bg-white/7 backdrop-blur-lg shadow-2xl`}
+              className={`absolute ${item.pos} flex items-center gap-2 text-sm sm:text-base font-black text-muted`}
               style={{ rotate: `${item.rotate}deg` }}
             >
-              <span className={`inline-block w-2.5 h-2.5 rounded-full mr-2 ${item.dot}`} />
-              <strong>{item.label}</strong>
+              <span className={`inline-block w-3 h-3 rounded-full ${item.dot} shadow-[0_0_18px_rgba(255,107,138,0.75)]`} />
+              <span className="rounded-full bg-white/[0.03] px-4 py-2 backdrop-blur-sm">{item.label}</span>
             </motion.div>
           ))}
         </div>
@@ -85,10 +85,10 @@ export default function ProblemSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.55, delay: i * 0.08 }}
-                className={`absolute ${item.mobile} px-4 py-3 rounded-2xl border border-white/12 bg-white/8 backdrop-blur-lg text-sm`}
+                className={`absolute ${item.mobile} flex items-center gap-2 text-sm font-black text-muted`}
               >
-                <span className="inline-block w-2 h-2 rounded-full mr-2 bg-[#ff6b8a]" />
-                {item.label}
+                <span className="inline-block w-2.5 h-2.5 rounded-full bg-[#ff6b8a]" />
+                <span className="rounded-full bg-white/[0.04] px-3 py-2 backdrop-blur-sm">{item.label}</span>
               </motion.div>
             ))}
           </div>
@@ -100,7 +100,7 @@ export default function ProblemSection() {
             whileInView={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
-            className="relative p-7 sm:p-9 rounded-[34px] border border-accent-2/24 bg-[#07101d]/78 shadow-[0_22px_90px_rgba(38,230,163,0.12)] backdrop-blur-xl"
+            className="relative p-7 sm:p-9 rounded-[34px] bg-[linear-gradient(135deg,rgba(38,230,163,0.22),rgba(93,216,255,0.08)_52%,rgba(124,92,255,0.12))] shadow-[0_22px_110px_rgba(38,230,163,0.13)] backdrop-blur-xl"
           >
             <span className="inline-flex items-center gap-2 text-accent-2 text-[0.8rem] font-black uppercase tracking-[0.16em]">
               <span className="w-2.5 h-2.5 rounded-full bg-accent-2 shadow-[0_0_18px_rgba(38,230,163,0.9)]" />

@@ -87,7 +87,13 @@ export default function LoveSection() {
             whileInView={{ opacity: 1, y: 0, scaleY: 1 }}
             viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: 0.64, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className={`relative min-h-[430px] overflow-hidden rounded-[34px] border border-white/12 bg-gradient-to-b ${r.gradient} p-7 sm:p-8 shadow-2xl`}
+            className={`relative min-h-[430px] overflow-hidden p-7 sm:p-8 shadow-2xl ${
+              r.visual === "ledger"
+                ? `rounded-[14px_46px_28px_46px] bg-gradient-to-br ${r.gradient}`
+                : r.visual === "lock"
+                  ? "rounded-full lg:rounded-[999px] bg-[#050911] shadow-[0_0_90px_rgba(38,230,163,0.12)]"
+                  : `rounded-[46px_14px_46px_28px] bg-[linear-gradient(145deg,rgba(93,216,255,0.18)_0%,rgba(93,216,255,0.18)_48%,rgba(255,255,255,0.04)_48%,rgba(255,255,255,0.015)_100%)]`
+            }`}
           >
             <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent via-accent-2/70 to-transparent" />
             <span className="text-muted text-xs font-black uppercase tracking-[0.18em]">0{i + 1}</span>
