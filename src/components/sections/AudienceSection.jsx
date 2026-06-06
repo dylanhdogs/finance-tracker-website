@@ -21,7 +21,7 @@ const audiences = [
 
 function AudienceVisual({ type }) {
   if (type === "bills") {
-    return <div className="grid grid-cols-2 gap-2 text-xs font-bold"><span className="rounded-xl bg-white/8 p-3 text-muted">Bills<br /><b className="text-text">$2.4k</b></span><span className="rounded-xl bg-accent-2/12 p-3 text-accent-2">Saved<br /><b>$840</b></span></div>;
+    return <div className="grid grid-cols-2 gap-5 text-xs font-bold"><span className="text-muted">Bills<br /><b className="text-text text-lg">$2.4k</b></span><span className="text-accent-2">Saved<br /><b className="text-lg">$840</b></span></div>;
   }
   if (type === "bars") {
     return <div className="space-y-2">{[82, 56, 38].map((w, i) => <div key={w} className="h-3 rounded-full bg-white/10"><span className={`block h-3 rounded-full ${i === 0 ? "bg-warning" : "bg-accent-2"}`} style={{ width: `${w}%` }} /></div>)}</div>;

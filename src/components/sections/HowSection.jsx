@@ -53,16 +53,16 @@ export default function HowSection() {
           whileInView={{ opacity: 1, scale: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
-          className="relative z-10 mx-auto w-full max-w-[640px] overflow-hidden rounded-[34px] border border-white/16 bg-[#07101d]/80 shadow-[0_30px_120px_rgba(0,0,0,0.34),0_0_80px_rgba(38,230,163,0.08)] backdrop-blur-xl"
+          className="relative z-10 mx-auto w-full max-w-[640px] overflow-hidden rounded-[34px] bg-[#07101d]/52 shadow-[0_30px_120px_rgba(0,0,0,0.34),0_0_80px_rgba(38,230,163,0.08)] backdrop-blur-xl"
         >
-          <div className="flex items-center justify-between px-5 py-4 border-b border-white/12 bg-white/6">
+          <div className="flex items-center justify-between px-5 py-4">
             <div className="flex gap-2"><span className="w-3 h-3 rounded-full bg-[#ff6b6b]" /><span className="w-3 h-3 rounded-full bg-[#ffc857]" /><span className="w-3 h-3 rounded-full bg-accent-2" /></div>
             <strong className="text-muted text-xs uppercase tracking-[0.18em]">Command center</strong>
           </div>
           <div className="grid sm:grid-cols-[0.8fr_1.2fr] min-h-[390px]">
-            <aside className="p-5 border-r border-white/10 bg-black/15 max-sm:border-r-0 max-sm:border-b">
+            <aside className="p-5 max-sm:border-b max-sm:border-white/10">
               {features.map((feature, i) => (
-                <div key={feature.title} className={`mb-2.5 px-3 py-3 rounded-2xl ${i === 1 ? "bg-accent-2/14 text-text" : "text-muted"}`}>
+                <div key={feature.title} className={`mb-2.5 px-3 py-3 ${i === 1 ? "text-accent-2" : "text-muted"}`}>
                   <span className="text-xs font-black uppercase tracking-[0.14em]">{feature.title}</span>
                 </div>
               ))}
@@ -77,7 +77,7 @@ export default function HowSection() {
               </div>
               <div className="space-y-3">
                 {["Checking reconciled", "Mortgage categorized", "Groceries budget 72%", "P&L ready to print"].map((item, i) => (
-                  <div key={item} className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3">
+                  <div key={item} className="flex items-center gap-3 px-1 py-3 border-b border-white/8 last:border-b-0">
                     <span className={`w-2.5 h-2.5 rounded-full ${i === 2 ? "bg-warning" : "bg-accent-2"}`} />
                     <span className="text-sm text-muted font-semibold">{item}</span>
                   </div>

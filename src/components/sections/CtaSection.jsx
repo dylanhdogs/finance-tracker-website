@@ -33,7 +33,7 @@ export default function CtaSection() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-          className="relative z-10 p-6 border border-white/20 rounded-[30px] bg-[#07101d]/78 text-center shadow-[0_22px_80px_rgba(0,0,0,0.24)]"
+          className="relative z-10 p-6 rounded-[30px] text-center shadow-[0_22px_80px_rgba(0,0,0,0.24)] backdrop-blur-xl"
         >
           <span className="mb-4 inline-flex rounded-full bg-accent-2/14 px-3 py-1.5 text-accent-2 text-xs font-black uppercase tracking-[0.14em]">Checkout</span>
           <span className="text-muted font-black">Monthly plan</span>
@@ -50,9 +50,9 @@ export default function CtaSection() {
             Download Prism
           </motion.a>
           <div className="mt-4 grid grid-cols-3 gap-2 text-[0.72rem] font-black text-muted">
-            <span className="rounded-full bg-white/6 px-2 py-2">Local data</span>
-            <span className="rounded-full bg-white/6 px-2 py-2">Cancel anytime</span>
-            <span className="rounded-full bg-white/6 px-2 py-2">Windows 10+</span>
+            <span>Local data</span>
+            <span>Cancel anytime</span>
+            <span>Windows 10+</span>
           </div>
         </motion.div>
       </motion.div>

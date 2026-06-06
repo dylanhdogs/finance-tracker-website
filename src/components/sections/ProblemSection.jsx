@@ -32,7 +32,7 @@ export default function ProblemSection() {
           hidden: {},
           visible: { transition: { staggerChildren: 0.12 } },
         }}
-        className="relative mt-12 min-h-[560px] overflow-hidden rounded-[42px] bg-[radial-gradient(circle_at_18%_18%,rgba(255,107,138,0.18),transparent_31%),radial-gradient(circle_at_78%_54%,rgba(38,230,163,0.18),transparent_32%)]"
+        className="relative mt-12 min-h-[560px] overflow-hidden"
       >
         <svg className="absolute inset-0 w-full h-full opacity-80" viewBox="0 0 1200 560" preserveAspectRatio="none" aria-hidden="true">
           {[[150, 120], [295, 290], [180, 455], [860, 120], [935, 400]].map(([x, y], i) => (
@@ -71,7 +71,7 @@ export default function ProblemSection() {
               style={{ rotate: `${item.rotate}deg` }}
             >
               <span className={`inline-block w-3 h-3 rounded-full ${item.dot} shadow-[0_0_18px_rgba(255,107,138,0.75)]`} />
-              <span className="rounded-full bg-white/[0.03] px-4 py-2 backdrop-blur-sm">{item.label}</span>
+              <span>{item.label}</span>
             </motion.div>
           ))}
         </div>
@@ -88,7 +88,7 @@ export default function ProblemSection() {
                 className={`absolute ${item.mobile} flex items-center gap-2 text-sm font-black text-muted`}
               >
                 <span className="inline-block w-2.5 h-2.5 rounded-full bg-[#ff6b8a]" />
-                <span className="rounded-full bg-white/[0.04] px-3 py-2 backdrop-blur-sm">{item.label}</span>
+                <span>{item.label}</span>
               </motion.div>
             ))}
           </div>
@@ -100,8 +100,9 @@ export default function ProblemSection() {
             whileInView={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
-            className="relative p-7 sm:p-9 rounded-[34px] bg-[linear-gradient(135deg,rgba(38,230,163,0.22),rgba(93,216,255,0.08)_52%,rgba(124,92,255,0.12))] shadow-[0_22px_110px_rgba(38,230,163,0.13)] backdrop-blur-xl"
+            className="relative p-2 sm:p-6"
           >
+            <div className="absolute -inset-8 -z-10 bg-[radial-gradient(circle_at_22%_30%,rgba(38,230,163,0.2),transparent_58%)]" />
             <span className="inline-flex items-center gap-2 text-accent-2 text-[0.8rem] font-black uppercase tracking-[0.16em]">
               <span className="w-2.5 h-2.5 rounded-full bg-accent-2 shadow-[0_0_18px_rgba(38,230,163,0.9)]" />
               Prism workspace
@@ -112,7 +113,7 @@ export default function ProblemSection() {
             <p className="text-muted leading-relaxed">
               Instead of chasing disconnected apps, Prism brings your financial information into a structured desktop workspace so budgets, trends, and goals stop slipping through the cracks.
             </p>
-            <div className="mt-7 grid grid-cols-2 gap-3 text-sm font-bold">
+            <div className="mt-7 grid grid-cols-2 gap-x-6 gap-y-3 text-sm font-bold">
               {["Budgets stay current", "Spending gets noticed", "Goals stay visible", "Trends become clear"].map((item) => (
                 <span key={item} className="flex items-center gap-2 text-muted">
                   <span className="w-2 h-2 rounded-full bg-accent-2" />

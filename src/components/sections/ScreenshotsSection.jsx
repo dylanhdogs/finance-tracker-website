@@ -48,8 +48,8 @@ export default function ScreenshotsSection() {
       </Reveal>
 
       <Reveal direction="scale" delay={0.1} className="hidden lg:block">
-        <div className="mt-12 sticky top-24 rounded-[38px] border border-white/14 bg-[#07101d]/78 shadow-[0_28px_120px_rgba(0,0,0,0.34)] backdrop-blur-xl overflow-hidden">
-          <div className="flex items-center gap-2 px-5 py-4 border-b border-white/12 bg-white/6">
+        <div className="mt-12 sticky top-24 rounded-[38px] bg-[#07101d]/46 shadow-[0_28px_120px_rgba(0,0,0,0.34)] backdrop-blur-xl overflow-hidden">
+          <div className="flex items-center gap-2 px-5 py-4">
             <span className="w-3 h-3 rounded-full bg-[#ff6b6b]" />
             <span className="w-3 h-3 rounded-full bg-warning" />
             <span className="w-3 h-3 rounded-full bg-accent-2" />
@@ -57,7 +57,7 @@ export default function ScreenshotsSection() {
           </div>
 
           <div className="grid lg:grid-cols-[260px_1fr]">
-            <div className="border-r border-white/10 bg-black/18 p-4 max-lg:border-r-0 max-lg:border-b">
+            <div className="p-4">
               <div className="grid grid-cols-2 lg:grid-cols-1 gap-2">
                 {screens.map((s, i) => (
                   <button
@@ -66,8 +66,9 @@ export default function ScreenshotsSection() {
                     onMouseEnter={() => setActive(i)}
                     onFocus={() => setActive(i)}
                     onClick={() => setActive(i)}
-                    className={`text-left rounded-2xl border px-4 py-4 transition-all duration-200 ${active === i ? "border-accent-2/38 bg-accent-2/12 text-text shadow-[0_0_30px_rgba(38,230,163,0.08)]" : "border-transparent bg-transparent text-muted hover:bg-white/6"}`}
+                    className={`relative text-left px-4 py-4 transition-all duration-200 ${active === i ? "text-text" : "text-muted hover:text-text"}`}
                   >
+                    {active === i && <span className="absolute left-0 top-4 bottom-4 w-1 rounded-full bg-accent-2 shadow-[0_0_18px_rgba(38,230,163,0.85)]" />}
                     <span className="block text-sm font-black">{s.label}</span>
                     <span className="mt-1 block text-xs leading-relaxed opacity-75">{s.desc}</span>
                   </button>
@@ -84,10 +85,10 @@ export default function ScreenshotsSection() {
             >
               <div className="absolute right-0 top-0 h-72 w-72 rounded-full bg-accent-2/10 blur-3xl" />
               <div className="relative z-10 grid md:grid-cols-[1fr_0.82fr] gap-5 h-full">
-                <div className="rounded-[28px] border border-white/12 bg-white/6 p-6">
+                <div className="rounded-[28px] p-6 bg-[radial-gradient(circle_at_20%_10%,rgba(38,230,163,0.08),transparent_48%)]">
                   <span className="text-muted text-xs font-black uppercase tracking-[0.18em]">{screen.label}</span>
                   <strong className="mt-4 block text-5xl sm:text-6xl font-black tracking-tight">{screen.stat}</strong>
-                  <div className="mt-8 h-52 rounded-3xl border border-white/10 bg-gradient-to-b from-white/10 to-white/3 p-5 flex items-end gap-4">
+                  <div className="mt-8 h-52 rounded-3xl bg-gradient-to-b from-white/[0.055] to-transparent p-5 flex items-end gap-4">
                     {[44, 66, 52, 82, 70, 90, 58].map((height, i) => (
                       <motion.span
                         key={i}
@@ -107,12 +108,12 @@ export default function ScreenshotsSection() {
                       initial={{ opacity: 0, x: 22 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.35, delay: i * 0.07 }}
-                      className="rounded-2xl border border-white/10 bg-white/5 px-5 py-4"
+                      className="border-b border-white/8 px-1 py-4 last:border-b-0"
                     >
                       <span className="flex items-center gap-3 text-muted font-bold"><span className="w-2.5 h-2.5 rounded-full bg-accent-2" />{row}</span>
                     </motion.div>
                   ))}
-                  <div className="rounded-[28px] border border-accent/20 bg-accent/10 p-5">
+                  <div className="rounded-[28px] bg-accent/8 p-5">
                     <p className="m-0 text-muted leading-relaxed">{screen.desc}</p>
                   </div>
                 </div>
@@ -134,7 +135,7 @@ export default function ScreenshotsSection() {
             <div className="p-5">
               <strong className="block text-4xl mb-4 tracking-tight">{s.stat}</strong>
               <div className="space-y-2 mb-4">
-                {s.rows.map((row) => <span key={row} className="block rounded-2xl bg-white/6 px-4 py-3 text-sm text-muted">{row}</span>)}
+                {s.rows.map((row) => <span key={row} className="block border-b border-white/8 px-1 py-3 text-sm text-muted last:border-b-0">{row}</span>)}
               </div>
               <p className="m-0 text-muted">{s.desc}</p>
             </div>

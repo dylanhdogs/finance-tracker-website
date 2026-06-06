@@ -28,8 +28,8 @@ function PillarVisual({ type }) {
       <div className="space-y-2">
         {["Assets", "Income", "Expenses", "Equity"].map((row, i) => (
           <div key={row} className="grid grid-cols-[1fr_72px] gap-3 text-xs font-bold">
-            <span className="rounded-lg bg-white/8 px-3 py-2 text-muted">{row}</span>
-            <span className={`rounded-lg px-3 py-2 text-right ${i % 2 ? "bg-accent/18 text-accent-3" : "bg-accent-2/14 text-accent-2"}`}>{i % 2 ? "DR" : "CR"}</span>
+            <span className="border-b border-white/10 px-1 py-2 text-muted">{row}</span>
+            <span className={`border-b border-white/10 px-1 py-2 text-right ${i % 2 ? "text-accent-3" : "text-accent-2"}`}>{i % 2 ? "DR" : "CR"}</span>
           </div>
         ))}
       </div>
@@ -38,9 +38,9 @@ function PillarVisual({ type }) {
 
   if (type === "lock") {
     return (
-      <div className="relative mx-auto flex h-[150px] w-[190px] items-end justify-center">
+        <div className="relative mx-auto flex h-[150px] w-[190px] items-end justify-center">
         <div className="absolute top-3 h-24 w-28 rounded-t-[48px] border-[10px] border-accent-2/70 border-b-0" />
-        <div className="relative h-24 w-40 rounded-[24px] border border-accent-2/30 bg-accent-2/14 shadow-[0_0_55px_rgba(38,230,163,0.16)]">
+        <div className="relative h-24 w-40 rounded-[24px] bg-accent-2/10 shadow-[0_0_55px_rgba(38,230,163,0.16)]">
           <span className="absolute left-1/2 top-1/2 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent-2" />
           <span className="absolute left-1/2 top-[58%] h-8 w-1.5 -translate-x-1/2 rounded-full bg-accent-2" />
         </div>
@@ -87,14 +87,15 @@ export default function LoveSection() {
             whileInView={{ opacity: 1, y: 0, scaleY: 1 }}
             viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: 0.64, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className={`relative min-h-[430px] overflow-hidden p-7 sm:p-8 shadow-2xl ${
+            className={`relative min-h-[430px] overflow-hidden p-7 sm:p-8 ${
               r.visual === "ledger"
-                ? `rounded-[14px_46px_28px_46px] bg-gradient-to-br ${r.gradient}`
+                ? "rounded-[14px_46px_28px_46px] shadow-[24px_24px_90px_rgba(124,92,255,0.10)]"
                 : r.visual === "lock"
-                  ? "rounded-full lg:rounded-[999px] bg-[#050911] shadow-[0_0_90px_rgba(38,230,163,0.12)]"
-                  : `rounded-[46px_14px_46px_28px] bg-[linear-gradient(145deg,rgba(93,216,255,0.18)_0%,rgba(93,216,255,0.18)_48%,rgba(255,255,255,0.04)_48%,rgba(255,255,255,0.015)_100%)]`
+                  ? "rounded-full lg:rounded-[999px] shadow-[0_0_110px_rgba(38,230,163,0.13)]"
+                  : "rounded-[46px_14px_46px_28px] shadow-[-24px_24px_90px_rgba(93,216,255,0.10)]"
             }`}
           >
+            <div className={`absolute inset-0 -z-10 ${r.visual === "ledger" ? "bg-[radial-gradient(circle_at_22%_18%,rgba(124,92,255,0.16),transparent_45%)]" : r.visual === "lock" ? "bg-[radial-gradient(circle,rgba(38,230,163,0.14),transparent_62%)]" : "bg-[linear-gradient(145deg,rgba(93,216,255,0.13),transparent_58%)]"}`} />
             <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent via-accent-2/70 to-transparent" />
             <span className="text-muted text-xs font-black uppercase tracking-[0.18em]">0{i + 1}</span>
             <div className="mt-8 min-h-[170px]">
