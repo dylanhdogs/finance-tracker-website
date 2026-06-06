@@ -12,6 +12,7 @@
   </head>
   <body>
     <div class="noise" aria-hidden="true"></div>
+    <div class="scroll-progress"><span class="scroll-progress-bar" data-scroll-progress></span></div>
     <header class="site-header" data-header>
       <a class="brand" href="#top" aria-label="Prism home">
         <img class="brand-mark" src="Prism_logo.png" alt="Prism" />
@@ -36,7 +37,7 @@
     <main id="top">
 
       <section class="hero section-shell">
-        <div class="hero-copy reveal-left">
+        <div class="hero-copy" data-reveal="left">
           <p class="eyebrow">See everything. Miss nothing.</p>
           <h1>Know Exactly Where Your Money Goes</h1>
           <p class="hero-text">
@@ -54,7 +55,7 @@
           </div>
         </div>
 
-        <div class="hero-visual reveal-right delay-1" aria-label="Prism product preview">
+        <div class="hero-visual" data-reveal="right" data-delay="150" aria-label="Prism product preview">
           <div class="app-window tilt-card">
             <div class="window-bar">
               <span></span><span></span><span></span>
@@ -109,12 +110,12 @@
       </section>
 
       <section class="section-shell problem-section" id="problem">
-        <div class="section-heading reveal">
+        <div class="section-heading" data-reveal="up">
           <p class="eyebrow">The problem</p>
           <h2>Most people have no idea where their money goes</h2>
         </div>
-        <div class="problem-grid reveal delay-1">
-          <div class="problem-col">
+        <div class="problem-grid" data-reveal="fade">
+          <div class="problem-col" data-reveal="left">
             <h3>People manage their finances with:</h3>
             <ul>
               <li>Bank apps</li>
@@ -125,7 +126,7 @@
             </ul>
             <p class="problem-conclusion">Their financial information is scattered everywhere.</p>
           </div>
-          <div class="problem-col">
+          <div class="problem-col" data-reveal="right">
             <h3>As a result:</h3>
             <ul class="problem-negative">
               <li>Budgets fail</li>
@@ -135,43 +136,43 @@
             </ul>
           </div>
         </div>
-        <div class="problem-solution reveal-scale delay-2">
+        <div class="problem-solution" data-reveal="scale" data-delay="300">
           <p>Prism brings everything together into one organized financial workspace.</p>
         </div>
       </section>
 
       <section class="section-shell help-section" id="how">
-        <div class="section-heading reveal">
+        <div class="section-heading" data-reveal="up">
           <p class="eyebrow">How Prism helps</p>
           <h2>One place for your entire financial life</h2>
         </div>
         <div class="help-grid">
-          <article class="help-card reveal">
+          <article class="help-card" data-reveal="up">
             <span class="help-icon" style="--icon-clr: var(--accent-2)">A</span>
             <h3>Accounts</h3>
             <p>Track checking, savings, cash, credit cards, loans, investments, and more.</p>
           </article>
-          <article class="help-card reveal delay-1">
+          <article class="help-card" data-reveal="up">
             <span class="help-icon" style="--icon-clr: var(--accent-3)">T</span>
             <h3>Transactions</h3>
             <p>Record and categorize every dollar that comes in and goes out.</p>
           </article>
-          <article class="help-card reveal delay-2">
+          <article class="help-card" data-reveal="up">
             <span class="help-icon" style="--icon-clr: var(--warning)">B</span>
             <h3>Budgets</h3>
             <p>Build monthly budgets and compare spending against your plan.</p>
           </article>
-          <article class="help-card reveal">
+          <article class="help-card" data-reveal="up">
             <span class="help-icon" style="--icon-clr: var(--accent)">V</span>
             <h3>Vendors</h3>
             <p>Track where your money is actually going.</p>
           </article>
-          <article class="help-card reveal delay-1">
+          <article class="help-card" data-reveal="up">
             <span class="help-icon" style="--icon-clr: var(--accent-2)">R</span>
             <h3>Reports</h3>
             <p>Understand spending trends, income, expenses, and financial health.</p>
           </article>
-          <article class="help-card reveal delay-2">
+          <article class="help-card" data-reveal="up">
             <span class="help-icon" style="--icon-clr: var(--accent-3)">P</span>
             <h3>Planning</h3>
             <p>Make smarter decisions with real financial data.</p>
@@ -180,22 +181,22 @@
       </section>
 
       <section class="section-shell love-section" id="love">
-        <div class="section-heading reveal">
+        <div class="section-heading" data-reveal="up">
           <p class="eyebrow">Why people love Prism</p>
           <h2>Built for people who want control — not complexity</h2>
         </div>
         <div class="love-grid">
-          <article class="love-card reveal">
+          <article class="love-card" data-reveal="up">
             <span class="love-icon">&#9889;</span>
             <h3>Powerful</h3>
             <p>Uses real accounting principles for complete accuracy.</p>
           </article>
-          <article class="love-card reveal delay-1">
+          <article class="love-card" data-reveal="up">
             <span class="love-icon">&#128274;</span>
             <h3>Private</h3>
             <p>Your data stays on your computer.</p>
           </article>
-          <article class="love-card reveal delay-2">
+          <article class="love-card" data-reveal="up">
             <span class="love-icon">&#9881;</span>
             <h3>Flexible</h3>
             <p>Customize categories, accounts, vendors, budgets, and reports to fit your life.</p>
@@ -204,30 +205,30 @@
       </section>
 
       <section class="section-shell screenshots-section" id="screenshots">
-        <div class="section-heading reveal">
+        <div class="section-heading" data-reveal="up">
           <p class="eyebrow">See it in action</p>
           <h2>A focused workspace for your personal books</h2>
         </div>
         <div class="screenshot-grid">
-          <article class="screenshot-card reveal">
+          <article class="screenshot-card" data-reveal="up">
             <div class="screenshot-placeholder" style="--pl-clr-1: var(--accent); --pl-clr-2: var(--accent-2);">
               <span>Dashboard</span>
             </div>
             <p>See your entire financial picture at a glance.</p>
           </article>
-          <article class="screenshot-card reveal delay-1">
+          <article class="screenshot-card" data-reveal="up">
             <div class="screenshot-placeholder" style="--pl-clr-1: var(--accent-3); --pl-clr-2: var(--accent);">
               <span>Transaction Register</span>
             </div>
             <p>Track every dollar with customizable categories.</p>
           </article>
-          <article class="screenshot-card reveal delay-2">
+          <article class="screenshot-card" data-reveal="up">
             <div class="screenshot-placeholder" style="--pl-clr-1: var(--warning); --pl-clr-2: var(--accent-2);">
               <span>Budget Planner</span>
             </div>
             <p>Create realistic budgets and monitor progress.</p>
           </article>
-          <article class="screenshot-card reveal delay-1">
+          <article class="screenshot-card" data-reveal="up">
             <div class="screenshot-placeholder" style="--pl-clr-1: var(--accent-2); --pl-clr-2: var(--accent-3);">
               <span>Reports</span>
             </div>
@@ -236,7 +237,7 @@
         </div>
       </section>
 
-      <section class="section-shell audience reveal" id="audience">
+      <section class="section-shell audience" data-reveal="up" id="audience">
         <div>
           <p class="eyebrow">Who it is for</p>
           <h2>Built for people who want real control over their finances</h2>
@@ -258,11 +259,11 @@
       </section>
 
       <section class="section-shell compare-section" id="compare">
-        <div class="section-heading reveal">
+        <div class="section-heading" data-reveal="up">
           <p class="eyebrow">Comparison</p>
           <h2>Prism vs. the alternatives</h2>
         </div>
-        <div class="compare-table-wrapper reveal delay-1">
+        <div class="compare-table-wrapper" data-reveal="fade" data-delay="100">
           <table class="compare-table">
             <thead>
               <tr>
@@ -343,12 +344,12 @@
       </section>
 
       <section class="section-shell testimonials-section" id="testimonials">
-        <div class="section-heading reveal">
+        <div class="section-heading" data-reveal="up">
           <p class="eyebrow">Testimonials</p>
           <h2>What users are saying about Prism</h2>
         </div>
         <div class="testimonials-grid">
-          <article class="testimonial-card reveal">
+          <article class="testimonial-card" data-reveal="left">
             <blockquote>
               "I tried QuickBooks for my personal finances and it was a nightmare. Prism gives me the same accounting structure without all the business clutter. The reconciliation feature alone saved me hours."
             </blockquote>
@@ -360,7 +361,7 @@
               </div>
             </div>
           </article>
-          <article class="testimonial-card reveal delay-1">
+          <article class="testimonial-card" data-reveal="up">
             <blockquote>
               "I've been a spreadsheet person for years, but keeping my books in Excel was getting ridiculous. Prism gave me structure, real reports, and peace of mind. I actually look forward to reconciling now."
             </blockquote>
@@ -372,7 +373,7 @@
               </div>
             </div>
           </article>
-          <article class="testimonial-card reveal delay-2">
+          <article class="testimonial-card" data-reveal="right">
             <blockquote>
               "Every budgeting app I tried was missing the accounting piece. Prism is the first tool that gives me both — a clear view of my spending and proper books I can trust."
             </blockquote>
@@ -388,7 +389,7 @@
       </section>
 
       <section class="section-shell final-cta" id="cta">
-        <div class="cta-card reveal">
+        <div class="cta-card" data-reveal="scale">
           <div class="cta-copy">
             <p class="eyebrow">Get started</p>
             <h2>Your personal books deserve better than a spreadsheet</h2>
@@ -405,11 +406,11 @@
       </section>
 
       <section class="section-shell faq" id="faq">
-        <div class="section-heading reveal">
+        <div class="section-heading" data-reveal="up">
           <p class="eyebrow">FAQ</p>
           <h2>Clear answers for buyers</h2>
         </div>
-        <div class="faq-list reveal delay-1">
+        <div class="faq-list" data-reveal="fade" data-delay="100">
           <details open>
             <summary>Is this only for personal finance?</summary>
             <p>Yes. Prism is built for personal finance — tracking spending, budgets, accounts, bills, savings, and net worth. No business accounting complexity.</p>
