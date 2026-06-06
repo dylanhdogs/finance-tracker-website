@@ -9,6 +9,14 @@ const scatteredItems = [
   { label: "Budget Apps", pos: "lg:right-[18%] lg:bottom-[18%]", mobile: "left-[17%] bottom-[17%]", dot: "bg-[#ff6b8a]", rotate: 4 },
 ];
 
+const problemLines = [
+  "M 42 96 C 220 78, 380 92, 640 156",
+  "M 245 246 C 370 240, 500 220, 640 156",
+  "M 96 490 C 270 452, 500 298, 640 156",
+  "M 852 64 C 770 68, 706 104, 640 156",
+  "M 950 412 C 840 344, 740 236, 640 156",
+];
+
 export default function ProblemSection() {
   return (
     <section
@@ -34,11 +42,11 @@ export default function ProblemSection() {
         }}
         className="relative mt-12 min-h-[560px] overflow-hidden"
       >
-        <svg className="absolute inset-0 w-full h-full opacity-80" viewBox="0 0 1200 560" preserveAspectRatio="none" aria-hidden="true">
-          {[[150, 120], [295, 290], [180, 455], [860, 120], [935, 400]].map(([x, y], i) => (
+        <svg className="absolute inset-0 w-full h-full opacity-80 max-lg:hidden" viewBox="0 0 1200 560" preserveAspectRatio="none" aria-hidden="true">
+          {problemLines.map((path, i) => (
             <motion.path
               key={i}
-              d={`M ${x} ${y} C ${x + 130} ${y - 30}, 520 ${y + 45}, 690 285`}
+              d={path}
               fill="none"
               stroke="url(#problemLine)"
               strokeWidth="1.5"
@@ -100,7 +108,7 @@ export default function ProblemSection() {
             whileInView={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
-            className="relative p-2 sm:p-6"
+            className="relative p-6 sm:p-8 lg:mt-24 lg:ml-10 rounded-[32px] border border-white/10 bg-[#07101d]/88 shadow-[0_24px_90px_rgba(0,0,0,0.34)] backdrop-blur-xl"
           >
             <div className="absolute -inset-8 -z-10 bg-[radial-gradient(circle_at_22%_30%,rgba(38,230,163,0.2),transparent_58%)]" />
             <span className="inline-flex items-center gap-2 text-accent-2 text-[0.8rem] font-black uppercase tracking-[0.16em]">
