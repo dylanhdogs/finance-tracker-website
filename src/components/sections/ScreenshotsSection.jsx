@@ -2,30 +2,43 @@ import { useState } from "react";
 import { motion } from "motion/react";
 import Reveal from "../animations/Reveal";
 
+const dashboardImage = `/Dashboard_image.png?v=${Date.now()}`;
+const transactionsImage = `/Transactions_Register.png?v=${Date.now()}`;
+const budgetImage = `/Budget%20Planner.png?v=${Date.now()}`;
+const reportsImage = `/Reports.png?v=${Date.now()}`;
+
 const screens = [
   {
     label: "Dashboard",
     desc: "See your entire financial picture at a glance.",
     stat: "$84,210",
     rows: ["Net worth updated", "Income +$9,840", "Expenses -$4,126"],
+    image: dashboardImage,
+    alt: "Prism dashboard showing net worth, income, expenses, and chart overview",
   },
   {
     label: "Transaction Register",
     desc: "Track every dollar with customizable categories.",
     stat: "438",
     rows: ["Mortgage matched", "Grocery categorized", "Transfer ignored"],
+    image: transactionsImage,
+    alt: "Prism transaction register showing categorized entries and account activity",
   },
   {
     label: "Budget Planner",
     desc: "Create realistic budgets and monitor progress.",
     stat: "72%",
     rows: ["Dining warning", "Utilities on plan", "Savings funded"],
+    image: budgetImage,
+    alt: "Prism budget planner showing category budgets and progress tracking",
   },
   {
     label: "Reports",
     desc: "Turn financial data into actionable insights.",
     stat: "Ready",
     rows: ["Profit & Loss", "Balance Sheet", "Category trend"],
+    image: reportsImage,
+    alt: "Prism reports screen showing financial statements and charts",
   },
 ];
 
@@ -84,24 +97,22 @@ export default function ScreenshotsSection() {
               className="relative min-h-[520px] p-5 sm:p-8 lg:p-10 overflow-hidden"
             >
               <div className="absolute right-0 top-0 h-72 w-72 rounded-full bg-accent-2/10 blur-3xl" />
-              <div className="relative z-10 grid md:grid-cols-[1fr_0.82fr] gap-5 h-full">
-                <div className="rounded-[28px] p-6 bg-[radial-gradient(circle_at_20%_10%,rgba(38,230,163,0.08),transparent_48%)]">
-                  <span className="text-muted text-xs font-black uppercase tracking-[0.18em]">{screen.label}</span>
-                  <strong className="mt-4 block text-5xl sm:text-6xl font-black tracking-tight">{screen.stat}</strong>
-                  <div className="mt-8 h-52 rounded-3xl bg-gradient-to-b from-white/[0.055] to-transparent p-5 flex items-end gap-4">
-                    {[44, 66, 52, 82, 70, 90, 58].map((height, i) => (
-                      <motion.span
-                        key={i}
-                        initial={{ scaleY: 0 }}
-                        animate={{ scaleY: 1 }}
-                        transition={{ duration: 0.5, delay: i * 0.04 }}
-                        className="flex-1 origin-bottom rounded-t-full bg-gradient-to-b from-accent-3 to-accent-2"
-                        style={{ height: `${height}%` }}
-                      />
-                    ))}
+              <div className="relative z-10 grid md:grid-cols-[1.08fr_0.92fr] gap-5 h-full items-stretch">
+                <div className="rounded-[28px] border border-white/10 bg-black/20 p-3 sm:p-4 shadow-[0_18px_60px_rgba(0,0,0,0.28)]">
+                  <div className="overflow-hidden rounded-[22px] border border-white/10 bg-[#08101c]">
+                    <img
+                      src={screen.image}
+                      alt={screen.alt}
+                      className="block w-full h-full object-cover"
+                      loading="lazy"
+                    />
                   </div>
                 </div>
-                <div className="space-y-3">
+                <div className="space-y-3 self-center">
+                  <div className="rounded-[28px] bg-[radial-gradient(circle_at_20%_10%,rgba(38,230,163,0.08),transparent_48%)] p-6">
+                    <span className="text-muted text-xs font-black uppercase tracking-[0.18em]">{screen.label}</span>
+                    <strong className="mt-4 block text-5xl sm:text-6xl font-black tracking-tight">{screen.stat}</strong>
+                  </div>
                   {screen.rows.map((row, i) => (
                     <motion.div
                       key={row}
@@ -131,6 +142,11 @@ export default function ScreenshotsSection() {
               <span className="w-2.5 h-2.5 rounded-full bg-warning" />
               <span className="w-2.5 h-2.5 rounded-full bg-accent-2" />
               <strong className="ml-2 text-xs uppercase tracking-[0.16em] text-muted">{s.label}</strong>
+            </div>
+            <div className="px-4 pb-0">
+              <div className="overflow-hidden rounded-[22px] border border-white/10 bg-[#08101c]">
+                <img src={s.image} alt={s.alt} className="block w-full h-full object-cover" loading="lazy" />
+              </div>
             </div>
             <div className="p-5">
               <strong className="block text-4xl mb-4 tracking-tight">{s.stat}</strong>
