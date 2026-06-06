@@ -1,24 +1,68 @@
 import { motion } from "motion/react";
 import Reveal from "../animations/Reveal";
-import StaggerContainer, { staggerItemScale } from "../animations/StaggerContainer";
 
 const reasons = [
   {
-    icon: "\u26A1",
     title: "Powerful",
     desc: "Uses real accounting principles for complete accuracy.",
+    gradient: "from-accent/22 via-white/5 to-transparent",
+    visual: "ledger",
   },
   {
-    icon: "\uD83D\uDD12",
     title: "Private",
     desc: "Your data stays on your computer.",
+    gradient: "from-accent-2/20 via-white/5 to-transparent",
+    visual: "lock",
   },
   {
-    icon: "\u2699",
     title: "Flexible",
     desc: "Customize categories, accounts, vendors, budgets, and reports to fit your life.",
+    gradient: "from-accent-3/18 via-white/5 to-transparent",
+    visual: "sliders",
   },
 ];
+
+function PillarVisual({ type }) {
+  if (type === "ledger") {
+    return (
+      <div className="space-y-2">
+        {["Assets", "Income", "Expenses", "Equity"].map((row, i) => (
+          <div key={row} className="grid grid-cols-[1fr_72px] gap-3 text-xs font-bold">
+            <span className="rounded-lg bg-white/8 px-3 py-2 text-muted">{row}</span>
+            <span className={`rounded-lg px-3 py-2 text-right ${i % 2 ? "bg-accent/18 text-accent-3" : "bg-accent-2/14 text-accent-2"}`}>{i % 2 ? "DR" : "CR"}</span>
+          </div>
+        ))}
+      </div>
+    );
+  }
+
+  if (type === "lock") {
+    return (
+      <div className="relative mx-auto flex h-[150px] w-[190px] items-end justify-center">
+        <div className="absolute top-3 h-24 w-28 rounded-t-[48px] border-[10px] border-accent-2/70 border-b-0" />
+        <div className="relative h-24 w-40 rounded-[24px] border border-accent-2/30 bg-accent-2/14 shadow-[0_0_55px_rgba(38,230,163,0.16)]">
+          <span className="absolute left-1/2 top-1/2 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent-2" />
+          <span className="absolute left-1/2 top-[58%] h-8 w-1.5 -translate-x-1/2 rounded-full bg-accent-2" />
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="space-y-5 pt-2">
+      {[72, 46, 88].map((width, i) => (
+        <div key={width}>
+          <div className="h-2 rounded-full bg-white/12">
+            <div className="relative h-2 rounded-full bg-gradient-to-r from-accent-3 to-accent-2" style={{ width: `${width}%` }}>
+              <span className="absolute right-0 top-1/2 h-5 w-5 -translate-y-1/2 translate-x-1/2 rounded-full border-2 border-[#07101d] bg-white" />
+            </div>
+          </div>
+          <span className="mt-2 block text-xs font-bold text-muted">{["Categories", "Reports", "Budgets"][i]}</span>
+        </div>
+      ))}
+    </div>
+  );
+}
 
 export default function LoveSection() {
   return (
@@ -35,22 +79,28 @@ export default function LoveSection() {
         </h2>
       </Reveal>
 
-      <StaggerContainer
-        staggerDelay={0.12}
-        className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-10"
-      >
-        {reasons.map((r) => (
+      <div className="mt-12 grid grid-cols-1 lg:grid-cols-3 gap-5">
+        {reasons.map((r, i) => (
           <motion.article
             key={r.title}
-            variants={staggerItemScale}
-            className="p-8 sm:p-[26px] border border-white/14 rounded-[28px] bg-white/5 shadow-2xl backdrop-blur-lg transition-all duration-320 hover:-translate-y-2 hover:border-accent/34 hover:shadow-[0_18px_60px_rgba(0,0,0,0.18),0_0_40px_rgba(124,92,255,0.08)]"
+            initial={{ opacity: 0, y: 34, scaleY: 0.96 }}
+            whileInView={{ opacity: 1, y: 0, scaleY: 1 }}
+            viewport={{ once: true, margin: "-40px" }}
+            transition={{ duration: 0.64, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
+            className={`relative min-h-[430px] overflow-hidden rounded-[34px] border border-white/12 bg-gradient-to-b ${r.gradient} p-7 sm:p-8 shadow-2xl`}
           >
-            <span className="block mb-5 text-3xl">{r.icon}</span>
-            <h3 className="text-[1.3rem] font-bold mb-3">{r.title}</h3>
-            <p className="m-0 text-muted leading-relaxed">{r.desc}</p>
+            <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent via-accent-2/70 to-transparent" />
+            <span className="text-muted text-xs font-black uppercase tracking-[0.18em]">0{i + 1}</span>
+            <div className="mt-8 min-h-[170px]">
+              <PillarVisual type={r.visual} />
+            </div>
+            <div className="mt-10">
+              <h3 className="text-3xl font-black tracking-tight mb-3">{r.title}</h3>
+              <p className="m-0 text-muted leading-relaxed">{r.desc}</p>
+            </div>
           </motion.article>
         ))}
-      </StaggerContainer>
+      </div>
     </section>
   );
 }

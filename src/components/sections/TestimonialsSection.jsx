@@ -1,6 +1,5 @@
 import { motion } from "motion/react";
 import Reveal from "../animations/Reveal";
-import StaggerContainer, { staggerItemLeft, staggerItem, staggerItemRight } from "../animations/StaggerContainer";
 
 const testimonials = [
   {
@@ -29,9 +28,9 @@ const testimonials = [
   },
 ];
 
-const staggerVariants = [staggerItemLeft, staggerItem, staggerItemRight];
-
 export default function TestimonialsSection() {
+  const [main, ...secondary] = testimonials;
+
   return (
     <section
       id="testimonials"
@@ -46,47 +45,43 @@ export default function TestimonialsSection() {
         </h2>
       </Reveal>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-10">
-        {testimonials.map((t, i) => {
-          const variants = staggerVariants[i] || staggerItem;
-          return (
+      <div className="grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] gap-5 mt-12">
+        <motion.article
+          initial={{ opacity: 0, y: 32 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-40px" }}
+          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+          className="relative overflow-hidden rounded-[38px] border border-white/12 bg-[radial-gradient(circle_at_15%_15%,rgba(124,92,255,0.22),transparent_32%),linear-gradient(135deg,rgba(255,255,255,0.1),rgba(255,255,255,0.035))] p-8 sm:p-10 shadow-2xl"
+        >
+          <span className="absolute right-8 top-2 text-[9rem] leading-none text-white/5 font-serif">&ldquo;</span>
+          <blockquote className="relative z-10 m-0 max-w-[720px] text-2xl sm:text-3xl lg:text-4xl font-black leading-tight tracking-tight">
+            {main.quote}
+          </blockquote>
+          <div className="relative z-10 mt-10 flex items-center gap-4">
+            <div className="w-14 h-14 flex items-center justify-center rounded-full bg-gradient-to-br from-accent to-accent-2 font-black text-xl">{main.initial}</div>
+            <div><cite className="not-italic font-black block">{main.name}</cite><span className="text-muted text-sm">{main.role}</span></div>
+          </div>
+        </motion.article>
+
+        <div className="grid gap-5">
+          {secondary.map((t, i) => (
             <motion.article
               key={t.name}
-              initial="hidden"
-              whileInView="visible"
+              initial={{ opacity: 0, x: 34 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-40px" }}
-              variants={{
-                hidden: variants.hidden,
-                visible: {
-                  ...variants.visible,
-                  transition: {
-                    ...variants.visible.transition,
-                    delay: i * 0.1,
-                  },
-                },
-              }}
-              className="flex flex-col p-8 sm:p-[26px] border border-white/14 rounded-[28px] bg-white/5 shadow-2xl backdrop-blur-lg transition-all duration-320 hover:-translate-y-2 hover:border-accent-2/34 hover:shadow-[0_18px_60px_rgba(0,0,0,0.18),0_0_40px_rgba(38,230,163,0.08)]"
+              transition={{ duration: 0.58, delay: i * 0.12, ease: [0.16, 1, 0.3, 1] }}
+              className="relative rounded-[30px] border border-white/10 bg-white/5 p-6 overflow-hidden"
             >
-              <blockquote className="m-0 mb-6 text-text text-[0.95rem] leading-relaxed flex-1">
-                {t.quote}
-              </blockquote>
-              <div className="flex items-center gap-3.5">
-                <div
-                  className="w-[42px] h-[42px] flex items-center justify-center rounded-full font-black text-[1.1rem] shrink-0 bg-gradient-to-br"
-                  style={{
-                    background: `linear-gradient(135deg, ${t.color}, rgba(255,255,255,0.1))`,
-                  }}
-                >
-                  {t.initial}
-                </div>
-                <div>
-                  <cite className="not-italic font-bold block">{t.name}</cite>
-                  <span className="text-muted text-[0.82rem]">{t.role}</span>
-                </div>
+              <span className="absolute right-5 top-1 text-6xl text-white/5 font-serif">&ldquo;</span>
+              <blockquote className="relative z-10 m-0 text-muted leading-relaxed">{t.quote}</blockquote>
+              <div className="relative z-10 mt-6 flex items-center gap-3">
+                <div className="w-11 h-11 flex items-center justify-center rounded-full font-black bg-gradient-to-br" style={{ background: `linear-gradient(135deg, ${t.color}, rgba(255,255,255,0.1))` }}>{t.initial}</div>
+                <div><cite className="not-italic font-bold block">{t.name}</cite><span className="text-muted text-xs">{t.role}</span></div>
               </div>
             </motion.article>
-          );
-        })}
+          ))}
+        </div>
       </div>
     </section>
   );

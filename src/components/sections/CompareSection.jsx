@@ -43,31 +43,32 @@ export default function CompareSection() {
       </Reveal>
 
       <Reveal direction="fade" delay={0.1}>
-        <div className="hidden md:block overflow-x-auto">
-          <table className="w-full border-collapse text-[0.9rem]">
+        <div className="hidden md:block overflow-x-auto mt-12">
+          <table className="w-full border-collapse text-[0.92rem]">
             <thead>
               <tr>
                 <th className="p-4 text-left font-black tracking-tight text-muted border-b border-white/14" />
                 {columns.map((col) => (
                   <th
                     key={col.key}
-                    className={`p-4 text-left font-black tracking-tight border-b border-white/14 ${
-                      col.key === "prism" ? "text-accent-2" : "text-muted"
+                    className={`relative p-4 text-left font-black tracking-tight border-b border-white/14 ${
+                      col.key === "prism" ? "text-accent-2 bg-accent-2/7 shadow-[inset_0_0_55px_rgba(38,230,163,0.08)]" : "text-muted"
                     }`}
                   >
+                    {col.key === "prism" && <span className="absolute -top-7 left-4 rounded-full bg-accent-2 px-3 py-1 text-[0.68rem] uppercase tracking-[0.12em] text-[#03111a]">Best for personal books</span>}
                     {col.label}
                   </th>
                 ))}
               </tr>
             </thead>
             <tbody>
-              {rows.map((row) => (
+              {rows.map((row, i) => (
                 <motion.tr
                   key={row.label}
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+                  transition={{ duration: 0.4, delay: i * 0.04, ease: [0.16, 1, 0.3, 1] }}
                   className="hover:bg-white/4 transition-colors duration-180"
                 >
                   <td className="p-4 text-left font-bold text-text border-b border-white/14 whitespace-nowrap">
@@ -77,7 +78,7 @@ export default function CompareSection() {
                     <td
                       key={col.key}
                       className={`p-4 text-left border-b border-white/14 whitespace-nowrap ${
-                        col.key === "prism" ? "text-text" : "text-muted"
+                        col.key === "prism" ? "text-text bg-accent-2/5 shadow-[inset_1px_0_0_rgba(38,230,163,0.16),inset_-1px_0_0_rgba(93,216,255,0.12)]" : "text-muted"
                       }`}
                     >
                       <Cell value={row[col.key]} />
@@ -89,7 +90,7 @@ export default function CompareSection() {
           </table>
         </div>
 
-        <div className="md:hidden grid gap-4">
+        <div className="md:hidden grid gap-4 mt-10">
           {rows.map((row, i) => (
             <motion.div
               key={row.label}
@@ -97,7 +98,7 @@ export default function CompareSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.05, ease: [0.16, 1, 0.3, 1] }}
-              className="p-4 border border-white/14 rounded-2xl bg-white/5 backdrop-blur-lg"
+              className="border-y border-white/12 py-4"
             >
               <div className="font-bold text-text mb-3 text-[0.95rem]">
                 {row.label}

@@ -1,35 +1,38 @@
+import { useState } from "react";
 import { motion } from "motion/react";
 import Reveal from "../animations/Reveal";
-import StaggerContainer, { staggerItem } from "../animations/StaggerContainer";
 
 const screens = [
   {
     label: "Dashboard",
     desc: "See your entire financial picture at a glance.",
-    c1: "var(--color-accent)",
-    c2: "var(--color-accent-2)",
+    stat: "$84,210",
+    rows: ["Net worth updated", "Income +$9,840", "Expenses -$4,126"],
   },
   {
     label: "Transaction Register",
     desc: "Track every dollar with customizable categories.",
-    c1: "var(--color-accent-3)",
-    c2: "var(--color-accent)",
+    stat: "438",
+    rows: ["Mortgage matched", "Grocery categorized", "Transfer ignored"],
   },
   {
     label: "Budget Planner",
     desc: "Create realistic budgets and monitor progress.",
-    c1: "var(--color-warning)",
-    c2: "var(--color-accent-2)",
+    stat: "72%",
+    rows: ["Dining warning", "Utilities on plan", "Savings funded"],
   },
   {
     label: "Reports",
     desc: "Turn financial data into actionable insights.",
-    c1: "var(--color-accent-2)",
-    c2: "var(--color-accent-3)",
+    stat: "Ready",
+    rows: ["Profit & Loss", "Balance Sheet", "Category trend"],
   },
 ];
 
 export default function ScreenshotsSection() {
+  const [active, setActive] = useState(0);
+  const screen = screens[active];
+
   return (
     <section
       id="screenshots"
@@ -44,32 +47,100 @@ export default function ScreenshotsSection() {
         </h2>
       </Reveal>
 
-      <StaggerContainer
-        staggerDelay={0.1}
-        className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 mt-10"
-      >
-        {screens.map((s) => (
-          <motion.article
-            key={s.label}
-            variants={staggerItem}
-            className="border border-white/14 rounded-[28px] bg-white/5 shadow-2xl backdrop-blur-lg overflow-hidden transition-transform duration-220 hover:-translate-y-1.5"
-          >
-            <div
-              className="flex items-center justify-center h-[220px] max-sm:h-[160px] opacity-50"
-              style={{
-                background: `linear-gradient(135deg, ${s.c1}, ${s.c2})`,
-              }}
-            >
-              <span className="px-5 py-2 rounded-full bg-[#07101d]/60 font-black text-[0.95rem]">
-                {s.label}
-              </span>
+      <Reveal direction="scale" delay={0.1} className="hidden lg:block">
+        <div className="mt-12 sticky top-24 rounded-[38px] border border-white/14 bg-[#07101d]/78 shadow-[0_28px_120px_rgba(0,0,0,0.34)] backdrop-blur-xl overflow-hidden">
+          <div className="flex items-center gap-2 px-5 py-4 border-b border-white/12 bg-white/6">
+            <span className="w-3 h-3 rounded-full bg-[#ff6b6b]" />
+            <span className="w-3 h-3 rounded-full bg-warning" />
+            <span className="w-3 h-3 rounded-full bg-accent-2" />
+            <strong className="ml-3 text-muted text-xs uppercase tracking-[0.18em]">Prism live preview</strong>
+          </div>
+
+          <div className="grid lg:grid-cols-[260px_1fr]">
+            <div className="border-r border-white/10 bg-black/18 p-4 max-lg:border-r-0 max-lg:border-b">
+              <div className="grid grid-cols-2 lg:grid-cols-1 gap-2">
+                {screens.map((s, i) => (
+                  <button
+                    key={s.label}
+                    type="button"
+                    onMouseEnter={() => setActive(i)}
+                    onFocus={() => setActive(i)}
+                    onClick={() => setActive(i)}
+                    className={`text-left rounded-2xl border px-4 py-4 transition-all duration-200 ${active === i ? "border-accent-2/38 bg-accent-2/12 text-text shadow-[0_0_30px_rgba(38,230,163,0.08)]" : "border-transparent bg-transparent text-muted hover:bg-white/6"}`}
+                  >
+                    <span className="block text-sm font-black">{s.label}</span>
+                    <span className="mt-1 block text-xs leading-relaxed opacity-75">{s.desc}</span>
+                  </button>
+                ))}
+              </div>
             </div>
-            <p className="m-0 px-[22px] pb-6 pt-5 text-muted leading-relaxed">
-              {s.desc}
-            </p>
-          </motion.article>
+
+            <motion.div
+              key={screen.label}
+              initial={{ opacity: 0, y: 18 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+              className="relative min-h-[520px] p-5 sm:p-8 lg:p-10 overflow-hidden"
+            >
+              <div className="absolute right-0 top-0 h-72 w-72 rounded-full bg-accent-2/10 blur-3xl" />
+              <div className="relative z-10 grid md:grid-cols-[1fr_0.82fr] gap-5 h-full">
+                <div className="rounded-[28px] border border-white/12 bg-white/6 p-6">
+                  <span className="text-muted text-xs font-black uppercase tracking-[0.18em]">{screen.label}</span>
+                  <strong className="mt-4 block text-5xl sm:text-6xl font-black tracking-tight">{screen.stat}</strong>
+                  <div className="mt-8 h-52 rounded-3xl border border-white/10 bg-gradient-to-b from-white/10 to-white/3 p-5 flex items-end gap-4">
+                    {[44, 66, 52, 82, 70, 90, 58].map((height, i) => (
+                      <motion.span
+                        key={i}
+                        initial={{ scaleY: 0 }}
+                        animate={{ scaleY: 1 }}
+                        transition={{ duration: 0.5, delay: i * 0.04 }}
+                        className="flex-1 origin-bottom rounded-t-full bg-gradient-to-b from-accent-3 to-accent-2"
+                        style={{ height: `${height}%` }}
+                      />
+                    ))}
+                  </div>
+                </div>
+                <div className="space-y-3">
+                  {screen.rows.map((row, i) => (
+                    <motion.div
+                      key={row}
+                      initial={{ opacity: 0, x: 22 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.35, delay: i * 0.07 }}
+                      className="rounded-2xl border border-white/10 bg-white/5 px-5 py-4"
+                    >
+                      <span className="flex items-center gap-3 text-muted font-bold"><span className="w-2.5 h-2.5 rounded-full bg-accent-2" />{row}</span>
+                    </motion.div>
+                  ))}
+                  <div className="rounded-[28px] border border-accent/20 bg-accent/10 p-5">
+                    <p className="m-0 text-muted leading-relaxed">{screen.desc}</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </Reveal>
+
+      <div className="mt-10 grid gap-5 lg:hidden">
+        {screens.map((s) => (
+          <div key={s.label} className="overflow-hidden rounded-[28px] border border-white/10 bg-[#07101d]/72">
+            <div className="flex items-center gap-2 border-b border-white/10 bg-white/6 px-4 py-3">
+              <span className="w-2.5 h-2.5 rounded-full bg-[#ff6b6b]" />
+              <span className="w-2.5 h-2.5 rounded-full bg-warning" />
+              <span className="w-2.5 h-2.5 rounded-full bg-accent-2" />
+              <strong className="ml-2 text-xs uppercase tracking-[0.16em] text-muted">{s.label}</strong>
+            </div>
+            <div className="p-5">
+              <strong className="block text-4xl mb-4 tracking-tight">{s.stat}</strong>
+              <div className="space-y-2 mb-4">
+                {s.rows.map((row) => <span key={row} className="block rounded-2xl bg-white/6 px-4 py-3 text-sm text-muted">{row}</span>)}
+              </div>
+              <p className="m-0 text-muted">{s.desc}</p>
+            </div>
+          </div>
         ))}
-      </StaggerContainer>
+      </div>
     </section>
   );
 }

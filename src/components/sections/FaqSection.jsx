@@ -39,10 +39,10 @@ const faqs = [
 
 function FaqItem({ question, answer, isOpen, onToggle }) {
   return (
-    <div className="border border-white/14 rounded-xl bg-white/5 shadow-2xl backdrop-blur-lg overflow-hidden">
+    <div className="border-b border-white/14 overflow-hidden">
       <button
         onClick={onToggle}
-        className="w-full flex items-center justify-between px-[22px] py-[18px] text-left font-black text-text bg-transparent border-0 cursor-pointer"
+        className="w-full flex items-center justify-between px-0 py-6 text-left font-black text-text bg-transparent border-0 cursor-pointer"
       >
         <span>{question}</span>
         <motion.span
@@ -61,7 +61,7 @@ function FaqItem({ question, answer, isOpen, onToggle }) {
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
           >
-            <p className="px-[22px] pb-[18px] m-0 text-muted leading-relaxed">
+            <p className="max-w-[860px] pb-6 m-0 text-muted leading-relaxed">
               {answer}
             </p>
           </motion.div>
@@ -89,7 +89,7 @@ export default function FaqSection() {
       </Reveal>
 
       <Reveal direction="fade" delay={0.1}>
-        <div className="grid gap-3 mt-10">
+        <div className="mt-10 border-t border-white/14">
           {faqs.map((faq, i) => (
             <FaqItem
               key={i}

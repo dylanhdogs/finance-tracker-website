@@ -12,9 +12,10 @@ export default function CtaSection() {
         whileInView={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
         viewport={{ once: true }}
         transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-        className="flex flex-col md:flex-row justify-between gap-7 p-[clamp(28px,5vw,54px)] border border-white/14 rounded-[34px] bg-gradient-to-br from-accent/20 to-accent-2/8 shadow-2xl backdrop-blur-lg"
+        className="relative overflow-hidden grid md:grid-cols-[1fr_360px] gap-8 p-[clamp(28px,5vw,58px)] border border-white/14 rounded-[42px] bg-[radial-gradient(circle_at_14%_20%,rgba(124,92,255,0.28),transparent_34%),radial-gradient(circle_at_82%_70%,rgba(38,230,163,0.2),transparent_30%),linear-gradient(135deg,rgba(255,255,255,0.11),rgba(255,255,255,0.035))] shadow-2xl backdrop-blur-lg"
       >
-        <div className="flex-1">
+        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent-2 to-transparent" />
+        <div className="relative z-10 flex-1">
           <p className="text-accent-2 text-[0.92rem] font-black tracking-[0.18em] uppercase mb-4">
             Get started
           </p>
@@ -32,8 +33,9 @@ export default function CtaSection() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-          className="min-w-[250px] p-6 border border-white/20 rounded-[26px] bg-white/8 text-center"
+          className="relative z-10 p-6 border border-white/20 rounded-[30px] bg-[#07101d]/78 text-center shadow-[0_22px_80px_rgba(0,0,0,0.24)]"
         >
+          <span className="mb-4 inline-flex rounded-full bg-accent-2/14 px-3 py-1.5 text-accent-2 text-xs font-black uppercase tracking-[0.14em]">Checkout</span>
           <span className="text-muted font-black">Monthly plan</span>
           <strong className="block my-2 text-[4.4rem] font-black tracking-tight leading-none">
             $20
@@ -47,9 +49,11 @@ export default function CtaSection() {
           >
             Download Prism
           </motion.a>
-          <p className="mt-3 text-muted text-[0.78rem]">
-            Windows 10+ &middot; macOS &amp; Linux coming soon
-          </p>
+          <div className="mt-4 grid grid-cols-3 gap-2 text-[0.72rem] font-black text-muted">
+            <span className="rounded-full bg-white/6 px-2 py-2">Local data</span>
+            <span className="rounded-full bg-white/6 px-2 py-2">Cancel anytime</span>
+            <span className="rounded-full bg-white/6 px-2 py-2">Windows 10+</span>
+          </div>
         </motion.div>
       </motion.div>
     </section>

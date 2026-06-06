@@ -10,6 +10,12 @@ const bars = [
   { class: "b6", h: "92%", d: 420 },
 ];
 
+const callouts = [
+  { label: "Reconciled 98%", detail: "Statement matched", className: "top-[11%] -right-2 sm:-right-7", delay: 0.5 },
+  { label: "Budget Alert", detail: "Dining near limit", className: "bottom-[18%] -left-2 sm:-left-8", delay: -1.4 },
+  { label: "Net Worth Updated", detail: "+$2,410 this month", className: "bottom-[3%] right-[9%]", delay: -0.4 },
+];
+
 export default function HeroSection() {
   return (
     <section
@@ -82,10 +88,11 @@ export default function HeroSection() {
 
       <Reveal direction="right" delay={0.3}>
         <div className="relative perspective-[1200px]">
+          <div className="absolute -inset-5 rounded-[38px] bg-[radial-gradient(circle_at_70%_20%,rgba(38,230,163,0.22),transparent_34%),radial-gradient(circle_at_20%_80%,rgba(124,92,255,0.22),transparent_32%)] blur-2xl" />
           <motion.div
             animate={{ y: [0, -14, 0] }}
             transition={{ duration: 4, ease: "easeInOut", repeat: Infinity }}
-            className="overflow-hidden border border-white/18 rounded-[30px] bg-gradient-to-br from-white/16 to-white/5 shadow-2xl"
+            className="relative overflow-hidden border border-white/18 rounded-[30px] bg-gradient-to-br from-white/16 to-white/5 shadow-2xl"
             style={{ transformStyle: "preserve-3d" }}
           >
             <div className="flex gap-2 items-center px-[18px] py-4 border-b border-white/14 bg-white/6">
@@ -117,7 +124,7 @@ export default function HeroSection() {
                   </span>
                   <strong className="text-3xl tracking-tight">$84,210</strong>
                 </div>
-                <div className="grid grid-cols-3 gap-3 mb-[18px]">
+                <div className="grid grid-cols-3 gap-3 mb-[18px] max-sm:grid-cols-1">
                   {[
                     { label: "Income", val: "$9,840" },
                     { label: "Expenses", val: "$4,126" },
@@ -136,17 +143,22 @@ export default function HeroSection() {
                     </article>
                   ))}
                 </div>
-                <div className="flex items-end gap-3.5 h-[190px] p-5 border border-white/14 rounded-2xl bg-gradient-to-b from-white/10 to-white/3.5">
-                  {bars.map((bar) => (
-                    <div
-                      key={bar.class}
-                      className="flex-1 min-w-[18px] rounded-t-full bg-gradient-to-b from-accent-2 to-accent"
-                      style={{
-                        height: bar.h,
-                        animation: `grow 1s ${bar.d}ms cubic-bezier(0.2, 0.8, 0.2, 1) both`,
-                      }}
-                    />
-                  ))}
+                <div className="relative h-[190px] p-5 border border-white/14 rounded-2xl bg-gradient-to-b from-white/10 to-white/3.5 overflow-hidden">
+                  <div className="absolute inset-x-5 top-6 bottom-6 grid grid-rows-4 opacity-25">
+                    {[0, 1, 2, 3].map((line) => <span key={line} className="border-t border-white/20" />)}
+                  </div>
+                  <div className="relative z-10 flex items-end gap-3.5 h-full">
+                    {bars.map((bar) => (
+                      <div
+                        key={bar.class}
+                        className="flex-1 min-w-[18px] rounded-t-full bg-gradient-to-b from-accent-2 to-accent"
+                        style={{
+                          height: bar.h,
+                          animation: `grow 1s ${bar.d}ms cubic-bezier(0.2, 0.8, 0.2, 1) both`,
+                        }}
+                      />
+                    ))}
+                  </div>
                 </div>
                 <div className="mt-4">
                   {[
@@ -168,27 +180,19 @@ export default function HeroSection() {
             </div>
           </motion.div>
 
-          <motion.div
-            animate={{ y: [0, -14, 0] }}
-            transition={{ duration: 4, ease: "easeInOut", repeat: Infinity, delay: 0.5 }}
-            className="absolute top-[16%] -right-3.5 px-[18px] py-4 border border-white/14 rounded-xl bg-[#07101d]/78 shadow-2xl backdrop-blur-lg"
-          >
-            <span className="text-muted text-[0.78rem] font-extrabold uppercase">
-              Reconciled
-            </span>
-            <strong className="block mt-1.5 text-[1.25rem]">98%</strong>
-          </motion.div>
-
-          <motion.div
-            animate={{ y: [0, -14, 0] }}
-            transition={{ duration: 4, ease: "easeInOut", repeat: Infinity, delay: -1.4 }}
-            className="absolute bottom-[10%] -left-[18px] px-[18px] py-4 border border-white/14 rounded-xl bg-[#07101d]/78 shadow-2xl backdrop-blur-lg"
-          >
-            <span className="text-muted text-[0.78rem] font-extrabold uppercase">
-              Budget alert
-            </span>
-            <strong className="block mt-1.5 text-[1.25rem]">Under plan</strong>
-          </motion.div>
+          {callouts.map((callout) => (
+            <motion.div
+              key={callout.label}
+              animate={{ y: [0, -14, 0] }}
+              transition={{ duration: 4, ease: "easeInOut", repeat: Infinity, delay: callout.delay }}
+              className={`absolute hidden sm:block px-[18px] py-4 border border-white/14 rounded-xl bg-[#07101d]/82 shadow-2xl backdrop-blur-lg ${callout.className}`}
+            >
+              <span className="text-accent-2 text-[0.72rem] font-extrabold uppercase tracking-[0.14em]">
+                {callout.label}
+              </span>
+              <strong className="block mt-1.5 text-[0.95rem]">{callout.detail}</strong>
+            </motion.div>
+          ))}
         </div>
       </Reveal>
     </section>
