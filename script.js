@@ -10,7 +10,7 @@ const navLinks = document.querySelectorAll('.primary-nav a[href^="#"]');
 const sections = document.querySelectorAll('section[id]');
 const progressBar = document.querySelector('[data-scroll-progress]');
 
-const revealItems = document.querySelectorAll('[data-reveal]');
+const revealItems = document.querySelectorAll('[data-reveal], .reveal, .reveal-left, .reveal-right, .reveal-scale');
 
 function updateHeader() {
   header.classList.toggle('scrolled', window.scrollY > 18);
