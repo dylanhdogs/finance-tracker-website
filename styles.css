@@ -60,7 +60,7 @@ input {
   left: 50%;
   z-index: 30;
   display: flex;
-  width: min(calc(100% - 32px), 1320px);
+  width: min(calc(100% - 32px), 1440px);
   align-items: center;
   justify-content: space-between;
   padding: 12px 14px;
@@ -144,7 +144,7 @@ input {
 }
 
 .section-shell {
-  width: min(calc(100% - 32px), 1320px);
+  width: min(calc(100% - 32px), 1440px);
   margin-inline: auto;
 }
 
@@ -182,7 +182,7 @@ h2 {
 h1 {
   max-width: 100%;
   margin-bottom: 24px;
-  font-size: clamp(3.4rem, 6.5vw, 5.5rem);
+  font-size: clamp(3.2rem, 6vw, 5.2rem);
 }
 
 h2 {
@@ -710,7 +710,7 @@ h3 {
 }
 
 .site-footer {
-  width: min(calc(100% - 32px), 1160px);
+  width: min(calc(100% - 32px), 1440px);
   justify-content: space-between;
   gap: 24px;
   margin: 60px auto 28px;
