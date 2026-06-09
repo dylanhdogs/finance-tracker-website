@@ -9,12 +9,12 @@ const steps = [
     color: "accent-2",
     mini: (
       <svg width="100%" height="56" viewBox="0 0 200 56" fill="none" aria-hidden="true">
-        <rect x="20" y="8" width="160" height="5" rx="2.5" fill="currentColor" opacity="0.08" />
-        <rect x="20" y="18" width="160" height="5" rx="2.5" fill="currentColor" opacity="0.06" />
-        <rect x="20" y="28" width="130" height="5" rx="2.5" fill="currentColor" opacity="0.12" />
-        <rect x="20" y="38" width="160" height="5" rx="2.5" fill="currentColor" opacity="0.08" />
-        <circle cx="174" cy="42" r="7" fill="var(--color-accent-2)" opacity="0.2" />
-        <path d="M171 42l2 2 4-4" stroke="var(--color-accent-2)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" opacity="0.8" />
+        <rect x="20" y="8" width="160" height="5" rx="2.5" fill="currentColor" opacity="0.2" />
+        <rect x="20" y="18" width="160" height="5" rx="2.5" fill="currentColor" opacity="0.15" />
+        <rect x="20" y="28" width="130" height="5" rx="2.5" fill="currentColor" opacity="0.3" />
+        <rect x="20" y="38" width="160" height="5" rx="2.5" fill="currentColor" opacity="0.2" />
+        <circle cx="174" cy="42" r="7" fill="var(--color-accent-2)" opacity="0.4" />
+        <path d="M171 42l2 2 4-4" stroke="var(--color-accent-2)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" opacity="1" />
       </svg>
     ),
   },
@@ -25,14 +25,14 @@ const steps = [
     color: "accent",
     mini: (
       <svg width="100%" height="56" viewBox="0 0 200 56" fill="none" aria-hidden="true">
-        <rect x="20" y="8" width="12" height="12" rx="3" fill="var(--color-accent-2)" opacity="0.25" />
-        <rect x="38" y="11" width="72" height="3" rx="1.5" fill="currentColor" opacity="0.12" />
-        <rect x="38" y="17" width="48" height="3" rx="1.5" fill="currentColor" opacity="0.08" />
-        <rect x="20" y="24" width="12" height="12" rx="3" fill="var(--color-accent)" opacity="0.25" />
-        <rect x="38" y="27" width="60" height="3" rx="1.5" fill="currentColor" opacity="0.12" />
-        <rect x="38" y="33" width="40" height="3" rx="1.5" fill="currentColor" opacity="0.08" />
-        <rect x="20" y="40" width="12" height="12" rx="3" fill="var(--color-accent-3)" opacity="0.25" />
-        <rect x="38" y="43" width="50" height="3" rx="1.5" fill="currentColor" opacity="0.12" />
+        <rect x="20" y="8" width="12" height="12" rx="3" fill="var(--color-accent-2)" opacity="0.5" />
+        <rect x="38" y="11" width="72" height="3" rx="1.5" fill="currentColor" opacity="0.25" />
+        <rect x="38" y="17" width="48" height="3" rx="1.5" fill="currentColor" opacity="0.18" />
+        <rect x="20" y="24" width="12" height="12" rx="3" fill="var(--color-accent)" opacity="0.5" />
+        <rect x="38" y="27" width="60" height="3" rx="1.5" fill="currentColor" opacity="0.25" />
+        <rect x="38" y="33" width="40" height="3" rx="1.5" fill="currentColor" opacity="0.18" />
+        <rect x="20" y="40" width="12" height="12" rx="3" fill="var(--color-accent-3)" opacity="0.5" />
+        <rect x="38" y="43" width="50" height="3" rx="1.5" fill="currentColor" opacity="0.25" />
       </svg>
     ),
   },
@@ -43,11 +43,11 @@ const steps = [
     color: "accent-3",
     mini: (
       <svg width="100%" height="56" viewBox="0 0 200 56" fill="none" aria-hidden="true">
-        <rect x="20" y="8" width="72" height="4" rx="2" fill="currentColor" opacity="0.08" />
-        <rect x="100" y="8" width="40" height="4" rx="2" fill="currentColor" opacity="0.05" />
-        <path d="M20 46 Q 60 38, 80 42 T 120 32 T 160 36" stroke="var(--color-accent-2)" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.7" />
-        <circle cx="160" cy="36" r="3.5" fill="var(--color-accent-2)" opacity="0.6" />
-        <path d="M20 46 Q 60 34, 80 40 T 120 28 T 160 30" stroke="var(--color-accent)" strokeWidth="1.5" strokeLinecap="round" fill="none" opacity="0.35" />
+        <rect x="20" y="8" width="72" height="4" rx="2" fill="currentColor" opacity="0.18" />
+        <rect x="100" y="8" width="40" height="4" rx="2" fill="currentColor" opacity="0.12" />
+        <path d="M20 46 Q 60 38, 80 42 T 120 32 T 160 36" stroke="var(--color-accent-2)" strokeWidth="2" strokeLinecap="round" fill="none" opacity="1" />
+        <circle cx="160" cy="36" r="3.5" fill="var(--color-accent-2)" opacity="0.9" />
+        <path d="M20 46 Q 60 34, 80 40 T 120 28 T 160 30" stroke="var(--color-accent)" strokeWidth="1.5" strokeLinecap="round" fill="none" opacity="0.55" />
       </svg>
     ),
   },
@@ -57,8 +57,8 @@ function Connector() {
   return (
     <div className="hidden lg:flex items-center justify-center w-10 shrink-0">
       <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
-        <path d="M4 14h20" stroke="currentColor" strokeWidth="1.5" strokeDasharray="4 4" className="text-white/12" />
-        <polygon points="22,10 26,14 22,18" fill="var(--color-accent-2)" opacity="0.35" />
+        <path d="M4 14h20" stroke="currentColor" strokeWidth="1.5" strokeDasharray="4 4" className="text-white/25" />
+        <polygon points="22,10 26,14 22,18" fill="var(--color-accent-2)" opacity="0.6" />
       </svg>
     </div>
   );
@@ -99,8 +99,8 @@ export default function HowSection() {
                 <div
                   className="mb-5 rounded-xl flex items-center justify-center overflow-hidden"
                   style={{
-                    background: `var(--color-${step.color})08`,
-                    border: `1px solid var(--color-${step.color})12`,
+                    background: `var(--color-${step.color})12`,
+                    border: `1px solid var(--color-${step.color})25`,
                     color: `var(--color-${step.color})`,
                   }}
                 >
