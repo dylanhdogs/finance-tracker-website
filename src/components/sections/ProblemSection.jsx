@@ -90,13 +90,18 @@ const flowTrails = [
 ];
 
 const scatteredItems = [
-  { label: "Bank Accounts", icon: <BankIcon />, color: "#ff6b8a", pos: "left-[7%] top-[7%]", rotate: -18, delay: 0, floatY: [0, -12, 0], floatDur: 4.2, trail: flowTrails[0] },
-  { label: "Credit Cards", icon: <CreditIcon />, color: "#ff6b8a", pos: "right-[7%] top-[5%]", rotate: 14, delay: 0.12, floatY: [0, -8, 0], floatDur: 3.6, trail: flowTrails[1] },
-  { label: "Bills", icon: <BillsIcon />, color: "#ffc857", pos: "left-[5%] top-[34%]", rotate: 9, delay: 0.24, floatY: [0, -10, 0], floatDur: 4.8, trail: flowTrails[2] },
-  { label: "Receipts", icon: <ReceiptIcon />, color: "#ff9f6b", pos: "right-[5%] top-[30%]", rotate: -13, delay: 0.36, floatY: [0, -7, 0], floatDur: 3.9, trail: flowTrails[3] },
-  { label: "Reminders", icon: <NotesIcon />, color: "#ffc857", pos: "left-[35%] top-[4%]", rotate: 22, delay: 0.48, floatY: [0, -14, 0], floatDur: 3.3, trail: flowTrails[4] },
-  { label: "Budgets", icon: <BudgetIcon />, color: "#26e6a3", pos: "left-[7%] bottom-[7%]", rotate: -6, delay: 0.6, floatY: [0, -9, 0], floatDur: 4.4, trail: flowTrails[5] },
-  { label: "Spreadsheets", icon: <SpreadsheetIcon />, color: "#7c5cff", pos: "right-[7%] bottom-[5%]", rotate: 10, delay: 0.72, floatY: [0, -6, 0], floatDur: 5.0, trail: flowTrails[6] },
+  { label: "Bank Accounts", icon: <BankIcon />, color: "#ff6b8a", pos: "left-[8%] top-[5%]", rotate: -22, scale: 1.05, opacity: 0.88, delay: 0, floatY: [0, -14, 0], floatDur: 4.2, trail: flowTrails[0] },
+  { label: "Credit Cards", icon: <CreditIcon />, color: "#ff6b8a", pos: "right-[8%] top-[3%]", rotate: 18, scale: 0.95, opacity: 1, delay: 0.12, floatY: [0, -10, 0], floatDur: 3.6, trail: flowTrails[1] },
+  { label: "Bills", icon: <BillsIcon />, color: "#ffc857", pos: "left-[6%] top-[33%]", rotate: 15, scale: 1, opacity: 0.9, delay: 0.24, floatY: [0, -12, 0], floatDur: 4.8, trail: flowTrails[2] },
+  { label: "Receipts", icon: <ReceiptIcon />, color: "#ff9f6b", pos: "right-[6%] top-[28%]", rotate: -20, scale: 0.9, opacity: 0.82, delay: 0.36, floatY: [0, -8, 0], floatDur: 3.9, trail: flowTrails[3] },
+  { label: "Reminders", icon: <NotesIcon />, color: "#ffc857", pos: "left-[30%] top-[2%]", rotate: 28, scale: 0.85, opacity: 0.76, delay: 0.48, floatY: [0, -16, 0], floatDur: 3.3, trail: flowTrails[4] },
+  { label: "Budgets", icon: <BudgetIcon />, color: "#26e6a3", pos: "left-[8%] bottom-[8%]", rotate: -10, scale: 1, opacity: 0.95, delay: 0.6, floatY: [0, -7, 0], floatDur: 4.4, trail: flowTrails[5] },
+  { label: "Spreadsheets", icon: <SpreadsheetIcon />, color: "#7c5cff", pos: "right-[8%] bottom-[6%]", rotate: 12, scale: 1.1, opacity: 1, delay: 0.72, floatY: [0, -5, 0], floatDur: 5.0, trail: flowTrails[6] },
+];
+
+const problemLabels = [
+  { text: "Uncleared", pos: "right-[20%] top-[14%]", color: "#ff6b8a", delay: 0.55 },
+  { text: "Overdue", pos: "left-[15%] top-[27%]", color: "#ffc857", delay: 0.75 },
 ];
 
 const painPoints = [
@@ -179,6 +184,8 @@ export default function ProblemSection() {
                     borderColor: `${item.color}44`,
                     background: `linear-gradient(135deg, ${item.color}15, #07101dee)`,
                     rotate: `${item.rotate}deg`,
+                    scale: item.scale,
+                    opacity: item.opacity,
                   }}
                   whileHover={{
                     scale: 1.12,
@@ -204,6 +211,34 @@ export default function ProblemSection() {
               </motion.div>
             ))}
 
+            {/* Problem labels — subtle pain-point indicators */}
+            {problemLabels.map((label) => (
+              <motion.div
+                key={label.text}
+                initial={{ opacity: 0, scale: 0.3 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: label.delay, ease: [0.16, 1, 0.3, 1] }}
+                className={`absolute ${label.pos} z-20 hidden sm:block pointer-events-none`}
+              >
+                <motion.div
+                  animate={{ y: [0, -4, 0] }}
+                  transition={{ duration: 3, ease: "easeInOut", repeat: Infinity }}
+                >
+                  <span
+                    className="text-[0.6rem] font-extrabold uppercase tracking-[0.12em] px-2 py-1 rounded-lg border backdrop-blur-sm"
+                    style={{
+                      color: `${label.color}99`,
+                      borderColor: `${label.color}33`,
+                      background: `${label.color}0d`,
+                    }}
+                  >
+                    {label.text}
+                  </span>
+                </motion.div>
+              </motion.div>
+            ))}
+
             {/* Central Prism hub — magnetic organizing core */}
             <div className="absolute inset-0 z-10 flex items-center justify-center pointer-events-none">
               <motion.div
@@ -213,32 +248,32 @@ export default function ProblemSection() {
                 transition={{ duration: 0.9, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
                 className="relative flex items-center justify-center"
               >
-                {/* Expansive magnetic glow */}
+                {/* Expansive magnetic glow — reaches further to pull items in */}
                 <motion.div
-                  animate={{ scale: [1, 1.15, 1], opacity: [0.08, 0.04, 0.08] }}
-                  transition={{ duration: 4, ease: "easeInOut", repeat: Infinity }}
-                  className="absolute w-[300px] h-[300px] rounded-full"
+                  animate={{ scale: [1, 1.25, 1], opacity: [0.1, 0.04, 0.1] }}
+                  transition={{ duration: 4.5, ease: "easeInOut", repeat: Infinity }}
+                  className="absolute w-[340px] h-[340px] rounded-full"
                   style={{
                     background: "radial-gradient(circle, rgba(38,230,163,0.08), transparent 70%)",
                     border: "1px solid rgba(38,230,163,0.06)",
                   }}
                 />
-                {/* Pulse ring 1 */}
+                {/* Pulse ring 1 — wider pull */}
                 <motion.div
-                  animate={{ scale: [1, 1.1, 1], opacity: [0.2, 0.06, 0.2] }}
-                  transition={{ duration: 3.2, ease: "easeInOut", repeat: Infinity }}
-                  className="absolute w-[200px] h-[200px] rounded-full border border-accent-2/20"
+                  animate={{ scale: [1, 1.12, 1], opacity: [0.22, 0.06, 0.22] }}
+                  transition={{ duration: 3.8, ease: "easeInOut", repeat: Infinity }}
+                  className="absolute w-[240px] h-[240px] rounded-full border border-accent-2/20"
                   style={{
-                    background: "radial-gradient(circle, rgba(38,230,163,0.05), transparent 65%)",
+                    background: "radial-gradient(circle, rgba(38,230,163,0.06), transparent 65%)",
                   }}
                 />
                 {/* Pulse ring 2 */}
                 <motion.div
-                  animate={{ scale: [1, 1.07, 1], opacity: [0.25, 0.08, 0.25] }}
-                  transition={{ duration: 2.6, ease: "easeInOut", repeat: Infinity, delay: 0.2 }}
-                  className="absolute w-[150px] h-[150px] rounded-full border border-accent/20"
+                  animate={{ scale: [1, 1.08, 1], opacity: [0.3, 0.08, 0.3] }}
+                  transition={{ duration: 2.8, ease: "easeInOut", repeat: Infinity, delay: 0.2 }}
+                  className="absolute w-[180px] h-[180px] rounded-full border border-accent/20"
                   style={{
-                    background: "radial-gradient(circle, rgba(124,92,255,0.06), transparent 65%)",
+                    background: "radial-gradient(circle, rgba(124,92,255,0.07), transparent 65%)",
                   }}
                 />
                 {/* Core hub */}
@@ -254,7 +289,7 @@ export default function ProblemSection() {
                     <span className="w-[7px] h-[7px] rounded-full bg-[#26e6a3]" />
                   </div>
                   {/* Prism diamond */}
-                  <div className="w-9 h-9 rounded-full bg-gradient-to-br from-accent-2 to-accent flex items-center justify-center shadow-[0_0_24px_rgba(38,230,163,0.4)]">
+                  <div className="w-9 h-9 rounded-full bg-gradient-to-br from-accent-2 to-accent flex items-center justify-center shadow-[0_0_28px_rgba(38,230,163,0.5)]">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#07101d" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                       <polygon points="12 2 22 12 12 22 2 12 12 2" />
                       <line x1="12" y1="2" x2="12" y2="22" />
@@ -265,7 +300,7 @@ export default function ProblemSection() {
                   <div className="flex items-center gap-1.5">
                     <span className="w-1.5 h-1.5 rounded-full bg-accent-2 shadow-[0_0_8px_rgba(38,230,163,0.7)] animate-pulse" />
                     <span className="text-accent-2 text-[0.5rem] font-extrabold uppercase tracking-[0.14em]">
-                      All organized
+                      Bringing it together
                     </span>
                   </div>
                 </motion.div>
