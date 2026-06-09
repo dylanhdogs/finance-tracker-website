@@ -37,9 +37,10 @@ export default function HeroSection() {
 
         <Reveal direction="up" delay={0.24}>
           <p className="text-muted text-[1.12rem] leading-relaxed max-w-[620px]">
-            Your complete financial picture in one place. Track accounts,
-            spending, budgets, bills, vendors, and financial reports with
-            powerful desktop software built for personal finance.
+            Prism helps you see your full financial picture in one place. Track
+            spending, manage budgets, reconcile accounts, import transactions,
+            and understand your money without messy spreadsheets or cloud-based
+            finance apps.
           </p>
         </Reveal>
 
@@ -49,7 +50,7 @@ export default function HeroSection() {
               href="download.html"
               className="relative inline-flex items-center justify-center min-h-[52px] px-6 rounded-full font-black text-[#03111a] bg-gradient-to-br from-accent-2 to-accent-3 shadow-[0_18px_50px_rgba(38,230,163,0.25)] transition-transform duration-180 hover:-translate-y-1 no-underline hover:shadow-[0_18px_70px_rgba(38,230,163,0.45)]"
             >
-              Download Prism
+              Get Prism for Desktop
             </a>
             <a
               href="#how"
@@ -70,10 +71,9 @@ export default function HeroSection() {
         <Reveal direction="up" delay={0.48}>
           <div className="flex flex-wrap gap-2.5">
             {[
-              "100% local & offline",
-              "Double-entry bookkeeping",
-              "CSV & Excel import",
-              "Privacy-first",
+              "100% Local & Offline",
+              "CSV & Excel Import",
+              "Built for Personal Bookkeeping",
             ].map((tag) => (
               <span
                 key={tag}
