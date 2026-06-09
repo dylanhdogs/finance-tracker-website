@@ -80,23 +80,23 @@ function NotesIcon() {
 
 /* Flow trail arcs from each item toward center */
 const flowTrails = [
-  "M 30 60 Q 130 100, 240 210",
-  "M 560 40 Q 440 120, 330 210",
-  "M 20 210 Q 110 230, 230 240",
-  "M 570 190 Q 440 220, 330 240",
-  "M 260 20 Q 280 100, 280 210",
-  "M 40 480 Q 140 400, 250 260",
-  "M 560 500 Q 430 400, 320 260",
+  "M 42 42 Q 160 110, 240 210",
+  "M 558 28 Q 420 110, 330 210",
+  "M 30 200 Q 120 220, 230 240",
+  "M 570 180 Q 430 220, 330 240",
+  "M 220 24 Q 260 100, 280 210",
+  "M 50 520 Q 160 400, 250 260",
+  "M 550 530 Q 420 410, 320 260",
 ];
 
 const scatteredItems = [
-  { label: "Bank Accounts", icon: <BankIcon />, color: "#ff6b8a", pos: "left-[0%] top-[2%]", rotate: -18, delay: 0, floatY: [0, -12, 0], floatDur: 4.2, trail: flowTrails[0] },
-  { label: "Credit Cards", icon: <CreditIcon />, color: "#ff6b8a", pos: "right-[1%] top-[-2%]", rotate: 14, delay: 0.12, floatY: [0, -8, 0], floatDur: 3.6, trail: flowTrails[1] },
-  { label: "Bills", icon: <BillsIcon />, color: "#ffc857", pos: "left-[-2%] top-[34%]", rotate: 9, delay: 0.24, floatY: [0, -10, 0], floatDur: 4.8, trail: flowTrails[2] },
-  { label: "Receipts", icon: <ReceiptIcon />, color: "#ff9f6b", pos: "right-[0%] top-[30%]", rotate: -13, delay: 0.36, floatY: [0, -7, 0], floatDur: 3.9, trail: flowTrails[3] },
-  { label: "Reminders", icon: <NotesIcon />, color: "#ffc857", pos: "left-[30%] top-[-4%]", rotate: 22, delay: 0.48, floatY: [0, -14, 0], floatDur: 3.3, trail: flowTrails[4] },
-  { label: "Budgets", icon: <BudgetIcon />, color: "#26e6a3", pos: "left-[1%] bottom-[3%]", rotate: -6, delay: 0.6, floatY: [0, -9, 0], floatDur: 4.4, trail: flowTrails[5] },
-  { label: "Spreadsheets", icon: <SpreadsheetIcon />, color: "#7c5cff", pos: "right-[1%] bottom-[0%]", rotate: 10, delay: 0.72, floatY: [0, -6, 0], floatDur: 5.0, trail: flowTrails[6] },
+  { label: "Bank Accounts", icon: <BankIcon />, color: "#ff6b8a", pos: "left-[7%] top-[7%]", rotate: -18, delay: 0, floatY: [0, -12, 0], floatDur: 4.2, trail: flowTrails[0] },
+  { label: "Credit Cards", icon: <CreditIcon />, color: "#ff6b8a", pos: "right-[7%] top-[5%]", rotate: 14, delay: 0.12, floatY: [0, -8, 0], floatDur: 3.6, trail: flowTrails[1] },
+  { label: "Bills", icon: <BillsIcon />, color: "#ffc857", pos: "left-[5%] top-[34%]", rotate: 9, delay: 0.24, floatY: [0, -10, 0], floatDur: 4.8, trail: flowTrails[2] },
+  { label: "Receipts", icon: <ReceiptIcon />, color: "#ff9f6b", pos: "right-[5%] top-[30%]", rotate: -13, delay: 0.36, floatY: [0, -7, 0], floatDur: 3.9, trail: flowTrails[3] },
+  { label: "Reminders", icon: <NotesIcon />, color: "#ffc857", pos: "left-[35%] top-[4%]", rotate: 22, delay: 0.48, floatY: [0, -14, 0], floatDur: 3.3, trail: flowTrails[4] },
+  { label: "Budgets", icon: <BudgetIcon />, color: "#26e6a3", pos: "left-[7%] bottom-[7%]", rotate: -6, delay: 0.6, floatY: [0, -9, 0], floatDur: 4.4, trail: flowTrails[5] },
+  { label: "Spreadsheets", icon: <SpreadsheetIcon />, color: "#7c5cff", pos: "right-[7%] bottom-[5%]", rotate: 10, delay: 0.72, floatY: [0, -6, 0], floatDur: 5.0, trail: flowTrails[6] },
 ];
 
 const painPoints = [
