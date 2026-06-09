@@ -103,3 +103,20 @@ body {
     transition-duration: 0.01ms !important;
   }
 }
+
+@media (max-width: 640px) {
+  .wallpaper-glow {
+    opacity: 0.68;
+    filter: blur(0px);
+  }
+
+  .wallpaper-grid {
+    opacity: 0.16;
+    background-size: 56px 56px, 56px 56px, 14px 14px, 14px 14px, 112px 112px, 112px 112px;
+    mask-image: radial-gradient(circle at center, black 72%, transparent 100%);
+  }
+
+  .noise {
+    opacity: 0.025;
+  }
+}

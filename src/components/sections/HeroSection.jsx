@@ -32,7 +32,7 @@ export default function HeroSection() {
   return (
     <section
       id="top"
-      className="min-h-screen grid grid-cols-1 lg:grid-cols-[0.92fr_1.08fr] gap-14 items-center px-5 sm:px-6 mx-auto max-w-7xl pt-[130px] pb-[70px] scroll-mt-0"
+      className="min-h-screen grid grid-cols-1 lg:grid-cols-[0.92fr_1.08fr] gap-10 lg:gap-14 items-center px-5 sm:px-6 mx-auto max-w-7xl pt-[104px] sm:pt-[130px] pb-[54px] sm:pb-[70px] scroll-mt-0"
     >
       {" "}
       <div className="flex flex-col">
@@ -46,14 +46,14 @@ export default function HeroSection() {
         </Reveal>{" "}
         <Reveal direction="up" delay={0.12}>
           {" "}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[0.96] mb-6 max-w-full">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[0.96] mb-5 sm:mb-6 max-w-full">
             {" "}
             Know Exactly Where Your Money Goes{" "}
           </h1>{" "}
         </Reveal>{" "}
         <Reveal direction="up" delay={0.24}>
           {" "}
-          <p className="text-muted text-[1.12rem] leading-relaxed max-w-[620px]">
+          <p className="text-muted text-[1rem] sm:text-[1.12rem] leading-relaxed max-w-[620px]">
             {" "}
             Prism gives you one calm private place to see your full financial
             picture — without spreadsheets, cloud accounts, or the guesswork.
@@ -62,11 +62,11 @@ export default function HeroSection() {
         </Reveal>{" "}
         <Reveal direction="up" delay={0.36}>
           {" "}
-          <div className="flex flex-wrap gap-3.5 mt-8 mb-7">
+          <div className="flex flex-col sm:flex-row gap-3.5 mt-8 mb-7">
             {" "}
             <a
               href="download.html"
-              className="relative inline-flex items-center justify-center min-h-[52px] px-6 rounded-full font-black text-[#03111a] bg-gradient-to-br from-accent-2 to-accent-3 shadow-[0_18px_50px_rgba(38,230,163,0.25)] transition-transform duration-180 hover:-translate-y-1 no-underline hover:shadow-[0_18px_70px_rgba(38,230,163,0.45)]"
+              className="w-full sm:w-auto relative inline-flex items-center justify-center min-h-[52px] px-6 rounded-full font-black text-[#03111a] bg-gradient-to-br from-accent-2 to-accent-3 shadow-[0_18px_50px_rgba(38,230,163,0.25)] transition-transform duration-180 hover:-translate-y-1 no-underline hover:shadow-[0_18px_70px_rgba(38,230,163,0.45)]"
             >
               {" "}
               Get Prism for Desktop{" "}
@@ -79,7 +79,7 @@ export default function HeroSection() {
                   .querySelector("#how")
                   ?.scrollIntoView({ behavior: "smooth", block: "start" });
               }}
-              className="relative inline-flex items-center justify-center min-h-[52px] px-6 rounded-full font-black text-text border border-white/14 bg-white/6 transition-transform duration-180 hover:-translate-y-1 no-underline"
+              className="w-full sm:w-auto relative inline-flex items-center justify-center min-h-[52px] px-6 rounded-full font-black text-text border border-white/14 bg-white/6 transition-transform duration-180 hover:-translate-y-1 no-underline"
             >
               {" "}
               See How It Works{" "}
@@ -93,11 +93,11 @@ export default function HeroSection() {
             {[
               "100% Local & Offline",
               "CSV & Excel Import",
-              "Built for Personal Bookkeeping",
+              "Built for Personal Finance",
             ].map((tag) => (
               <span
                 key={tag}
-                className="px-3 py-2 rounded-full border border-white/14 bg-white/5 text-muted text-[0.85rem] font-bold"
+              className="px-3 py-2 rounded-full border border-white/14 bg-white/5 text-muted text-[0.8rem] font-bold"
               >
                 {" "}
                 {tag}{" "}
@@ -108,7 +108,7 @@ export default function HeroSection() {
       </div>{" "}
       <Reveal direction="right" delay={0.3}>
         {" "}
-        <div className="relative perspective-[1200px]">
+        <div className="relative perspective-[1200px] max-md:mx-auto max-md:max-w-[560px]">
           {" "}
           <div className="absolute -inset-5 rounded-[38px] bg-[radial-gradient(circle_at_70%_20%,rgba(38,230,163,0.22),transparent_34%),radial-gradient(circle_at_20%_80%,rgba(124,92,255,0.22),transparent_32%)] blur-2xl" />{" "}
           <motion.div
@@ -127,7 +127,7 @@ export default function HeroSection() {
                 Prism
               </strong>{" "}
             </div>{" "}
-            <div className="grid grid-cols-[160px_1fr] min-h-[480px] max-md:grid-cols-1">
+            <div className="grid grid-cols-[160px_1fr] min-h-[480px] max-md:grid-cols-1 max-md:min-h-[380px]">
               {" "}
               <aside className="p-5 border-r border-white/14 bg-black/15 max-md:hidden">
                 {" "}
@@ -150,7 +150,7 @@ export default function HeroSection() {
                   </p>
                 ))}{" "}
               </aside>{" "}
-              <div className="p-[22px]">
+              <div className="p-[22px] max-md:p-4">
                 {" "}
                 <div className="flex justify-between items-center mb-[18px]">
                   {" "}
@@ -185,7 +185,7 @@ export default function HeroSection() {
                     </article>
                   ))}{" "}
                 </div>{" "}
-                <div className="relative h-[190px] p-5 border border-white/14 rounded-2xl bg-gradient-to-b from-white/10 to-white/3.5 overflow-hidden">
+                  <div className="relative h-[190px] max-md:h-[150px] p-5 max-md:p-4 border border-white/14 rounded-2xl bg-gradient-to-b from-white/10 to-white/3.5 overflow-hidden">
                   {" "}
                   <div className="absolute inset-x-5 top-6 bottom-6 grid grid-rows-4 opacity-25">
                     {" "}

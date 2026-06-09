@@ -59,7 +59,7 @@ const rows = [
   },
   {
     label: "Price",
-    prism: "$20/mo",
+    prism: "$19.99/mo",
     qb: "$30+/mo",
     mint: "Free (ads)",
     sheets: "Free",
@@ -84,7 +84,7 @@ function Cell({ value }) {
         {value}
       </span>
     );
-  if (value === "$20/mo") return <strong className="text-text">{value}</strong>;
+  if (value === "$19.99/mo") return <strong className="text-text">{value}</strong>;
   return <span>{value}</span>;
 }
 export default function CompareSection() {
@@ -100,7 +100,7 @@ export default function CompareSection() {
           {" "}
           The smarter choice{" "}
         </p>{" "}
-        <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[0.96] mb-5 max-w-[760px]">
+        <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[0.96] mb-5 max-w-[760px]">
           {" "}
           Prism does what the others can't{" "}
         </h2>{" "}
@@ -168,7 +168,7 @@ export default function CompareSection() {
             </tbody>{" "}
           </table>{" "}
         </div>{" "}
-        <div className="md:hidden grid gap-4 mt-10">
+        <div className="md:hidden grid gap-3 mt-8">
           {" "}
           {rows.map((row, i) => (
             <motion.div
@@ -181,10 +181,10 @@ export default function CompareSection() {
                 delay: i * 0.05,
                 ease: [0.16, 1, 0.3, 1],
               }}
-              className="rounded-[24px] border border-white/12 bg-[linear-gradient(145deg,rgba(255,255,255,0.08),rgba(255,255,255,0.025))] p-5 shadow-[0_18px_70px_rgba(0,0,0,0.22)]"
+              className="rounded-[24px] border border-white/12 bg-[linear-gradient(145deg,rgba(255,255,255,0.08),rgba(255,255,255,0.025))] p-4 shadow-[0_18px_70px_rgba(0,0,0,0.22)]"
             >
               {" "}
-              <div className="font-black text-text mb-4 text-[1rem]">
+              <div className="font-black text-text mb-3 text-[0.95rem]">
                 {" "}
                 {row.label}{" "}
               </div>{" "}

@@ -74,7 +74,7 @@ export default function HowSection() {
         <p className="text-accent-2 text-[0.92rem] font-black tracking-[0.18em] uppercase mb-4">
           How Prism works
         </p>
-        <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[0.96] mb-5 max-w-[760px]">
+        <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[0.96] mb-5 max-w-[760px]">
           From Scattered Money to Clear Decisions
         </h2>
         <p className="text-muted text-[1.12rem] leading-relaxed max-w-[620px]">

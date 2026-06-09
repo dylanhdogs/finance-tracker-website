@@ -12,7 +12,7 @@ export default function CtaSection() {
         whileInView={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
         viewport={{ once: true }}
         transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-        className="relative overflow-hidden grid md:grid-cols-[1fr_360px] gap-8 p-[clamp(28px,5vw,58px)] rounded-[42px] bg-[radial-gradient(circle_at_14%_20%,rgba(124,92,255,0.32),transparent_34%),radial-gradient(circle_at_82%_70%,rgba(38,230,163,0.24),transparent_30%),linear-gradient(135deg,rgba(255,255,255,0.13),rgba(255,255,255,0.035))] shadow-2xl backdrop-blur-lg"
+        className="relative overflow-hidden grid md:grid-cols-[1fr_360px] gap-8 p-[clamp(24px,5vw,58px)] rounded-[42px] bg-[radial-gradient(circle_at_14%_20%,rgba(124,92,255,0.32),transparent_34%),radial-gradient(circle_at_82%_70%,rgba(38,230,163,0.24),transparent_30%),linear-gradient(135deg,rgba(255,255,255,0.13),rgba(255,255,255,0.035))] shadow-2xl backdrop-blur-lg"
       >
         {" "}
         <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent-2 to-transparent" />{" "}
@@ -22,7 +22,7 @@ export default function CtaSection() {
             {" "}
             Take control{" "}
           </p>{" "}
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.4rem] font-black tracking-tight leading-[0.96] mb-5 max-w-[540px]">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-[3.4rem] font-black tracking-tight leading-[0.96] mb-5 max-w-[540px]">
             {" "}
             One clear place. Total peace of mind.{" "}
           </h2>{" "}
@@ -37,16 +37,16 @@ export default function CtaSection() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-          className="relative z-10 p-6 rounded-[30px] text-center shadow-[0_22px_80px_rgba(0,0,0,0.24)] backdrop-blur-xl"
+          className="relative z-10 p-5 sm:p-6 rounded-[30px] text-center shadow-[0_22px_80px_rgba(0,0,0,0.24)] backdrop-blur-xl"
         >
           {" "}
           <span className="mb-4 inline-flex rounded-full bg-accent-2/14 px-3 py-1.5 text-accent-2 text-xs font-black uppercase tracking-[0.14em]">
             Checkout
           </span>{" "}
           <span className="text-muted font-black">Monthly plan</span>{" "}
-          <strong className="block my-2 text-[4.4rem] font-black tracking-tight leading-none">
+          <strong className="block my-2 text-[3.4rem] sm:text-[4.4rem] font-black tracking-tight leading-none">
             {" "}
-            $20{" "}
+            $19.99{" "}
           </strong>{" "}
           <p className="text-muted mb-4">
             Per month &middot; Cancel anytime

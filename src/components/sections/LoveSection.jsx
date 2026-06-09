@@ -94,12 +94,12 @@ export default function LoveSection() {
           {" "}
           Why Prism{" "}
         </p>{" "}
-        <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[0.96] mb-5 max-w-[760px]">
+        <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[0.96] mb-5 max-w-[760px]">
           {" "}
           Built for people who want control &mdash; not complexity{" "}
         </h2>{" "}
       </Reveal>{" "}
-      <div className="mt-12 grid grid-cols-1 lg:grid-cols-3 gap-5">
+      <div className="mt-10 sm:mt-12 grid grid-cols-1 lg:grid-cols-3 gap-5">
         {" "}
         {reasons.map((r, i) => (
           <motion.article
@@ -112,7 +112,7 @@ export default function LoveSection() {
               delay: i * 0.1,
               ease: [0.16, 1, 0.3, 1],
             }}
-            className={`relative min-h-[430px] overflow-hidden p-7 sm:p-8 ${r.visual === "ledger" ? "rounded-[14px_46px_28px_46px] shadow-[24px_24px_90px_rgba(124,92,255,0.10)]" : r.visual === "lock" ? "rounded-[28px_46px_28px_46px] shadow-[0_0_110px_rgba(38,230,163,0.13)]" : "rounded-[46px_14px_46px_28px] shadow-[-24px_24px_90px_rgba(93,216,255,0.10)]"}`}
+            className={`relative min-h-[360px] sm:min-h-[430px] overflow-hidden p-6 sm:p-8 ${r.visual === "ledger" ? "rounded-[14px_46px_28px_46px] shadow-[24px_24px_90px_rgba(124,92,255,0.10)]" : r.visual === "lock" ? "rounded-[28px_46px_28px_46px] shadow-[0_0_110px_rgba(38,230,163,0.13)]" : "rounded-[46px_14px_46px_28px] shadow-[-24px_24px_90px_rgba(93,216,255,0.10)]"}`}
           >
             {" "}
             <div
