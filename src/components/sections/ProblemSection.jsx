@@ -114,7 +114,7 @@ export default function ProblemSection() {
   return (
     <section
       id="problem"
-      className="px-5 sm:px-6 py-24 md:py-32 lg:py-40 mx-auto max-w-7xl scroll-mt-32"
+      className="px-5 sm:px-6 py-16 md:py-24 lg:py-32 mx-auto max-w-7xl scroll-mt-32"
     >
       <div className="grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-12 lg:gap-16 items-center">
         {/* Left: Visual */}

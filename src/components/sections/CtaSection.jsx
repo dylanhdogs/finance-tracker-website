@@ -5,7 +5,7 @@ export default function CtaSection() {
   return (
     <section
       id="cta"
-      className="px-5 sm:px-6 py-24 md:py-32 lg:py-40 mx-auto max-w-7xl scroll-mt-32"
+      className="px-5 sm:px-6 py-16 md:py-24 lg:py-32 mx-auto max-w-7xl scroll-mt-32"
     >
       <motion.div
         initial={{ opacity: 0, scale: 0.95, filter: "blur(4px)" }}

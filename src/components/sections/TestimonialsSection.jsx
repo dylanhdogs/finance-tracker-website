@@ -34,7 +34,7 @@ export default function TestimonialsSection() {
   return (
     <section
       id="testimonials"
-      className="px-5 sm:px-6 py-24 md:py-32 lg:py-40 mx-auto max-w-7xl scroll-mt-32"
+      className="px-5 sm:px-6 py-16 md:py-24 lg:py-32 mx-auto max-w-7xl scroll-mt-32"
     >
       <Reveal direction="up">
         <p className="text-accent-2 text-[0.92rem] font-black tracking-[0.18em] uppercase mb-4">
