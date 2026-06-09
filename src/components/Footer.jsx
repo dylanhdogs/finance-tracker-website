@@ -4,7 +4,7 @@ export default function Footer() {
       <div>
         <strong>Prism</strong>
         <p className="mt-1.5 text-muted leading-relaxed">
-          Personal bookkeeping software for people who want clearer books.
+          Personal finance software that puts you in control.
         </p>
       </div>
       <a
