@@ -2,19 +2,20 @@ import { motion } from "motion/react";
 import Reveal from "../animations/Reveal";
 
 const scatteredItems = [
-  { label: "Bank Apps", pos: "lg:left-[3%] lg:top-[16%]", mobile: "left-[5%] top-[7%]", dot: "bg-[#ff6b8a]", rotate: -7 },
-  { label: "Credit Cards", pos: "lg:left-[20%] lg:top-[44%]", mobile: "right-[4%] top-[18%]", dot: "bg-[#ff6b8a]", rotate: 5 },
-  { label: "Spreadsheets", pos: "lg:left-[8%] lg:bottom-[12%]", mobile: "left-[2%] top-[34%]", dot: "bg-[#ff6b8a]", rotate: 8 },
-  { label: "Notes", pos: "lg:right-[28%] lg:top-[11%]", mobile: "right-[12%] bottom-[30%]", dot: "bg-[#ff6b8a]", rotate: -4 },
-  { label: "Budget Apps", pos: "lg:right-[18%] lg:bottom-[18%]", mobile: "left-[17%] bottom-[17%]", dot: "bg-[#ff6b8a]", rotate: 4 },
+  { label: "Bank Accounts", icon: "🏦", pos: "top-[6%] left-[2%]", delay: 0 },
+  { label: "Credit Cards", icon: "💳", pos: "top-[2%] right-[8%]", delay: 0.15 },
+  { label: "Bills", icon: "📋", pos: "bottom-[28%] left-[0%]", delay: 0.3 },
+  { label: "Spreadsheets", icon: "📊", pos: "bottom-[2%] right-[4%]", delay: 0.45 },
+  { label: "Budgets", icon: "🎯", pos: "bottom-[2%] left-[6%]", delay: 0.6 },
+  { label: "Receipts", icon: "🧾", pos: "top-[34%] -right-[2%]", delay: 0.75 },
 ];
 
-const problemLines = [
-  "M 42 96 C 220 78, 380 92, 640 156",
-  "M 245 246 C 370 240, 500 220, 640 156",
-  "M 96 490 C 270 452, 500 298, 640 156",
-  "M 852 64 C 770 68, 706 104, 640 156",
-  "M 950 412 C 840 344, 740 236, 640 156",
+const painPoints = [
+  "Your spending is hard to track",
+  "Your budgets are easy to lose sight of",
+  "Your accounts do not always match",
+  "Your reports take too much time to build",
+  "Your financial picture feels scattered",
 ];
 
 export default function ProblemSection() {
@@ -23,115 +24,215 @@ export default function ProblemSection() {
       id="problem"
       className="px-5 sm:px-6 py-24 md:py-32 lg:py-40 mx-auto max-w-7xl scroll-mt-32"
     >
-      <Reveal direction="up">
-        <p className="text-accent-2 text-[0.92rem] font-black tracking-[0.18em] uppercase mb-4">
-          The problem
-        </p>
-        <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[0.96] mb-5 max-w-[760px]">
-          Most people have no idea where their money goes
-        </h2>
-      </Reveal>
+      <div className="grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-12 lg:gap-16 items-center">
+        {/* Left: Copy */}
+        <Reveal direction="left">
+          <div className="flex flex-col">
+            <p className="text-accent-2 text-[0.92rem] font-black tracking-[0.18em] uppercase mb-4">
+              The problem
+            </p>
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[0.96] mb-6 max-w-[620px]">
+              Managing Money Gets Messy Fast
+            </h2>
+            <p className="text-muted text-[1.12rem] leading-relaxed max-w-[540px] mb-8">
+              Your money moves through different accounts, cards, bills, budgets,
+              and spreadsheets. Before long, it becomes hard to see what came in,
+              what went out, and what needs attention.
+            </p>
+            <p className="text-text text-[1.12rem] leading-relaxed max-w-[540px] mb-9 font-bold">
+              Prism brings it all together so you can stop guessing and start
+              seeing your money clearly.
+            </p>
+            <ul className="flex flex-col gap-3.5">
+              {painPoints.map((point) => (
+                <li
+                  key={point}
+                  className="flex items-start gap-3.5 text-muted text-[1rem] leading-snug"
+                >
+                  <span className="mt-1.5 w-2 h-2 rounded-full bg-accent shrink-0 shadow-[0_0_14px_rgba(124,92,255,0.6)]" />
+                  {point}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </Reveal>
 
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-40px" }}
-        variants={{
-          hidden: {},
-          visible: { transition: { staggerChildren: 0.12 } },
-        }}
-        className="relative mt-12 min-h-[560px] overflow-hidden"
-      >
-        <svg className="absolute inset-0 w-full h-full opacity-80 max-lg:hidden" viewBox="0 0 1200 560" preserveAspectRatio="none" aria-hidden="true">
-          {problemLines.map((path, i) => (
-            <motion.path
-              key={i}
-              d={path}
-              fill="none"
-              stroke="url(#problemLine)"
-              strokeWidth="1.5"
-              strokeDasharray="8 10"
-              initial={{ pathLength: 0, opacity: 0 }}
-              whileInView={{ pathLength: 1, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 1, delay: 0.45 + i * 0.08 }}
-            />
-          ))}
-          <defs>
-            <linearGradient id="problemLine" x1="0" x2="1">
-              <stop stopColor="#ff6b8a" stopOpacity="0.7" />
-              <stop offset="1" stopColor="#26e6a3" stopOpacity="0.95" />
-            </linearGradient>
-          </defs>
-        </svg>
+        {/* Right: Visual */}
+        <Reveal direction="right" delay={0.15}>
+          <div className="relative perspective-[1200px] min-h-[520px]">
+            {/* Background glow */}
+            <div className="absolute inset-0 rounded-[38px] bg-[radial-gradient(circle_at_70%_20%,rgba(38,230,163,0.25),transparent_40%),radial-gradient(circle_at_20%_80%,rgba(124,92,255,0.25),transparent_40%)] blur-2xl" />
 
-        <div className="absolute inset-0 max-lg:hidden">
-          {scatteredItems.map((item, i) => (
-            <motion.div
-              key={item.label}
-              variants={{
-                hidden: { opacity: 0, scale: 0.88, x: i % 2 ? 35 : -35, y: i % 2 ? -20 : 25 },
-                visible: { opacity: 1, scale: 1, x: 0, y: 0, transition: { duration: 0.75, ease: [0.16, 1, 0.3, 1] } },
-              }}
-              animate={{ y: [0, -8, 0] }}
-              transition={{ duration: 4 + i * 0.25, repeat: Infinity, ease: "easeInOut" }}
-              className={`absolute ${item.pos} flex items-center gap-2 text-sm sm:text-base font-black text-muted`}
-              style={{ rotate: `${item.rotate}deg` }}
-            >
-              <span className={`inline-block w-3 h-3 rounded-full ${item.dot} shadow-[0_0_18px_rgba(255,107,138,0.75)]`} />
-              <span>{item.label}</span>
-            </motion.div>
-          ))}
-        </div>
-
-        <div className="relative z-10 grid lg:grid-cols-[1fr_0.95fr] gap-8 min-h-[560px] p-5 sm:p-8 lg:p-12 items-center">
-          <div className="lg:hidden min-h-[310px] relative">
-            {scatteredItems.map((item, i) => (
+            {/* Scattered items floating around */}
+            {scatteredItems.map((item) => (
               <motion.div
                 key={item.label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.55, delay: i * 0.08 }}
-                className={`absolute ${item.mobile} flex items-center gap-2 text-sm font-black text-muted`}
+                transition={{ duration: 0.5, delay: item.delay, ease: [0.16, 1, 0.3, 1] }}
+                animate={{ y: [0, -10, 0] }}
+                className={`absolute ${item.pos} z-20 hidden sm:flex items-center gap-2.5 px-4 py-3 rounded-2xl border border-white/14 bg-[#07101d]/85 shadow-2xl backdrop-blur-lg`}
+                style={{ animation: `float 4s ${item.delay}s ease-in-out infinite` }}
               >
-                <span className="inline-block w-2.5 h-2.5 rounded-full bg-[#ff6b8a]" />
-                <span>{item.label}</span>
+                <span className="text-lg">{item.icon}</span>
+                <span className="text-muted text-[0.82rem] font-extrabold whitespace-nowrap">
+                  {item.label}
+                </span>
               </motion.div>
             ))}
-          </div>
 
-          <div className="hidden lg:block" />
+            {/* Connecting arrows (decorative SVG) */}
+            <svg
+              className="absolute inset-0 w-full h-full z-10 pointer-events-none max-lg:hidden"
+              viewBox="0 0 600 520"
+              fill="none"
+              aria-hidden="true"
+            >
+              {[
+                "M 60 80 C 160 100, 200 140, 280 200",
+                "M 540 60 C 440 110, 380 150, 310 210",
+                "M 40 340 C 140 320, 210 270, 280 240",
+                "M 560 460 C 430 400, 370 320, 310 260",
+                "M 60 480 C 160 410, 230 320, 280 260",
+                "M 580 200 C 470 220, 390 230, 310 240",
+              ].map((path, i) => (
+                <motion.path
+                  key={i}
+                  d={path}
+                  stroke="url(#problemGlow)"
+                  strokeWidth="1.2"
+                  strokeDasharray="6 8"
+                  initial={{ pathLength: 0, opacity: 0 }}
+                  whileInView={{ pathLength: 1, opacity: 0.5 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.9, delay: 0.3 + i * 0.08, ease: [0.16, 1, 0.3, 1] }}
+                />
+              ))}
+              <defs>
+                <linearGradient id="problemGlow" x1="0" y1="0" x2="1" y2="1">
+                  <stop stopColor="#7c5cff" stopOpacity="0.6" />
+                  <stop offset="1" stopColor="#26e6a3" stopOpacity="0.8" />
+                </linearGradient>
+              </defs>
+            </svg>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.92, filter: "blur(8px)" }}
-            whileInView={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
-            className="relative p-6 sm:p-8 lg:mt-24 lg:ml-10 rounded-[32px] border border-white/10 bg-[#07101d]/88 shadow-[0_24px_90px_rgba(0,0,0,0.34)] backdrop-blur-xl"
-          >
-            <div className="absolute -inset-8 -z-10 bg-[radial-gradient(circle_at_22%_30%,rgba(38,230,163,0.2),transparent_58%)]" />
-            <span className="inline-flex items-center gap-2 text-accent-2 text-[0.8rem] font-black uppercase tracking-[0.16em]">
-              <span className="w-2.5 h-2.5 rounded-full bg-accent-2 shadow-[0_0_18px_rgba(38,230,163,0.9)]" />
-              Prism workspace
-            </span>
-            <h3 className="mt-5 mb-4 text-2xl sm:text-3xl font-black tracking-tight">
-              One organized place for every account, budget, bill, and report
-            </h3>
-            <p className="text-muted leading-relaxed">
-              Instead of chasing disconnected apps, Prism brings your financial information into a structured desktop workspace so budgets, trends, and goals stop slipping through the cracks.
-            </p>
-            <div className="mt-7 grid grid-cols-2 gap-x-6 gap-y-3 text-sm font-bold">
-              {["Budgets stay current", "Spending gets noticed", "Goals stay visible", "Trends become clear"].map((item) => (
-                <span key={item} className="flex items-center gap-2 text-muted">
-                  <span className="w-2 h-2 rounded-full bg-accent-2" />
-                  {item}
-                </span>
+            {/* Central Prism mockup */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.92, y: 20 }}
+              whileInView={{ opacity: 1, scale: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
+              className="relative z-10 mx-auto mt-16 sm:mt-20 max-w-[420px]"
+            >
+              <div className="absolute inset-0 rounded-[30px] bg-[radial-gradient(circle_at_30%_20%,rgba(38,230,163,0.15),transparent_50%),radial-gradient(circle_at_70%_80%,rgba(124,92,255,0.15),transparent_50%)] blur-xl" />
+              <motion.div
+                animate={{ y: [0, -10, 0] }}
+                transition={{ duration: 5, ease: "easeInOut", repeat: Infinity }}
+                className="relative overflow-hidden border border-white/18 rounded-[30px] bg-gradient-to-br from-white/16 to-white/5 shadow-2xl"
+                style={{ transformStyle: "preserve-3d" }}
+              >
+                {/* Traffic lights */}
+                <div className="flex gap-2 items-center px-[18px] py-4 border-b border-white/14 bg-white/6">
+                  <span className="w-[11px] h-[11px] rounded-full bg-[#ff6b6b]" />
+                  <span className="w-[11px] h-[11px] rounded-full bg-[#ffd166]" />
+                  <span className="w-[11px] h-[11px] rounded-full bg-[#26e6a3]" />
+                  <strong className="ml-2.5 text-muted text-[0.82rem]">Prism</strong>
+                </div>
+                {/* Mockup content */}
+                <div className="p-5">
+                  <div className="flex justify-between items-center mb-4">
+                    <span className="text-muted text-[0.72rem] font-extrabold uppercase tracking-[0.14em]">
+                      All Accounts
+                    </span>
+                    <strong className="text-xl tracking-tight">$84,210</strong>
+                  </div>
+                  <div className="grid grid-cols-3 gap-2.5 mb-4">
+                    {[
+                      { label: "Checking", val: "$12.4k", accent: "from-accent-2 to-accent" },
+                      { label: "Savings", val: "$48.2k", accent: "from-accent-3 to-accent-2" },
+                      { label: "Credit", val: "$2.1k", accent: "from-accent to-accent-3" },
+                    ].map((m) => (
+                      <article
+                        key={m.label}
+                        className="p-3 border border-white/14 rounded-[16px] bg-white/6"
+                      >
+                        <span className="text-muted text-[0.68rem] font-extrabold uppercase block">
+                          {m.label}
+                        </span>
+                        <strong className="block mt-1.5 text-[0.95rem]">{m.val}</strong>
+                        <div className="mt-2 h-1.5 rounded-full bg-white/10 overflow-hidden">
+                          <div
+                            className={`h-full rounded-full bg-gradient-to-r ${m.accent}`}
+                            style={{ width: `${60 + Math.random() * 30}%` }}
+                          />
+                        </div>
+                      </article>
+                    ))}
+                  </div>
+                  <div className="relative h-[100px] p-4 border border-white/14 rounded-2xl bg-gradient-to-b from-white/10 to-white/3.5 overflow-hidden">
+                    <div className="absolute inset-x-4 top-5 bottom-5 grid grid-rows-3 opacity-20">
+                      {[0, 1, 2].map((line) => (
+                        <span key={line} className="border-t border-white/20" />
+                      ))}
+                    </div>
+                    <div className="relative z-10 flex items-end gap-3 h-full">
+                      {[
+                        { h: "38%", d: 80 },
+                        { h: "68%", d: 140 },
+                        { h: "54%", d: 200 },
+                        { h: "82%", d: 260 },
+                        { h: "60%", d: 320 },
+                        { h: "88%", d: 380 },
+                      ].map((bar, i) => (
+                        <div
+                          key={i}
+                          className="flex-1 min-w-[14px] rounded-t-full bg-gradient-to-b from-accent-2 to-accent"
+                          style={{
+                            height: bar.h,
+                            animation: `grow 1s ${bar.d}ms cubic-bezier(0.2, 0.8, 0.2, 1) both`,
+                          }}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                  <div className="mt-3 flex items-center justify-between text-muted text-[0.75rem]">
+                    <span className="flex items-center gap-1.5">
+                      <span className="w-2 h-2 rounded-full bg-accent-2" />
+                      All reconciled
+                    </span>
+                    <span className="flex items-center gap-1.5">
+                      <span className="w-2 h-2 rounded-full bg-accent-3" />
+                      Budgets on track
+                    </span>
+                    <span className="flex items-center gap-1.5">
+                      <span className="w-2 h-2 rounded-full bg-accent" />
+                      Reports ready
+                    </span>
+                  </div>
+                </div>
+              </motion.div>
+            </motion.div>
+
+            {/* Mobile scattered items (simplified) */}
+            <div className="sm:hidden mt-8 grid grid-cols-3 gap-2.5">
+              {scatteredItems.slice(0, 6).map((item) => (
+                <motion.div
+                  key={item.label}
+                  initial={{ opacity: 0, y: 12 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: item.delay }}
+                  className="flex items-center gap-2 px-3 py-2.5 rounded-xl border border-white/14 bg-white/6"
+                >
+                  <span className="text-base">{item.icon}</span>
+                  <span className="text-muted text-[0.72rem] font-extrabold">{item.label}</span>
+                </motion.div>
               ))}
             </div>
-          </motion.div>
-        </div>
-      </motion.div>
+          </div>
+        </Reveal>
+      </div>
     </section>
   );
 }
