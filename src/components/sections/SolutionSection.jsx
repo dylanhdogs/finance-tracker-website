@@ -41,9 +41,9 @@ export default function SolutionSection() {
       id="solution"
       className="px-5 sm:px-6 py-12 md:py-16 lg:py-[65px] mx-auto max-w-7xl scroll-mt-32"
     >
-      <div className="grid grid-cols-1 lg:grid-cols-[1.08fr_0.92fr] gap-12 lg:gap-16 items-center">
+      <div className="flex flex-col gap-12 lg:grid lg:grid-cols-[1.08fr_0.92fr] lg:gap-16 items-stretch lg:items-center">
         {/* Left: Organized Visual */}
-        <Reveal direction="left" delay={0.15}>
+        <Reveal direction="left" delay={0.15} className="order-2 lg:order-1">
           <div className="relative min-h-[520px] overflow-hidden rounded-[38px] bg-[radial-gradient(circle_at_50%_50%,rgba(38,230,163,0.12),transparent_30%),radial-gradient(circle_at_80%_20%,rgba(124,92,255,0.08),transparent_28%)]">
             {/* Summary row */}
             <div className="grid grid-cols-3 gap-3 p-5">
@@ -142,7 +142,7 @@ export default function SolutionSection() {
           </div>
         </Reveal>
         {/* Right: Copy */}
-        <Reveal direction="right">
+        <Reveal direction="right" className="order-1 lg:order-2">
           <div className="flex flex-col">
             <p className="text-accent-2 text-[0.92rem] font-black tracking-[0.18em] uppercase mb-4">
               Everything in one place
