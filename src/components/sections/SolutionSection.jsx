@@ -52,12 +52,12 @@ export default function SolutionSection() {
               One Clear Place for Your Finances
             </h2>
             <p className="text-muted text-[1.12rem] leading-relaxed max-w-[540px] mb-5">
-              Prism gives you a private desktop space to organize your accounts,
-              spending, budgets, bills, imports, reconciliations, and reports.
+              Prism gives you one private place to organize your money, track
+              what is happening, and stay on top of the details that matter.
             </p>
             <p className="text-text text-[1.12rem] leading-relaxed max-w-[540px] mb-9 font-bold">
-              Instead of jumping between apps, spreadsheets, and notes, manage
-              your money from one clean system built to help you stay in control.
+              From spending and budgets to bills, imports, and reports,
+              everything lives in one clean system.
             </p>
             <ul className="flex flex-col gap-3">
               <li className="flex items-center gap-3 text-text text-[1.05rem] font-bold leading-snug">
