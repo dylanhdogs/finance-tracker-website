@@ -41,9 +41,43 @@ export default function SolutionSection() {
       id="solution"
       className="px-5 sm:px-6 py-12 md:py-16 lg:py-[65px] mx-auto max-w-7xl scroll-mt-32"
     >
-      <div className="grid grid-cols-1 lg:grid-cols-[1.08fr_0.92fr] gap-12 lg:gap-16 items-center">
-        {/* Left: Organized Visual */}
-        <Reveal direction="left" delay={0.15}>
+      <div className="grid grid-cols-1 lg:grid-cols-[0.92fr_1.08fr] gap-12 lg:gap-16 items-center">
+        {/* Left: Copy */}
+        <Reveal direction="left">
+          <div className="flex flex-col">
+            <p className="text-accent-2 text-[0.92rem] font-black tracking-[0.18em] uppercase mb-4">
+              Everything in one place
+            </p>
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[0.96] mb-6 max-w-[620px]">
+              One Clear System for Your Personal Finances
+            </h2>
+            <p className="text-muted text-[1.12rem] leading-relaxed max-w-[540px] mb-5">
+              Prism gives you a private desktop space to organize your accounts,
+              spending, budgets, bills, imports, reconciliations, and reports.
+            </p>
+            <p className="text-text text-[1.12rem] leading-relaxed max-w-[540px] mb-9 font-bold">
+              Instead of jumping between apps, spreadsheets, and notes, manage
+              your money from one clean system built to help you stay in control.
+            </p>
+            <ul className="flex flex-col gap-3">
+              <li className="flex items-center gap-3 text-text text-[1.05rem] font-bold leading-snug">
+                <span className="w-2 h-2 rounded-full bg-accent-2 shrink-0 shadow-[0_0_14px_rgba(38,230,163,0.6)]" />
+                Track what came in.
+              </li>
+              <li className="flex items-center gap-3 text-text text-[1.05rem] font-bold leading-snug">
+                <span className="w-2 h-2 rounded-full bg-accent-3 shrink-0 shadow-[0_0_14px_rgba(93,216,255,0.6)]" />
+                See what went out.
+              </li>
+              <li className="flex items-center gap-3 text-text text-[1.05rem] font-bold leading-snug">
+                <span className="w-2 h-2 rounded-full bg-accent shrink-0 shadow-[0_0_14px_rgba(124,92,255,0.6)]" />
+                Know what needs attention.
+              </li>
+            </ul>
+          </div>
+        </Reveal>
+
+        {/* Right: Organized Visual */}
+        <Reveal direction="right" delay={0.15}>
           <div className="relative min-h-[520px] overflow-hidden rounded-[38px] bg-[radial-gradient(circle_at_50%_50%,rgba(38,230,163,0.12),transparent_30%),radial-gradient(circle_at_80%_20%,rgba(124,92,255,0.08),transparent_28%)]">
             {/* Summary row */}
             <div className="grid grid-cols-3 gap-3 p-5">
@@ -139,40 +173,6 @@ export default function SolutionSection() {
                 })}
               </div>
             </motion.div>
-          </div>
-        </Reveal>
-
-        {/* Right: Copy */}
-        <Reveal direction="right">
-          <div className="flex flex-col">
-            <p className="text-accent-2 text-[0.92rem] font-black tracking-[0.18em] uppercase mb-4">
-              Everything in one place
-            </p>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[0.96] mb-6 max-w-[620px]">
-              One Clear System for Your Personal Finances
-            </h2>
-            <p className="text-muted text-[1.12rem] leading-relaxed max-w-[540px] mb-5">
-              Prism gives you a private desktop space to organize your accounts,
-              spending, budgets, bills, imports, reconciliations, and reports.
-            </p>
-            <p className="text-text text-[1.12rem] leading-relaxed max-w-[540px] mb-9 font-bold">
-              Instead of jumping between apps, spreadsheets, and notes, manage
-              your money from one clean system built to help you stay in control.
-            </p>
-            <ul className="flex flex-col gap-3">
-              <li className="flex items-center gap-3 text-text text-[1.05rem] font-bold leading-snug">
-                <span className="w-2 h-2 rounded-full bg-accent-2 shrink-0 shadow-[0_0_14px_rgba(38,230,163,0.6)]" />
-                Track what came in.
-              </li>
-              <li className="flex items-center gap-3 text-text text-[1.05rem] font-bold leading-snug">
-                <span className="w-2 h-2 rounded-full bg-accent-3 shrink-0 shadow-[0_0_14px_rgba(93,216,255,0.6)]" />
-                See what went out.
-              </li>
-              <li className="flex items-center gap-3 text-text text-[1.05rem] font-bold leading-snug">
-                <span className="w-2 h-2 rounded-full bg-accent shrink-0 shadow-[0_0_14px_rgba(124,92,255,0.6)]" />
-                Know what needs attention.
-              </li>
-            </ul>
           </div>
         </Reveal>
       </div>
