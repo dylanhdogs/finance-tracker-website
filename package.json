@@ -3,10 +3,10 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "copy /Y index.source.html index.html && vite",
-    "build": "copy /Y index.source.html index.html && vite build",
+    "dev": "vite",
+    "build": "vite build",
     "preview": "vite preview",
-    "deploy": "copy /Y index.source.html index.html && vite build && copy /Y dist\\index.html index.html && xcopy /E /Y dist\\assets .\\assets\\"
+    "deploy": "vite build"
   },
   "dependencies": {
     "motion": "^12.10.5",
