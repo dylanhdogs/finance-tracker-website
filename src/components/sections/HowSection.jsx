@@ -9,7 +9,7 @@ const steps = [
     desc: "Import transactions from CSV or Excel, connect your accounts, add bills and recurring entries. All your financial life in one private place.",
     color: "accent-2",
     icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
         <path d="M4 20h16" />
         <path d="M4 20V4" />
         <path d="M8 8v8" />
@@ -24,7 +24,7 @@ const steps = [
     desc: "Categorized spending, reconciled accounts, live budget tracking, and a clear view of income versus expenses. Know exactly what is happening.",
     color: "accent",
     icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="12" cy="12" r="10" />
         <polyline points="12 6 12 12 16 14" />
       </svg>
@@ -36,7 +36,7 @@ const steps = [
     desc: "Generate reports, review trends, settle shared balances, and make informed decisions. Your money stops being scattered and starts working for you.",
     color: "accent-3",
     icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 20V10" />
         <path d="M18 20V4" />
         <path d="M6 20v-4" />
@@ -108,14 +108,14 @@ export default function HowSection() {
             >
               <div className="flex items-center gap-3 mb-5">
                 <span
-                  className="text-[0.7rem] font-extrabold tracking-widest"
+                  className="text-[1.1rem] font-extrabold tracking-widest"
                   style={{ color: `var(--color-${steps[step].color})` }}
                 >
                   {steps[step].number}
                 </span>
                 <span className="h-px flex-1 bg-white/8" />
                 <div
-                  className="w-10 h-10 rounded-xl flex items-center justify-center"
+                  className="w-14 h-14 rounded-xl flex items-center justify-center"
                   style={{
                     background: `var(--color-${steps[step].color})18`,
                     color: `var(--color-${steps[step].color})`,
