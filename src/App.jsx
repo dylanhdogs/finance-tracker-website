@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import HeroSection from "./components/sections/HeroSection";
 import ProblemSection from "./components/sections/ProblemSection";
+import SharedExpensesSection from "./components/sections/SharedExpensesSection";
 import SolutionSection from "./components/sections/SolutionSection";
 import LoveSection from "./components/sections/LoveSection";
 import ScreenshotsSection from "./components/sections/ScreenshotsSection";
@@ -20,6 +21,7 @@ export default function App() {
       <main>
         <HeroSection />
         <ProblemSection />
+        <SharedExpensesSection />
         <SolutionSection />
         <LoveSection />
         <ScreenshotsSection />
