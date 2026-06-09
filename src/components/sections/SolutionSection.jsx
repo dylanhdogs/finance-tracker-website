@@ -49,7 +49,7 @@ export default function SolutionSection() {
               Everything in one place
             </p>
             <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[0.96] mb-6 max-w-[620px]">
-              One Clear System for Your Personal Finances
+              One Clear Place for Your Finances
             </h2>
             <p className="text-muted text-[1.12rem] leading-relaxed max-w-[540px] mb-5">
               Prism gives you a private desktop space to organize your accounts,
