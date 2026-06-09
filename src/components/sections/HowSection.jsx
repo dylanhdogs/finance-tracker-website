@@ -1,4 +1,5 @@
-import { motion } from "motion/react";
+import { useState } from "react";
+import { motion, AnimatePresence } from "motion/react";
 import Reveal from "../animations/Reveal";
 
 const steps = [
@@ -44,16 +45,35 @@ const steps = [
   },
 ];
 
-function StepConnector() {
-  return (
-    <svg className="w-8 h-8 shrink-0 max-lg:hidden" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-      <path d="M4 16h24" stroke="currentColor" strokeWidth="1.5" strokeDasharray="4 4" className="text-white/10" />
-      <polygon points="28,12 32,16 28,20" fill="var(--color-accent-2)" opacity="0.4" />
-    </svg>
-  );
-}
+const slideVariants = {
+  enter: (dir) => ({ x: dir > 0 ? 200 : -200, opacity: 0 }),
+  center: { x: 0, opacity: 1 },
+  exit: (dir) => ({ x: dir > 0 ? -200 : 200, opacity: 0 }),
+};
 
 export default function HowSection() {
+  const [step, setStep] = useState(0);
+  const [dir, setDir] = useState(0);
+
+  const prev = () => {
+    if (step > 0) {
+      setDir(-1);
+      setStep((s) => s - 1);
+    }
+  };
+
+  const next = () => {
+    if (step < steps.length - 1) {
+      setDir(1);
+      setStep((s) => s + 1);
+    }
+  };
+
+  const goTo = (i) => {
+    setDir(i > step ? 1 : -1);
+    setStep(i);
+  };
+
   return (
     <section
       id="how"
@@ -72,42 +92,85 @@ export default function HowSection() {
         </p>
       </Reveal>
 
-      <div className="flex flex-col lg:flex-row items-start gap-6 lg:gap-4 mt-14">
-        {steps.map((step, i) => (
-          <motion.div
-            key={step.number}
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.15 + i * 0.12, ease: [0.16, 1, 0.3, 1] }}
-            className="flex-1 w-full"
-          >
-            <div
-              className="rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 shadow-xl backdrop-blur-md h-full"
+      {/* Carousel */}
+      <div className="relative mt-14 max-w-[600px] mx-auto">
+        <div className="overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 shadow-xl backdrop-blur-md">
+          <AnimatePresence mode="wait" custom={dir}>
+            <motion.div
+              key={step}
+              custom={dir}
+              variants={slideVariants}
+              initial="enter"
+              animate="center"
+              exit="exit"
+              transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+              className="p-7 sm:p-9"
             >
-              <div className="flex items-center gap-3 mb-4">
+              <div className="flex items-center gap-3 mb-5">
                 <span
-                  className="text-[0.65rem] font-extrabold tracking-widest"
-                  style={{ color: `var(--color-${step.color})` }}
+                  className="text-[0.7rem] font-extrabold tracking-widest"
+                  style={{ color: `var(--color-${steps[step].color})` }}
                 >
-                  {step.number}
+                  {steps[step].number}
                 </span>
                 <span className="h-px flex-1 bg-white/8" />
                 <div
-                  className="w-9 h-9 rounded-xl flex items-center justify-center"
+                  className="w-10 h-10 rounded-xl flex items-center justify-center"
                   style={{
-                    background: `var(--color-${step.color})18`,
-                    color: `var(--color-${step.color})`,
+                    background: `var(--color-${steps[step].color})18`,
+                    color: `var(--color-${steps[step].color})`,
                   }}
                 >
-                  {step.icon}
+                  {steps[step].icon}
                 </div>
               </div>
-              <h3 className="text-text text-[1.05rem] font-extrabold mb-2">{step.title}</h3>
-              <p className="text-muted text-[0.85rem] leading-relaxed">{step.desc}</p>
-            </div>
-          </motion.div>
-        ))}
+              <h3 className="text-text text-[1.25rem] font-extrabold mb-3">{steps[step].title}</h3>
+              <p className="text-muted text-[0.95rem] leading-relaxed">{steps[step].desc}</p>
+            </motion.div>
+          </AnimatePresence>
+        </div>
+
+        {/* Prev / Next arrows */}
+        <div className="flex items-center justify-between mt-6">
+          <button
+            onClick={prev}
+            disabled={step === 0}
+            className="w-10 h-10 rounded-xl border border-white/10 bg-white/5 flex items-center justify-center text-muted hover:text-text hover:bg-white/10 disabled:opacity-20 disabled:cursor-not-allowed transition-all duration-180"
+            aria-label="Previous step"
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <polyline points="15 18 9 12 15 6" />
+            </svg>
+          </button>
+
+          {/* Dots */}
+          <div className="flex items-center gap-2">
+            {steps.map((s, i) => (
+              <button
+                key={s.number}
+                onClick={() => goTo(i)}
+                className="rounded-full transition-all duration-180"
+                style={{
+                  width: i === step ? 28 : 8,
+                  height: 8,
+                  background: i === step ? `var(--color-accent-2)` : "rgba(255,255,255,0.15)",
+                }}
+                aria-label={`Go to step ${i + 1}`}
+              />
+            ))}
+          </div>
+
+          <button
+            onClick={next}
+            disabled={step === steps.length - 1}
+            className="w-10 h-10 rounded-xl border border-white/10 bg-white/5 flex items-center justify-center text-muted hover:text-text hover:bg-white/10 disabled:opacity-20 disabled:cursor-not-allowed transition-all duration-180"
+            aria-label="Next step"
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </button>
+        </div>
       </div>
     </section>
   );
