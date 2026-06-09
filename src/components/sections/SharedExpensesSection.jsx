@@ -15,9 +15,9 @@ const expenses = [
 ];
 
 const balances = [
-  { name: "Alex", color: "accent-2", amount: "+$340", isPositive: true },
-  { name: "Morgan", color: "accent", amount: "-$150", isPositive: false },
-  { name: "Jordan", color: "accent-3", amount: "-$190", isPositive: false },
+  { name: "Alex", color: "accent-2", label: "is owed", amount: "$340", isPositive: true },
+  { name: "Morgan", color: "accent", label: "owes", amount: "$150", isPositive: false },
+  { name: "Jordan", color: "accent-3", label: "owes", amount: "$190", isPositive: false },
 ];
 
 function UserIcon({ initial, color }) {
@@ -52,12 +52,12 @@ export default function SharedExpensesSection() {
               Know Who Owes Who — Without the Guesswork
             </h2>
             <p className="text-muted text-[1.12rem] leading-relaxed max-w-[540px] mb-5">
-              Prism helps you track shared costs between roommates, partners,
+              Prism helps you track shared costs with roommates, partners,
               friends, family, or anyone you split expenses with.
             </p>
             <p className="text-text text-[1.12rem] leading-relaxed max-w-[540px] mb-8 font-bold">
-              See who paid, who owes, how much is still open, and settle
-              balances without messy notes, texts, or spreadsheets.
+              See who paid, who owes, what is still open, and settle balances
+              without messy notes, texts, or spreadsheets.
             </p>
             <ul className="flex flex-col gap-3">
               {[
@@ -106,9 +106,9 @@ export default function SharedExpensesSection() {
                     key={b.name}
                     className="rounded-xl border border-white/8 bg-white/5 p-2.5 text-center"
                   >
-                    <p className="text-muted text-[0.55rem] font-bold">{b.name}</p>
+                    <p className="text-muted text-[0.55rem] font-bold">{b.name} {b.label}</p>
                     <p
-                      className={`text-[0.85rem] font-extrabold ${b.isPositive ? "text-accent-2" : "text-[#ff6b8a]"}`}
+                      className={`text-[0.9rem] font-extrabold ${b.isPositive ? "text-accent-2" : "text-[#ff6b8a]"}`}
                     >
                       {b.amount}
                     </p>
@@ -161,17 +161,18 @@ export default function SharedExpensesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
-              className="rounded-2xl border border-accent-2/20 bg-gradient-to-br from-accent-2/10 to-accent/10 p-4 shadow-xl backdrop-blur-md text-center"
+              className="rounded-2xl border border-accent-2/30 bg-gradient-to-br from-accent-2/15 to-accent/12 p-5 shadow-[0_0_30px_rgba(38,230,163,0.08)] backdrop-blur-md text-center"
             >
-              <div className="flex items-center justify-center gap-2 mb-1">
-                <span className="w-2 h-2 rounded-full bg-accent-2 shadow-[0_0_10px_rgba(38,230,163,0.7)] animate-pulse" />
-                <p className="text-accent-2 text-[0.75rem] font-extrabold">Ready to settle</p>
+              <div className="flex items-center justify-center gap-2 mb-1.5">
+                <span className="w-2.5 h-2.5 rounded-full bg-accent-2 shadow-[0_0_14px_rgba(38,230,163,0.9)] animate-pulse" />
+                <p className="text-accent-2 text-[0.8rem] font-extrabold tracking-wide">Ready to settle</p>
               </div>
-              <p className="text-text text-[0.6rem] font-bold">
-                Morgan owes Alex $150 · Jordan owes Alex $190
+              <p className="text-text text-[0.7rem] font-bold leading-relaxed">
+                Morgan owes Alex $150<br />
+                Jordan owes Alex $190
               </p>
-              <div className="mt-2.5 inline-flex items-center gap-1.5 px-4 py-1.5 rounded-xl bg-gradient-to-br from-accent-2 to-accent text-[#07101d] text-[0.65rem] font-extrabold shadow-lg">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <div className="mt-3.5 inline-flex items-center gap-2 px-5 py-2 rounded-xl bg-gradient-to-br from-accent-2 to-accent text-[#07101d] text-[0.7rem] font-extrabold shadow-[0_0_20px_rgba(38,230,163,0.25)] cursor-default">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <polyline points="20 6 9 17 4 12" />
                 </svg>
                 Settle Up
