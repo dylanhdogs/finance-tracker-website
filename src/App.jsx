@@ -23,12 +23,12 @@ export default function App() {
       <main>
         <HeroSection />
         <ProblemSection />
-        <SharedExpensesSection />
         <SolutionSection />
-        <HowSection />
-        <LoveSection />
-        <ScreenshotsSection />
         <CompareSection />
+        <HowSection />
+        <ScreenshotsSection />
+        <SharedExpensesSection />
+        <LoveSection />
         <TestimonialsSection />
         <CtaSection />
         <FaqSection />

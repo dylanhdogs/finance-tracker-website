@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Download Prism — the modern desktop finance app for tracking accounts, transactions, budgets, vendors, reconciliation, and financial reports."
+      content="Download Prism, personal finance software for budgets, spending, shared expenses, imports, reports, and private desktop money management."
     />
-    <title>Download Prism | Modern Desktop Finance</title>
+    <title>Download Prism | Personal Finance Software</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div class="wallpaper-grid" aria-hidden="true"></div>
+    <div class="wallpaper-glow" aria-hidden="true"></div>
     <div class="noise" aria-hidden="true"></div>
     <header class="site-header" data-header>
       <a class="brand" href="index.html" aria-label="Prism home">
@@ -44,8 +46,8 @@
           <p class="eyebrow">Get started today</p>
           <h1>Download Prism</h1>
           <p class="hero-text">
-            A focused desktop workspace for your personal finances.
-            No cloud dependency — just your data, your machine.
+            Your finances stay on your computer.
+            No uploads, no cloud accounts, no subscriptions to access your own money.
           </p>
           <div class="trust-row" aria-label="Supported platforms">
             <span>Windows</span>
@@ -54,13 +56,19 @@
         </div>
         <div class="download-hero-visual reveal delay-1">
           <div class="download-card primary-download">
-            <p class="eyebrow">Latest version</p>
-            <strong class="version-label">v0.2.3</strong>
-            <p class="version-info">Released June 2026 &middot; 64-bit Windows</p>
-            <a class="button primary magnetic download-button" href="downloads/Prism_0.2.3_x64-setup.exe" data-protected-download>Download for Windows</a>
-            <a class="checksum-link" href="downloads/SHA256SUMS.txt">SHA-256 checksum</a>
-            <div class="other-platforms">
-              <span>macOS — coming soon</span>
+            <div class="download-card-inner">
+              <div class="download-card-brand" aria-hidden="true">
+                <img class="latest-version-logo" src="/Prism_logo.png" alt="Prism" />
+              </div>
+              <div class="download-card-body">
+                <p class="eyebrow">Latest version</p>
+                <strong class="version-label">v0.2.3</strong>
+                <p class="version-info">Released June 2026 &middot; 64-bit Windows</p>
+                <a class="button primary magnetic download-button" href="downloads/Prism_0.2.3_x64-setup.exe" data-protected-download>Download for Windows</a>
+                <div class="other-platforms">
+                  <span>macOS — coming soon</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -69,13 +77,13 @@
       <section class="section-shell platform-section reveal">
         <div class="section-heading">
           <p class="eyebrow">Platforms</p>
-          <h2>Available on Windows and macOS.</h2>
+          <h2>Runs on your computer, not someone else's servers.</h2>
         </div>
         <div class="platform-grid">
           <article class="platform-card reveal">
             <div class="platform-icon win"></div>
             <h3>Windows</h3>
-            <p>Windows 10 or Windows 11. 64-bit required.</p>
+            <p>Windows 10 or Windows 11. All data stays local on your machine.</p>
             <span class="platform-badge">Installer (.exe)</span>
             <a class="button secondary" href="downloads/Prism_0.2.3_x64-setup.exe" data-protected-download>Download</a>
             <a class="checksum-link" href="downloads/SHA256SUMS.txt">Verify checksum</a>
@@ -83,7 +91,7 @@
           <article class="platform-card reveal delay-1">
             <div class="platform-icon mac"></div>
             <h3>macOS</h3>
-            <p>macOS 10.15 (Catalina) or later. Intel and Apple Silicon supported.</p>
+            <p>macOS 10.15 (Catalina) or later. Native speed, local-first file storage.</p>
             <span class="platform-badge">DMG &middot; Universal</span>
             <span class="button secondary disabled" style="opacity:0.4;cursor:default">Coming soon</span>
           </article>
@@ -114,9 +122,9 @@
           <article class="requirement-card">
             <h3>Additional</h3>
             <ul>
-              <li>Internet connection for initial download</li>
-              <li>No online account required</li>
-              <li>SQLite database — local by default</li>
+              <li>No internet required after initial install</li>
+              <li>No account creation or sign-in</li>
+              <li>SQLite database stored locally by default</li>
             </ul>
           </article>
         </div>
@@ -124,39 +132,39 @@
 
       <section class="section-shell download-features reveal">
         <div class="section-heading">
-          <p class="eyebrow">What you get</p>
-          <h2>Full double-entry accounting, fully offline.</h2>
+          <p class="eyebrow">What you keep private</p>
+          <h2>Complete accounting. No uploads, no cloud sync.</h2>
         </div>
         <div class="feature-grid">
           <article class="feature-card">
             <span>&#10003;</span>
             <h3>Unified Dashboard</h3>
-            <p>Net worth, income, expenses, transactions, and budget status in one view. Income vs expense chart and category breakdown.</p>
+            <p>Net worth, income, expenses, transactions, and budget status in one private view. Your data never leaves your machine.</p>
           </article>
           <article class="feature-card">
             <span>&#10003;</span>
             <h3>CSV &amp; Excel Import</h3>
-            <p>Import bank statements and spreadsheets with automatic column detection. No manual mapping needed.</p>
+            <p>Import bank statements and spreadsheets locally. Auto-detection without uploading files anywhere.</p>
           </article>
           <article class="feature-card">
             <span>&#10003;</span>
             <h3>Budgets &amp; Recurring</h3>
-            <p>Monthly spending plans by category with rollover. Auto-process recurring transactions on any schedule.</p>
+            <p>Monthly spending plans with rollover and recurring transactions. All processed on your schedule, on your device.</p>
           </article>
           <article class="feature-card">
             <span>&#10003;</span>
             <h3>Chart of Accounts &amp; Ledgers</h3>
-            <p>Full double-entry structure with drill-down ledgers for every account, category, and vendor.</p>
+            <p>Full double-entry structure with drill-down ledgers. Completely local financial records.</p>
           </article>
           <article class="feature-card">
             <span>&#10003;</span>
             <h3>Journal Entries</h3>
-            <p>Post double-entry journal entries with sequential numbering and balance verification.</p>
+            <p>Manual journal entries with numbering and balance verification. Your books stay on your computer.</p>
           </article>
           <article class="feature-card">
             <span>&#10003;</span>
             <h3>Reports &amp; Reconciliation</h3>
-            <p>Profit &amp; Loss and Balance Sheet reports. Full reconciliation workspace with statement history.</p>
+            <p>Profit & Loss and Balance Sheet reports with full reconciliation. No cloud sync needed.</p>
           </article>
         </div>
       </section>

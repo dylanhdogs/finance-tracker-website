@@ -52,8 +52,8 @@ export default function SharedExpensesSection() {
               Know Who Owes Who — Without the Guesswork
             </h2>
             <p className="text-muted text-[1.12rem] leading-relaxed max-w-[540px] mb-5">
-              Prism helps you track shared costs with roommates, partners,
-              friends, family, or anyone you split expenses with.
+              Prism helps roommates, families, couples, college students, and
+              vacation groups track shared costs in one clear place.
             </p>
             <p className="text-text text-[1.12rem] leading-relaxed max-w-[540px] mb-8 font-bold">
               See who paid, who owes, what is still open, and settle balances
@@ -91,8 +91,8 @@ export default function SharedExpensesSection() {
             >
               <div className="flex items-center justify-between mb-3">
                 <div className="flex items-center gap-2.5">
-                  <p className="text-text text-[0.8rem] font-extrabold">Apartment Split</p>
-                  <span className="px-1.5 py-0.5 rounded-md bg-accent-2/15 text-accent-2 text-[0.5rem] font-extrabold uppercase tracking-wider">3 people</span>
+                  <p className="text-text text-[1rem] font-extrabold">Apartment Split</p>
+                  <span className="px-2 py-1 rounded-md bg-accent-2/15 text-accent-2 text-[0.65rem] font-extrabold uppercase tracking-wider">3 people</span>
                 </div>
                 <div className="flex -space-x-1.5">
                   {people.map((p) => (
@@ -106,9 +106,9 @@ export default function SharedExpensesSection() {
                     key={b.name}
                     className="rounded-xl border border-white/8 bg-white/5 p-2.5 text-center"
                   >
-                    <p className="text-muted text-[0.55rem] font-bold">{b.name} {b.label}</p>
+                    <p className="text-muted text-[0.7rem] font-bold">{b.name} {b.label}</p>
                     <p
-                      className={`text-[0.9rem] font-extrabold ${b.isPositive ? "text-accent-2" : "text-[#ff6b8a]"}`}
+                      className={`text-[1.12rem] font-extrabold ${b.isPositive ? "text-accent-2" : "text-[#ff6b8a]"}`}
                     >
                       {b.amount}
                     </p>
@@ -126,15 +126,15 @@ export default function SharedExpensesSection() {
               className="rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-4 shadow-xl backdrop-blur-md mb-3"
             >
               <div className="flex items-center justify-between mb-2.5">
-                <p className="text-text text-[0.75rem] font-extrabold">Recent Expenses</p>
-                <p className="text-muted text-[0.55rem] font-bold uppercase tracking-wider">Total: $2,880</p>
+                <p className="text-text text-[0.95rem] font-extrabold">Recent Expenses</p>
+                <p className="text-muted text-[0.7rem] font-bold uppercase tracking-wider">Total: $2,880</p>
               </div>
               <div className="space-y-2">
                 {expenses.map((e, i) => (
                   <div key={e.desc} className="flex items-center justify-between py-1.5 border-b border-white/5 last:border-0">
                     <div className="flex items-center gap-2.5">
                       <div
-                        className="w-7 h-7 rounded-lg flex items-center justify-center text-[0.55rem] font-black"
+                        className="w-9 h-9 rounded-lg flex items-center justify-center text-[0.7rem] font-black"
                         style={{
                           background: `var(--color-accent-2)15`,
                           color: `var(--color-accent-2)`,
@@ -143,11 +143,11 @@ export default function SharedExpensesSection() {
                         ${e.amount}
                       </div>
                       <div>
-                        <p className="text-text text-[0.7rem] font-bold">{e.desc}</p>
-                        <p className="text-muted text-[0.55rem]">Paid by {e.paid}</p>
+                        <p className="text-text text-[0.88rem] font-bold">{e.desc}</p>
+                        <p className="text-muted text-[0.7rem]">Paid by {e.paid}</p>
                       </div>
                     </div>
-                    <span className="text-accent-2 text-[0.65rem] font-extrabold">
+                    <span className="text-accent-2 text-[0.8rem] font-extrabold">
                       ${e.split[0]} each
                     </span>
                   </div>
@@ -165,13 +165,13 @@ export default function SharedExpensesSection() {
             >
               <div className="flex items-center justify-center gap-2 mb-1.5">
                 <span className="w-2.5 h-2.5 rounded-full bg-accent-2 shadow-[0_0_14px_rgba(38,230,163,0.9)] animate-pulse" />
-                <p className="text-accent-2 text-[0.8rem] font-extrabold tracking-wide">Ready to settle</p>
+                <p className="text-accent-2 text-[1rem] font-extrabold tracking-wide">Ready to settle</p>
               </div>
-              <p className="text-text text-[0.7rem] font-bold leading-relaxed">
+              <p className="text-text text-[0.9rem] font-bold leading-relaxed">
                 Morgan owes Alex $150<br />
                 Jordan owes Alex $190
               </p>
-              <div className="mt-3.5 inline-flex items-center gap-2 px-5 py-2 rounded-xl bg-gradient-to-br from-accent-2 to-accent text-[#07101d] text-[0.7rem] font-extrabold shadow-[0_0_20px_rgba(38,230,163,0.25)] cursor-default">
+              <div className="mt-3.5 inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-br from-accent-2 to-accent text-[#07101d] text-[0.85rem] font-extrabold shadow-[0_0_20px_rgba(38,230,163,0.25)] cursor-default">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <polyline points="20 6 9 17 4 12" />
                 </svg>

@@ -1,1 +1,206 @@
-import { motion } from "motion/react";import Reveal from "../animations/Reveal";/* Inline SVG icons */function BankIcon() {  return (    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">      <path d="M3 21h18" />      <path d="M5 21V7l8-4v18" />      <path d="M19 21V11l-6-4" />      <path d="M9 9v.01" /><path d="M9 12v.01" /><path d="M9 15v.01" /><path d="M9 18v.01" />    </svg>  );}function CreditIcon() {  return (    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">      <rect x="1" y="4" width="22" height="16" rx="2" />      <line x1="1" y1="10" x2="23" y2="10" />      <line x1="6" y1="15" x2="10" y2="15" />    </svg>  );}function BillsIcon() {  return (    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />      <polyline points="14 2 14 8 20 8" />      <line x1="8" y1="13" x2="16" y2="13" />      <line x1="8" y1="17" x2="12" y2="17" />    </svg>  );}function SpreadsheetIcon() {  return (    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">      <rect x="3" y="3" width="18" height="18" rx="2" />      <line x1="3" y1="9" x2="21" y2="9" />      <line x1="3" y1="15" x2="21" y2="15" />      <line x1="9" y1="3" x2="9" y2="21" />      <line x1="15" y1="3" x2="15" y2="21" />    </svg>  );}function BudgetIcon() {  return (    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">      <circle cx="12" cy="12" r="10" />      <polyline points="12 6 12 12 16 14" />    </svg>  );}function ReceiptIcon() {  return (    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">      <path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1-2-1z" />      <line x1="8" y1="8" x2="16" y2="8" />      <line x1="8" y1="12" x2="14" y2="12" />      <line x1="8" y1="16" x2="12" y2="16" />    </svg>  );}function NotesIcon() {  return (    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />      <polyline points="14 2 14 8 20 8" />      <line x1="8" y1="13" x2="16" y2="13" />      <line x1="8" y1="16" x2="14" y2="16" />      <line x1="8" y1="19" x2="12" y2="19" />    </svg>  );}/* Flow trail arcs from each item toward center */const flowTrails = [  "M 42 42 Q 160 110, 240 210",  "M 558 28 Q 420 110, 330 210",  "M 30 200 Q 120 220, 230 240",  "M 570 180 Q 430 220, 330 240",  "M 220 24 Q 260 100, 280 210",  "M 50 520 Q 160 400, 250 260",  "M 550 530 Q 420 410, 320 260",];const scatteredItems = [  { label: "Bank Accounts", icon: <BankIcon />, color: "#ff6b8a", pos: "left-[8%] top-[5%]", rotate: -22, scale: 1.05, opacity: 0.88, delay: 0, floatY: [0, -14, 0], floatDur: 4.2, trail: flowTrails[0] },  { label: "Credit Cards", icon: <CreditIcon />, color: "#ff6b8a", pos: "right-[8%] top-[3%]", rotate: 18, scale: 0.95, opacity: 1, delay: 0.12, floatY: [0, -10, 0], floatDur: 3.6, trail: flowTrails[1] },  { label: "Bills", icon: <BillsIcon />, color: "#ffc857", pos: "left-[6%] top-[33%]", rotate: 15, scale: 1, opacity: 0.9, delay: 0.24, floatY: [0, -12, 0], floatDur: 4.8, trail: flowTrails[2] },  { label: "Receipts", icon: <ReceiptIcon />, color: "#ff9f6b", pos: "right-[6%] top-[28%]", rotate: -20, scale: 0.9, opacity: 0.82, delay: 0.36, floatY: [0, -8, 0], floatDur: 3.9, trail: flowTrails[3] },  { label: "Reminders", icon: <NotesIcon />, color: "#ffc857", pos: "left-[30%] top-[2%]", rotate: 28, scale: 0.85, opacity: 0.76, delay: 0.48, floatY: [0, -16, 0], floatDur: 3.3, trail: flowTrails[4] },  { label: "Budgets", icon: <BudgetIcon />, color: "#26e6a3", pos: "left-[8%] bottom-[8%]", rotate: -10, scale: 1, opacity: 0.95, delay: 0.6, floatY: [0, -7, 0], floatDur: 4.4, trail: flowTrails[5] },  { label: "Spreadsheets", icon: <SpreadsheetIcon />, color: "#7c5cff", pos: "right-[8%] bottom-[6%]", rotate: 12, scale: 1.1, opacity: 1, delay: 0.72, floatY: [0, -5, 0], floatDur: 5.0, trail: flowTrails[6] },];const problemLabels = [  { text: "Uncleared", pos: "right-[20%] top-[14%]", color: "#ff6b8a", delay: 0.55 },  { text: "Overdue", pos: "left-[15%] top-[27%]", color: "#ffc857", delay: 0.75 },];const painPoints = [  "Not knowing if a transaction cleared",  "Losing track of a budget halfway through the month",  "Feeling like your money is everywhere and nowhere",];export default function ProblemSection() {  return (    <section      id="problem"      className="px-5 sm:px-6 py-12 md:py-16 lg:py-\[65px\] mx-auto max-w-7xl scroll-mt-32"    >      <div className="flex flex-col gap-12 lg:grid lg:grid-cols-[1.05fr_0.95fr] lg:gap-16 items-stretch lg:items-center">        {/* Left: Visual */}        <Reveal direction="left" delay={0.15} className="order-2 lg:order-1">          <div className="relative perspective-[1200px] min-h-[580px] overflow-hidden rounded-[38px]">            {/* Warm-chaos → cool-order atmosphere */}            <div className="absolute inset-0 rounded-[38px] bg-[radial-gradient(circle_at_50%_50%,rgba(38,230,163,0.18),transparent_28%),radial-gradient(circle_at_18%_18%,rgba(255,107,138,0.16),transparent_30%),radial-gradient(circle_at_82%_12%,rgba(255,200,87,0.10),transparent_28%),radial-gradient(circle_at_12%_78%,rgba(255,159,107,0.10),transparent_28%),radial-gradient(circle_at_78%_82%,rgba(124,92,255,0.12),transparent_30%)] blur-2xl" />            {/* Flow trails — animated arcs from items toward center */}            <svg              className="absolute inset-0 w-full h-full z-10 pointer-events-none max-lg:hidden"              viewBox="0 0 600 560"              fill="none"              aria-hidden="true"            >              <defs>                <linearGradient id="trailGrad" x1="0" y1="0" x2="1" y2="1">                  <stop offset="0%" stopColor="#ff6b8a" stopOpacity="0.05" />                  <stop offset="40%" stopColor="#7c5cff" stopOpacity="0.12" />                  <stop offset="100%" stopColor="#26e6a3" stopOpacity="0.25" />                </linearGradient>                <filter id="trailGlow">                  <feGaussianBlur stdDeviation="2.5" result="blur" />                  <feMerge>                    <feMergeNode in="blur" />                    <feMergeNode in="SourceGraphic" />                  </feMerge>                </filter>              </defs>              {scatteredItems.map((item, i) => (                <motion.path                  key={item.label}                  d={item.trail}                  stroke="url(#trailGrad)"                  strokeWidth="1.8"                  strokeLinecap="round"                  filter="url(#trailGlow)"                  initial={{ pathLength: 0, opacity: 0 }}                  whileInView={{ pathLength: 1, opacity: 1 }}                  viewport={{ once: true }}                  transition={{ duration: 1.2, delay: 0.3 + i * 0.1, ease: [0.16, 1, 0.3, 1] }}                />              ))}            </svg>            {/* Scattered items — chaotic perimeter */}            {scatteredItems.map((item) => (              <motion.div                key={item.label}                initial={{ opacity: 0, scale: 0.4 }}                whileInView={{ opacity: 1, scale: 1 }}                viewport={{ once: true }}                transition={{ duration: 0.7, delay: item.delay, ease: [0.16, 1, 0.3, 1] }}                className={`absolute ${item.pos} z-20 hidden sm:block`}              >                <motion.div                  animate={{                    y: item.floatY,                    rotate: [0, item.rotate > 0 ? 3 : -3, 0],                  }}                  transition={{                    y: { duration: item.floatDur, ease: "easeInOut", repeat: Infinity },                    rotate: { duration: item.floatDur * 1.4, ease: "easeInOut", repeat: Infinity },                  }}                  className="flex items-center gap-2.5 px-3.5 py-3 rounded-2xl border shadow-2xl backdrop-blur-lg cursor-default select-none"                  style={{                    borderColor: `${item.color}44`,                    background: `linear-gradient(135deg, ${item.color}15, #07101dee)`,                    rotate: `${item.rotate}deg`,                    scale: item.scale,                    opacity: item.opacity,                  }}                  whileHover={{                    scale: 1.12,                    rotate: 0,                    borderColor: item.color,                    boxShadow: `0 0 35px ${item.color}55, 0 8px 40px rgba(0,0,0,0.4)`,                    transition: { duration: 0.3, ease: [0.16, 1, 0.3, 1] },                  }}                >                  <div                    className="flex items-center justify-center w-8 h-8 rounded-xl"                    style={{ background: `${item.color}20` }}                  >                    <span style={{ color: item.color }}>{item.icon}</span>                  </div>                  <span                    className="text-[0.78rem] font-extrabold whitespace-nowrap"                    style={{ color: `${item.color}dd` }}                  >                    {item.label}                  </span>                </motion.div>              </motion.div>            ))}            {/* Problem labels — subtle pain-point indicators */}            {problemLabels.map((label) => (              <motion.div                key={label.text}                initial={{ opacity: 0, scale: 0.3 }}                whileInView={{ opacity: 1, scale: 1 }}                viewport={{ once: true }}                transition={{ duration: 0.6, delay: label.delay, ease: [0.16, 1, 0.3, 1] }}                className={`absolute ${label.pos} z-20 hidden sm:block pointer-events-none`}              >                <motion.div                  animate={{ y: [0, -4, 0] }}                  transition={{ duration: 3, ease: "easeInOut", repeat: Infinity }}                >                  <span                    className="text-[0.6rem] font-extrabold uppercase tracking-[0.12em] px-2 py-1 rounded-lg border backdrop-blur-sm"                    style={{                      color: `${label.color}99`,                      borderColor: `${label.color}33`,                      background: `${label.color}0d`,                    }}                  >                    {label.text}                  </span>                </motion.div>              </motion.div>            ))}            {/* Central Prism hub — magnetic organizing core */}            <div className="absolute inset-0 z-10 flex items-center justify-center pointer-events-none">              <motion.div                initial={{ opacity: 0, scale: 0.5 }}                whileInView={{ opacity: 1, scale: 1 }}                viewport={{ once: true }}                transition={{ duration: 0.9, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}                className="relative flex items-center justify-center"              >                {/* Expansive magnetic glow — reaches further to pull items in */}                <motion.div                  animate={{ scale: [1, 1.25, 1], opacity: [0.1, 0.04, 0.1] }}                  transition={{ duration: 4.5, ease: "easeInOut", repeat: Infinity }}                  className="absolute w-[340px] h-[340px] rounded-full"                  style={{                    background: "radial-gradient(circle, rgba(38,230,163,0.08), transparent 70%)",                    border: "1px solid rgba(38,230,163,0.06)",                  }}                />                {/* Pulse ring 1 — wider pull */}                <motion.div                  animate={{ scale: [1, 1.12, 1], opacity: [0.22, 0.06, 0.22] }}                  transition={{ duration: 3.8, ease: "easeInOut", repeat: Infinity }}                  className="absolute w-[240px] h-[240px] rounded-full border border-accent-2/20"                  style={{                    background: "radial-gradient(circle, rgba(38,230,163,0.06), transparent 65%)",                  }}                />                {/* Pulse ring 2 */}                <motion.div                  animate={{ scale: [1, 1.08, 1], opacity: [0.3, 0.08, 0.3] }}                  transition={{ duration: 2.8, ease: "easeInOut", repeat: Infinity, delay: 0.2 }}                  className="absolute w-[180px] h-[180px] rounded-full border border-accent/20"                  style={{                    background: "radial-gradient(circle, rgba(124,92,255,0.07), transparent 65%)",                  }}                />                {/* Core hub */}                <motion.div                  animate={{ y: [0, -5, 0] }}                  transition={{ duration: 4, ease: "easeInOut", repeat: Infinity }}                  className="relative w-[130px] h-[130px] rounded-[28px] border border-white/20 bg-gradient-to-br from-white/18 to-white/5 shadow-2xl backdrop-blur-xl flex flex-col items-center justify-center gap-1.5"                >                  {/* Traffic dots */}                  <div className="flex gap-1.5 absolute top-2.5 left-3">                    <span className="w-[7px] h-[7px] rounded-full bg-[#ff6b6b]" />                    <span className="w-[7px] h-[7px] rounded-full bg-[#ffd166]" />                    <span className="w-[7px] h-[7px] rounded-full bg-[#26e6a3]" />                  </div>                  {/* Prism diamond */}                  <div className="w-9 h-9 rounded-full bg-gradient-to-br from-accent-2 to-accent flex items-center justify-center shadow-[0_0_28px_rgba(38,230,163,0.5)]">                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#07101d" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">                      <polygon points="12 2 22 12 12 22 2 12 12 2" />                      <line x1="12" y1="2" x2="12" y2="22" />                      <line x1="2" y1="12" x2="22" y2="12" />                    </svg>                  </div>                  <span className="text-text text-[0.85rem] font-black tracking-tight">Prism</span>                  <div className="flex items-center gap-1.5">                    <span className="w-1.5 h-1.5 rounded-full bg-accent-2 shadow-[0_0_8px_rgba(38,230,163,0.7)] animate-pulse" />                    <span className="text-accent-2 text-[0.5rem] font-extrabold uppercase tracking-[0.14em]">                      Bringing it together                    </span>                  </div>                </motion.div>              </motion.div>            </div>            {/* Mobile items */}            <div className="sm:hidden mt-8 grid grid-cols-4 gap-2 relative z-30">              {scatteredItems.map((item) => (                <motion.div                  key={item.label}                  initial={{ opacity: 0, y: 12 }}                  whileInView={{ opacity: 1, y: 0 }}                  viewport={{ once: true }}                  transition={{ duration: 0.35, delay: item.delay }}                  className="flex items-center gap-1.5 px-2 py-2 rounded-xl border bg-white/6"                  style={{ borderColor: `${item.color}33` }}                >                  <div className="w-5 h-5 flex items-center justify-center shrink-0" style={{ color: item.color }}>                    {item.icon}                  </div>                  <span className="text-muted text-[0.6rem] font-extrabold leading-tight">{item.label}</span>                </motion.div>              ))}            </div>          </div>        </Reveal>        {/* Right: Copy */}        <Reveal direction="right" className="order-1 lg:order-2">          <div className="flex flex-col">            <p className="text-accent-2 text-[0.92rem] font-black tracking-[0.18em] uppercase mb-4">              Sound familiar?            </p>            <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[0.96] mb-6 max-w-[620px]">              Managing Money Gets Messy Fast            </h2>            <p className="text-muted text-[1.12rem] leading-relaxed max-w-[540px] mb-5">              A few accounts here, a couple of cards there, bills you almost              forgot, and a budget you made months ago. It does not take long              before your finances start feeling scattered.            </p>            <p className="text-text text-[1.12rem] leading-relaxed max-w-[540px] mb-9 font-bold">              Prism brings it all together so you can stop guessing and start              seeing your money clearly.            </p>            <ul className="flex flex-col gap-3.5">              {painPoints.map((point) => (                <li                  key={point}                  className="flex items-start gap-3.5 text-muted text-[1rem] leading-snug"                >                  <span className="mt-1.5 w-2 h-2 rounded-full bg-accent shrink-0 shadow-[0_0_14px_rgba(124,92,255,0.6)]" />                  {point}                </li>              ))}            </ul>          </div>        </Reveal>      </div>    </section>  );}
+import { motion } from "motion/react";
+import Reveal from "../animations/Reveal";
+
+function ScatteredCard({ x, y, angle, delay, label, title, detail, tone = "muted", className = "" }) {
+  const toneClasses = {
+    warning: "border-[#ff6b8a]/28 bg-[#ff6b8a]/10 text-[#ff9aaa]",
+    accent: "border-accent/28 bg-accent/10 text-accent",
+    cyan: "border-accent-3/28 bg-accent-3/10 text-accent-3",
+    muted: "border-white/12 bg-white/7 text-muted",
+  };
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20, rotate: angle }}
+      whileInView={{ opacity: 1, y: 0, rotate: angle }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6, delay, ease: [0.16, 1, 0.3, 1] }}
+      style={{ position: "absolute", left: x, top: y }}
+      className={`w-[210px] rounded-2xl border p-4 shadow-2xl backdrop-blur-md ${toneClasses[tone]} ${className}`}
+    >
+      <div className="mb-3 flex items-center justify-between gap-3">
+        <span className="text-[0.66rem] font-black uppercase tracking-[0.14em]">
+          {label}
+        </span>
+        <span className="h-2 w-2 rounded-full bg-current shadow-[0_0_18px_currentColor]" />
+      </div>
+      <p className="text-text text-[0.9rem] font-black leading-tight">{title}</p>
+      <p className="mt-1.5 text-[0.72rem] font-bold leading-snug text-muted">{detail}</p>
+    </motion.div>
+  );
+}
+
+function TangledLines() {
+  return (
+    <svg
+      className="absolute inset-0 h-full w-full opacity-55 max-sm:opacity-35"
+      viewBox="0 0 680 520"
+      fill="none"
+      aria-hidden="true"
+    >
+      <defs>
+        <linearGradient id="scatterLine" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stopColor="#ff6b8a" stopOpacity="0.65" />
+          <stop offset="48%" stopColor="#7c5cff" stopOpacity="0.45" />
+          <stop offset="100%" stopColor="#26e6a3" stopOpacity="0.55" />
+        </linearGradient>
+      </defs>
+      {[
+        "M70 92 C210 116 214 254 340 260 S492 164 612 112",
+        "M80 360 C190 304 240 412 338 268 S488 296 600 382",
+        "M74 246 C188 222 236 208 340 260 S482 226 608 246",
+        "M170 72 C236 176 248 224 340 260 S438 356 508 438",
+      ].map((d, i) => (
+        <motion.path
+          key={d}
+          d={d}
+          stroke="url(#scatterLine)"
+          strokeWidth={i === 2 ? 2.2 : 1.4}
+          strokeLinecap="round"
+          strokeDasharray={i % 2 ? "8 12" : "4 10"}
+          initial={{ pathLength: 0, opacity: 0 }}
+          whileInView={{ pathLength: 1, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1.1, delay: 0.2 + i * 0.08, ease: "easeOut" }}
+        />
+      ))}
+    </svg>
+  );
+}
+
+function UnclearSummary() {
+  return (
+    <motion.div
+      initial={{ opacity: 0, scale: 0.92 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.72, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
+      className="absolute left-1/2 top-1/2 z-10 w-[240px] -translate-x-1/2 -translate-y-1/2 rounded-[28px] border border-white/16 bg-[#07101d]/72 p-5 shadow-[0_24px_90px_rgba(0,0,0,0.42)] backdrop-blur-xl max-sm:w-[210px] max-sm:p-4"
+    >
+      <div className="mb-4 flex items-center justify-between">
+        <span className="text-[0.68rem] font-black uppercase tracking-[0.16em] text-muted">
+          financial picture
+        </span>
+        <span className="rounded-full border border-[#ff6b8a]/35 bg-[#ff6b8a]/12 px-2 py-1 text-[0.58rem] font-black uppercase tracking-[0.12em] text-[#ff9aaa]">
+          unclear
+        </span>
+      </div>
+      <strong className="block text-3xl font-black tracking-tight text-text blur-[1.4px] max-sm:text-2xl">
+        $ ??.??
+      </strong>
+      <div className="mt-5 space-y-2.5">
+        {[62, 86, 48].map((width, i) => (
+          <div key={width} className="h-2 rounded-full bg-white/9">
+            <motion.div
+              initial={{ width: 0 }}
+              whileInView={{ width: `${width}%` }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.58 + i * 0.08 }}
+              className="h-full rounded-full bg-gradient-to-r from-[#ff6b8a]/70 via-accent/60 to-accent-2/70 opacity-70 blur-[0.4px]"
+            />
+          </div>
+        ))}
+      </div>
+    </motion.div>
+  );
+}
+
+function StatusChip({ x, y, delay, children, className = "" }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 12 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.45, delay, ease: [0.16, 1, 0.3, 1] }}
+      style={{ position: "absolute", left: x, top: y }}
+      className={`z-20 rounded-full border border-white/14 bg-[#07101d]/78 px-3 py-2 text-[0.7rem] font-black text-muted shadow-2xl backdrop-blur-md ${className}`}
+    >
+      {children}
+    </motion.div>
+  );
+}
+
+export default function ProblemSection() {
+  return (
+    <section
+      id="problem"
+      className="px-5 sm:px-6 py-12 md:py-16 lg:py-[65px] mx-auto max-w-7xl scroll-mt-32"
+    >
+      <div className="grid grid-cols-1 lg:grid-cols-[0.72fr_1.28fr] gap-7 items-start">
+        <Reveal direction="left">
+          <div className="flex flex-col gap-5">
+            <p className="text-accent-2 text-[0.92rem] font-black tracking-[0.18em] uppercase mb-1">
+              Sound familiar?
+            </p>
+            <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[0.96] max-w-[760px]">
+              Managing Money Gets Messy Fast
+            </h2>
+            <p className="text-muted text-[1rem] leading-relaxed max-w-[540px]">
+              Money split across apps, cards, and spreadsheets. Most people only
+              see what's really happening after it's too late.
+            </p>
+          </div>
+        </Reveal>
+        <Reveal direction="right" className="order-2 lg:order-2">
+          <div className="relative min-h-[420px] overflow-hidden rounded-[38px] border border-white/12 bg-[radial-gradient(circle_at_50%_50%,rgba(255,107,138,0.10),transparent_30%),radial-gradient(circle_at_82%_18%,rgba(124,92,255,0.12),transparent_28%),radial-gradient(circle_at_14%_82%,rgba(38,230,163,0.08),transparent_28%),linear-gradient(180deg,rgba(255,255,255,0.045),rgba(255,255,255,0.012))] p-6 shadow-2xl backdrop-blur-md sm:min-h-[520px]">
+            <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.035)_1px,transparent_1px)] bg-[size:42px_42px] opacity-35" />
+            <TangledLines />
+            <ScatteredCard
+              x="3%"
+              y="5%"
+              angle={-7}
+              delay={0.1}
+              label="bank"
+              title="Balance alert"
+              detail="Checking fell below target"
+              tone="warning"
+            />
+            <ScatteredCard
+              x="58%"
+              y="8%"
+              angle={5}
+              delay={0.18}
+              label="spreadsheet"
+              title="Manual update"
+              detail="Last edited 19 days ago"
+              tone="accent"
+              className="max-sm:hidden"
+            />
+            <ScatteredCard
+              x="4%"
+              y="66%"
+              angle={4}
+              delay={0.26}
+              label="receipt"
+              title="Uncategorized"
+              detail="Dining, grocery, or transfer?"
+              tone="muted"
+              className="max-sm:top-[68%]"
+            />
+            <ScatteredCard
+              x="61%"
+              y="62%"
+              angle={-5}
+              delay={0.34}
+              label="budget"
+              title="Limit drifting"
+              detail="Subscriptions and bills overlap"
+              tone="cyan"
+              className="max-sm:hidden"
+            />
+            <UnclearSummary />
+            <StatusChip x="37%" y="11%" delay={0.46} className="max-sm:left-[46%] max-sm:top-[16%]">
+              Missing category
+            </StatusChip>
+            <StatusChip x="62%" y="45%" delay={0.54} className="max-sm:hidden">
+              Unmatched transfer
+            </StatusChip>
+            <StatusChip x="31%" y="83%" delay={0.62} className="max-sm:left-[42%] max-sm:top-[86%]">
+              Budget drift
+            </StatusChip>
+          </div>
+        </Reveal>
+      </div>
+    </section>
+  );
+}

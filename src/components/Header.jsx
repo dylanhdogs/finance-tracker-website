@@ -43,7 +43,7 @@ export default function Header() {
         <img
           src="/Prism_logo.png"
           alt="Prism"
-          className="w-12 h-12 rounded-xl object-cover"
+          className="w-14 h-14 rounded-xl object-cover"
         />
         <span>Prism</span>
       </a>
@@ -74,9 +74,9 @@ export default function Header() {
         )}
         <a
           href="download.html"
-          className="px-3.5 py-2.5 rounded-full text-[#07101d] text-[0.92rem] font-bold no-underline bg-text hover:bg-white/90 transition-colors duration-180"
+          className="px-3.5 py-2.5 rounded-full text-[#07101a] text-[0.92rem] font-bold no-underline bg-text hover:bg-white/90 transition-colors duration-180"
         >
-          Get the App
+          Get Prism
         </a>
       </nav>
 
@@ -112,7 +112,7 @@ export default function Header() {
               href="download.html"
               className="block text-center px-3.5 py-2.5 rounded-full text-[#07101d] text-[0.92rem] font-bold no-underline bg-text hover:bg-white/90 transition-colors duration-180 mt-1"
             >
-              Get the App
+              Get Prism
             </a>
           </motion.div>
         )}

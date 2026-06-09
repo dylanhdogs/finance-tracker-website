@@ -4,8 +4,8 @@ import Reveal from "../animations/Reveal";
 const steps = [
   {
     number: "01",
-    title: "Bring Everything In",
-    desc: "Import transactions, add accounts, and keep your money in one private desktop app.",
+    title: "Bring Your Money Into One Place",
+    desc: "Import transactions and connect your accounts once. From there, every activity is visible in one place without hopping between apps.",
     color: "accent-2",
     mini: (
       <svg width="100%" height="56" viewBox="0 0 200 56" fill="none" aria-hidden="true">
@@ -20,8 +20,8 @@ const steps = [
   },
   {
     number: "02",
-    title: "Organize What Happened",
-    desc: "Categorize spending, manage budgets, reconcile accounts, and track shared expenses.",
+    title: "See What Actually Happened",
+    desc: "Organize spending, reconcile activity, and understand each transaction in context. No more guessing whether you can spend in a category.",
     color: "accent",
     mini: (
       <svg width="100%" height="56" viewBox="0 0 200 56" fill="none" aria-hidden="true">
@@ -38,8 +38,8 @@ const steps = [
   },
   {
     number: "03",
-    title: "Stay in Control",
-    desc: "Review reports, settle balances, spot trends, and know what needs attention.",
+    title: "Make Better Financial Decisions",
+    desc: "Use reports, trends, and actual balances to decide with confidence. Know what you can spend, what needs attention, and where you're headed.",
     color: "accent-3",
     mini: (
       <svg width="100%" height="56" viewBox="0 0 200 56" fill="none" aria-hidden="true">
@@ -72,14 +72,14 @@ export default function HowSection() {
     >
       <Reveal direction="up">
         <p className="text-accent-2 text-[0.92rem] font-black tracking-[0.18em] uppercase mb-4">
-          How Prism works
+          From scattered to clear
         </p>
         <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[0.96] mb-5 max-w-[760px]">
-          From Scattered Money to Clear Decisions
+          Stop Guessing. Start Knowing.
         </h2>
         <p className="text-muted text-[1.12rem] leading-relaxed max-w-[620px]">
-          Prism keeps the process simple: bring your money in, organize what
-          happened, and stay in control.
+          A better system in three steps: bring your money in, see what actually
+          happened, and make decisions with confidence.
         </p>
       </Reveal>
 

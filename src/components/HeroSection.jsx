@@ -10,19 +10,19 @@ const bars = [
 ];
 const callouts = [
   {
-    label: "Reconciled 98%",
-    detail: "Statement matched",
+    label: "Balance verified",
+    detail: "All sources matched",
     className: "top-[11%] -right-2 sm:-right-7",
     delay: 0.5,
   },
   {
-    label: "Budget Alert",
-    detail: "Dining near limit",
+    label: "Dining near limit",
+    detail: "$38 remaining",
     className: "bottom-[18%] -left-2 sm:-left-8",
     delay: -1.4,
   },
   {
-    label: "Net Worth Updated",
+    label: "Net worth updated",
     detail: "+$2,410 this month",
     className: "bottom-[3%] right-[9%]",
     delay: -0.4,
@@ -55,9 +55,9 @@ export default function HeroSection() {
           {" "}
           <p className="text-muted text-[1rem] sm:text-[1.12rem] leading-relaxed max-w-[620px]">
             {" "}
-            Prism is personal finance software that helps you organize your
-            accounts, spending, budgets, shared expenses, imports, and reports
-            in one private desktop app. Your data stays on your machine.{" "}
+            Stop guessing. Get one calm private place to see your full financial
+            picture — without spreadsheets, cloud uploads, or constant
+            switching between accounts.{" "}
           </p>{" "}
         </Reveal>{" "}
         <Reveal direction="up" delay={0.36}>
@@ -69,7 +69,7 @@ export default function HeroSection() {
               className="w-full sm:w-auto relative inline-flex items-center justify-center min-h-[52px] px-6 rounded-full font-black text-[#03111a] bg-gradient-to-br from-accent-2 to-accent-3 shadow-[0_18px_50px_rgba(38,230,163,0.25)] transition-transform duration-180 hover:-translate-y-1 no-underline hover:shadow-[0_18px_70px_rgba(38,230,163,0.45)]"
             >
               {" "}
-              Get Prism for Desktop{" "}
+              Get Clarity{" "}
             </a>{" "}
             <a
               href="#how"
@@ -82,7 +82,7 @@ export default function HeroSection() {
               className="w-full sm:w-auto relative inline-flex items-center justify-center min-h-[52px] px-6 rounded-full font-black text-text border border-white/14 bg-white/6 transition-transform duration-180 hover:-translate-y-1 no-underline"
             >
               {" "}
-              See How It Works{" "}
+              See How It Helps{" "}
             </a>{" "}
           </div>{" "}
         </Reveal>{" "}
@@ -92,8 +92,8 @@ export default function HeroSection() {
             {" "}
             {[
               "100% Local & Offline",
+              "CSV & Excel Import",
               "Built for Personal Finance",
-              "Imports, Budgets & Reports",
             ].map((tag) => (
               <span
                 key={tag}
@@ -124,14 +124,14 @@ export default function HeroSection() {
               <span className="w-[11px] h-[11px] rounded-full bg-[#ffd166]" />{" "}
               <span className="w-[11px] h-[11px] rounded-full bg-[#26e6a3]" />{" "}
               <strong className="ml-2.5 text-muted text-[0.82rem]">
-                Prism
+                Your finances
               </strong>{" "}
             </div>{" "}
             <div className="grid grid-cols-[160px_1fr] min-h-[480px] max-md:grid-cols-1 max-md:min-h-[380px]">
               {" "}
               <aside className="p-5 border-r border-white/14 bg-black/15 max-md:hidden">
                 {" "}
-                <div className="w-[72px] h-[14px] mb-7 rounded-full bg-gradient-to-r from-accent to-accent-2" />{" "}
+                <div className="w-[72px] h-[14px] mb-7 rounded-full bg-gradient-to-r from-accent to-accent-2" />
                 {[
                   "Dashboard",
                   "Transactions",
@@ -185,7 +185,7 @@ export default function HeroSection() {
                     </article>
                   ))}{" "}
                 </div>{" "}
-                  <div className="relative h-[190px] max-md:h-[150px] p-5 max-md:p-4 border border-white/14 rounded-2xl bg-gradient-to-b from-white/10 to-white/3.5 overflow-hidden">
+                <div className="relative h-[190px] max-md:h-[150px] p-5 max-md:p-4 border border-white/14 rounded-2xl bg-gradient-to-b from-white/10 to-white/3.5 overflow-hidden">
                   {" "}
                   <div className="absolute inset-x-5 top-6 bottom-6 grid grid-rows-4 opacity-25">
                     {" "}
