@@ -4,7 +4,7 @@ import Reveal from "../animations/Reveal";
 /* Inline SVG icons */
 function BankIcon() {
   return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
       <path d="M3 21h18" />
       <path d="M5 21V7l8-4v18" />
       <path d="M19 21V11l-6-4" />
@@ -15,7 +15,7 @@ function BankIcon() {
 
 function CreditIcon() {
   return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
       <rect x="1" y="4" width="22" height="16" rx="2" />
       <line x1="1" y1="10" x2="23" y2="10" />
       <line x1="6" y1="15" x2="10" y2="15" />
@@ -25,7 +25,7 @@ function CreditIcon() {
 
 function BillsIcon() {
   return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
       <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
       <polyline points="14 2 14 8 20 8" />
       <line x1="8" y1="13" x2="16" y2="13" />
@@ -36,7 +36,7 @@ function BillsIcon() {
 
 function SpreadsheetIcon() {
   return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
       <rect x="3" y="3" width="18" height="18" rx="2" />
       <line x1="3" y1="9" x2="21" y2="9" />
       <line x1="3" y1="15" x2="21" y2="15" />
@@ -48,7 +48,7 @@ function SpreadsheetIcon() {
 
 function BudgetIcon() {
   return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
       <circle cx="12" cy="12" r="10" />
       <polyline points="12 6 12 12 16 14" />
     </svg>
@@ -57,7 +57,7 @@ function BudgetIcon() {
 
 function ReceiptIcon() {
   return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
       <path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1-2-1z" />
       <line x1="8" y1="8" x2="16" y2="8" />
       <line x1="8" y1="12" x2="14" y2="12" />
@@ -68,7 +68,7 @@ function ReceiptIcon() {
 
 function NotesIcon() {
   return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
       <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
       <polyline points="14 2 14 8 20 8" />
       <line x1="8" y1="13" x2="16" y2="13" />
@@ -78,14 +78,25 @@ function NotesIcon() {
   );
 }
 
+/* Flow trail arcs from each item toward center */
+const flowTrails = [
+  "M 30 60 Q 130 100, 240 210",
+  "M 560 40 Q 440 120, 330 210",
+  "M 20 210 Q 110 230, 230 240",
+  "M 570 190 Q 440 220, 330 240",
+  "M 260 20 Q 280 100, 280 210",
+  "M 40 480 Q 140 400, 250 260",
+  "M 560 500 Q 430 400, 320 260",
+];
+
 const scatteredItems = [
-  { label: "Bank Accounts", icon: <BankIcon />, color: "#ff6b8a", pos: "left-[2%] top-[2%]", rotate: -14, delay: 0, floatY: [0, -10, 0], floatDur: 4.2 },
-  { label: "Credit Cards", icon: <CreditIcon />, color: "#ff6b8a", pos: "right-[3%] top-[-1%]", rotate: 11, delay: 0.12, floatY: [0, -7, 0], floatDur: 3.6 },
-  { label: "Bills", icon: <BillsIcon />, color: "#ffc857", pos: "left-[-1%] top-[30%]", rotate: 7, delay: 0.24, floatY: [0, -9, 0], floatDur: 4.8 },
-  { label: "Receipts", icon: <ReceiptIcon />, color: "#ff9f6b", pos: "right-[1%] top-[28%]", rotate: -10, delay: 0.36, floatY: [0, -6, 0], floatDur: 3.9 },
-  { label: "Reminders", icon: <NotesIcon />, color: "#ffc857", pos: "left-[35%] top-[-3%]", rotate: 17, delay: 0.48, floatY: [0, -11, 0], floatDur: 3.3 },
-  { label: "Budgets", icon: <BudgetIcon />, color: "#26e6a3", pos: "left-[3%] bottom-[5%]", rotate: -5, delay: 0.6, floatY: [0, -8, 0], floatDur: 4.4 },
-  { label: "Spreadsheets", icon: <SpreadsheetIcon />, color: "#7c5cff", pos: "right-[2%] bottom-[2%]", rotate: 8, delay: 0.72, floatY: [0, -5, 0], floatDur: 5.0 },
+  { label: "Bank Accounts", icon: <BankIcon />, color: "#ff6b8a", pos: "left-[0%] top-[2%]", rotate: -18, delay: 0, floatY: [0, -12, 0], floatDur: 4.2, trail: flowTrails[0] },
+  { label: "Credit Cards", icon: <CreditIcon />, color: "#ff6b8a", pos: "right-[1%] top-[-2%]", rotate: 14, delay: 0.12, floatY: [0, -8, 0], floatDur: 3.6, trail: flowTrails[1] },
+  { label: "Bills", icon: <BillsIcon />, color: "#ffc857", pos: "left-[-2%] top-[34%]", rotate: 9, delay: 0.24, floatY: [0, -10, 0], floatDur: 4.8, trail: flowTrails[2] },
+  { label: "Receipts", icon: <ReceiptIcon />, color: "#ff9f6b", pos: "right-[0%] top-[30%]", rotate: -13, delay: 0.36, floatY: [0, -7, 0], floatDur: 3.9, trail: flowTrails[3] },
+  { label: "Reminders", icon: <NotesIcon />, color: "#ffc857", pos: "left-[30%] top-[-4%]", rotate: 22, delay: 0.48, floatY: [0, -14, 0], floatDur: 3.3, trail: flowTrails[4] },
+  { label: "Budgets", icon: <BudgetIcon />, color: "#26e6a3", pos: "left-[1%] bottom-[3%]", rotate: -6, delay: 0.6, floatY: [0, -9, 0], floatDur: 4.4, trail: flowTrails[5] },
+  { label: "Spreadsheets", icon: <SpreadsheetIcon />, color: "#7c5cff", pos: "right-[1%] bottom-[0%]", rotate: 10, delay: 0.72, floatY: [0, -6, 0], floatDur: 5.0, trail: flowTrails[6] },
 ];
 
 const painPoints = [
@@ -105,15 +116,15 @@ export default function ProblemSection() {
         <Reveal direction="left">
           <div className="flex flex-col">
             <p className="text-accent-2 text-[0.92rem] font-black tracking-[0.18em] uppercase mb-4">
-              Feel like this?
+              Sound familiar?
             </p>
             <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[0.96] mb-6 max-w-[620px]">
               Managing Money Gets Messy Fast
             </h2>
-            <p className="text-muted text-[1.12rem] leading-relaxed max-w-[540px] mb-8">
+            <p className="text-muted text-[1.12rem] leading-relaxed max-w-[540px] mb-5">
               A few accounts here, a couple of cards there, bills you almost
-              forgot, a budget you made in January… It does not take long before
-              you are guessing instead of knowing.
+              forgot, and a budget you made months ago. It does not take long
+              before your finances start feeling scattered.
             </p>
             <p className="text-text text-[1.12rem] leading-relaxed max-w-[540px] mb-9 font-bold">
               Prism brings it all together so you can stop guessing and start
@@ -135,34 +146,77 @@ export default function ProblemSection() {
 
         {/* Right: Visual */}
         <Reveal direction="right" delay={0.15}>
-          <div className="relative perspective-[1200px] min-h-[580px]">
-            {/* Atmosphere: warm edges → cool center */}
-            <div className="absolute inset-0 rounded-[38px] bg-[radial-gradient(circle_at_50%_50%,rgba(38,230,163,0.15),transparent_30%),radial-gradient(circle_at_20%_20%,rgba(255,107,138,0.12),transparent_32%),radial-gradient(circle_at_85%_15%,rgba(255,200,87,0.08),transparent_30%),radial-gradient(circle_at_15%_80%,rgba(255,159,107,0.08),transparent_30%),radial-gradient(circle_at_80%_80%,rgba(124,92,255,0.10),transparent_30%)] blur-2xl" />
+          <div className="relative perspective-[1200px] min-h-[580px] overflow-hidden">
+            {/* Warm-chaos → cool-order atmosphere */}
+            <div className="absolute inset-0 rounded-[38px] bg-[radial-gradient(circle_at_50%_50%,rgba(38,230,163,0.18),transparent_28%),radial-gradient(circle_at_18%_18%,rgba(255,107,138,0.16),transparent_30%),radial-gradient(circle_at_82%_12%,rgba(255,200,87,0.10),transparent_28%),radial-gradient(circle_at_12%_78%,rgba(255,159,107,0.10),transparent_28%),radial-gradient(circle_at_78%_82%,rgba(124,92,255,0.12),transparent_30%)] blur-2xl" />
+
+            {/* Flow trails — animated arcs from items toward center */}
+            <svg
+              className="absolute inset-0 w-full h-full z-10 pointer-events-none max-lg:hidden"
+              viewBox="0 0 600 560"
+              fill="none"
+              aria-hidden="true"
+            >
+              <defs>
+                <linearGradient id="trailGrad" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stopColor="#ff6b8a" stopOpacity="0.05" />
+                  <stop offset="40%" stopColor="#7c5cff" stopOpacity="0.12" />
+                  <stop offset="100%" stopColor="#26e6a3" stopOpacity="0.25" />
+                </linearGradient>
+                <filter id="trailGlow">
+                  <feGaussianBlur stdDeviation="2.5" result="blur" />
+                  <feMerge>
+                    <feMergeNode in="blur" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+              </defs>
+              {scatteredItems.map((item, i) => (
+                <motion.path
+                  key={item.label}
+                  d={item.trail}
+                  stroke="url(#trailGrad)"
+                  strokeWidth="1.8"
+                  strokeLinecap="round"
+                  filter="url(#trailGlow)"
+                  initial={{ pathLength: 0, opacity: 0 }}
+                  whileInView={{ pathLength: 1, opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1.2, delay: 0.3 + i * 0.1, ease: [0.16, 1, 0.3, 1] }}
+                />
+              ))}
+            </svg>
 
             {/* Scattered items — chaotic perimeter */}
             {scatteredItems.map((item) => (
               <motion.div
                 key={item.label}
-                initial={{ opacity: 0, scale: 0.5 }}
+                initial={{ opacity: 0, scale: 0.4 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.7, delay: item.delay, ease: [0.16, 1, 0.3, 1] }}
                 className={`absolute ${item.pos} z-20 hidden sm:block`}
-                style={{ rotate: `${item.rotate}deg` }}
               >
                 <motion.div
-                  animate={{ y: item.floatY }}
-                  transition={{ duration: item.floatDur, ease: "easeInOut", repeat: Infinity }}
+                  animate={{
+                    y: item.floatY,
+                    rotate: [0, item.rotate > 0 ? 3 : -3, 0],
+                  }}
+                  transition={{
+                    y: { duration: item.floatDur, ease: "easeInOut", repeat: Infinity },
+                    rotate: { duration: item.floatDur * 1.4, ease: "easeInOut", repeat: Infinity },
+                  }}
                   className="flex items-center gap-2.5 px-3.5 py-3 rounded-2xl border shadow-2xl backdrop-blur-lg cursor-default select-none"
                   style={{
                     borderColor: `${item.color}44`,
                     background: `linear-gradient(135deg, ${item.color}15, #07101dee)`,
+                    rotate: `${item.rotate}deg`,
                   }}
                   whileHover={{
-                    scale: 1.1,
+                    scale: 1.12,
                     rotate: 0,
                     borderColor: item.color,
-                    boxShadow: `0 0 30px ${item.color}44, 0 8px 40px rgba(0,0,0,0.4)`,
+                    boxShadow: `0 0 35px ${item.color}55, 0 8px 40px rgba(0,0,0,0.4)`,
                     transition: { duration: 0.3, ease: [0.16, 1, 0.3, 1] },
                   }}
                 >
@@ -182,61 +236,67 @@ export default function ProblemSection() {
               </motion.div>
             ))}
 
-            {/* Central Prism hub — the organizing force */}
+            {/* Central Prism hub — magnetic organizing core */}
             <div className="absolute inset-0 z-10 flex items-center justify-center pointer-events-none">
-              {/* Glow rings */}
               <motion.div
-                initial={{ opacity: 0, scale: 0.6 }}
+                initial={{ opacity: 0, scale: 0.5 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                transition={{ duration: 0.9, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
                 className="relative flex items-center justify-center"
               >
-                {/* Outer pulse ring */}
+                {/* Expansive magnetic glow */}
                 <motion.div
-                  animate={{ scale: [1, 1.12, 1], opacity: [0.15, 0.08, 0.15] }}
-                  transition={{ duration: 3.5, ease: "easeInOut", repeat: Infinity }}
-                  className="absolute w-[240px] h-[240px] rounded-full border border-accent-2/20"
-                  style={{
-                    background: "radial-gradient(circle, rgba(38,230,163,0.06), transparent 70%)",
-                  }}
-                />
-                {/* Middle ring */}
-                <motion.div
-                  animate={{ scale: [1, 1.06, 1], opacity: [0.2, 0.1, 0.2] }}
-                  transition={{ duration: 2.8, ease: "easeInOut", repeat: Infinity, delay: 0.3 }}
-                  className="absolute w-[180px] h-[180px] rounded-full border border-accent/20"
-                  style={{
-                    background: "radial-gradient(circle, rgba(124,92,255,0.08), transparent 70%)",
-                  }}
-                />
-                {/* Core card */}
-                <motion.div
-                  animate={{ y: [0, -6, 0] }}
+                  animate={{ scale: [1, 1.15, 1], opacity: [0.08, 0.04, 0.08] }}
                   transition={{ duration: 4, ease: "easeInOut", repeat: Infinity }}
-                  className="relative w-[140px] h-[140px] rounded-[32px] border border-white/20 bg-gradient-to-br from-white/18 to-white/5 shadow-2xl backdrop-blur-xl flex flex-col items-center justify-center gap-2"
+                  className="absolute w-[300px] h-[300px] rounded-full"
+                  style={{
+                    background: "radial-gradient(circle, rgba(38,230,163,0.08), transparent 70%)",
+                    border: "1px solid rgba(38,230,163,0.06)",
+                  }}
+                />
+                {/* Pulse ring 1 */}
+                <motion.div
+                  animate={{ scale: [1, 1.1, 1], opacity: [0.2, 0.06, 0.2] }}
+                  transition={{ duration: 3.2, ease: "easeInOut", repeat: Infinity }}
+                  className="absolute w-[200px] h-[200px] rounded-full border border-accent-2/20"
+                  style={{
+                    background: "radial-gradient(circle, rgba(38,230,163,0.05), transparent 65%)",
+                  }}
+                />
+                {/* Pulse ring 2 */}
+                <motion.div
+                  animate={{ scale: [1, 1.07, 1], opacity: [0.25, 0.08, 0.25] }}
+                  transition={{ duration: 2.6, ease: "easeInOut", repeat: Infinity, delay: 0.2 }}
+                  className="absolute w-[150px] h-[150px] rounded-full border border-accent/20"
+                  style={{
+                    background: "radial-gradient(circle, rgba(124,92,255,0.06), transparent 65%)",
+                  }}
+                />
+                {/* Core hub */}
+                <motion.div
+                  animate={{ y: [0, -5, 0] }}
+                  transition={{ duration: 4, ease: "easeInOut", repeat: Infinity }}
+                  className="relative w-[130px] h-[130px] rounded-[28px] border border-white/20 bg-gradient-to-br from-white/18 to-white/5 shadow-2xl backdrop-blur-xl flex flex-col items-center justify-center gap-1.5"
                 >
                   {/* Traffic dots */}
-                  <div className="flex gap-1.5 absolute top-3 left-3">
-                    <span className="w-2 h-2 rounded-full bg-[#ff6b6b]" />
-                    <span className="w-2 h-2 rounded-full bg-[#ffd166]" />
-                    <span className="w-2 h-2 rounded-full bg-[#26e6a3]" />
+                  <div className="flex gap-1.5 absolute top-2.5 left-3">
+                    <span className="w-[7px] h-[7px] rounded-full bg-[#ff6b6b]" />
+                    <span className="w-[7px] h-[7px] rounded-full bg-[#ffd166]" />
+                    <span className="w-[7px] h-[7px] rounded-full bg-[#26e6a3]" />
                   </div>
-                  {/* Prism branding */}
-                  <div className="flex flex-col items-center gap-1">
-                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-accent-2 to-accent flex items-center justify-center shadow-[0_0_20px_rgba(38,230,163,0.35)]">
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#07101d" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                        <polygon points="12 2 22 12 12 22 2 12 12 2" />
-                        <line x1="12" y1="2" x2="12" y2="22" />
-                        <line x1="2" y1="12" x2="22" y2="12" />
-                      </svg>
-                    </div>
-                    <span className="text-text text-[0.85rem] font-black tracking-tight">Prism</span>
+                  {/* Prism diamond */}
+                  <div className="w-9 h-9 rounded-full bg-gradient-to-br from-accent-2 to-accent flex items-center justify-center shadow-[0_0_24px_rgba(38,230,163,0.4)]">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#07101d" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                      <polygon points="12 2 22 12 12 22 2 12 12 2" />
+                      <line x1="12" y1="2" x2="12" y2="22" />
+                      <line x1="2" y1="12" x2="22" y2="12" />
+                    </svg>
                   </div>
-                  {/* Organized indicator */}
-                  <div className="flex items-center gap-1.5 mt-1">
-                    <span className="w-1.5 h-1.5 rounded-full bg-accent-2 shadow-[0_0_8px_rgba(38,230,163,0.7)]" />
-                    <span className="text-accent-2 text-[0.55rem] font-extrabold uppercase tracking-[0.12em]">
+                  <span className="text-text text-[0.85rem] font-black tracking-tight">Prism</span>
+                  <div className="flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-accent-2 shadow-[0_0_8px_rgba(38,230,163,0.7)] animate-pulse" />
+                    <span className="text-accent-2 text-[0.5rem] font-extrabold uppercase tracking-[0.14em]">
                       All organized
                     </span>
                   </div>
