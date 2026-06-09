@@ -16,6 +16,8 @@ import FaqSection from "./components/sections/FaqSection";
 export default function App() {
   return (
     <>
+      <div className="wallpaper-glow" aria-hidden="true" />
+      <div className="wallpaper-grid" aria-hidden="true" />
       <div className="noise" aria-hidden="true" />
       <Header />
       <main>
