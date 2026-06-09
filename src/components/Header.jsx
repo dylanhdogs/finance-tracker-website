@@ -32,8 +32,8 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-[18px] left-1/2 z-30 flex w-[calc(100%-32px)] max-w-[1440px] items-center justify-between px-[14px] py-3 rounded-full border border-white/14 bg-[#07101d]/70 shadow-2xl backdrop-blur-lg -translate-x-1/2 transition-all duration-180 ${
-        scrolled ? "border-white/22 bg-[#07101d]/88" : ""
+      className={`fixed top-0 left-1/2 z-30 flex w-[calc(100%-32px)] max-w-[1440px] items-center justify-between px-[14px] py-3 rounded-b-2xl border-x border-b border-white/14 bg-[#07101d]/90 shadow-2xl backdrop-blur-xl -translate-x-1/2 transition-all duration-180 ${
+        scrolled ? "border-white/22 bg-[#07101d]/95" : ""
       }`}
     >
       <a
