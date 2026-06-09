@@ -71,12 +71,12 @@ function ReceiptIcon() {
 }
 
 const scatteredItems = [
-  { label: "Bank Accounts", icon: <BankIcon />, color: "#5dd8ff", pos: "top-[4%] left-[0%]", delay: 0 },
-  { label: "Credit Cards", icon: <CreditIcon />, color: "#ff6b8a", pos: "top-[0%] right-[6%]", delay: 0.15 },
-  { label: "Bills", icon: <BillsIcon />, color: "#ffc857", pos: "bottom-[26%] left-[-2%]", delay: 0.3 },
-  { label: "Spreadsheets", icon: <SpreadsheetIcon />, color: "#7c5cff", pos: "bottom-[0%] right-[2%]", delay: 0.45 },
-  { label: "Budgets", icon: <BudgetIcon />, color: "#26e6a3", pos: "bottom-[0%] left-[4%]", delay: 0.6 },
-  { label: "Receipts", icon: <ReceiptIcon />, color: "#ff9f6b", pos: "top-[32%] -right-[3%]", delay: 0.75 },
+  { label: "Bank Accounts", icon: <BankIcon />, color: "#5dd8ff", pos: "left-[2%] top-[6%]", delay: 0, path: "M 12 34 C 100 60, 180 140, 290 260" },
+  { label: "Credit Cards", icon: <CreditIcon />, color: "#ff6b8a", pos: "right-[2%] top-[2%]", delay: 0.15, path: "M 588 11 C 500 40, 400 140, 290 260" },
+  { label: "Bills", icon: <BillsIcon />, color: "#ffc857", pos: "left-[0%] top-[36%]", delay: 0.3, path: "M 0 202 C 90 210, 180 240, 290 260" },
+  { label: "Spreadsheets", icon: <SpreadsheetIcon />, color: "#7c5cff", pos: "right-[2%] bottom-[3%]", delay: 0.45, path: "M 588 543 C 500 460, 400 360, 290 260" },
+  { label: "Budgets", icon: <BudgetIcon />, color: "#26e6a3", pos: "left-[3%] bottom-[6%]", delay: 0.6, path: "M 18 526 C 100 460, 180 360, 290 260" },
+  { label: "Receipts", icon: <ReceiptIcon />, color: "#ff9f6b", pos: "right-[1%] top-[34%]", delay: 0.75, path: "M 594 190 C 510 210, 410 240, 290 260" },
 ];
 
 const painPoints = [
@@ -175,7 +175,7 @@ export default function ProblemSection() {
             {scatteredItems.map((item) => (
               <motion.div
                 key={item.label}
-                initial={{ opacity: 0, scale: 0.7, x: 0, y: 0 }}
+                initial={{ opacity: 0, scale: 0.7 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: item.delay, ease: [0.16, 1, 0.3, 1] }}
@@ -183,7 +183,6 @@ export default function ProblemSection() {
                 style={{
                   borderColor: `${item.color}33`,
                   background: `linear-gradient(135deg, ${item.color}12, #07101dcc)`,
-                  animation: `float 4.5s ${item.delay}s ease-in-out infinite`,
                 }}
               >
                 <div
@@ -219,17 +218,10 @@ export default function ProblemSection() {
                   </feMerge>
                 </filter>
               </defs>
-              {[
-                "M 20 120 C 120 130, 160 190, 250 230",
-                "M 580 80 C 480 140, 420 180, 340 230",
-                "M 10 340 C 110 320, 180 280, 250 260",
-                "M 580 500 C 450 430, 390 340, 330 280",
-                "M 20 510 C 130 430, 200 340, 260 280",
-                "M 590 220 C 480 240, 410 250, 340 255",
-              ].map((path, i) => (
+              {scatteredItems.map((item, i) => (
                 <motion.path
-                  key={i}
-                  d={path}
+                  key={item.label}
+                  d={item.path}
                   stroke="url(#connectorIn)"
                   strokeWidth="2"
                   filter="url(#connectorGlow)"
