@@ -114,7 +114,7 @@ export default function ProblemSection() {
       <div className="grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-12 lg:gap-16 items-center">
         {/* Left: Visual */}
         <Reveal direction="left" delay={0.15}>
-          <div className="relative perspective-[1200px] min-h-[580px] overflow-hidden">
+          <div className="relative perspective-[1200px] min-h-[580px] overflow-hidden rounded-[38px]">
             {/* Warm-chaos → cool-order atmosphere */}
             <div className="absolute inset-0 rounded-[38px] bg-[radial-gradient(circle_at_50%_50%,rgba(38,230,163,0.18),transparent_28%),radial-gradient(circle_at_18%_18%,rgba(255,107,138,0.16),transparent_30%),radial-gradient(circle_at_82%_12%,rgba(255,200,87,0.10),transparent_28%),radial-gradient(circle_at_12%_78%,rgba(255,159,107,0.10),transparent_28%),radial-gradient(circle_at_78%_82%,rgba(124,92,255,0.12),transparent_30%)] blur-2xl" />
 
