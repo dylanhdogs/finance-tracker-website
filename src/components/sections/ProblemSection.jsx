@@ -80,11 +80,9 @@ const scatteredItems = [
 ];
 
 const painPoints = [
-  "Your spending is hard to track",
-  "Your budgets are easy to lose sight of",
-  "Your accounts do not always match",
-  "Your reports take too much time to build",
-  "Your financial picture feels scattered",
+  "Not knowing if a transaction cleared",
+  "Losing track of a budget halfway through the month",
+  "Feeling like your money is everywhere and nowhere",
 ];
 
 /* Mini doughnut chart SVG */
@@ -139,15 +137,15 @@ export default function ProblemSection() {
         <Reveal direction="left">
           <div className="flex flex-col">
             <p className="text-accent-2 text-[0.92rem] font-black tracking-[0.18em] uppercase mb-4">
-              The problem
+              Feel like this?
             </p>
             <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[0.96] mb-6 max-w-[620px]">
               Managing Money Gets Messy Fast
             </h2>
             <p className="text-muted text-[1.12rem] leading-relaxed max-w-[540px] mb-8">
-              Your money moves through different accounts, cards, bills, budgets,
-              and spreadsheets. Before long, it becomes hard to see what came in,
-              what went out, and what needs attention.
+              A few accounts here, a couple of cards there, bills you almost
+              forgot, a budget you made in January… It does not take long before
+              you are guessing instead of knowing.
             </p>
             <p className="text-text text-[1.12rem] leading-relaxed max-w-[540px] mb-9 font-bold">
               Prism brings it all together so you can stop guessing and start
