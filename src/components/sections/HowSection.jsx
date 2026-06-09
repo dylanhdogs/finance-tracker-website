@@ -93,7 +93,7 @@ export default function HowSection() {
       </Reveal>
 
       {/* Carousel */}
-      <div className="relative mt-14 max-w-[600px] mx-auto">
+      <div className="relative mt-14 mx-auto">
         <div className="overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 shadow-xl backdrop-blur-md">
           <AnimatePresence mode="wait" custom={dir}>
             <motion.div
@@ -104,7 +104,7 @@ export default function HowSection() {
               animate="center"
               exit="exit"
               transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-              className="p-7 sm:p-9"
+              className="p-8 sm:p-12 lg:p-14"
             >
               <div className="flex items-center gap-3 mb-5">
                 <span
