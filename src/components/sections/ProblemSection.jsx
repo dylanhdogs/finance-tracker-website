@@ -112,40 +112,8 @@ export default function ProblemSection() {
       className="px-5 sm:px-6 py-24 md:py-32 lg:py-40 mx-auto max-w-7xl scroll-mt-32"
     >
       <div className="grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-12 lg:gap-16 items-center">
-        {/* Left: Copy */}
-        <Reveal direction="left">
-          <div className="flex flex-col">
-            <p className="text-accent-2 text-[0.92rem] font-black tracking-[0.18em] uppercase mb-4">
-              Sound familiar?
-            </p>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[0.96] mb-6 max-w-[620px]">
-              Managing Money Gets Messy Fast
-            </h2>
-            <p className="text-muted text-[1.12rem] leading-relaxed max-w-[540px] mb-5">
-              A few accounts here, a couple of cards there, bills you almost
-              forgot, and a budget you made months ago. It does not take long
-              before your finances start feeling scattered.
-            </p>
-            <p className="text-text text-[1.12rem] leading-relaxed max-w-[540px] mb-9 font-bold">
-              Prism brings it all together so you can stop guessing and start
-              seeing your money clearly.
-            </p>
-            <ul className="flex flex-col gap-3.5">
-              {painPoints.map((point) => (
-                <li
-                  key={point}
-                  className="flex items-start gap-3.5 text-muted text-[1rem] leading-snug"
-                >
-                  <span className="mt-1.5 w-2 h-2 rounded-full bg-accent shrink-0 shadow-[0_0_14px_rgba(124,92,255,0.6)]" />
-                  {point}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </Reveal>
-
-        {/* Right: Visual */}
-        <Reveal direction="right" delay={0.15}>
+        {/* Left: Visual */}
+        <Reveal direction="left" delay={0.15}>
           <div className="relative perspective-[1200px] min-h-[580px] overflow-hidden">
             {/* Warm-chaos → cool-order atmosphere */}
             <div className="absolute inset-0 rounded-[38px] bg-[radial-gradient(circle_at_50%_50%,rgba(38,230,163,0.18),transparent_28%),radial-gradient(circle_at_18%_18%,rgba(255,107,138,0.16),transparent_30%),radial-gradient(circle_at_82%_12%,rgba(255,200,87,0.10),transparent_28%),radial-gradient(circle_at_12%_78%,rgba(255,159,107,0.10),transparent_28%),radial-gradient(circle_at_78%_82%,rgba(124,92,255,0.12),transparent_30%)] blur-2xl" />
@@ -323,6 +291,37 @@ export default function ProblemSection() {
                 </motion.div>
               ))}
             </div>
+          </div>
+        </Reveal>
+        {/* Right: Copy */}
+        <Reveal direction="right">
+          <div className="flex flex-col">
+            <p className="text-accent-2 text-[0.92rem] font-black tracking-[0.18em] uppercase mb-4">
+              Sound familiar?
+            </p>
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[0.96] mb-6 max-w-[620px]">
+              Managing Money Gets Messy Fast
+            </h2>
+            <p className="text-muted text-[1.12rem] leading-relaxed max-w-[540px] mb-5">
+              A few accounts here, a couple of cards there, bills you almost
+              forgot, and a budget you made months ago. It does not take long
+              before your finances start feeling scattered.
+            </p>
+            <p className="text-text text-[1.12rem] leading-relaxed max-w-[540px] mb-9 font-bold">
+              Prism brings it all together so you can stop guessing and start
+              seeing your money clearly.
+            </p>
+            <ul className="flex flex-col gap-3.5">
+              {painPoints.map((point) => (
+                <li
+                  key={point}
+                  className="flex items-start gap-3.5 text-muted text-[1rem] leading-snug"
+                >
+                  <span className="mt-1.5 w-2 h-2 rounded-full bg-accent shrink-0 shadow-[0_0_14px_rgba(124,92,255,0.6)]" />
+                  {point}
+                </li>
+              ))}
+            </ul>
           </div>
         </Reveal>
       </div>
