@@ -4,9 +4,9 @@
   "type": "module",
   "scripts": {
     "dev": "node -e \"require('fs').copyFileSync('index.source.html','index.html')\" && vite",
-    "build": "node -e \"require('fs').copyFileSync('index.source.html','index.html')\" && vite build",
+    "build": "node -e \"require('fs').copyFileSync('index.source.html','index.html')\" && vite build && node scripts/copy-static-pages.mjs",
     "preview": "vite preview",
-    "deploy": "node -e \"require('fs').copyFileSync('index.source.html','index.html')\" && vite build && node -e \"var f=require('fs');f.copyFileSync('dist/index.html','index.html');f.cpSync('dist/assets','assets',{recursive:true});f.rmSync('dist',{recursive:true,force:true});\""
+    "deploy": "node -e \"require('fs').copyFileSync('index.source.html','index.html')\" && vite build && node scripts/copy-static-pages.mjs && node -e \"var f=require('fs');f.copyFileSync('dist/index.html','index.html');f.cpSync('dist/assets','assets',{recursive:true});f.rmSync('dist',{recursive:true,force:true});\""
   },
   "dependencies": {
     "motion": "^12.10.5",

@@ -63,14 +63,14 @@ export default function HeroSection() {
           <div className="flex flex-col sm:flex-row gap-3.5 mt-8 mb-7">
             {" "}
             <a
-              href="download.html"
+              href="/download.html"
               className="w-full sm:w-auto relative inline-flex items-center justify-center min-h-[52px] px-6 rounded-full font-black text-[#03111a] bg-gradient-to-br from-accent-2 to-accent-3 shadow-[0_18px_50px_rgba(38,230,163,0.25)] transition-transform duration-180 hover:-translate-y-1 no-underline hover:shadow-[0_18px_70px_rgba(38,230,163,0.45)]"
             >
               {" "}
                Get Prism Desktop{" "}
             </a>{" "}
             <a
-              href="download.html"
+              href="/download.html"
               className="w-full sm:w-auto relative inline-flex items-center justify-center min-h-[52px] px-6 rounded-full font-black text-text border border-white/14 bg-white/6 transition-transform duration-180 hover:-translate-y-1 no-underline"
             >
               {" "}

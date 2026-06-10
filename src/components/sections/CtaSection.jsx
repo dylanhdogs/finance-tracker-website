@@ -28,7 +28,7 @@ export default function CtaSection() {
           <strong className="block my-2 text-[3.4rem] sm:text-[4.4rem] font-black tracking-tight leading-none">$19.99</strong>
           <p className="text-muted mb-4">Per month · Cancel anytime</p>
           <motion.a
-            href="download.html"
+            href="/download.html"
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.97 }}
             className="block w-full relative inline-flex items-center justify-center min-h-[52px] px-6 rounded-full font-black text-[#03111a] bg-gradient-to-br from-accent-2 to-accent-3 shadow-[0_18px_50px_rgba(38,230,163,0.25)] transition-transform duration-180 no-underline hover:shadow-[0_18px_70px_rgba(38,230,163,0.45)]"
