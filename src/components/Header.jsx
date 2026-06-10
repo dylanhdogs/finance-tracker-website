@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import prismLogo from "../../Prism_logo.png";
+import prismLogo from "../../prism_logo_high_quality.png";
 
 const navLinks = [
   { href: "#how", label: "How It Works" },
