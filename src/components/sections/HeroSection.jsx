@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import Reveal from "../animations/Reveal";
 import heroGraphic from "../../../hero_laptop_graphic.png";
+import heroLighting from "../../../hero_lighting_effect.png";
 
 export default function HeroSection() {
   return (
@@ -8,15 +9,7 @@ export default function HeroSection() {
       id="top"
       className="relative grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-4 lg:gap-4 items-center px-5 sm:px-6 mx-auto max-w-[1440px] pt-[100px] sm:pt-[110px] pb-0 sm:pb-0 scroll-mt-0 overflow-visible"
     >
-      <div className="absolute bottom-0 left-0 right-0 h-[300px] pointer-events-none" aria-hidden="true" style={{
-        background: `
-          radial-gradient(100% 100% at 0% 100%, rgba(255,45,149,0.20) 0%, transparent 70%),
-          radial-gradient(100% 100% at 100% 100%, rgba(124,58,237,0.20) 0%, transparent 70%),
-          radial-gradient(100% 100% at 50% 100%, rgba(167,139,250,0.08) 0%, transparent 60%)
-        `,
-        filter: "blur(40px)",
-        transform: "scaleY(1.5) translateY(10%)"
-      }} />
+      <img src={heroLighting} alt="" aria-hidden="true" className="absolute left-1/2 -translate-x-1/2 w-screen h-[135%] -top-[10%] object-cover pointer-events-none select-none opacity-45" />
       {" "}
       <div className="flex flex-col">
         {" "}

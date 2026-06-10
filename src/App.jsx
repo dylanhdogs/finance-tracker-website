@@ -16,14 +16,6 @@ import CtaSection from "./components/sections/CtaSection";
 export default function App() {
   return (
     <>
-      <div className="wallpaper-glow" aria-hidden="true" />
-      <div className="wallpaper-orb wallpaper-orb--1" aria-hidden="true" />
-      <div className="wallpaper-orb wallpaper-orb--2" aria-hidden="true" />
-      <div className="wallpaper-orb wallpaper-orb--3" aria-hidden="true" />
-      <div className="wallpaper-grid" aria-hidden="true" />
-      <div className="noise" aria-hidden="true" />
-      <div className="bg-glow bg-glow--bl" aria-hidden="true" />
-      <div className="bg-glow bg-glow--tr" aria-hidden="true" />
       <Header />
       <main>
         <HeroSection />
