@@ -1,5 +1,7 @@
-import { motion } from "motion/react";
+import { useState } from "react";
+import { motion, AnimatePresence } from "motion/react";
 import Reveal from "../animations/Reveal";
+import personalFinanceGraphic from "../../../Bank_Transactions_Preview.png";
 
 const summaryCards = [
   { label: "Net Worth", value: "$84,210", change: "+$2,340", color: "accent-2" },
@@ -36,64 +38,22 @@ function CheckIcon() {
 }
 
 export default function SolutionSection() {
+  const [previewOpen, setPreviewOpen] = useState(false);
+
   return (
     <section id="solution" className="px-5 sm:px-6 py-12 md:py-16 lg:py-[65px] mx-auto max-w-[1440px] scroll-mt-32">
       <div className="flex flex-col gap-12 lg:grid lg:grid-cols-[1.08fr_0.92fr] lg:gap-16 items-stretch lg:items-center">
         <Reveal direction="left" delay={0.15} className="order-2 lg:order-1">
-          <div className="relative min-h-[520px] overflow-hidden rounded-[38px] border border-white/[0.06] bg-white/[0.02] backdrop-blur-xl shadow-[0_0_60px_rgba(0,0,0,0.3)]">
-            <div className="grid grid-cols-1 gap-2.5 p-4 sm:grid-cols-3 sm:gap-3 sm:p-5">
-              {summaryCards.map((card, i) => (
-                <motion.div key={card.label} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.2 + i * 0.08, ease: [0.16, 1, 0.3, 1] }} className="rounded-2xl border border-white/[0.06] bg-white/[0.03] p-3 shadow-xl backdrop-blur-md sm:p-4">
-                  <p className="text-muted text-[0.72rem] font-bold uppercase tracking-wider mb-1 sm:text-[0.82rem] sm:mb-1.5">{card.label}</p>
-                  <p className="text-text text-[1.3rem] font-black tracking-tight whitespace-nowrap sm:text-[1.35rem] md:text-[1.55rem]">{card.value}</p>
-                  <p className={`text-${card.color} text-[0.78rem] font-bold mt-1`}>{card.change}</p>
-                </motion.div>
-              ))}
-            </div>
-            <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.5, ease: [0.16, 1, 0.3, 1] }} className="mx-5 mb-3 rounded-2xl border border-white/[0.06] bg-white/[0.03] p-4 shadow-xl backdrop-blur-md">
-              <div className="flex items-center justify-between mb-2.5">
-                <p className="text-text text-[0.9rem] font-extrabold">Recent Transactions</p>
-                <span className="text-accent-2/50"><ChevronRight /></span>
-              </div>
-              <div className="space-y-2">
-                {transactions.map((tx) => (
-                  <div key={tx.desc} className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <span className={`w-4 h-4 rounded-full flex items-center justify-center ${tx.status === "cleared" ? "bg-accent-2/15" : "bg-warning/15"}`}>
-                        <span className={`${tx.status === "cleared" ? "text-accent-2" : "text-warning"}`}><CheckIcon /></span>
-                      </span>
-                      <div>
-                        <p className="text-text text-[0.86rem] font-bold">{tx.desc}</p>
-                        <p className="text-muted text-[0.72rem]">{tx.category}</p>
-                      </div>
-                    </div>
-                    <span className={`text-[0.9rem] font-extrabold ${tx.amount.startsWith("+") ? "text-accent-2" : "text-muted"}`}>{tx.amount}</span>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-            <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.7, ease: [0.16, 1, 0.3, 1] }} className="mx-5 mb-5 rounded-2xl border border-white/[0.06] bg-white/[0.03] p-4 shadow-xl backdrop-blur-md">
-              <div className="flex items-center justify-between mb-2.5">
-                <p className="text-text text-[0.9rem] font-extrabold">Budget Overview</p>
-                <span className="text-accent-2/50"><ChevronRight /></span>
-              </div>
-              <div className="grid grid-cols-3 gap-3">
-                {budgets.map((b) => {
-                  const pct = Math.round((b.spent / b.budget) * 100);
-                  return (
-                    <div key={b.category}>
-                      <div className="flex justify-between text-[0.72rem] mb-1.5">
-                        <span className="text-muted font-bold">{b.category}</span>
-                        <span className="text-text font-extrabold">{pct}%</span>
-                      </div>
-                      <div className="h-[5px] rounded-full bg-white/[0.06] overflow-hidden">
-                        <motion.div initial={{ width: 0 }} whileInView={{ width: `${pct}%` }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.9, ease: [0.16, 1, 0.3, 1] }} className="h-full rounded-full" style={{ background: b.color === "accent-2" ? "var(--color-accent-2)" : b.color === "accent-3" ? "var(--color-accent-3)" : "var(--color-accent)" }} />
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            </motion.div>
+          <div className="relative flex justify-center overflow-visible px-1 sm:px-2">
+            <motion.img
+              src={personalFinanceGraphic}
+              alt="Personal finance tools"
+              className="relative z-10 h-auto w-full max-w-[620px] object-contain sm:max-w-[720px] lg:max-w-[800px] xl:max-w-[840px] cursor-pointer select-none"
+              draggable="false"
+              whileHover={{ scale: 1.03 }}
+              transition={{ type: "spring", stiffness: 300, damping: 20 }}
+              onClick={() => setPreviewOpen(true)}
+            />
           </div>
         </Reveal>
         <Reveal direction="right" className="order-1 lg:order-2">
@@ -109,6 +69,36 @@ export default function SolutionSection() {
           </div>
         </Reveal>
       </div>
+
+      <AnimatePresence>
+        {previewOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black cursor-pointer"
+            onClick={() => setPreviewOpen(false)}
+          >
+            <motion.img
+              src={personalFinanceGraphic}
+              alt="Preview"
+              initial={{ scale: 0.85, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.85, opacity: 0 }}
+              transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
+              className="max-h-screen max-w-full object-contain"
+              onClick={(e) => e.stopPropagation()}
+            />
+            <button
+              onClick={() => setPreviewOpen(false)}
+              className="absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-br from-accent-2 to-accent text-white text-xl font-bold border-0 cursor-pointer shadow-[0_0_15px_rgba(236,72,153,0.3)] transition-all duration-200 hover:scale-110"
+            >
+              ✕
+            </button>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }

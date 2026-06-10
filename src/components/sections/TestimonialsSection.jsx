@@ -7,7 +7,7 @@ const testimonials = [
     initial: "M",
     name: "Marcus R.",
     role: "Renter",
-    color: "var(--color-accent)",
+    color: "var(--color-accent-3)",
   },
   {
     quote:
@@ -15,7 +15,7 @@ const testimonials = [
     initial: "S",
     name: "Sarah K.",
     role: "Trip organizer",
-    color: "var(--color-accent-2)",
+    color: "var(--color-accent)",
   },
   {
     quote:
@@ -38,7 +38,7 @@ export default function TestimonialsSection() {
           Testimonials
         </p>
         <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[0.96] mb-5 max-w-[760px]">
-          What users are saying about PRISM
+          What users are saying about <strong>PRISM</strong>
         </h2>
       </Reveal>
       <div className="grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] gap-5 mt-12">
@@ -54,7 +54,7 @@ export default function TestimonialsSection() {
             {main.quote}
           </blockquote>
           <div className="relative z-10 mt-10 flex items-center gap-4">
-            <div className="w-14 h-14 flex items-center justify-center rounded-full bg-gradient-to-br from-accent to-accent-2 font-black text-xl shadow-[0_0_20px_rgba(168,85,247,0.2)]">{main.initial}</div>
+            <div className="w-14 h-14 flex items-center justify-center rounded-full bg-gradient-to-br from-accent-3 to-accent font-black text-xl shadow-[0_0_20px_rgba(59,130,246,0.2)]">{main.initial}</div>
             <div><cite className="not-italic font-black block">{main.name}</cite><span className="text-muted text-sm">{main.role}</span></div>
           </div>
         </motion.article>
@@ -72,7 +72,7 @@ export default function TestimonialsSection() {
               <span className="absolute right-5 top-1 text-6xl text-white/[0.03] font-serif">&ldquo;</span>
               <blockquote className="relative z-10 m-0 text-muted leading-relaxed">{t.quote}</blockquote>
               <div className="relative z-10 mt-6 flex items-center gap-3">
-                <div className="w-11 h-11 flex items-center justify-center rounded-full font-black bg-gradient-to-br" style={{ background: `linear-gradient(135deg, ${t.color}, rgba(255,255,255,0.05))` }}>{t.initial}</div>
+                <div className="w-11 h-11 flex items-center justify-center rounded-full font-black bg-gradient-to-br from-accent-3 to-accent text-white shadow-[0_0_15px_rgba(59,130,246,0.2)]">{t.initial}</div>
                 <div><cite className="not-italic font-bold block">{t.name}</cite><span className="text-muted text-xs">{t.role}</span></div>
               </div>
             </motion.article>

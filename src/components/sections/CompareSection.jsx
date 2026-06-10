@@ -21,13 +21,13 @@ const columns = [
 function Cell({ value }) {
   if (value === "✓")
     return (
-      <span className="inline-flex h-7 w-7 items-center justify-center rounded-lg bg-accent-2/12 text-lg font-black text-accent-2 shadow-[0_0_20px_rgba(139,92,246,0.12)]">
+      <span className="inline-flex h-7 w-7 items-center justify-center rounded-lg bg-accent-3/15 text-lg font-black text-accent-3 shadow-[0_0_20px_rgba(59,130,246,0.15)]">
         {value}
       </span>
     );
   if (value === "✗")
     return (
-      <span className="inline-flex h-7 w-7 items-center justify-center rounded-lg bg-[#ff6b6b]/10 text-lg font-black text-[#ff8585]">
+      <span className="inline-flex h-7 w-7 items-center justify-center rounded-lg bg-white/[0.06] text-lg font-black text-muted">
         {value}
       </span>
     );
@@ -48,10 +48,10 @@ export default function CompareSection() {
               <tr className="bg-white/[0.03]">
                 <th className="rounded-tl-[26px] border-b border-white/[0.06] p-5 text-left font-black tracking-tight text-[#d8e4ef]" />
                 {columns.map((col) => (
-                  <th key={col.key} className={`relative border-b border-white/[0.06] p-5 text-left font-black tracking-tight ${col.key === "prism" ? "text-accent-2 bg-accent-2/[0.06] shadow-[inset_0_0_60px_rgba(139,92,246,0.06)]" : "text-[#d8e4ef]"} ${col.key === "sheets" ? "rounded-tr-[26px]" : ""}`}>
+                  <th key={col.key} className={`relative border-b border-white/[0.06] p-5 text-left font-black tracking-tight ${col.key === "prism" ? "text-accent bg-accent/[0.06] shadow-[inset_0_0_60px_rgba(139,92,246,0.06)]" : "text-[#d8e4ef]"} ${col.key === "sheets" ? "rounded-tr-[26px]" : ""}`}>
                     {col.label}
                     {col.key === "prism" && (
-                      <span className="mt-2 block w-fit rounded-full bg-accent-2 px-3 py-1 text-[0.68rem] uppercase tracking-[0.12em] text-[#03111a] shadow-[0_0_20px_rgba(139,92,246,0.15)]">Built for personal finance</span>
+                      <span className="mt-2 block w-fit rounded-full bg-accent-3/20 px-3 py-1 text-[0.68rem] uppercase tracking-[0.12em] text-accent-3 shadow-[0_0_20px_rgba(59,130,246,0.15)]">Built for personal finance</span>
                     )}
                   </th>
                 ))}
@@ -62,7 +62,7 @@ export default function CompareSection() {
                 <motion.tr key={row.label} initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.04, ease: [0.16, 1, 0.3, 1] }} className={`${i % 2 === 0 ? "bg-white/[0.015]" : "bg-transparent"} transition-colors duration-200 hover:bg-white/[0.04]`}>
                   <td className={`border-b border-white/[0.06] p-5 text-left font-bold text-text whitespace-nowrap ${i === rows.length - 1 ? "rounded-bl-[26px]" : ""}`}>{row.label}</td>
                   {columns.map((col) => (
-                    <td key={col.key} className={`border-b border-white/[0.06] p-5 text-left whitespace-nowrap ${col.key === "prism" ? "text-text bg-accent-2/[0.05] shadow-[inset_1px_0_0_rgba(139,92,246,0.1),inset_-1px_0_0_rgba(56,189,246,0.08)]" : "text-[#c9d6e2]"} ${i === rows.length - 1 && col.key === "sheets" ? "rounded-br-[26px]" : ""}`}>
+                    <td key={col.key} className={`border-b border-white/[0.06] p-5 text-left whitespace-nowrap ${col.key === "prism" ? "text-text bg-accent/[0.05] shadow-[inset_1px_0_0_rgba(139,92,246,0.1),inset_-1px_0_0_rgba(56,189,246,0.08)]" : "text-[#c9d6e2]"} ${i === rows.length - 1 && col.key === "sheets" ? "rounded-br-[26px]" : ""}`}>
                       <Cell value={row[col.key]} />
                     </td>
                   ))}
@@ -77,8 +77,8 @@ export default function CompareSection() {
               <div className="font-black text-text mb-3 text-[0.95rem]">{row.label}</div>
               <div className="grid grid-cols-2 gap-3">
                 {columns.map((col) => (
-                  <div key={col.key} className={`rounded-2xl border p-3 text-sm ${col.key === "prism" ? "border-accent-2/15 bg-accent-2/[0.05] text-text shadow-[inset_0_0_24px_rgba(139,92,246,0.05)]" : "border-white/[0.06] bg-white/[0.02] text-[#c9d6e2]"}`}>
-                    <span className={`text-[0.75rem] font-black uppercase tracking-[0.08em] block mb-1.5 ${col.key === "prism" ? "text-accent-2" : "text-[#9fb0bf]"}`}>{col.label}</span>
+                  <div key={col.key} className={`rounded-2xl border p-3 text-sm ${col.key === "prism" ? "border-accent/15 bg-accent/[0.05] text-text shadow-[inset_0_0_24px_rgba(139,92,246,0.05)]" : "border-white/[0.06] bg-white/[0.02] text-[#c9d6e2]"}`}>
+                    <span className={`text-[0.75rem] font-black uppercase tracking-[0.08em] block mb-1.5 ${col.key === "prism" ? "text-accent" : "text-[#9fb0bf]"}`}>{col.label}</span>
                     <Cell value={row[col.key]} />
                   </div>
                 ))}

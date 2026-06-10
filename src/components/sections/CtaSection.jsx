@@ -34,7 +34,7 @@ export default function CtaSection() {
             whileTap={{ scale: 0.97 }}
             className="gradient-border-button block w-full relative inline-flex items-center justify-center min-h-[52px] px-6 rounded-full font-black text-white bg-white/[0.04] backdrop-blur-md transition-all duration-300 no-underline hover:bg-white/[0.08]"
           >
-            Get PRISM Desktop
+            Start Tracking Shared Expenses
           </motion.a>
           <div className="mt-4 grid grid-cols-3 gap-2 text-[0.72rem] font-black text-muted">
             <span>Local data</span>

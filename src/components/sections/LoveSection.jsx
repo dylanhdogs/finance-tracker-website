@@ -12,7 +12,7 @@ export default function LoveSection() {
         {" "}
         <p className="text-white/70 text-[0.92rem] font-black tracking-[0.18em] uppercase mb-4">
           {" "}
-          Why PRISM{" "}
+          Why <strong>PRISM</strong>{" "}
         </p>{" "}
         <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[0.96] mb-5 max-w-[760px]">
           {" "}

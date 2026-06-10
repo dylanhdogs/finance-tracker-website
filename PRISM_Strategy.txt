@@ -1,0 +1,313 @@
+PRISM
+Shared Expenses
+Landing Page Strategy & Website Restructure Plan
+A professional marketing direction document focused on positioning Prism as a shared 
+expense tracker first, with personal finance tools as a supporting add-on.
+Core Positioning Statement
+Prism is a shared expense tracker built to make split costs simple, clear, and easy to settle. 
+Personal finance tools are included, but they are not the main pitch.
+Document Purpose
+This PDF organizes the new homepage direction, page order, copy language, messaging priorities, 
+and implementation prompt for restructuring the Prism website around the Shared Expenses 
+feature.
+Primary Goal
+Reposition Prism so the first thing visitors understand is that the application solves a relatable 
+everyday problem: managing shared costs, knowing who owes who, and settling balances without 
+confusion.
+Prism Shared Expenses Landing Page Strategy  |  Page 1
+1. Marketing Pivot
+New Direction
+Prism should not be marketed as a personal finance app with shared expenses as a feature. 
+It should be marketed as a shared expense tracker that also helps users manage personal 
+finances.
+Old Positioning
+A personal finance dashboard with shared expenses included as one of many features.
+New Positioning
+A shared expense tracker that clearly shows who paid, who owes who, how much is owed, and what 
+has already been settled. Personal finance tools become a valuable add-on, not the main selling point.
+Why This Works
+
+
+
+
+Shared costs are highly relatable across roommates, couples, friends, families, trips, and small teams.
+The pain is easy to understand: people lose track of who paid, who still owes, and whether a balance 
+was settled.
+This gives Prism a sharper purpose than a generic budgeting or finance dashboard.
+The marketing becomes more emotional and useful because it solves a real everyday money problem.
+Core Website Message
+Main Message
+Stop guessing who owes who. Prism makes shared expenses clear.
+Language Direction
+The homepage should use plain language that immediately communicates the outcome. The visitor 
+should feel, "This solves a problem I have."
+
+
+
+Use: shared expenses, split costs, shared bills, who owes who, settle balances, paid back, 
+reimbursements, clear records.
+Reduce: budgeting software, finance management platform, spending analytics, bookkeeping system, 
+advanced dashboard.
+Keep the tone clear, practical, modern, and relatable.
+Prism Shared Expenses Landing Page Strategy  |  Page 2
+2. Recommended Homepage Structure
+The homepage should be reordered so the Shared Expenses feature becomes the main story. Personal 
+finance should appear later as supporting value.
+Order
+Section
+Purpose
+1
+Hero Section
+Immediately communicate that 
+Prism solves shared expenses and 
+split-cost confusion.
+2
+Problem Section
+Close with a direct shared-expense 
+CTA focused on clarity and action.
+Make the visitor feel the pain of 
+messy shared costs before 
+presenting the solution.
+3
+Main Shared Expenses Section
+Show the core feature clearly: who 
+owes who, how much, and whether 
+it is settled.
+4
+Use Cases Section
+Show that shared expenses apply to 
+roommates, couples, friends, 
+families, trips, and small teams.
+5
+How It Works Section
+Explain the simple flow: add it, split 
+it, see balances, settle up.
+6
+Personal Finance Add-On Section
+Position dashboards, categories, and 
+spending tracking as bonus tools.
+7
+Final CTA Section
+3. Section-by-Section Direction
+1) Hero Section
+The hero should immediately sell the shared expense problem. Do not lead with budgeting, charts, or 
+general finance tracking.
+HEADLINE OPTIONS
+
+
+
+
+Shared expenses, finally made clear.
+Know exactly who owes who.
+Split costs without the awkward math.
+Track shared expenses without the confusion.
+RECOMMENDED SUBHEADLINE
+Hero Copy
+Prism helps you track shared bills, split costs, see who owes who, and settle balances clearly - with personal finance tools built in when you need them.
+Prism Shared Expenses Landing Page Strategy  |  Page 3
+CTA BUTTONS
+
+
+Primary CTA: Start Tracking Shared Expenses
+Secondary CTA: See How It Works
+2) Problem Section
+This section should make the user feel the common pain before introducing feature details.
+Problem Headline
+Shared costs get messy fast.
+One person pays for groceries. Someone else covers dinner. Rent, utilities, subscriptions, trips, and 
+random expenses start piling up. Prism keeps everything clear so nobody has to guess, argue, or 
+scroll through old messages.
+PROBLEM CARDS
+
+
+
+Who paid for what? Track every shared cost in one place.
+Who still owes? See balances between people instantly.
+Was it settled? Mark payments complete and keep a clean history.
+3) Main Shared Expenses Section
+This should be the strongest section on the page and should visually answer the most important user 
+questions.
+Core Section Headline
+See the answer in seconds.
+
+
+
+Who owes who? Show names and balances clearly.
+How much? Display the exact amount owed.
+Can I settle it? Add a clear settle button or settlement status.
+Design direction: Use a simple shared-expense interface preview with people, amounts owed, balance 
+status, and a settle action. Keep this section clean. The user should instantly understand the product 
+value without reading a paragraph.
+4) Use Cases Section
+Use cases make the feature relatable. Visitors should recognize themselves in at least one situation.
+
+
+
+
+
+Roommates: Rent, utilities, groceries, and household supplies.
+Couples: Shared bills, dinners, trips, and subscriptions.
+Friends: Group meals, vacations, events, and outings.
+Families: Household costs, reimbursements, and shared responsibilities.
+Small teams or projects: Supplies, job costs, purchases, and reimbursements.
+Prism Shared Expenses Landing Page Strategy  |  Page 4
+5) How It Works Section
+Section Headline
+Add it. Split it. Settle it.
+1. Add an expense: Enter what was paid, who paid it, and who was involved.
+2. Split the cost: Divide it evenly or customize each person's share.
+3. See balances: Prism calculates who owes who automatically.
+4. Settle up: Mark balances as paid and keep a clean record.
+6) Personal Finance Add-On Section
+Move personal finance lower on the page. Present it as an included benefit, not the headline.
+Section Headline
+Personal finance tools are included too.
+Prism also gives users a clean way to track personal spending, organize expenses, and understand 
+where money is going - but the main focus stays on keeping shared costs clear.
+
+
+
+Expense tracking: Log and organize spending.
+Categories: Understand where money is going.
+Dashboard insights: View simple charts and summaries.
+7) Final CTA Section
+Final CTA Copy
+Make shared expenses easier to manage. Track what was paid, who owes who, and what has 
+already been settled - all in one clear place.
+
+Primary CTA: Start Tracking Shared Expenses
+Prism Shared Expenses Landing Page Strategy  |  Page 5
+4. Website Copy Guidelines
+The copy should be simple, specific, and outcome-focused. The main idea should be repeated in 
+different ways across the page: Prism gives clarity to shared costs.
+Use More of This Language
+
+
+
+
+
+
+
+
+
+
+Shared expenses
+Split costs
+Shared bills
+Who owes who
+Settle balances
+Paid back
+Reimbursements
+Clear records
+Everyone pays their part
+No awkward math
+Use Less of This Language
+
+
+
+
+
+
+
+Personal finance dashboard
+Budgeting software
+Spending analytics
+Financial management platform
+Bookkeeping system
+Advanced finance tracking
+Generic expense tracking
+Recommended One-Liners
+
+
+
+
+
+Stop guessing who owes who.
+Track shared costs in one clear place.
+Split bills without messy spreadsheets or group chat math.
+See who paid, who owes, and what has been settled.
+Built for the everyday costs people share.
+Conversion Checklist
+
+
+
+
+
+
+
+The hero mentions shared expenses before personal finance.
+The page explains the problem before listing features.
+The Shared Expenses section appears near the top of the page.
+The main feature answers: who owes who, how much, and can I settle it?
+Use cases are broad enough for roommates, couples, friends, families, trips, and teams.
+Personal finance appears as a secondary add-on.
+The final CTA repeats the shared expense value clearly.
+Prism Shared Expenses Landing Page Strategy  |  Page 6
+5. Full Website Restructure Prompt
+Use the prompt below to update the website direction and layout while keeping the current Prism 
+visual style.
+Restructure the Prism landing page so the main marketing focus is Shared Expenses, not general 
+personal finance.
+The new direction should position Prism as a shared expense tracker that helps users clearly see who 
+paid, who owes who, how much is owed, and what has already been settled. The personal finance 
+dashboard should be treated as a secondary add-on feature, not the main selling point.
+Update the page order and messaging with this structure:
+1. Hero Section
+Lead with shared expenses. Use a strong headline like "Shared expenses, finally made clear" or "Know 
+exactly who owes who." The subheadline should explain that Prism helps users track shared bills, split 
+costs, view balances, and settle up clearly. Add a strong primary CTA focused on shared expenses.
+2. Problem Section
+Explain the common pain: shared costs get messy fast. Mention rent, groceries, utilities, trips, 
+subscriptions, dinners, and group expenses. Make the user feel the problem before showing the 
+solution.
+3. Main Shared Expenses Section
+Make this the strongest section on the page. It should clearly answer:- Who owes who?- How much?- Can I settle it?
+Show a simple shared expense interface preview with clear balances, people, amounts owed, and settle 
+status/buttons. Keep this section clean and easy to understand.
+4. Use Cases Section
+Show that shared expenses apply to roommates, couples, families, friends, trips, and small 
+teams/projects. Keep the language broad and relatable.
+5. How It Works Section
+Use a simple 4-step flow:- Add an expense- Split the cost- See who owes who- Settle the balance
+6. Personal Finance Add-On Section
+Move the personal finance features lower on the page. Present them as included bonus tools: expense 
+tracking, categories, spending dashboard, and financial overview. Do not make this the main focus.
+7. Final CTA
+End with a strong shared-expense CTA: "Start tracking shared expenses clearly."
+Keep the current glassmorphism design, dark premium background, green/purple/pink gradient accents, 
+and modern Prism visual style. Reduce generic personal finance language and replace it with shared
+expense-focused wording such as "split costs," "shared bills," "who owes who," "settle balances," 
+"paid back," and "clear records."
+Make the page feel more targeted, relatable, and conversion-focused. The user should immediately 
+understand that Prism solves the everyday problem of managing shared costs.
+Prism Shared Expenses Landing Page Strategy  |  Page 7
+6. Final Summary
+Primary Strategy
+Lead with Shared Expenses. Sell the everyday problem first. Treat personal finance as a 
+helpful add-on.
+The Website Should Make This Clear
+
+
+
+
+
+Prism helps users track shared costs.
+Prism shows who paid and who still owes.
+Prism calculates balances automatically.
+Prism helps users settle balances and keep clean records.
+Prism also includes personal finance tools, but those tools support the main shared-expense value.
+Best Main Homepage Statement
+Recommended Statement
+Prism is a shared expense tracker built to make split costs simple, clear, and easy to settle.
+Best Direction for the Brand
+Prism should feel like the easiest way for everyday people to manage money together. The site should 
+be modern and polished, but the message should stay simple: no confusion, no awkward math, no 
+guessing who owes who.
+Implementation Priorities
+5. Rewrite the hero around shared expenses.
+6. Move the Shared Expenses section directly near the top.
+7. Create a strong problem section that talks about messy shared costs.
+8. Make the core feature visually answer who owes who, how much, and settlement status.
+9. Move personal finance lower and present it as an included bonus.
+10. Repeat the shared-expense CTA at the top and bottom of the page.
+Prism Shared Expenses Landing Page Strategy  |  Page 8

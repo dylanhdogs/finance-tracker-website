@@ -6,9 +6,9 @@
   --text: #f4f5f8;
   --muted: #9ba3b8;
   --line: rgba(255, 255, 255, 0.06);
-  --accent: #b45cff;
-  --accent-2: #ff3fb4;
-  --accent-3: #38bdf8;
+  --accent: #8B5CF6;
+  --accent-2: #EC4899;
+  --accent-3: #3B82F6;
   --warning: #818cf8;
   --shadow: 0 28px 90px rgba(0, 0, 0, 0.5);
   --radius: 28px;
@@ -1514,15 +1514,15 @@ h3 {
 }
 
 .platform-icon.win {
-  background: linear-gradient(135deg, #38BDF6, #a855f7);
+  background: linear-gradient(135deg, var(--accent-3), var(--accent));
 }
 
 .platform-icon.mac {
-  background: linear-gradient(135deg, #ff6b9d, #a855f7);
+  background: linear-gradient(135deg, var(--accent-2), var(--accent));
 }
 
 .platform-icon.lin {
-  background: linear-gradient(135deg, #bb5cf6, #ff6b6b);
+  background: linear-gradient(135deg, var(--accent), #ff6b6b);
 }
 
 .platform-card h3 {

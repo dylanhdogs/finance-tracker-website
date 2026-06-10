@@ -1,4 +1,5 @@
-import { motion } from "motion/react";
+import { useState } from "react";
+import { motion, AnimatePresence } from "motion/react";
 import Reveal from "../animations/Reveal";
 import sharedCostsGraphic from "../../../Shared_Costs_Get_Messy_Fast_section_graphic.png";
 
@@ -122,6 +123,8 @@ function StatusChip({ x, y, delay, children, className = "" }) {
 }
 
 export default function ProblemSection() {
+  const [previewOpen, setPreviewOpen] = useState(false);
+
   return (
     <section
       id="problem"
@@ -145,16 +148,49 @@ export default function ProblemSection() {
           </div>
         </Reveal>
         <Reveal direction="right" className="order-2 lg:order-2">
-          <div className="relative flex justify-center overflow-hidden">
-            <img
+          <div className="relative flex justify-center overflow-visible px-1 sm:px-2">
+            <motion.img
               src={sharedCostsGraphic}
               alt="Shared costs get messy fast"
-              className="relative z-10 h-auto w-full max-w-[560px] object-contain sm:max-w-[680px] lg:max-w-[760px]"
+              className="relative z-10 h-auto w-full max-w-[560px] object-contain sm:max-w-[680px] lg:max-w-[760px] cursor-pointer select-none"
               draggable="false"
+              whileHover={{ scale: 1.03 }}
+              transition={{ type: "spring", stiffness: 300, damping: 20 }}
+              onClick={() => setPreviewOpen(true)}
             />
           </div>
         </Reveal>
       </div>
+
+      <AnimatePresence>
+        {previewOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black cursor-pointer"
+            onClick={() => setPreviewOpen(false)}
+          >
+            <motion.img
+              src={sharedCostsGraphic}
+              alt="Preview"
+              initial={{ scale: 0.85, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.85, opacity: 0 }}
+              transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
+              className="max-h-screen max-w-full object-contain"
+              onClick={(e) => e.stopPropagation()}
+            />
+            <button
+              onClick={() => setPreviewOpen(false)}
+              className="absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-br from-accent-2 to-accent text-white text-xl font-bold border-0 cursor-pointer shadow-[0_0_15px_rgba(236,72,153,0.3)] transition-all duration-200 hover:scale-110"
+            >
+              ✕
+            </button>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }

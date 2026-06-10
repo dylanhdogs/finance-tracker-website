@@ -33,13 +33,13 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-1/2 z-30 flex w-[calc(100%-32px)] max-w-[1440px] items-center justify-between px-[14px] py-3 rounded-2xl border-x border-b border-purple-500/30 bg-[#050505]/78 backdrop-blur-2xl -translate-x-1/2 transition-all duration-300 shadow-[0_0_0_1px_rgba(168,85,247,0.15),0_0_25px_rgba(168,85,247,0.12),0_0_60px_rgba(168,85,247,0.06)] ${
+      className={`fixed top-0 left-1/2 z-30 flex w-[calc(100%-32px)] max-w-[1440px] items-center justify-between px-[14px] py-3 rounded-b-2xl border-x border-b border-purple-500/30 bg-[#050505]/78 backdrop-blur-2xl -translate-x-1/2 transition-all duration-300 shadow-[0_0_0_1px_rgba(168,85,247,0.15),0_0_25px_rgba(168,85,247,0.12),0_0_60px_rgba(168,85,247,0.06)] ${
         scrolled ? "border-purple-500/40 bg-[#050505]/90 shadow-[0_0_0_1px_rgba(168,85,247,0.25),0_0_30px_rgba(168,85,247,0.18),0_0_80px_rgba(168,85,247,0.08),0_8px_40px_rgba(0,0,0,0.38)]" : ""
       }`}
     >
       <a
         href="#top"
-        className="flex items-center gap-1.5 font-thin no-underline text-white text-[1.35rem] sm:text-[1.55rem]"
+        className="flex items-center gap-1.5 font-bold no-underline text-white text-[1.35rem] sm:text-[1.55rem]"
       >
         <img
           src={prismLogo}

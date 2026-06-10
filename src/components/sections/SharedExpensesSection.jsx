@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import Reveal from "../animations/Reveal";
-import answerInSecondsGraphic from "../../../Shared_Expenses_preview.png";
+import answerInSecondsGraphic from "../../../Shared_Expenses_preview.png?v=2";
 
 export default function SharedExpensesSection() {
   const [previewOpen, setPreviewOpen] = useState(false);
@@ -61,38 +61,38 @@ export default function SharedExpensesSection() {
               onClick={() => setPreviewOpen(true)}
             />
           </div>
-
-          <AnimatePresence>
-            {previewOpen && (
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.2 }}
-                className="fixed inset-0 z-50 flex items-center justify-center bg-black/85 backdrop-blur-sm cursor-pointer"
-                onClick={() => setPreviewOpen(false)}
-              >
-                <motion.img
-                  src={answerInSecondsGraphic}
-                  alt="Preview"
-                  initial={{ scale: 0.85, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
-                  exit={{ scale: 0.85, opacity: 0 }}
-                  transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
-                  className="max-h-[90vh] max-w-[92vw] object-contain rounded-lg"
-                  onClick={(e) => e.stopPropagation()}
-                />
-                <button
-                  onClick={() => setPreviewOpen(false)}
-                  className="absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-white/10 backdrop-blur-md text-white text-xl font-bold border-0 cursor-pointer transition-colors hover:bg-white/20"
-                >
-                  ✕
-                </button>
-              </motion.div>
-            )}
-          </AnimatePresence>
         </Reveal>
       </div>
+
+      <AnimatePresence>
+        {previewOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black cursor-pointer"
+            onClick={() => setPreviewOpen(false)}
+          >
+            <motion.img
+              src={answerInSecondsGraphic}
+              alt="Preview"
+              initial={{ scale: 0.85, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.85, opacity: 0 }}
+              transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
+              className="max-h-screen max-w-full object-contain"
+              onClick={(e) => e.stopPropagation()}
+            />
+            <button
+              onClick={() => setPreviewOpen(false)}
+              className="absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-br from-accent-2 to-accent text-white text-xl font-bold border-0 cursor-pointer shadow-[0_0_15px_rgba(236,72,153,0.3)] transition-all duration-200 hover:scale-110"
+            >
+              ✕
+            </button>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }
