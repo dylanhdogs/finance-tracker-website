@@ -3,9 +3,9 @@
 @theme {
   --color-bg-main: #000000;
   --color-bg-soft: #0a0a0a;
-  --color-accent: #7c3aed;
-  --color-accent-2: #ff3fb4;
-  --color-accent-3: #38bdf8;
+  --color-accent: #8B5CF6;
+  --color-accent-2: #EC4899;
+  --color-accent-3: #3B82F6;
   --color-warning: #818cf8;
   --color-text: #ffffff;
   --color-muted: #d1d5db;
@@ -86,7 +86,7 @@ html {
   inset: -2px;
   border-radius: inherit;
   padding: 2px;
-  background: linear-gradient(110deg, var(--color-accent-2), var(--color-accent-3));
+  background: linear-gradient(110deg, var(--color-accent), var(--color-accent-3));
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
@@ -97,19 +97,19 @@ html {
 
 .gradient-border-button:hover::before {
   opacity: 1;
-  filter: drop-shadow(0 0 10px rgba(255, 63, 180, 0.38)) drop-shadow(0 0 12px rgba(56, 189, 248, 0.28));
+  filter: drop-shadow(0 0 10px rgba(236, 72, 153, 0.38)) drop-shadow(0 0 12px rgba(59, 130, 246, 0.28));
 }
 
 .hero-gradient-text {
   color: transparent;
-  background: linear-gradient(105deg, var(--color-accent-2) 0%, var(--color-accent) 15%, var(--color-accent-3) 100%);
+  background: linear-gradient(105deg, var(--color-accent) 0%, var(--color-accent-3) 100%);
   background-clip: text;
   -webkit-background-clip: text;
 }
 
 .section-gradient-text {
   color: transparent;
-  background: linear-gradient(105deg, var(--color-accent-2) 0%, var(--color-accent) 15%, var(--color-accent-3) 100%);
+  background: linear-gradient(105deg, var(--color-accent-2) 0%, var(--color-accent) 40%, var(--color-accent-3) 100%);
   background-clip: text;
   -webkit-background-clip: text;
 }

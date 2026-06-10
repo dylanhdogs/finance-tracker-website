@@ -80,7 +80,7 @@ export default function FaqSection() {
       className="px-5 sm:px-6 py-12 md:py-16 lg:py-[65px] mx-auto max-w-[1440px] scroll-mt-32"
     >
       <Reveal direction="up">
-        <p className="text-white text-[0.92rem] font-black tracking-[0.18em] uppercase mb-4">
+        <p className="text-white/70 text-[0.92rem] font-black tracking-[0.18em] uppercase mb-4">
           FAQ
         </p>
         <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[0.96] mb-5 max-w-[760px]">

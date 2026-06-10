@@ -1,7 +1,11 @@
+import { useState } from "react";
+import { motion, AnimatePresence } from "motion/react";
 import Reveal from "../animations/Reveal";
-import answerInSecondsGraphic from "../../../See_the_answer_in_seconds_section_graphic.png";
+import answerInSecondsGraphic from "../../../Shared_Expenses_preview.png";
 
 export default function SharedExpensesSection() {
+  const [previewOpen, setPreviewOpen] = useState(false);
+
   return (
     <section
       id="shared-expenses"
@@ -11,7 +15,7 @@ export default function SharedExpensesSection() {
         {/* Left: Copy */}
         <Reveal direction="left">
           <div className="flex flex-col">
-            <p className="text-white text-[0.92rem] font-black tracking-[0.18em] uppercase mb-4">
+            <p className="text-white/70 text-[0.92rem] font-black tracking-[0.18em] uppercase mb-4">
               See the answer in seconds
             </p>
             <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[0.96] mb-6 max-w-[620px]">
@@ -47,13 +51,46 @@ export default function SharedExpensesSection() {
         {/* Right: Shared Expenses Visual */}
         <Reveal direction="right" delay={0.15}>
           <div className="relative flex justify-center overflow-visible px-1 sm:px-2">
-            <img
+            <motion.img
               src={answerInSecondsGraphic}
               alt="See the answer in seconds"
-              className="relative z-10 h-auto w-[112%] max-w-none object-contain sm:w-full sm:max-w-[720px] lg:max-w-[810px] xl:max-w-[850px]"
+              className="relative z-10 h-auto w-[112%] max-w-none object-contain sm:w-full sm:max-w-[780px] lg:max-w-[880px] xl:max-w-[950px] cursor-pointer select-none"
               draggable="false"
+              whileHover={{ scale: 1.03 }}
+              transition={{ type: "spring", stiffness: 300, damping: 20 }}
+              onClick={() => setPreviewOpen(true)}
             />
           </div>
+
+          <AnimatePresence>
+            {previewOpen && (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.2 }}
+                className="fixed inset-0 z-50 flex items-center justify-center bg-black/85 backdrop-blur-sm cursor-pointer"
+                onClick={() => setPreviewOpen(false)}
+              >
+                <motion.img
+                  src={answerInSecondsGraphic}
+                  alt="Preview"
+                  initial={{ scale: 0.85, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  exit={{ scale: 0.85, opacity: 0 }}
+                  transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
+                  className="max-h-[90vh] max-w-[92vw] object-contain rounded-lg"
+                  onClick={(e) => e.stopPropagation()}
+                />
+                <button
+                  onClick={() => setPreviewOpen(false)}
+                  className="absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-white/10 backdrop-blur-md text-white text-xl font-bold border-0 cursor-pointer transition-colors hover:bg-white/20"
+                >
+                  ✕
+                </button>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </Reveal>
       </div>
     </section>

@@ -10,7 +10,7 @@ export default function HowSection() {
       <div className="grid grid-cols-1 lg:grid-cols-[0.72fr_1.28fr] gap-7 items-center">
         <Reveal direction="left">
           <div>
-            <p className="text-white text-[0.92rem] font-black tracking-[0.18em] uppercase mb-4">
+            <p className="text-white/70 text-[0.92rem] font-black tracking-[0.18em] uppercase mb-4">
               Add it. Split it. Settle it.
             </p>
             <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[0.96] mb-5 max-w-[760px]">
