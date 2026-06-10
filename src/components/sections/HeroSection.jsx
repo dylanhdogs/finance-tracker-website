@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { motion } from "motion/react";
 import Reveal from "../animations/Reveal";
-import heroGraphic from "../../../hero_laptop_graphic.png";
+import heroGraphic from "../../assets/images/hero/hero_laptop_graphic.png";
 
 export default function HeroSection() {
   const containerRef = useRef(null);

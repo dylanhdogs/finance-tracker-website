@@ -1,5 +1,5 @@
 import Reveal from "../animations/Reveal";
-import builtForSharedCostsGraphic from "../../../Built_for_shared_costs_section_graphic.png";
+import builtForSharedCostsGraphic from "../../assets/images/sections/Built_for_shared_costs_section_graphic.png";
 
 export default function AudienceSection() {
   return (

@@ -1,12 +1,10 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import Reveal from "../animations/Reveal";
-
-const assetVersion = '2026-06-09';
-const dashboardImage = `/Dashboard_image.png?v=${assetVersion}`;
-const transactionsImage = `/Transactions_Register.png?v=${assetVersion}`;
-const budgetImage = `/Budget%20Planner.png?v=${assetVersion}`;
-const reportsImage = `/Reports.png?v=${assetVersion}`;
+import dashboardImage from "../../assets/images/hero/hero_laptop_graphic.png";
+import transactionsImage from "../../assets/images/screenshots/Bank_Transactions_Preview.png";
+import budgetImage from "../../assets/images/screenshots/budgets_preview.png";
+import reportsImage from "../../assets/images/screenshots/chartofaccounts_preview.png";
 
 const screens = [
   {

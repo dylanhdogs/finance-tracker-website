@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import Reveal from "../animations/Reveal";
-import sharedCostsGraphic from "../../../Shared_Costs_Get_Messy_Fast_section_graphic.png";
+import sharedCostsGraphic from "../../assets/images/sections/Shared_Costs_Get_Messy_Fast_section_graphic.png";
 
 function ScatteredCard({ x, y, angle, delay, label, title, detail, tone = "muted", className = "" }) {
   const toneClasses = {

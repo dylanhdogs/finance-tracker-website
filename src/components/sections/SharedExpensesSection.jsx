@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import Reveal from "../animations/Reveal";
-import answerInSecondsGraphic from "../../../Shared_Expenses_preview.png?v=2";
+import answerInSecondsGraphic from "../../assets/images/screenshots/Shared_Expenses_preview.png?v=2";
 
 export default function SharedExpensesSection() {
   const [previewOpen, setPreviewOpen] = useState(false);

@@ -1,5 +1,5 @@
 import Reveal from "../animations/Reveal";
-import controlGraphic from "../../../Built for people who want control — not complexity.png";
+import controlGraphic from "../../assets/images/sections/Built for people who want control — not complexity.png";
 
 export default function LoveSection() {
   return (

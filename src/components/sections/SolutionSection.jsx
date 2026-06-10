@@ -1,12 +1,12 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import Reveal from "../animations/Reveal";
-import imgBank from "../../../Bank_Transactions_Preview.png";
-import imgMatching from "../../../Transaction_matching_preview.png";
-import imgBudgets from "../../../budgets_preview.png";
-import imgChart from "../../../chartofaccounts_preview.png";
-import imgVendors from "../../../vendors_preview.png";
-import imgRecon from "../../../reconciliation_preview.png";
+import imgBank from "../../assets/images/screenshots/Bank_Transactions_Preview.png";
+import imgMatching from "../../assets/images/screenshots/Transaction_matching_preview.png";
+import imgBudgets from "../../assets/images/screenshots/budgets_preview.png";
+import imgChart from "../../assets/images/screenshots/chartofaccounts_preview.png";
+import imgVendors from "../../assets/images/screenshots/vendors_preview.png";
+import imgRecon from "../../assets/images/screenshots/reconciliation_preview.png";
 
 const carouselImages = [
   { src: imgBank, label: "Bank Transactions", alt: "Bank transactions preview" },

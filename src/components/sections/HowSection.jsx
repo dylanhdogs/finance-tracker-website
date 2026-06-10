@@ -1,5 +1,5 @@
 import Reveal from "../animations/Reveal";
-import knowWhoOwesGraphic from "../../../Know_Who_Owes_Who_In_Seconds_section_graphic.png";
+import knowWhoOwesGraphic from "../../assets/images/sections/Know_Who_Owes_Who_In_Seconds_section_graphic.png";
 
 export default function HowSection() {
   return (
