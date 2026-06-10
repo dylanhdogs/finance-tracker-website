@@ -13,7 +13,7 @@ function page(title, body) {
         min-height: 100vh;
         display: grid;
         place-items: center;
-        background: #09111f;
+        background: #0a0a0a;
         color: #f7fbff;
         font-family: Inter, Arial, sans-serif;
         padding: 24px;
@@ -36,7 +36,7 @@ function page(title, body) {
         min-height: 48px;
         padding: 0 18px;
         border-radius: 999px;
-        background: #26e6a3;
+        background: #ec4889;
         color: #03111a;
         text-decoration: none;
         font-weight: 800;

@@ -30,11 +30,11 @@ async function sendResendEmail(env, toEmail, downloadUrl) {
       to: [toEmail],
       subject: "Your Prism download link",
       html: `
-        <div style="font-family: Inter, Arial, sans-serif; line-height: 1.6; color: #0b1220;">
+        <div style="font-family: Inter, Arial, sans-serif; line-height: 1.6; color: #111111;">
           <h1 style="margin:0 0 16px;">Your Prism download is ready</h1>
           <p style="margin:0 0 16px;">Thanks for subscribing. Use the button below to open your protected download page.</p>
           <p style="margin:0 0 24px;">
-            <a href="${downloadUrl}" style="display:inline-block;padding:12px 20px;border-radius:999px;background:#26e6a3;color:#03111a;text-decoration:none;font-weight:700;">Open download page</a>
+            <a href="${downloadUrl}" style="display:inline-block;padding:12px 20px;border-radius:999px;background:#ec4889;color:#03111a;text-decoration:none;font-weight:700;">Open download page</a>
           </p>
           <p style="margin:0;color:#526073;">This link expires after a limited time. If you need help, reply to this email.</p>
         </div>

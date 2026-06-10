@@ -66,7 +66,7 @@ export default function HeroSection() {
             {" "}
             <a
               href="download.html"
-              className="w-full sm:w-auto relative inline-flex items-center justify-center min-h-[52px] px-6 rounded-full font-black text-[#03111a] bg-gradient-to-br from-accent-2 to-accent-3 shadow-[0_18px_50px_rgba(38,230,163,0.25)] transition-transform duration-180 hover:-translate-y-1 no-underline hover:shadow-[0_18px_70px_rgba(38,230,163,0.45)]"
+              className="w-full sm:w-auto relative inline-flex items-center justify-center min-h-[52px] px-6 rounded-full font-black text-[#03111a] bg-gradient-to-br from-accent-2 to-accent-3 shadow-[0_18px_50px_rgba(139,92,246,0.25)] transition-transform duration-180 hover:-translate-y-1 no-underline hover:shadow-[0_18px_70px_rgba(139,92,246,0.45)]"
             >
               {" "}
               Get Clarity{" "}
@@ -110,7 +110,7 @@ export default function HeroSection() {
         {" "}
         <div className="relative perspective-[1200px] max-md:mx-auto max-md:max-w-[560px]">
           {" "}
-          <div className="absolute -inset-5 rounded-[38px] bg-[radial-gradient(circle_at_70%_20%,rgba(38,230,163,0.22),transparent_34%),radial-gradient(circle_at_20%_80%,rgba(124,92,255,0.22),transparent_32%)] blur-2xl" />{" "}
+          <div className="absolute -inset-5 rounded-[38px] bg-[radial-gradient(circle_at_70%_20%,rgba(139,92,246,0.22),transparent_34%),radial-gradient(circle_at_20%_80%,rgba(99,102,241,0.22),transparent_32%)] blur-2xl" />{" "}
           <motion.div
             animate={{ y: [0, -14, 0] }}
             transition={{ duration: 4, ease: "easeInOut", repeat: Infinity }}
@@ -122,7 +122,7 @@ export default function HeroSection() {
               {" "}
               <span className="w-[11px] h-[11px] rounded-full bg-[#ff6b6b]" />{" "}
               <span className="w-[11px] h-[11px] rounded-full bg-[#ffd166]" />{" "}
-              <span className="w-[11px] h-[11px] rounded-full bg-[#26e6a3]" />{" "}
+              <span className="w-[11px] h-[11px] rounded-full bg-accent-2" />{" "}
               <strong className="ml-2.5 text-muted text-[0.82rem]">
                 Your finances
               </strong>{" "}
@@ -240,7 +240,7 @@ export default function HeroSection() {
                 repeat: Infinity,
                 delay: callout.delay,
               }}
-              className={`absolute hidden sm:block px-[18px] py-4 border border-white/14 rounded-xl bg-[#07101d]/82 shadow-2xl backdrop-blur-lg ${callout.className}`}
+              className={`absolute hidden sm:block px-[18px] py-4 border border-white/14 rounded-xl bg-[#060a10]/82 shadow-2xl backdrop-blur-lg ${callout.className}`}
             >
               {" "}
               <span className="text-accent-2 text-[0.72rem] font-extrabold uppercase tracking-[0.14em]">
