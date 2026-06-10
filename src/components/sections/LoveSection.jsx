@@ -5,7 +5,7 @@ export default function LoveSection() {
   return (
     <section
       id="love"
-      className="px-5 sm:px-6 py-12 md:py-16 lg:py-\[65px\] mx-auto max-w-7xl scroll-mt-32"
+      className="px-5 sm:px-6 py-12 md:py-16 lg:py-\[65px\] mx-auto max-w-[1440px] scroll-mt-32"
     >
       {" "}
       <Reveal direction="up">

@@ -35,7 +35,7 @@ function Cell({ value }) {
 }
 export default function CompareSection() {
   return (
-    <section id="compare" className="px-5 sm:px-6 py-12 md:py-16 lg:py-[65px] mx-auto max-w-7xl scroll-mt-32">
+    <section id="compare" className="px-5 sm:px-6 py-12 md:py-16 lg:py-[65px] mx-auto max-w-[1440px] scroll-mt-32">
       <Reveal direction="up">
         <p className="text-accent-2 text-[0.92rem] font-black tracking-[0.18em] uppercase mb-4">Built for shared expenses</p>
         <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[0.96] mb-5 max-w-[760px]">Clear shared expenses. <span className="section-gradient-text">No confusion</span></h2>

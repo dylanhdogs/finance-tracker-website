@@ -77,7 +77,7 @@ export default function FaqSection() {
   return (
     <section
       id="faq"
-      className="px-5 sm:px-6 py-12 md:py-16 lg:py-[65px] mx-auto max-w-7xl scroll-mt-32"
+      className="px-5 sm:px-6 py-12 md:py-16 lg:py-[65px] mx-auto max-w-[1440px] scroll-mt-32"
     >
       <Reveal direction="up">
         <p className="text-accent-2 text-[0.92rem] font-black tracking-[0.18em] uppercase mb-4">

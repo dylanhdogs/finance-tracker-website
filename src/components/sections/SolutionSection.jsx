@@ -37,7 +37,7 @@ function CheckIcon() {
 
 export default function SolutionSection() {
   return (
-    <section id="solution" className="px-5 sm:px-6 py-12 md:py-16 lg:py-[65px] mx-auto max-w-7xl scroll-mt-32">
+    <section id="solution" className="px-5 sm:px-6 py-12 md:py-16 lg:py-[65px] mx-auto max-w-[1440px] scroll-mt-32">
       <div className="flex flex-col gap-12 lg:grid lg:grid-cols-[1.08fr_0.92fr] lg:gap-16 items-stretch lg:items-center">
         <Reveal direction="left" delay={0.15} className="order-2 lg:order-1">
           <div className="relative min-h-[520px] overflow-hidden rounded-[38px] border border-white/[0.06] bg-white/[0.02] backdrop-blur-xl shadow-[0_0_60px_rgba(0,0,0,0.3)]">

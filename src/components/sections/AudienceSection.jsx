@@ -3,7 +3,7 @@ import builtForSharedCostsGraphic from "../../../Built_for_shared_costs_section_
 
 export default function AudienceSection() {
   return (
-    <section id="audience" className="px-5 sm:px-6 py-12 md:py-16 lg:py-[65px] mx-auto max-w-7xl scroll-mt-32 overflow-hidden">
+    <section id="audience" className="px-5 sm:px-6 py-12 md:py-16 lg:py-[65px] mx-auto max-w-[1440px] scroll-mt-32 overflow-hidden">
       <div className="grid grid-cols-1 lg:grid-cols-[0.72fr_1.28fr] gap-7 items-center">
         <Reveal direction="left">
           <div className="flex flex-col gap-4">

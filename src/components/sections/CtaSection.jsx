@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import Reveal from "../animations/Reveal";
 export default function CtaSection() {
   return (
-    <section id="cta" className="px-5 sm:px-6 py-12 md:py-16 lg:py-[65px] mx-auto max-w-7xl scroll-mt-32">
+    <section id="cta" className="px-5 sm:px-6 py-12 md:py-16 lg:py-[65px] mx-auto max-w-[1440px] scroll-mt-32">
       <motion.div
         initial={{ opacity: 0, scale: 0.95, filter: "blur(4px)" }}
         whileInView={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
