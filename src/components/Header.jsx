@@ -39,7 +39,7 @@ export default function Header() {
     >
       <a
         href="#top"
-        className="flex items-center gap-3 font-thin tracking-[0.28em] no-underline text-white text-[1.35rem] sm:text-[1.55rem]"
+        className="flex items-center gap-1.5 font-thin no-underline text-white text-[1.35rem] sm:text-[1.55rem]"
       >
         <img
           src={prismLogo}
@@ -75,7 +75,7 @@ export default function Header() {
         )}
         <a
           href="download.html"
-          className="gradient-border-button ml-2 px-5 py-2.5 rounded-full text-text text-[0.92rem] no-underline border border-transparent bg-white/[0.04] backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/[0.08]"
+          className="ml-2 px-5 py-2.5 rounded-full text-text text-[0.92rem] no-underline border border-white/20 bg-white/[0.04] backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/[0.08]"
         >
           Get PRISM
         </a>
@@ -111,7 +111,7 @@ export default function Header() {
             ))}
             <a
               href="download.html"
-              className="gradient-border-button block text-center px-3.5 py-2.5 rounded-full text-text text-[0.92rem] no-underline border border-transparent bg-white/[0.04] backdrop-blur-md transition-all duration-200 hover:bg-white/[0.08] mt-1"
+              className="block text-center px-3.5 py-2.5 rounded-full text-text text-[0.92rem] no-underline border border-white/20 bg-white/[0.04] backdrop-blur-md transition-all duration-200 hover:bg-white/[0.08] mt-1"
             >
               Get PRISM
             </a>

@@ -14,7 +14,7 @@ export default function HeroSection() {
         {" "}
         <Reveal direction="up" delay={0}>
           {" "}
-          <p className="text-accent-2 text-[1.05rem] sm:text-[1.1rem] font-black tracking-[0.18em] uppercase mb-2">
+          <p className="tagline-gradient-text text-[1.05rem] sm:text-[1.1rem] font-black tracking-[0.18em] uppercase mb-2">
             {" "}
             Shared expenses, finally made clear{" "}
           </p>{" "}
@@ -40,7 +40,7 @@ export default function HeroSection() {
             {" "}
             <a
               href="/download.html"
-              className="gradient-border-button w-full sm:w-auto relative inline-flex items-center justify-center min-h-[52px] px-7 rounded-full text-text border border-transparent bg-white/[0.04] backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:bg-white/[0.08] no-underline"
+              className="w-full sm:w-auto relative inline-flex items-center justify-center min-h-[52px] px-7 rounded-full text-text border border-white/20 bg-white/[0.04] backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:bg-white/[0.08] no-underline"
             >
               {" "}
               <svg className="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
@@ -48,7 +48,7 @@ export default function HeroSection() {
             </a>{" "}
             <a
               href="/download.html"
-              className="gradient-border-button w-full sm:w-auto relative inline-flex items-center justify-center min-h-[52px] px-7 rounded-full text-text border border-transparent bg-white/[0.04] backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:bg-white/[0.08] no-underline"
+              className="w-full sm:w-auto relative inline-flex items-center justify-center min-h-[52px] px-7 rounded-full text-text border border-white/20 bg-white/[0.04] backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:bg-white/[0.08] no-underline"
             >
               <svg className="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
               See How Splits Work{" "}

@@ -11,7 +11,7 @@ export default function SharedExpensesSection() {
         {/* Left: Copy */}
         <Reveal direction="left">
           <div className="flex flex-col">
-            <p className="text-accent-2 text-[0.92rem] font-black tracking-[0.18em] uppercase mb-4">
+            <p className="tagline-gradient-text text-[0.92rem] font-black tracking-[0.18em] uppercase mb-4">
               See the answer in seconds
             </p>
             <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[0.96] mb-6 max-w-[620px]">
