@@ -86,7 +86,7 @@ html {
   inset: -2px;
   border-radius: inherit;
   padding: 2px;
-  background: linear-gradient(110deg, var(--color-accent-2), var(--color-accent), var(--color-accent-3), var(--color-accent-2));
+  background: linear-gradient(110deg, var(--color-accent), var(--color-accent-2), var(--color-accent-3));
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
@@ -102,14 +102,14 @@ html {
 
 .hero-gradient-text {
   color: transparent;
-  background: linear-gradient(105deg, var(--color-accent-2) 10%, var(--color-accent) 42%, var(--color-accent-3) 68%, #f0abfc 92%);
+  background: linear-gradient(105deg, var(--color-accent) 0%, var(--color-accent-2) 45%, var(--color-accent-3) 100%);
   background-clip: text;
   -webkit-background-clip: text;
 }
 
 .section-gradient-text {
   color: transparent;
-  background: linear-gradient(105deg, var(--color-accent-2) 10%, var(--color-accent) 48%, var(--color-accent-3) 88%);
+  background: linear-gradient(105deg, var(--color-accent) 0%, var(--color-accent-2) 45%, var(--color-accent-3) 100%);
   background-clip: text;
   -webkit-background-clip: text;
 }
