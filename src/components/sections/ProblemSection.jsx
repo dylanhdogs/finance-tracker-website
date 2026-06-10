@@ -134,7 +134,7 @@ export default function ProblemSection() {
               Shared costs get messy fast
             </p>
             <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[0.96] max-w-[760px]">
-              Shared Costs Get <span className="section-gradient-text">Messy Fast</span>
+              Shared Costs Get<br /><span className="section-gradient-text">Messy Fast</span>
             </h2>
             <p className="text-muted text-[1rem] leading-relaxed max-w-[540px]">
               One person pays for groceries. Someone else covers dinner. Rent,

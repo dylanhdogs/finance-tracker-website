@@ -40,7 +40,7 @@ export default function HeroSection() {
             {" "}
             <a
               href="/download.html"
-              className="gradient-border-button w-full sm:w-auto relative inline-flex items-center justify-center min-h-[52px] px-7 rounded-full text-white bg-gradient-to-r from-accent-2 via-accent-3 to-accent shadow-[0_0_30px_rgba(99,102,241,0.2),0_18px_50px_rgba(139,92,246,0.25)] transition-all duration-300 hover:-translate-y-1 no-underline hover:shadow-[0_0_50px_rgba(99,102,241,0.3),0_18px_70px_rgba(139,92,246,0.4)]"
+              className="gradient-border-button w-full sm:w-auto relative inline-flex items-center justify-center min-h-[52px] px-7 rounded-full text-text border border-transparent bg-white/[0.04] backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:bg-white/[0.08] no-underline"
             >
               {" "}
               <svg className="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
@@ -59,9 +59,9 @@ export default function HeroSection() {
           {" "}
           <div className="flex flex-wrap gap-2.5">
             {[
-              { label: "Shared expenses", icon: "M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2M9 5a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2M9 5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2M9 14l2 2 4-4" },
-              { label: "Split costs", icon: "M7 12l5 5 5-5M12 7v10" },
-              { label: "Settle balances", icon: "M22 11.08V12a10 10 0 1 1-5.93-9.14M22 4L12 14.01l-3-3" },
+              { label: "Shared Expenses", icon: "M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2M9 5a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2M9 5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2M9 14l2 2 4-4" },
+              { label: "Split Costs", icon: "M7 12l5 5 5-5M12 7v10" },
+              { label: "Settle Balances", icon: "M22 11.08V12a10 10 0 1 1-5.93-9.14M22 4L12 14.01l-3-3" },
             ].map((tag) => (
               <span
                 key={tag.label}
