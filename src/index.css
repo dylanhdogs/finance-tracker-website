@@ -102,14 +102,14 @@ html {
 
 .hero-gradient-text {
   color: transparent;
-  background: linear-gradient(105deg, var(--color-accent-2) 0%, var(--color-accent) 25%, var(--color-accent-3) 50%, #1e40af 100%);
+  background: linear-gradient(105deg, var(--color-accent-2) 0%, var(--color-accent) 45%, #1e40af 70%, var(--color-accent-3) 100%);
   background-clip: text;
   -webkit-background-clip: text;
 }
 
 .section-gradient-text {
   color: transparent;
-  background: linear-gradient(105deg, var(--color-accent-2) 0%, var(--color-accent) 25%, var(--color-accent-3) 50%, #1e40af 100%);
+  background: linear-gradient(105deg, var(--color-accent-2) 0%, var(--color-accent) 45%, #1e40af 70%, var(--color-accent-3) 100%);
   background-clip: text;
   -webkit-background-clip: text;
 }

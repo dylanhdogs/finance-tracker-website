@@ -75,7 +75,7 @@ export default function Header() {
         )}
         <a
           href="download.html"
-          className="gradient-border-button ml-2 px-5 py-2.5 rounded-full text-white text-[0.92rem] no-underline bg-gradient-to-r from-accent-2 via-accent-3 to-accent shadow-[0_0_20px_rgba(139,92,246,0.15)] hover:shadow-[0_0_30px_rgba(139,92,246,0.3)] transition-all duration-300 hover:-translate-y-0.5"
+          className="gradient-border-button ml-2 px-5 py-2.5 rounded-full text-text text-[0.92rem] no-underline border border-transparent bg-white/[0.04] backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/[0.08]"
         >
           Get PRISM
         </a>
@@ -111,7 +111,7 @@ export default function Header() {
             ))}
             <a
               href="download.html"
-              className="gradient-border-button block text-center px-3.5 py-2.5 rounded-full text-white text-[0.92rem] no-underline bg-gradient-to-r from-accent-2 via-accent-3 to-accent mt-1"
+              className="gradient-border-button block text-center px-3.5 py-2.5 rounded-full text-text text-[0.92rem] no-underline border border-transparent bg-white/[0.04] backdrop-blur-md transition-all duration-200 hover:bg-white/[0.08] mt-1"
             >
               Get PRISM
             </a>
