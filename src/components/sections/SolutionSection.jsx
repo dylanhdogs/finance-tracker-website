@@ -27,27 +27,27 @@ export default function SolutionSection() {
   const [progress, setProgress] = useState(0);
   const progressRef = useRef(0);
   const rafRef = useRef(null);
+  const startRef = useRef(null);
 
   const next = useCallback(() => {
     setCurrent((c) => (c + 1) % carouselImages.length);
     setProgress(0);
     progressRef.current = 0;
+    startRef.current = null;
   }, []);
 
   const prev = useCallback(() => {
     setCurrent((c) => (c - 1 + carouselImages.length) % carouselImages.length);
     setProgress(0);
     progressRef.current = 0;
+    startRef.current = null;
   }, []);
 
   useEffect(() => {
-    if (paused) {
-      if (rafRef.current) cancelAnimationFrame(rafRef.current);
-      return;
-    }
-    const start = performance.now();
+    if (paused) return;
+    if (startRef.current === null) startRef.current = performance.now();
     const tick = (now) => {
-      const elapsed = now - start;
+      const elapsed = now - startRef.current;
       const pct = Math.min(elapsed / INTERVAL, 1);
       progressRef.current = pct;
       setProgress(pct);
@@ -120,7 +120,8 @@ export default function SolutionSection() {
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -60 }}
                   transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-                  className="absolute inset-0 w-full h-full object-contain p-2 sm:p-4 cursor-pointer select-none"
+                  className="absolute inset-0 w-full h-full object-cover object-center cursor-pointer select-none"
+                  style={{ objectPosition: "center 5%" }}
                   draggable="false"
                   whileHover={{ scale: 1.01 }}
                   onClick={() => openPreview(carouselImages[current].src)}
@@ -137,10 +138,9 @@ export default function SolutionSection() {
             </div>
 
             <div className="relative h-1 bg-white/[0.06]">
-              <motion.div
-                className="absolute inset-y-0 left-0 bg-accent-3/70"
+              <div
+                className="absolute inset-y-0 left-0 bg-accent-3/70 transition-none"
                 style={{ width: `${progress * 100}%` }}
-                transition={{ duration: 0 }}
               />
             </div>
 
