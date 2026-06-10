@@ -41,23 +41,21 @@ export default function HeroSection() {
           {" "}
           <p className="text-accent-2 text-[0.92rem] font-black tracking-[0.18em] uppercase mb-4">
             {" "}
-            See everything. Miss nothing.{" "}
+            Shared expenses, finally made clear{" "}
           </p>{" "}
         </Reveal>{" "}
         <Reveal direction="up" delay={0.12}>
           {" "}
           <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[0.96] mb-5 sm:mb-6 max-w-full">
             {" "}
-            Know Exactly Where Your Money Goes{" "}
+            Know Exactly Who Owes Who{" "}
           </h1>{" "}
         </Reveal>{" "}
         <Reveal direction="up" delay={0.24}>
           {" "}
           <p className="text-muted text-[1rem] sm:text-[1.12rem] leading-relaxed max-w-[620px]">
             {" "}
-            Prism is personal finance software that helps you organize your
-            accounts, spending, budgets, shared expenses, imports, and reports
-            in one private desktop app. Your data stays on your machine.{" "}
+            Prism helps you track shared bills, split costs, see who owes who, and settle balances — with personal finance tools included when you need them.
           </p>{" "}
         </Reveal>{" "}
         <Reveal direction="up" delay={0.36}>
@@ -72,38 +70,30 @@ export default function HeroSection() {
               Get Prism for Desktop{" "}
             </a>{" "}
             <a
-              href="#how"
-              onClick={(e) => {
-                e.preventDefault();
-                document
-                  .querySelector("#how")
-                  ?.scrollIntoView({ behavior: "smooth", block: "start" });
-              }}
+              href="download.html"
               className="w-full sm:w-auto relative inline-flex items-center justify-center min-h-[52px] px-6 rounded-full font-black text-text border border-white/14 bg-white/6 transition-transform duration-180 hover:-translate-y-1 no-underline"
             >
               {" "}
-              See How It Works{" "}
+              Start Tracking Shared Expenses.{" "}
             </a>{" "}
           </div>{" "}
         </Reveal>{" "}
         <Reveal direction="up" delay={0.48}>
           {" "}
           <div className="flex flex-wrap gap-2.5">
-            {" "}
             {[
-              "100% Local & Offline",
-              "Built for Personal Finance",
-              "Imports, Budgets & Reports",
+              "Shared expenses",
+              "Split costs",
+              "Settle balances",
             ].map((tag) => (
               <span
                 key={tag}
-              className="px-3 py-2 rounded-full border border-white/14 bg-white/5 text-muted text-[0.8rem] font-bold"
+                className="px-3 py-2 rounded-full border border-white/14 bg-white/5 text-muted text-[0.8rem] font-bold"
               >
-                {" "}
-                {tag}{" "}
+                {tag}
               </span>
-            ))}{" "}
-          </div>{" "}
+            ))}
+          </div>
         </Reveal>{" "}
       </div>{" "}
       <Reveal direction="right" delay={0.3}>
@@ -185,7 +175,7 @@ export default function HeroSection() {
                     </article>
                   ))}{" "}
                 </div>{" "}
-                  <div className="relative h-[190px] max-md:h-[150px] p-5 max-md:p-4 border border-white/14 rounded-2xl bg-gradient-to-b from-white/10 to-white/3.5 overflow-hidden">
+                <div className="relative h-[190px] max-md:h-[150px] p-5 max-md:p-4 border border-white/14 rounded-2xl bg-gradient-to-b from-white/10 to-white/3.5 overflow-hidden">
                   {" "}
                   <div className="absolute inset-x-5 top-6 bottom-6 grid grid-rows-4 opacity-25">
                     {" "}

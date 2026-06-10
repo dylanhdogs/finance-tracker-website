@@ -3,18 +3,18 @@ import Reveal from "../animations/Reveal";
 
 const audiences = [
   {
-    title: "Households Who Want Confidence",
-    desc: "You know your money is spread thin across cards, bills, and bank accounts. This structure gives you one clear view — without having to become an accountant.",
+    title: "Roommates & Housemates",
+    desc: "Split rent, utilities, groceries, and household bills without messy notes or awkward reminders.",
     visual: "bills",
   },
   {
-    title: "Budgeters Tired of Guesswork",
-    desc: "Stop resetting plans that don't stick. See real numbers, build real budgets, and understand what changed each month.",
+    title: "Couples & Families",
+    desc: "See who paid for what, keep shared costs clear, and settle balances without arguments.",
     visual: "bars",
   },
   {
-    title: "Savers & Investors",
-    desc: "Track what you own, what it earns, and whether you're actually getting ahead — not just whether your app looks pretty.",
+    title: "Trips & Small Groups",
+    desc: "Track trip costs, group purchases, and shared spending so everyone knows where they stand.",
     visual: "line",
   },
 ];
@@ -41,9 +41,9 @@ export default function AudienceSection() {
         <Reveal direction="left">
           <div className="flex flex-col gap-4">
             <p className="text-accent-2 text-[0.92rem] font-black tracking-[0.18em] uppercase">Who this is for</p>
-            <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[0.96] max-w-[620px]">A system for real financial decisions</h2>
-            <p className="text-muted text-[1.12rem] leading-relaxed max-w-[540px]">You already know money is complicated. This just gives you a system that matches reality — not a product designed around subscriptions.</p>
-            <p className="text-text text-[1.12rem] leading-relaxed max-w-[540px] font-bold">If you're tired of spreadsheets, cloud logins, and tools that never quite fit your life, this was built for you.</p>
+            <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[0.96] max-w-[620px]">Built for shared costs</h2>
+            <p className="text-muted text-[1.12rem] leading-relaxed max-w-[540px]">Prism is built around shared bills, trips, households, and groups — not spreadsheets or general budgeting apps.</p>
+            <p className="text-text text-[1.12rem] leading-relaxed max-w-[540px] font-bold">If you split rent, groceries, trips, or household costs, this is for you.</p>
           </div>
         </Reveal>
         <Reveal direction="right" className="grid grid-cols-1 sm:grid-cols-3 gap-4">

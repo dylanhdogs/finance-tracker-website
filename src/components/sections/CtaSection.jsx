@@ -12,9 +12,9 @@ export default function CtaSection() {
       >
         <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent-2 to-transparent" />
         <div className="relative z-10 flex-1">
-          <p className="text-accent-2 text-[0.92rem] font-black tracking-[0.18em] uppercase mb-4">Take control</p>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-[3.4rem] font-black tracking-tight leading-[0.96] mb-5 max-w-[540px]">Stop building workarounds.<br />Start making better decisions.</h2>
-          <p className="text-muted leading-relaxed max-w-[540px]">Make confident financial decisions with a system built around your actual money — not someone else's product. Start with your data. Keep it local. Cancel anytime.</p>
+          <p className="text-accent-2 text-[0.92rem] font-black tracking-[0.18em] uppercase mb-4">Start tracking shared expenses clearly.</p>
+          <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-[3.4rem] font-black tracking-tight leading-[0.96] mb-5 max-w-[540px]">Make shared expenses easier to manage.</h2>
+          <p className="text-muted leading-relaxed max-w-[540px]">Track what was paid, who owes who, and what has already been settled — all in one clear place.</p>
         </div>
         <motion.div
           initial={{ opacity: 0, scale: 0.92 }}

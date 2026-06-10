@@ -4,15 +4,15 @@ import Reveal from "../animations/Reveal";
 const steps = [
   {
     number: "01",
-    title: "Bring Your Money Into One Place",
-    desc: "Import transactions and connect your accounts once. From there, every activity is visible in one place without hopping between apps.",
+    title: "Add an expense",
+    desc: "Enter what was paid, who paid it, and who was involved.",
     color: "accent-2",
     mini: (
       <svg width="100%" height="56" viewBox="0 0 200 56" fill="none" aria-hidden="true">
         <rect x="20" y="8" width="160" height="5" rx="2.5" fill="currentColor" opacity="0.2" />
         <rect x="20" y="18" width="160" height="5" rx="2.5" fill="currentColor" opacity="0.15" />
         <rect x="20" y="28" width="130" height="5" rx="2.5" fill="currentColor" opacity="0.3" />
-        <rect x="20" y="38" width="160" height="5" rx="2.5" fill="currentColor" opacity="0.2" />
+        <rect x="20" y="38" width="120" height="5" rx="2.5" fill="currentColor" opacity="0.18" />
         <circle cx="174" cy="42" r="7" fill="var(--color-accent-2)" opacity="0.4" />
         <path d="M171 42l2 2 4-4" stroke="var(--color-accent-2)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" opacity="1" />
       </svg>
@@ -20,8 +20,8 @@ const steps = [
   },
   {
     number: "02",
-    title: "See What Actually Happened",
-    desc: "Organize spending, reconcile activity, and understand each transaction in context. No more guessing whether you can spend in a category.",
+    title: "Split the cost",
+    desc: "Divide it evenly or customize each person's share.",
     color: "accent",
     mini: (
       <svg width="100%" height="56" viewBox="0 0 200 56" fill="none" aria-hidden="true">
@@ -38,8 +38,8 @@ const steps = [
   },
   {
     number: "03",
-    title: "Make Better Financial Decisions",
-    desc: "Use reports, trends, and actual balances to decide with confidence. Know what you can spend, what needs attention, and where you're headed.",
+    title: "See who owes who",
+    desc: "Prism calculates balances automatically.",
     color: "accent-3",
     mini: (
       <svg width="100%" height="56" viewBox="0 0 200 56" fill="none" aria-hidden="true">
@@ -48,6 +48,20 @@ const steps = [
         <path d="M20 46 Q 60 38, 80 42 T 120 32 T 160 36" stroke="var(--color-accent-2)" strokeWidth="2" strokeLinecap="round" fill="none" opacity="1" />
         <circle cx="160" cy="36" r="3.5" fill="var(--color-accent-2)" opacity="0.9" />
         <path d="M20 46 Q 60 34, 80 40 T 120 28 T 160 30" stroke="var(--color-accent)" strokeWidth="1.5" strokeLinecap="round" fill="none" opacity="0.55" />
+      </svg>
+    ),
+  },
+  {
+    number: "04",
+    title: "Settle the balance",
+    desc: "Mark balances as paid and keep a clean record.",
+    color: "accent-2",
+    mini: (
+      <svg width="100%" height="56" viewBox="0 0 200 56" fill="none" aria-hidden="true">
+        <rect x="20" y="12" width="60" height="4" rx="2" fill="currentColor" opacity="0.18" />
+        <rect x="20" y="22" width="90" height="4" rx="2" fill="currentColor" opacity="0.12" />
+        <circle cx="160" cy="28" r="10" fill="var(--color-accent-2)" opacity="0.15" />
+        <path d="M154 28l4 4 8-8" stroke="var(--color-accent-2)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" opacity="1" />
       </svg>
     ),
   },
@@ -72,14 +86,13 @@ export default function HowSection() {
     >
       <Reveal direction="up">
         <p className="text-accent-2 text-[0.92rem] font-black tracking-[0.18em] uppercase mb-4">
-          From scattered to clear
+          Add it. Split it. Settle it.
         </p>
         <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[0.96] mb-5 max-w-[760px]">
-          Stop Guessing. Start Knowing.
+          Know Who Owes Who In Seconds
         </h2>
         <p className="text-muted text-[1.12rem] leading-relaxed max-w-[620px]">
-          A better system in three steps: bring your money in, see what actually
-          happened, and make decisions with confidence.
+          Add an expense, split the cost, see who owes who, and settle the balance.
         </p>
       </Reveal>
 

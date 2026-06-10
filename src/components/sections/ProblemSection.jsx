@@ -130,14 +130,16 @@ export default function ProblemSection() {
         <Reveal direction="left">
           <div className="flex flex-col gap-5">
             <p className="text-accent-2 text-[0.92rem] font-black tracking-[0.18em] uppercase mb-1">
-              Sound familiar?
+              Shared costs get messy fast
             </p>
             <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[0.96] max-w-[760px]">
-              Managing Money Gets Messy Fast
+              Shared Costs Get Messy Fast
             </h2>
             <p className="text-muted text-[1rem] leading-relaxed max-w-[540px]">
-              Money split across apps, cards, and spreadsheets. Most people only
-              see what's really happening after it's too late.
+              One person pays for groceries. Someone else covers dinner. Rent,
+              utilities, subscriptions, trips, and random expenses pile up. Prism
+              keeps shared costs clear so nobody has to guess or scroll through
+              old messages.
             </p>
           </div>
         </Reveal>

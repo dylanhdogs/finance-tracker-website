@@ -98,13 +98,13 @@ export default function SolutionSection() {
         </Reveal>
         <Reveal direction="right" className="order-1 lg:order-2">
           <div className="flex flex-col">
-            <p className="text-accent-2 text-[0.92rem] font-black tracking-[0.18em] uppercase mb-4">The answer to scattered finances</p>
-            <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[0.96] mb-6 max-w-[620px]">One Clear Bottom Line</h2>
-            <p className="text-muted text-[1.12rem] leading-relaxed max-w-[540px] mb-9">You need one place that shows what you actually have, what moved, and what it means. Nothing hidden behind a cloud account.</p>
-            <ul className="flex flex-col gap-3">
-              <li className="flex items-center gap-3 text-text text-[1.05rem] font-bold leading-snug"><span className="w-2 h-2 rounded-full bg-accent-2 shrink-0 shadow-[0_0_14px_rgba(38,230,163,0.6)]" />See what came in — clearly.</li>
-              <li className="flex items-center gap-3 text-text text-[1.05rem] font-bold leading-snug"><span className="w-2 h-2 rounded-full bg-accent-3 shrink-0 shadow-[0_0_14px_rgba(93,216,255,0.6)]" />Understand what went out — and why.</li>
-              <li className="flex items-center gap-3 text-text text-[1.05rem] font-bold leading-snug"><span className="w-2 h-2 rounded-full bg-accent shrink-0 shadow-[0_0_14px_rgba(124,92,255,0.6)]" />Know what needs attention — before it becomes a problem.</li>
+            <p className="text-muted text-[0.85rem] font-black tracking-[0.18em] uppercase mb-3">Also included</p>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight leading-[0.96] mb-4 max-w-[540px]">Personal finance tools, included</h2>
+            <p className="text-muted text-[1rem] leading-relaxed max-w-[460px] mb-5">Prism also includes basic personal finance features — but shared expenses are the focus.</p>
+            <ul className="flex flex-col gap-2.5">
+              <li className="flex items-center gap-3 text-text text-[1rem] font-bold leading-snug"><span className="w-2 h-2 rounded-full bg-accent-2 shrink-0 shadow-[0_0_14px_rgba(38,230,163,0.6)]" />Expense tracking</li>
+              <li className="flex items-center gap-3 text-text text-[1rem] font-bold leading-snug"><span className="w-2 h-2 rounded-full bg-accent-3 shrink-0 shadow-[0_0_14px_rgba(93,216,255,0.6)]" />Categories</li>
+              <li className="flex items-center gap-3 text-text text-[1rem] font-bold leading-snug"><span className="w-2 h-2 rounded-full bg-accent shrink-0 shadow-[0_0_14px_rgba(124,92,255,0.6)]" />Dashboard insights</li>
             </ul>
           </div>
         </Reveal>

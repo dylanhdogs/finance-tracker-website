@@ -46,14 +46,14 @@ export default function SharedExpensesSection() {
         <Reveal direction="left">
           <div className="flex flex-col">
             <p className="text-accent-2 text-[0.92rem] font-black tracking-[0.18em] uppercase mb-4">
-              Shared expenses made simple
+              See the answer in seconds
             </p>
             <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[0.96] mb-6 max-w-[620px]">
-              Know Who Owes Who — Without the Guesswork
+              See the answer in seconds
             </h2>
             <p className="text-muted text-[1.12rem] leading-relaxed max-w-[540px] mb-5">
-              Prism helps roommates, families, couples, college students, and
-              vacation groups track shared costs in one clear place.
+              Who owes who? How much? Can you settle it? Prism makes shared
+              expenses clear in one place.
             </p>
             <p className="text-text text-[1.12rem] leading-relaxed max-w-[540px] mb-8 font-bold">
               See who paid, who owes, what is still open, and settle balances
@@ -62,7 +62,7 @@ export default function SharedExpensesSection() {
             <ul className="flex flex-col gap-3">
               {[
                 "See exactly who owes who",
-                "Track how much each person owes",
+                "See how much each person owes",
                 "Split bills and shared costs clearly",
                 "Settle balances with confidence",
               ].map((point) => (

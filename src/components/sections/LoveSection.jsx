@@ -96,7 +96,7 @@ export default function LoveSection() {
         </p>{" "}
         <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[0.96] mb-5 max-w-[760px]">
           {" "}
-          Built for people who want control &mdash; not complexity{" "}
+          Built for people who want control &mdash; not complexity
         </h2>{" "}
       </Reveal>{" "}
       <div className="mt-10 sm:mt-12 grid grid-cols-1 lg:grid-cols-3 gap-5">

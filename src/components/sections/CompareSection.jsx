@@ -1,16 +1,16 @@
 import { motion } from "motion/react";
 import Reveal from "../animations/Reveal";
 const rows = [
-  { label: "Built for", prism: "Your life and money", qb: "Small business operations", mint: "Budget tracking only", sheets: "You build it" },
-  { label: "Double-entry", prism: "✓", qb: "✓", mint: "✗", sheets: "Manual setup" },
-  { label: "Chart of Accounts", prism: "✓", qb: "✓", mint: "✗", sheets: "Manual setup" },
+  { label: "Built for", prism: "Shared expenses", qb: "Small business operations", mint: "Budget tracking only", sheets: "You build it" },
+  { label: "Who paid / who owes who", prism: "✓", qb: "✗", mint: "✗", sheets: "Manual setup" },
+  { label: "Automatic balance calculations", prism: "✓", qb: "✗", mint: "✗", sheets: "Manual setup" },
   { label: "Local / Offline", prism: "✓", qb: "✗", mint: "✗", sheets: "✓" },
-  { label: "Reconciliation", prism: "✓", qb: "✓", mint: "✗", sheets: "✗" },
-  { label: "Budget tracking", prism: "✓", qb: "✗", mint: "✓", sheets: "Manual setup" },
-  { label: "Reports (P&L / Balance)", prism: "✓", qb: "✓", mint: "✗", sheets: "Manual setup" },
+  { label: "Settle balances", prism: "✓", qb: "✗", mint: "✗", sheets: "Manual setup" },
+  { label: "Group expenses", prism: "✓", qb: "✗", mint: "✗", sheets: "Manual setup" },
+  { label: "Reports", prism: "✓", qb: "✓", mint: "✗", sheets: "Manual setup" },
   { label: "CSV / Excel import", prism: "✓", qb: "✓", mint: "✓", sheets: "✓" },
-  { label: "Your money stays private", prism: "On your device", qb: "Cloud required", mint: "Cloud required", sheets: "Local files" },
-  { label: "Where the others fall short", prism: "Built for complexity", qb: "Designed for business", mint: "Made for targets", sheets: "Built for spreadsheets" },
+  { label: "Your data stays private", prism: "On your device", qb: "Cloud required", mint: "Cloud required", sheets: "Local files" },
+  { label: "Where the others fall short", prism: "Built for shared costs", qb: "Designed for business", mint: "Made for targets", sheets: "Built for spreadsheets" },
 ];
 const columns = [
   { key: "prism", label: "Prism" },
@@ -37,9 +37,9 @@ export default function CompareSection() {
   return (
     <section id="compare" className="px-5 sm:px-6 py-12 md:py-16 lg:py-[65px] mx-auto max-w-7xl scroll-mt-32">
       <Reveal direction="up">
-        <p className="text-accent-2 text-[0.92rem] font-black tracking-[0.18em] uppercase mb-4">Why Prism is different</p>
-        <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[0.96] mb-5 max-w-[760px]">Better than spreadsheets. Simpler than business software.</h2>
-        <p className="text-muted text-[1.12rem] leading-relaxed max-w-[620px]">Spreadsheets make you build the system yourself. Budgeting apps hide your data in the cloud. Business tools add complexity you do not need. Prism is personal finance software built for real life, not business accounting or fragile spreadsheet systems.</p>
+        <p className="text-accent-2 text-[0.92rem] font-black tracking-[0.18em] uppercase mb-4">Built for shared expenses</p>
+        <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[0.96] mb-5 max-w-[760px]">Clear shared expenses. No confusion</h2>
+        <p className="text-muted text-[1.12rem] leading-relaxed max-w-[620px]">Most spreadsheets, cloud apps, and business tools were not built for shared costs. Prism is.</p>
       </Reveal>
       <Reveal direction="fade" delay={0.1}>
         <div className="hidden lg:block mt-12 overflow-hidden rounded-[34px] border border-white/12 bg-[radial-gradient(circle_at_24%_0%,rgba(38,230,163,0.14),transparent_34%),radial-gradient(circle_at_88%_22%,rgba(124,92,255,0.12),transparent_32%),linear-gradient(145deg,rgba(255,255,255,0.075),rgba(255,255,255,0.025))] p-2 shadow-[0_28px_120px_rgba(0,0,0,0.32)] backdrop-blur-xl">

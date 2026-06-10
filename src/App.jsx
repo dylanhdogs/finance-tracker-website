@@ -4,14 +4,14 @@ import Footer from "./components/Footer";
 import HeroSection from "./components/sections/HeroSection";
 import ProblemSection from "./components/sections/ProblemSection";
 import SharedExpensesSection from "./components/sections/SharedExpensesSection";
-import SolutionSection from "./components/sections/SolutionSection";
+import AudienceSection from "./components/sections/AudienceSection";
 import HowSection from "./components/sections/HowSection";
+import SolutionSection from "./components/sections/SolutionSection";
 import LoveSection from "./components/sections/LoveSection";
-import ScreenshotsSection from "./components/sections/ScreenshotsSection";
 import CompareSection from "./components/sections/CompareSection";
 import TestimonialsSection from "./components/sections/TestimonialsSection";
-import CtaSection from "./components/sections/CtaSection";
 import FaqSection from "./components/sections/FaqSection";
+import CtaSection from "./components/sections/CtaSection";
 
 export default function App() {
   return (
@@ -23,15 +23,15 @@ export default function App() {
       <main>
         <HeroSection />
         <ProblemSection />
-        <SolutionSection />
-        <CompareSection />
-        <HowSection />
-        <ScreenshotsSection />
         <SharedExpensesSection />
+        <AudienceSection />
+        <HowSection />
+        <SolutionSection />
         <LoveSection />
+        <CompareSection />
         <TestimonialsSection />
-        <CtaSection />
         <FaqSection />
+        <CtaSection />
       </main>
       <Footer />
     </>
