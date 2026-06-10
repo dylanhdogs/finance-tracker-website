@@ -3,16 +3,16 @@ import { motion, AnimatePresence } from "motion/react";
 import Reveal from "../animations/Reveal";
 const faqs = [
   {
-    q: "Is Prism only for personal finance?",
-    a: "Prism is built for personal finance too, but its strongest use is shared expenses: roommates, couples, family, friends, and small teams who need a clear way to track who paid, who owes who, and what’s settled.",
+    q: "Is PRISM only for personal finance?",
+    a: "PRISM is built for personal finance too, but its strongest use is shared expenses: roommates, couples, family, friends, and small teams who need a clear way to track who paid, who owes who, and what's settled.",
   },
   {
-    q: "What makes Prism better than a spreadsheet for shared expenses?",
-    a: "You add an expense once and Prism calculates balances automatically — no shared formulas, version conflicts, or manual who-owes-who math.",
+    q: "What makes PRISM better than a spreadsheet for shared expenses?",
+    a: "You add an expense once and PRISM calculates balances automatically — no shared formulas, version conflicts, or manual who-owes-who math.",
   },
   {
-    q: "Can Prism replace QuickBooks or Mint?",
-    a: "Prism offers personal finance features alongside shared expense tracking, but it’s built to be simpler than business software and more useful for real shared costs than budgeting-only apps.",
+    q: "Can PRISM replace QuickBooks or Mint?",
+    a: "PRISM offers personal finance features alongside shared expense tracking, but it's built to be simpler than business software and more useful for real shared costs than budgeting-only apps.",
   },
   {
     q: "Is my shared expense data private?",
@@ -20,10 +20,10 @@ const faqs = [
   },
   {
     q: "Can I import shared expenses from a bank or spreadsheet?",
-    a: "Yes. Prism supports CSV and Excel (.xlsx) import and lets you reassign imported transactions to specific people or shares.",
+    a: "Yes. PRISM supports CSV and Excel (.xlsx) import and lets you reassign imported transactions to specific people or shares.",
   },
   {
-    q: "Does Prism work for group trips?",
+    q: "Does PRISM work for group trips?",
     a: "Yes. Trip expenses can be added and split as shared costs with balances tracked per person.",
   },
   {
@@ -31,17 +31,17 @@ const faqs = [
     a: "Yes. You can export transactions and balances, and reports are designed to make shared costs easy to review and reconcile.",
   },
   {
-    q: "How does Prism calculate who owes who?",
-    a: "When you add a shared expense, Prism determines the per-person share — equal or custom — and derives net balances across all participants so you can see exactly what is owed.",
+    q: "How does PRISM calculate who owes who?",
+    a: "When you add a shared expense, PRISM determines the per-person share — equal or custom — and derives net balances across all participants so you can see exactly what is owed.",
   },
   {
-    q: "Is Prism easier than spreadsheets for splitting costs?",
-    a: "Yes. Prism automates the owed-amount calculation and keeps one shared view of balances. You no longer need multiple tabs, comment threads, or reconciliation checklists.",
+    q: "Is PRISM easier than spreadsheets for splitting costs?",
+    a: "Yes. PRISM automates the owed-amount calculation and keeps one shared view of balances. You no longer need multiple tabs, comment threads, or reconciliation checklists.",
   },
 ];
 function FaqItem({ question, answer, isOpen, onToggle }) {
   return (
-    <div className="border-b border-white/14 overflow-hidden">
+    <div className="border-b border-white/[0.06] overflow-hidden">
       <button
         onClick={onToggle}
         className="w-full flex items-center justify-between px-0 py-6 text-left font-black text-text bg-transparent border-0 cursor-pointer"
@@ -84,11 +84,11 @@ export default function FaqSection() {
           FAQ
         </p>
         <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[0.96] mb-5 max-w-[760px]">
-          Clear answers for buyers
+          <span className="section-gradient-text">Clear answers</span> for buyers
         </h2>
       </Reveal>
       <Reveal direction="fade" delay={0.1}>
-        <div className="mt-10 border-t border-white/14">
+        <div className="mt-10 border-t border-white/[0.06]">
           {faqs.map((faq, i) => (
             <FaqItem
               key={i}

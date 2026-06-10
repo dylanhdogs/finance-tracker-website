@@ -40,26 +40,26 @@ export default function SolutionSection() {
     <section id="solution" className="px-5 sm:px-6 py-12 md:py-16 lg:py-[65px] mx-auto max-w-7xl scroll-mt-32">
       <div className="flex flex-col gap-12 lg:grid lg:grid-cols-[1.08fr_0.92fr] lg:gap-16 items-stretch lg:items-center">
         <Reveal direction="left" delay={0.15} className="order-2 lg:order-1">
-          <div className="relative min-h-[520px] overflow-hidden rounded-[38px] bg-[radial-gradient(circle_at_50%_50%,rgba(38,230,163,0.12),transparent_30%),radial-gradient(circle_at_80%_20%,rgba(124,92,255,0.08),transparent_28%)]">
-            <div className="grid grid-cols-3 gap-3 p-5">
+          <div className="relative min-h-[520px] overflow-hidden rounded-[38px] border border-white/[0.06] bg-white/[0.02] backdrop-blur-xl shadow-[0_0_60px_rgba(0,0,0,0.3)]">
+            <div className="grid grid-cols-1 gap-2.5 p-4 sm:grid-cols-3 sm:gap-3 sm:p-5">
               {summaryCards.map((card, i) => (
-                <motion.div key={card.label} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.2 + i * 0.08, ease: [0.16, 1, 0.3, 1] }} className="rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-4 shadow-xl backdrop-blur-md">
-                  <p className="text-muted text-[0.82rem] font-bold uppercase tracking-wider mb-1.5">{card.label}</p>
-                  <p className="text-text text-[1.55rem] font-black tracking-tight">{card.value}</p>
+                <motion.div key={card.label} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.2 + i * 0.08, ease: [0.16, 1, 0.3, 1] }} className="rounded-2xl border border-white/[0.06] bg-white/[0.03] p-3 shadow-xl backdrop-blur-md sm:p-4">
+                  <p className="text-muted text-[0.72rem] font-bold uppercase tracking-wider mb-1 sm:text-[0.82rem] sm:mb-1.5">{card.label}</p>
+                  <p className="text-text text-[1.3rem] font-black tracking-tight whitespace-nowrap sm:text-[1.35rem] md:text-[1.55rem]">{card.value}</p>
                   <p className={`text-${card.color} text-[0.78rem] font-bold mt-1`}>{card.change}</p>
                 </motion.div>
               ))}
             </div>
-            <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.5, ease: [0.16, 1, 0.3, 1] }} className="mx-5 mb-3 rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-4 shadow-xl backdrop-blur-md">
+            <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.5, ease: [0.16, 1, 0.3, 1] }} className="mx-5 mb-3 rounded-2xl border border-white/[0.06] bg-white/[0.03] p-4 shadow-xl backdrop-blur-md">
               <div className="flex items-center justify-between mb-2.5">
                 <p className="text-text text-[0.9rem] font-extrabold">Recent Transactions</p>
-                <span className="text-accent-2/60"><ChevronRight /></span>
+                <span className="text-accent-2/50"><ChevronRight /></span>
               </div>
               <div className="space-y-2">
                 {transactions.map((tx) => (
                   <div key={tx.desc} className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
-                      <span className={`w-4 h-4 rounded-full flex items-center justify-center ${tx.status === "cleared" ? "bg-accent-2/20" : "bg-warning/20"}`}>
+                      <span className={`w-4 h-4 rounded-full flex items-center justify-center ${tx.status === "cleared" ? "bg-accent-2/15" : "bg-warning/15"}`}>
                         <span className={`${tx.status === "cleared" ? "text-accent-2" : "text-warning"}`}><CheckIcon /></span>
                       </span>
                       <div>
@@ -72,10 +72,10 @@ export default function SolutionSection() {
                 ))}
               </div>
             </motion.div>
-            <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.7, ease: [0.16, 1, 0.3, 1] }} className="mx-5 mb-5 rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-4 shadow-xl backdrop-blur-md">
+            <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.7, ease: [0.16, 1, 0.3, 1] }} className="mx-5 mb-5 rounded-2xl border border-white/[0.06] bg-white/[0.03] p-4 shadow-xl backdrop-blur-md">
               <div className="flex items-center justify-between mb-2.5">
                 <p className="text-text text-[0.9rem] font-extrabold">Budget Overview</p>
-                <span className="text-accent-2/60"><ChevronRight /></span>
+                <span className="text-accent-2/50"><ChevronRight /></span>
               </div>
               <div className="grid grid-cols-3 gap-3">
                 {budgets.map((b) => {
@@ -86,8 +86,8 @@ export default function SolutionSection() {
                         <span className="text-muted font-bold">{b.category}</span>
                         <span className="text-text font-extrabold">{pct}%</span>
                       </div>
-                      <div className="h-[5px] rounded-full bg-white/8 overflow-hidden">
-                        <motion.div initial={{ width: 0 }} whileInView={{ width: `${pct}%` }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.9, ease: [0.16, 1, 0.3, 1] }} className={`h-full rounded-full bg-${b.color}`} style={{ background: b.color === "accent-2" ? "var(--color-accent-2)" : b.color === "accent-3" ? "var(--color-accent-3)" : "var(--color-accent)" }} />
+                      <div className="h-[5px] rounded-full bg-white/[0.06] overflow-hidden">
+                        <motion.div initial={{ width: 0 }} whileInView={{ width: `${pct}%` }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.9, ease: [0.16, 1, 0.3, 1] }} className="h-full rounded-full" style={{ background: b.color === "accent-2" ? "var(--color-accent-2)" : b.color === "accent-3" ? "var(--color-accent-3)" : "var(--color-accent)" }} />
                       </div>
                     </div>
                   );
@@ -99,12 +99,12 @@ export default function SolutionSection() {
         <Reveal direction="right" className="order-1 lg:order-2">
           <div className="flex flex-col">
             <p className="text-muted text-[0.85rem] font-black tracking-[0.18em] uppercase mb-3">Also included</p>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight leading-[0.96] mb-4 max-w-[540px]">Personal finance tools, included</h2>
-            <p className="text-muted text-[1rem] leading-relaxed max-w-[460px] mb-5">Prism also includes basic personal finance features — but shared expenses are the focus.</p>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight leading-[0.96] mb-4 max-w-[540px]">Personal finance tools, <span className="section-gradient-text">included</span></h2>
+            <p className="text-muted text-[1rem] leading-relaxed max-w-[460px] mb-5">PRISM also includes basic personal finance features — but shared expenses are the focus.</p>
             <ul className="flex flex-col gap-2.5">
-              <li className="flex items-center gap-3 text-text text-[1rem] font-bold leading-snug"><span className="w-2 h-2 rounded-full bg-accent-2 shrink-0 shadow-[0_0_14px_rgba(38,230,163,0.6)]" />Expense tracking</li>
-              <li className="flex items-center gap-3 text-text text-[1rem] font-bold leading-snug"><span className="w-2 h-2 rounded-full bg-accent-3 shrink-0 shadow-[0_0_14px_rgba(93,216,255,0.6)]" />Categories</li>
-              <li className="flex items-center gap-3 text-text text-[1rem] font-bold leading-snug"><span className="w-2 h-2 rounded-full bg-accent shrink-0 shadow-[0_0_14px_rgba(124,92,255,0.6)]" />Dashboard insights</li>
+              <li className="flex items-center gap-3 text-text text-[1rem] font-bold leading-snug"><span className="w-2 h-2 rounded-full bg-accent-2 shrink-0 shadow-[0_0_12px_rgba(139,92,246,0.5)]" />Expense tracking</li>
+              <li className="flex items-center gap-3 text-text text-[1rem] font-bold leading-snug"><span className="w-2 h-2 rounded-full bg-accent-3 shrink-0 shadow-[0_0_12px_rgba(56,189,246,0.5)]" />Categories</li>
+              <li className="flex items-center gap-3 text-text text-[1rem] font-bold leading-snug"><span className="w-2 h-2 rounded-full bg-accent shrink-0 shadow-[0_0_12px_rgba(168,85,247,0.5)]" />Dashboard insights</li>
             </ul>
           </div>
         </Reveal>

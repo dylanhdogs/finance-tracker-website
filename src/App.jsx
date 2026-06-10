@@ -22,6 +22,10 @@ export default function App() {
       <div className="wallpaper-orb wallpaper-orb--3" aria-hidden="true" />
       <div className="wallpaper-grid" aria-hidden="true" />
       <div className="noise" aria-hidden="true" />
+      <div className="corner-gradient corner-gradient--tl" aria-hidden="true" />
+      <div className="corner-gradient corner-gradient--tr" aria-hidden="true" />
+      <div className="corner-gradient corner-gradient--bl" aria-hidden="true" />
+      <div className="corner-gradient corner-gradient--br" aria-hidden="true" />
       <Header />
       <main>
         <HeroSection />

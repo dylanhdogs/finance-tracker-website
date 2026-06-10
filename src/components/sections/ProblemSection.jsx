@@ -1,12 +1,13 @@
 import { motion } from "motion/react";
 import Reveal from "../animations/Reveal";
+import sharedCostsGraphic from "../../../Shared_Costs_Get_Messy_Fast_section_graphic.png";
 
 function ScatteredCard({ x, y, angle, delay, label, title, detail, tone = "muted", className = "" }) {
   const toneClasses = {
-    warning: "border-[#ff6b8a]/28 bg-[#ff6b8a]/10 text-[#ff9aaa]",
-    accent: "border-accent/28 bg-accent/10 text-accent",
-    cyan: "border-accent-3/28 bg-accent-3/10 text-accent-3",
-    muted: "border-white/12 bg-white/7 text-muted",
+    warning: "border-[#ff6b8a]/20 bg-[#ff6b8a]/[0.06] text-[#ff9aaa]",
+    accent: "border-accent/20 bg-accent/[0.06] text-accent",
+    cyan: "border-accent-3/20 bg-accent-3/[0.06] text-accent-3",
+    muted: "border-white/[0.08] bg-white/[0.03] text-muted",
   };
 
   return (
@@ -16,7 +17,7 @@ function ScatteredCard({ x, y, angle, delay, label, title, detail, tone = "muted
       viewport={{ once: true }}
       transition={{ duration: 0.6, delay, ease: [0.16, 1, 0.3, 1] }}
       style={{ position: "absolute", left: x, top: y }}
-      className={`w-[210px] rounded-2xl border p-4 shadow-2xl backdrop-blur-md ${toneClasses[tone]} ${className}`}
+      className={`w-[210px] rounded-2xl border p-4 shadow-2xl backdrop-blur-xl ${toneClasses[tone]} ${className}`}
     >
       <div className="mb-3 flex items-center justify-between gap-3">
         <span className="text-[0.66rem] font-black uppercase tracking-[0.14em]">
@@ -33,16 +34,16 @@ function ScatteredCard({ x, y, angle, delay, label, title, detail, tone = "muted
 function TangledLines() {
   return (
     <svg
-      className="absolute inset-0 h-full w-full opacity-55 max-sm:opacity-35"
+      className="absolute inset-0 h-full w-full opacity-50 max-sm:opacity-30"
       viewBox="0 0 680 520"
       fill="none"
       aria-hidden="true"
     >
       <defs>
         <linearGradient id="scatterLine" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stopColor="#ff6b8a" stopOpacity="0.65" />
-          <stop offset="48%" stopColor="#7c5cff" stopOpacity="0.45" />
-          <stop offset="100%" stopColor="#26e6a3" stopOpacity="0.55" />
+          <stop offset="0%" stopColor="#ff6b8a" stopOpacity="0.5" />
+          <stop offset="48%" stopColor="#a855f7" stopOpacity="0.35" />
+          <stop offset="100%" stopColor="#a855f7" stopOpacity="0.45" />
         </linearGradient>
       </defs>
       {[
@@ -75,13 +76,13 @@ function UnclearSummary() {
       whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.72, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
-      className="absolute left-1/2 top-1/2 z-10 w-[240px] -translate-x-1/2 -translate-y-1/2 rounded-[28px] border border-white/16 bg-[#07101d]/72 p-5 shadow-[0_24px_90px_rgba(0,0,0,0.42)] backdrop-blur-xl max-sm:w-[210px] max-sm:p-4"
+      className="absolute left-1/2 top-1/2 z-10 w-[240px] -translate-x-1/2 -translate-y-1/2 rounded-[28px] border border-white/[0.08] bg-[#050505]/78 p-5 shadow-[0_24px_90px_rgba(0,0,0,0.55)] backdrop-blur-2xl max-sm:w-[210px] max-sm:p-4"
     >
       <div className="mb-4 flex items-center justify-between">
         <span className="text-[0.68rem] font-black uppercase tracking-[0.16em] text-muted">
           financial picture
         </span>
-        <span className="rounded-full border border-[#ff6b8a]/35 bg-[#ff6b8a]/12 px-2 py-1 text-[0.58rem] font-black uppercase tracking-[0.12em] text-[#ff9aaa]">
+        <span className="rounded-full border border-[#ff6b8a]/25 bg-[#ff6b8a]/[0.08] px-2 py-1 text-[0.58rem] font-black uppercase tracking-[0.12em] text-[#ff9aaa]">
           unclear
         </span>
       </div>
@@ -90,13 +91,13 @@ function UnclearSummary() {
       </strong>
       <div className="mt-5 space-y-2.5">
         {[62, 86, 48].map((width, i) => (
-          <div key={width} className="h-2 rounded-full bg-white/9">
+          <div key={width} className="h-2 rounded-full bg-white/[0.06]">
             <motion.div
               initial={{ width: 0 }}
               whileInView={{ width: `${width}%` }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.58 + i * 0.08 }}
-              className="h-full rounded-full bg-gradient-to-r from-[#ff6b8a]/70 via-accent/60 to-accent-2/70 opacity-70 blur-[0.4px]"
+              className="h-full rounded-full bg-gradient-to-r from-[#ff6b8a]/60 via-accent/50 to-accent-2/60 opacity-60 blur-[0.4px]"
             />
           </div>
         ))}
@@ -113,7 +114,7 @@ function StatusChip({ x, y, delay, children, className = "" }) {
       viewport={{ once: true }}
       transition={{ duration: 0.45, delay, ease: [0.16, 1, 0.3, 1] }}
       style={{ position: "absolute", left: x, top: y }}
-      className={`z-20 rounded-full border border-white/14 bg-[#07101d]/78 px-3 py-2 text-[0.7rem] font-black text-muted shadow-2xl backdrop-blur-md ${className}`}
+      className={`z-20 rounded-full border border-white/[0.08] bg-[#050505]/72 px-3 py-2 text-[0.7rem] font-black text-muted shadow-2xl backdrop-blur-xl ${className}`}
     >
       {children}
     </motion.div>
@@ -124,82 +125,33 @@ export default function ProblemSection() {
   return (
     <section
       id="problem"
-      className="px-5 sm:px-6 py-12 md:py-16 lg:py-[65px] mx-auto max-w-7xl scroll-mt-32"
+      className="px-5 sm:px-6 py-12 md:py-16 lg:py-[65px] mx-auto max-w-7xl scroll-mt-32 overflow-hidden"
     >
-      <div className="grid grid-cols-1 lg:grid-cols-[0.72fr_1.28fr] gap-7 items-start">
+      <div className="grid grid-cols-1 lg:grid-cols-[0.72fr_1.28fr] gap-7 items-center">
         <Reveal direction="left">
           <div className="flex flex-col gap-5">
             <p className="text-accent-2 text-[0.92rem] font-black tracking-[0.18em] uppercase mb-1">
               Shared costs get messy fast
             </p>
             <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[0.96] max-w-[760px]">
-              Shared Costs Get Messy Fast
+              Shared Costs Get <span className="section-gradient-text">Messy Fast</span>
             </h2>
             <p className="text-muted text-[1rem] leading-relaxed max-w-[540px]">
               One person pays for groceries. Someone else covers dinner. Rent,
-              utilities, subscriptions, trips, and random expenses pile up. Prism
+              utilities, subscriptions, trips, and random expenses pile up. PRISM
               keeps shared costs clear so nobody has to guess or scroll through
               old messages.
             </p>
           </div>
         </Reveal>
         <Reveal direction="right" className="order-2 lg:order-2">
-          <div className="relative min-h-[420px] overflow-hidden rounded-[38px] border border-white/12 bg-[radial-gradient(circle_at_50%_50%,rgba(255,107,138,0.10),transparent_30%),radial-gradient(circle_at_82%_18%,rgba(124,92,255,0.12),transparent_28%),radial-gradient(circle_at_14%_82%,rgba(38,230,163,0.08),transparent_28%),linear-gradient(180deg,rgba(255,255,255,0.045),rgba(255,255,255,0.012))] p-6 shadow-2xl backdrop-blur-md sm:min-h-[520px]">
-            <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.035)_1px,transparent_1px)] bg-[size:42px_42px] opacity-35" />
-            <TangledLines />
-            <ScatteredCard
-              x="3%"
-              y="5%"
-              angle={-7}
-              delay={0.1}
-              label="bank"
-              title="Balance alert"
-              detail="Checking fell below target"
-              tone="warning"
+          <div className="relative flex justify-center overflow-hidden">
+            <img
+              src={sharedCostsGraphic}
+              alt="Shared costs get messy fast"
+              className="relative z-10 h-auto w-full max-w-[560px] object-contain sm:max-w-[680px] lg:max-w-[760px]"
+              draggable="false"
             />
-            <ScatteredCard
-              x="58%"
-              y="8%"
-              angle={5}
-              delay={0.18}
-              label="spreadsheet"
-              title="Manual update"
-              detail="Last edited 19 days ago"
-              tone="accent"
-              className="max-sm:hidden"
-            />
-            <ScatteredCard
-              x="4%"
-              y="66%"
-              angle={4}
-              delay={0.26}
-              label="receipt"
-              title="Uncategorized"
-              detail="Dining, grocery, or transfer?"
-              tone="muted"
-              className="max-sm:top-[68%]"
-            />
-            <ScatteredCard
-              x="61%"
-              y="62%"
-              angle={-5}
-              delay={0.34}
-              label="budget"
-              title="Limit drifting"
-              detail="Subscriptions and bills overlap"
-              tone="cyan"
-              className="max-sm:hidden"
-            />
-            <UnclearSummary />
-            <StatusChip x="37%" y="11%" delay={0.46} className="max-sm:left-[46%] max-sm:top-[16%]">
-              Missing category
-            </StatusChip>
-            <StatusChip x="62%" y="45%" delay={0.54} className="max-sm:hidden">
-              Unmatched transfer
-            </StatusChip>
-            <StatusChip x="31%" y="83%" delay={0.62} className="max-sm:left-[42%] max-sm:top-[86%]">
-              Budget drift
-            </StatusChip>
           </div>
         </Reveal>
       </div>

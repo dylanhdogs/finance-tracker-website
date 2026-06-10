@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
+import prismLogo from "../../prism_logo_high_quality.png";
 
 const navLinks = [
   { href: "#how", label: "How It Works" },
@@ -32,20 +33,20 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-1/2 z-30 flex w-[calc(100%-32px)] max-w-[1440px] items-center justify-between px-[14px] py-3 rounded-b-2xl border-x border-b border-white/14 bg-[#07101d]/90 shadow-2xl backdrop-blur-xl -translate-x-1/2 transition-all duration-180 ${
-        scrolled ? "border-white/22 bg-[#07101d]/95" : ""
+      className={`fixed top-0 left-1/2 z-30 flex w-[calc(100%-32px)] max-w-[1440px] items-center justify-between px-[14px] py-3 rounded-2xl border-x border-b border-white/[0.07] bg-[#050505]/78 backdrop-blur-2xl -translate-x-1/2 transition-all duration-300 ${
+        scrolled ? "border-white/[0.12] bg-[#050505]/90 shadow-[0_8px_40px_rgba(0,0,0,0.38)]" : ""
       }`}
     >
       <a
         href="#top"
-        className="flex items-center gap-2.5 font-extrabold tracking-tight no-underline text-white"
+        className="flex items-center gap-3 font-black tracking-[0.28em] no-underline text-white text-[1.35rem] sm:text-[1.55rem]"
       >
         <img
-          src="/Prism_logo.png"
-          alt="Prism"
-          className="w-14 h-14 rounded-xl object-cover"
+          src={prismLogo}
+          alt="PRISM"
+          className="w-14 h-14 object-contain"
         />
-        <span>Prism</span>
+        <span>PRISM</span>
       </a>
 
       <nav className="hidden md:flex items-center gap-1">
@@ -58,7 +59,7 @@ export default function Header() {
                 e.preventDefault();
                 handleNavClick(link.href);
               }}
-              className="px-3.5 py-2.5 rounded-full text-muted text-[0.92rem] font-bold no-underline transition-colors duration-180 hover:bg-white/8 hover:text-text"
+              className="px-3.5 py-2.5 rounded-full text-muted text-[0.92rem] font-bold no-underline transition-all duration-200 hover:bg-white/[0.06] hover:text-text"
             >
               {link.label}
             </a>
@@ -66,7 +67,7 @@ export default function Header() {
             <a
               key={link.href}
               href={link.href}
-              className="px-3.5 py-2.5 rounded-full text-muted text-[0.92rem] font-bold no-underline transition-colors duration-180 hover:bg-white/8 hover:text-text"
+              className="px-3.5 py-2.5 rounded-full text-muted text-[0.92rem] font-bold no-underline transition-all duration-200 hover:bg-white/[0.06] hover:text-text"
             >
               {link.label}
             </a>
@@ -74,9 +75,9 @@ export default function Header() {
         )}
         <a
           href="download.html"
-          className="px-3.5 py-2.5 rounded-full text-[#07101a] text-[0.92rem] font-bold no-underline bg-text hover:bg-white/90 transition-colors duration-180"
+          className="gradient-border-button ml-2 px-5 py-2.5 rounded-full text-[#03111a] text-[0.92rem] font-bold no-underline bg-gradient-to-r from-accent-2 via-accent-3 to-accent shadow-[0_0_20px_rgba(139,92,246,0.15)] hover:shadow-[0_0_30px_rgba(139,92,246,0.3)] transition-all duration-300 hover:-translate-y-0.5"
         >
-          Get Prism
+          Get PRISM
         </a>
       </nav>
 
@@ -97,22 +98,22 @@ export default function Header() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.18 }}
-            className="absolute top-full right-0 left-0 mt-2.5 p-3 border border-white/14 rounded-2xl bg-[#07101d]/96 backdrop-blur-lg md:hidden grid gap-1"
+            className="absolute top-full right-0 left-0 mt-2.5 p-3 rounded-2xl border border-white/[0.07] bg-[#050505]/92 backdrop-blur-2xl md:hidden grid gap-1"
           >
             {navLinks.map((link) => (
               <button
                 key={link.href}
                 onClick={() => handleNavClick(link.href)}
-                className="w-full text-left px-3.5 py-2.5 rounded-full text-muted text-[0.92rem] font-bold no-underline transition-colors duration-180 hover:bg-white/8 hover:text-text bg-transparent border-0 cursor-pointer"
+                className="w-full text-left px-3.5 py-2.5 rounded-full text-muted text-[0.92rem] font-bold no-underline transition-all duration-200 hover:bg-white/[0.06] hover:text-text bg-transparent border-0 cursor-pointer"
               >
                 {link.label}
               </button>
             ))}
             <a
               href="download.html"
-              className="block text-center px-3.5 py-2.5 rounded-full text-[#07101d] text-[0.92rem] font-bold no-underline bg-text hover:bg-white/90 transition-colors duration-180 mt-1"
+              className="gradient-border-button block text-center px-3.5 py-2.5 rounded-full text-[#03111a] text-[0.92rem] font-bold no-underline bg-gradient-to-r from-accent-2 via-accent-3 to-accent mt-1"
             >
-              Get Prism
+              Get PRISM
             </a>
           </motion.div>
         )}

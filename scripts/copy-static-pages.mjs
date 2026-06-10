@@ -12,7 +12,7 @@ const itemsToCopy = [
   "tutorials.html",
   "styles.css",
   "script.js",
-  "Prism_logo.png",
+  "prism_logo_high_quality.png",
   "Dashboard_image.png",
   "Reports.png",
   "Budget Planner.png",

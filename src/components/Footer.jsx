@@ -1,8 +1,8 @@
 export default function Footer() {
   return (
-    <footer className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 px-5 sm:px-6 mx-auto max-w-7xl pt-6 pb-7 mt-16 border-t border-white/14">
+    <footer className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 px-5 sm:px-6 mx-auto max-w-7xl pt-6 pb-7 mt-16 border-t border-white/[0.06]">
       <div>
-        <strong>Prism</strong>
+        <strong>PRISM</strong>
         <p className="mt-1.5 text-muted leading-relaxed">
           Shared expenses, made clear.
         </p>
