@@ -33,7 +33,7 @@ export default function CtaSection() {
             whileTap={{ scale: 0.97 }}
             className="block w-full relative inline-flex items-center justify-center min-h-[52px] px-6 rounded-full font-black text-[#03111a] bg-gradient-to-br from-accent-2 to-accent-3 shadow-[0_18px_50px_rgba(38,230,163,0.25)] transition-transform duration-180 no-underline hover:shadow-[0_18px_70px_rgba(38,230,163,0.45)]"
           >
-            Get Prism for Desktop
+            Get Prism Desktop
           </motion.a>
           <div className="mt-4 grid grid-cols-3 gap-2 text-[0.72rem] font-black text-muted">
             <span>Local data</span>

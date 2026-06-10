@@ -32,7 +32,7 @@ export default function HeroSection() {
   return (
     <section
       id="top"
-      className="min-h-screen grid grid-cols-1 lg:grid-cols-[0.92fr_1.08fr] gap-10 lg:gap-14 items-center px-5 sm:px-6 mx-auto max-w-7xl pt-[104px] sm:pt-[130px] pb-[54px] sm:pb-[70px] scroll-mt-0"
+      className="min-h-screen grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-10 lg:gap-14 items-center px-5 sm:px-6 mx-auto max-w-7xl pt-[104px] sm:pt-[130px] pb-[54px] sm:pb-[70px] scroll-mt-0"
     >
       {" "}
       <div className="flex flex-col">
@@ -67,14 +67,14 @@ export default function HeroSection() {
               className="w-full sm:w-auto relative inline-flex items-center justify-center min-h-[52px] px-6 rounded-full font-black text-[#03111a] bg-gradient-to-br from-accent-2 to-accent-3 shadow-[0_18px_50px_rgba(38,230,163,0.25)] transition-transform duration-180 hover:-translate-y-1 no-underline hover:shadow-[0_18px_70px_rgba(38,230,163,0.45)]"
             >
               {" "}
-              Get Prism for Desktop{" "}
+               Get Prism Desktop{" "}
             </a>{" "}
             <a
               href="download.html"
               className="w-full sm:w-auto relative inline-flex items-center justify-center min-h-[52px] px-6 rounded-full font-black text-text border border-white/14 bg-white/6 transition-transform duration-180 hover:-translate-y-1 no-underline"
             >
               {" "}
-              Start Tracking Shared Expenses.{" "}
+              Track Shared Expenses{" "}
             </a>{" "}
           </div>{" "}
         </Reveal>{" "}

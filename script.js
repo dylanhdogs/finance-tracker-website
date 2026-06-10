@@ -9,8 +9,6 @@ const magneticButtons = document.querySelectorAll('.magnetic');
 const navLinks = document.querySelectorAll('.primary-nav a[href^="#"]');
 const sections = document.querySelectorAll('section[id]');
 const progressBar = document.querySelector('[data-scroll-progress]');
-const protectedDownloads = document.querySelectorAll('[data-protected-download]');
-const downloadPassword = 'admin4321!';
 
 const revealItems = document.querySelectorAll('[data-reveal], .reveal, .reveal-left, .reveal-right, .reveal-scale');
 
@@ -180,17 +178,5 @@ magneticButtons.forEach((button) => {
 
   button.addEventListener('pointerleave', () => {
     button.style.transform = '';
-  });
-});
-
-protectedDownloads.forEach((link) => {
-  link.addEventListener('click', (event) => {
-    const password = window.prompt('Enter the temporary download password:');
-    if (password !== downloadPassword) {
-      event.preventDefault();
-      if (password !== null) {
-        window.alert('Incorrect password.');
-      }
-    }
   });
 });

@@ -47,7 +47,7 @@
           <h1>Download Prism</h1>
           <p class="hero-text">
             Your finances stay on your computer.
-            No uploads, no cloud accounts, no subscriptions to access your own money.
+            No uploads, no cloud accounts, and your installer link arrives by email after checkout.
           </p>
           <div class="trust-row" aria-label="Supported platforms">
             <span>Windows</span>
@@ -64,10 +64,11 @@
                 <p class="eyebrow">Latest version</p>
                 <strong class="version-label">v0.2.5</strong>
                 <p class="version-info">Released June 2026 &middot; Windows &amp; macOS</p>
-                <a class="button primary magnetic download-button" href="downloads/Prism_0.2.3_x64-setup.exe" data-protected-download>Download for Windows</a>
+                <a class="button primary magnetic download-button" href="/api/create-checkout-session">Start subscription</a>
                 <div class="other-platforms">
-                  <a class="button secondary magnetic" href="https://github.com/dylanhdogs/personal-finance-tracker/releases/download/v0.2.5/Prism_0.2.5_aarch64.dmg">Download for macOS</a>
+                  <a class="button secondary magnetic" href="/api/create-checkout-session">Continue with Stripe</a>
                 </div>
+                <p class="cta-footnote">After payment, we email you a protected installer link.</p>
               </div>
             </div>
           </div>
@@ -85,7 +86,7 @@
             <h3>Windows</h3>
             <p>Windows 10 or Windows 11. All data stays local on your machine.</p>
             <span class="platform-badge">Installer (.exe)</span>
-            <a class="button secondary" href="downloads/Prism_0.2.3_x64-setup.exe" data-protected-download>Download</a>
+            <a class="button secondary" href="/api/create-checkout-session">Subscribe to download</a>
             <a class="checksum-link" href="downloads/SHA256SUMS.txt">Verify checksum</a>
           </article>
           <article class="platform-card reveal delay-1">
@@ -93,8 +94,8 @@
             <h3>macOS</h3>
             <p>macOS 10.15 (Catalina) or later. Native speed, local-first file storage.</p>
             <span class="platform-badge">DMG &middot; Apple Silicon</span>
-            <a class="button secondary" href="https://github.com/dylanhdogs/personal-finance-tracker/releases/download/v0.2.5/Prism_0.2.5_aarch64.dmg">Download</a>
-            <a class="checksum-link" href="https://github.com/dylanhdogs/personal-finance-tracker/releases/tag/v0.2.5">View release</a>
+            <a class="button secondary" href="/api/create-checkout-session">Subscribe to download</a>
+            <a class="checksum-link" href="/api/create-checkout-session">View checkout</a>
           </article>
         </div>
       </section>
@@ -165,7 +166,7 @@
           <article class="feature-card">
             <span>&#10003;</span>
             <h3>Reports &amp; Reconciliation</h3>
-            <p>Profit & Loss and Balance Sheet reports with full reconciliation. No cloud sync needed.</p>
+            <p>Profit &amp; Loss and Balance Sheet reports with full reconciliation. No cloud sync needed.</p>
           </article>
         </div>
       </section>
@@ -176,14 +177,14 @@
             <p class="eyebrow">Subscription plan</p>
             <h2>Full access, month to month.</h2>
             <p>
-              All features, updates, and import tools included. No long-term commitment — cancel anytime. Your data stays on your machine.
+              All features, updates, and import tools included. No long-term commitment - cancel anytime. Your data stays on your machine.
             </p>
           </div>
           <div class="price-box">
             <span>Monthly plan</span>
             <strong>$19.99</strong>
             <p>Per month &middot; Cancel anytime</p>
-            <a class="button primary magnetic" href="#">Buy Now</a>
+            <a class="button primary magnetic" href="/api/create-checkout-session">Buy Now</a>
           </div>
         </div>
       </section>

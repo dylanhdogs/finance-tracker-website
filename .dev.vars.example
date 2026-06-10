@@ -1,0 +1,10 @@
+STRIPE_SECRET_KEY=sk_test_xxx
+STRIPE_WEBHOOK_SECRET=whsec_xxx
+STRIPE_PRICE_ID=price_xxx
+DOWNLOAD_TOKEN_SECRET=replace_with_a_long_random_secret
+WINDOWS_INSTALLER_URL=https://example.com/private/windows-installer.exe
+MAC_INSTALLER_URL=https://example.com/private/mac-installer.dmg
+RESEND_API_KEY=re_xxx
+RESEND_FROM_EMAIL=Prism <downloads@yourdomain.com>
+APP_URL=https://your-site.pages.dev
+DOWNLOAD_TOKEN_TTL_HOURS=48
