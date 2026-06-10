@@ -9,7 +9,7 @@ export default function HeroSection() {
       id="top"
       className="relative grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-4 lg:gap-4 items-center px-5 sm:px-6 mx-auto max-w-[1440px] pt-[100px] sm:pt-[110px] pb-0 sm:pb-0 scroll-mt-0 overflow-visible"
     >
-      <img src={heroLighting} alt="" aria-hidden="true" className="absolute left-1/2 -translate-x-1/2 w-screen h-[135%] -top-[10%] object-cover pointer-events-none select-none opacity-45" />
+      <img src={heroLighting} alt="" aria-hidden="true" className="fixed left-0 top-0 w-full h-[135%] object-cover pointer-events-none select-none opacity-65" />
       {" "}
       <div className="flex flex-col">
         {" "}
