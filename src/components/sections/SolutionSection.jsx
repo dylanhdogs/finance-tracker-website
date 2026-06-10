@@ -81,29 +81,30 @@ export default function SolutionSection() {
     setCurrent(i);
     setProgress(0);
     progressRef.current = 0;
+    startRef.current = null;
   };
 
   return (
     <section id="solution" className="relative py-12 md:py-16 lg:py-[65px] overflow-hidden">
       <div className="px-5 sm:px-6 mx-auto max-w-[1440px] mb-10 lg:mb-14">
         <Reveal direction="right">
-          <div className="flex flex-col">
-            <p className="text-muted text-[0.85rem] font-black tracking-[0.18em] uppercase mb-3">Also included</p>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight leading-[0.96] mb-4 max-w-[540px]">Personal finance tools, included</h2>
-            <p className="text-muted text-[1.12rem] leading-relaxed max-w-[460px] mb-5">PRISM also includes basic personal finance features — but shared expenses are the focus.</p>
-            <ul className="flex flex-col gap-2.5">
-              <li className="flex items-center gap-3 text-text text-[1rem] font-bold leading-snug"><span className="w-2 h-2 rounded-full bg-accent-2 shrink-0 shadow-[0_0_12px_rgba(139,92,246,0.5)]" />Expense tracking</li>
-              <li className="flex items-center gap-3 text-text text-[1rem] font-bold leading-snug"><span className="w-2 h-2 rounded-full bg-accent-3 shrink-0 shadow-[0_0_12px_rgba(56,189,246,0.5)]" />Categories</li>
-              <li className="flex items-center gap-3 text-text text-[1rem] font-bold leading-snug"><span className="w-2 h-2 rounded-full bg-accent shrink-0 shadow-[0_0_12px_rgba(168,85,247,0.5)]" />Dashboard insights</li>
+          <div className="flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-10">
+            <div className="max-w-[540px]">
+              <p className="text-muted text-[0.85rem] font-black tracking-[0.18em] uppercase mb-3">Also included</p>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight leading-[0.96] mb-4">Personal finance tools, included</h2>
+              <p className="text-muted text-[1.12rem] leading-relaxed">PRISM also includes basic personal finance features — but shared expenses are the focus.</p>
+            </div>
+            <ul className="flex flex-col gap-3">
+              <li className="flex items-center gap-3 text-text text-[1rem] font-bold leading-snug"><span className="w-2.5 h-2.5 rounded-full bg-accent shrink-0 shadow-[0_0_14px_rgba(168,85,247,0.55)]" />Expense tracking</li>
+              <li className="flex items-center gap-3 text-text text-[1rem] font-bold leading-snug"><span className="w-2.5 h-2.5 rounded-full bg-accent shrink-0 shadow-[0_0_14px_rgba(168,85,247,0.55)]" />Categories</li>
+              <li className="flex items-center gap-3 text-text text-[1rem] font-bold leading-snug"><span className="w-2.5 h-2.5 rounded-full bg-accent shrink-0 shadow-[0_0_14px_rgba(168,85,247,0.55)]" />Dashboard insights</li>
             </ul>
           </div>
         </Reveal>
       </div>
 
       <div
-        className="relative w-screen left-1/2 -translate-x-1/2"
-        onMouseEnter={() => setPaused(true)}
-        onMouseLeave={() => setPaused(false)}
+        className="relative w-screen left-1/2 -translate-x-1/2 -mt-2"
       >
         <div className="relative mx-auto max-w-[1440px] px-5 sm:px-6">
           <div className="relative overflow-hidden rounded-2xl border border-white/[0.08] bg-white/[0.02] backdrop-blur-xl shadow-[0_0_60px_rgba(0,0,0,0.3)]">
