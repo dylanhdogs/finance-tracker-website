@@ -14,7 +14,7 @@ export default function HowSection() {
               Add it. Split it. Settle it.
             </p>
             <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[0.96] mb-5 max-w-[760px]">
-              Know Who Owes Who <span className="section-gradient-text">In Seconds</span>
+              Know Who Owes Who In Seconds
             </h2>
             <p className="text-muted text-[1.12rem] leading-relaxed max-w-[620px]">
               Add an expense, split the cost, see who owes who, and settle the balance.

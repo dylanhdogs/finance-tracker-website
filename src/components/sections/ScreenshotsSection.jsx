@@ -58,7 +58,7 @@ export default function ScreenshotsSection() {
           See it in action
         </p>
         <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[0.96] mb-5 max-w-[760px]">
-          A focused workspace for your <span className="section-gradient-text">personal books</span>
+          A focused workspace for your personal books
         </h2>
       </Reveal>
 

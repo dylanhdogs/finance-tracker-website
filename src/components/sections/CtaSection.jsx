@@ -14,7 +14,7 @@ export default function CtaSection() {
         <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent-2/40 to-transparent" />
         <div className="relative z-10 flex-1">
           <p className="text-white text-[0.92rem] font-black tracking-[0.18em] uppercase mb-4">Start tracking shared expenses clearly.</p>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-[3.4rem] font-black tracking-tight leading-[0.96] mb-5 max-w-[540px]">Make shared expenses <span className="section-gradient-text">easier</span> to manage.</h2>
+          <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-[3.4rem] font-black tracking-tight leading-[0.96] mb-5 max-w-[540px]">Make shared expenses easier to manage.</h2>
           <p className="text-muted text-[1.12rem] leading-relaxed max-w-[540px]">Track what was paid, who owes who, and what has already been settled — all in one clear place.</p>
         </div>
         <motion.div

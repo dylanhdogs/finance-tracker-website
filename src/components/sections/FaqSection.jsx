@@ -84,7 +84,7 @@ export default function FaqSection() {
           FAQ
         </p>
         <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[0.96] mb-5 max-w-[760px]">
-          <span className="section-gradient-text">Clear answers</span> for buyers
+              Clear answers for buyers
         </h2>
       </Reveal>
       <Reveal direction="fade" delay={0.1}>

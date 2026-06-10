@@ -15,7 +15,7 @@ export default function SharedExpensesSection() {
               See the answer in seconds
             </p>
             <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[0.96] mb-6 max-w-[620px]">
-              See the <span className="section-gradient-text">answer in seconds</span>
+              See the answer in seconds
             </h2>
             <p className="text-muted text-[1.12rem] leading-relaxed max-w-[540px] mb-5">
               Who owes who? How much? Can you settle it? PRISM makes shared

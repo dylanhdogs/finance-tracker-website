@@ -38,7 +38,7 @@ export default function TestimonialsSection() {
           Testimonials
         </p>
         <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[0.96] mb-5 max-w-[760px]">
-          What users are saying about <span className="section-gradient-text">PRISM</span>
+          What users are saying about PRISM
         </h2>
       </Reveal>
       <div className="grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] gap-5 mt-12">

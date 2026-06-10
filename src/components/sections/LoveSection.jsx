@@ -16,7 +16,7 @@ export default function LoveSection() {
         </p>{" "}
         <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[0.96] mb-5 max-w-[760px]">
           {" "}
-          Built for people who want <span className="section-gradient-text">control</span> &mdash; not complexity
+          Built for people who want control &mdash; not complexity
         </h2>{" "}
       </Reveal>{" "}
       <div className="mt-10 sm:mt-12 flex justify-center overflow-visible px-2 sm:px-3">
