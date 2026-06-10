@@ -13,7 +13,7 @@ export default function CtaSection() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_14%_20%,rgba(99,102,241,0.15),transparent_34%),radial-gradient(circle_at_82%_70%,rgba(139,92,246,0.1),transparent_30%)]" />
         <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent-2/40 to-transparent" />
         <div className="relative z-10 flex-1">
-          <p className="tagline-gradient-text text-[0.92rem] font-black tracking-[0.18em] uppercase mb-4">Start tracking shared expenses clearly.</p>
+          <p className="text-white text-[0.92rem] font-black tracking-[0.18em] uppercase mb-4">Start tracking shared expenses clearly.</p>
           <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-[3.4rem] font-black tracking-tight leading-[0.96] mb-5 max-w-[540px]">Make shared expenses <span className="section-gradient-text">easier</span> to manage.</h2>
           <p className="text-muted text-[1.12rem] leading-relaxed max-w-[540px]">Track what was paid, who owes who, and what has already been settled — all in one clear place.</p>
         </div>

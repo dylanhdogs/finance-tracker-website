@@ -130,7 +130,7 @@ export default function ProblemSection() {
       <div className="grid grid-cols-1 lg:grid-cols-[0.72fr_1.28fr] gap-7 items-center">
         <Reveal direction="left">
           <div className="flex flex-col gap-5">
-            <p className="tagline-gradient-text text-[0.92rem] font-black tracking-[0.18em] uppercase mb-1">
+            <p className="text-white text-[0.92rem] font-black tracking-[0.18em] uppercase mb-1">
               Shared costs get messy fast
             </p>
             <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[0.96] max-w-[760px]">

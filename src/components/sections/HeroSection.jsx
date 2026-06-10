@@ -14,7 +14,7 @@ export default function HeroSection() {
         {" "}
         <Reveal direction="up" delay={0}>
           {" "}
-          <p className="tagline-gradient-text text-[1.05rem] sm:text-[1.1rem] font-black tracking-[0.18em] uppercase mb-2">
+          <p className="text-white text-[1.05rem] sm:text-[1.1rem] font-black tracking-[0.18em] uppercase mb-2">
             {" "}
             Shared expenses, finally made clear{" "}
           </p>{" "}

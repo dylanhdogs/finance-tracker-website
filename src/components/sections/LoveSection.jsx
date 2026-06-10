@@ -10,7 +10,7 @@ export default function LoveSection() {
       {" "}
       <Reveal direction="up">
         {" "}
-        <p className="tagline-gradient-text text-[0.92rem] font-black tracking-[0.18em] uppercase mb-4">
+        <p className="text-white text-[0.92rem] font-black tracking-[0.18em] uppercase mb-4">
           {" "}
           Why PRISM{" "}
         </p>{" "}
