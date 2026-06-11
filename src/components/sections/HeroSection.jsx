@@ -32,7 +32,7 @@ export default function HeroSection() {
         <Reveal direction="up" delay={0}>
           {" "}
           <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight leading-[0.96] mb-3 sm:mb-3 max-w-full">
-            Shared expenses made clear.<br />
+            Clear shared expenses.<br />
             <span className="hero-gradient-text">No confusion.</span>
           </h1>{" "}
         </Reveal>{" "}
