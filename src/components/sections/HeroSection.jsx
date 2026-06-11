@@ -61,7 +61,7 @@ export default function HeroSection() {
               Start Tracking Shared Expenses{" "}
             </a>{" "}
             <a
-              href="/download.html"
+              href="/tutorials.html"
               className="w-full sm:w-auto relative inline-flex items-center justify-center min-h-[52px] px-7 rounded-full text-text border border-white/20 bg-white/[0.04] backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:bg-white/[0.08] no-underline"
             >
               <svg className="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
