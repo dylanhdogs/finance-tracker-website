@@ -23,6 +23,7 @@ export default function LoveSection() {
         <img
           src={controlGraphic}
           alt="Built for people who want control, not complexity"
+          loading="lazy"
           className="h-auto w-full max-w-[720px] object-contain sm:max-w-[920px] lg:max-w-[1080px] xl:max-w-[1180px]"
           draggable="false"
         />

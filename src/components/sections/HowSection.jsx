@@ -26,6 +26,7 @@ export default function HowSection() {
             <img
               src={knowWhoOwesGraphic}
               alt="Know who owes who in seconds"
+              loading="lazy"
               className="relative z-10 h-auto w-full max-w-[560px] object-contain sm:max-w-[680px] lg:max-w-[760px]"
               draggable="false"
             />

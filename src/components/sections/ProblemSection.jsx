@@ -152,6 +152,7 @@ export default function ProblemSection() {
             <motion.img
               src={sharedCostsGraphic}
               alt="Shared costs get messy"
+              loading="lazy"
               className="relative z-10 h-auto w-full max-w-[560px] object-contain sm:max-w-[680px] lg:max-w-[760px] cursor-pointer select-none"
               draggable="false"
               whileHover={{ scale: 1.03 }}
@@ -175,6 +176,7 @@ export default function ProblemSection() {
             <motion.img
               src={sharedCostsGraphic}
               alt="Preview"
+              loading="lazy"
               initial={{ scale: 0.85, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.85, opacity: 0 }}

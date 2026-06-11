@@ -117,6 +117,7 @@ export default function SolutionSection() {
                   key={current}
                   src={carouselImages[current].src}
                   alt={carouselImages[current].alt}
+                  loading="lazy"
                   initial={{ opacity: 0, x: 60 }}
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -60 }}
@@ -188,6 +189,7 @@ export default function SolutionSection() {
             <motion.img
               src={previewSrc}
               alt="Preview"
+              loading="lazy"
               initial={{ scale: 0.85, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.85, opacity: 0 }}

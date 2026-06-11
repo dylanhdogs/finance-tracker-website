@@ -10,6 +10,7 @@ export default function AudienceSection() {
             <img
               src={builtForSharedCostsGraphic}
               alt="Built for shared costs"
+              loading="lazy"
               className="relative z-10 h-auto w-full max-w-[560px] object-contain sm:max-w-[680px] lg:max-w-[780px] xl:max-w-[820px]"
               draggable="false"
             />

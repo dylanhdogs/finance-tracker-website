@@ -104,7 +104,7 @@ export default function HeroSection() {
             {" "}
             <img
               src={heroGraphic}
-              alt=""
+              alt="PRISM dashboard overview showing net worth, income, expenses, and recent transactions"
               className="block h-auto w-full max-w-none select-none object-contain"
               draggable="false"
             />{" "}
