@@ -134,10 +134,10 @@ export default function ProblemSection() {
         <Reveal direction="left">
           <div className="flex flex-col gap-5">
             <p className="text-white/70 text-[0.92rem] font-black tracking-[0.18em] uppercase mb-1">
-              Shared costs get messy fast
+              The problem with shared costs
             </p>
             <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[0.96] max-w-[760px]">
-              Shared Costs Get Messy<br />Fast
+              Shared costs get messy<br />fast
             </h2>
             <p className="text-muted text-[1.12rem] leading-relaxed max-w-[540px]">
               One person pays for groceries. Someone else covers dinner. Rent,

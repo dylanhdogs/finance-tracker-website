@@ -94,7 +94,7 @@ export default function SharedExpensesSection() {
           <div className="flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-10">
             <div className="max-w-[620px]">
               <p className="text-white/70 text-[0.85rem] font-black tracking-[0.18em] uppercase mb-3">
-                See the answer in seconds
+                Track shared costs in one clear place
               </p>
               <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[0.96] mb-4">
                 See the answer in seconds

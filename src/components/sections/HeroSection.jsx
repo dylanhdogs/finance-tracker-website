@@ -33,15 +33,15 @@ export default function HeroSection() {
           {" "}
           <p className="text-white/70 text-[0.92rem] font-black tracking-[0.18em] uppercase mb-2">
             {" "}
-            Shared expenses, finally made clear{" "}
+            No more guessing who owes who{" "}
           </p>{" "}
         </Reveal>{" "}
         <Reveal direction="up" delay={0.12}>
           {" "}
           <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight leading-[0.96] mb-3 sm:mb-3 max-w-full">
             {" "}
-            Shared expenses{" "}
-            <span className="hero-gradient-text">made simple</span>{" "}
+            Shared expenses,{" "}
+            <span className="hero-gradient-text">finally made clear</span>{" "}
           </h1>{" "}
         </Reveal>{" "}
         <Reveal direction="up" delay={0.24}>

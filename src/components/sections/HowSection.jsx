@@ -11,7 +11,7 @@ export default function HowSection() {
         <Reveal direction="left">
           <div>
             <p className="text-white/70 text-[0.92rem] font-black tracking-[0.18em] uppercase mb-4">
-              Add it. Split it. Settle it.
+              Here's how it works
             </p>
             <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[0.96] mb-5 max-w-[760px]">
               Add it. Split it. Settle it.
