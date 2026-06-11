@@ -137,7 +137,7 @@ export default function ProblemSection() {
               The problem with shared costs
             </p>
             <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[0.96] max-w-[760px]">
-              Shared costs get messy<br />fast
+              Shared costs get messy
             </h2>
             <p className="text-muted text-[1.12rem] leading-relaxed max-w-[540px]">
               One person pays for groceries. Someone else covers dinner. Rent,
@@ -151,7 +151,7 @@ export default function ProblemSection() {
           <div className="relative flex justify-center overflow-visible px-1 sm:px-2">
             <motion.img
               src={sharedCostsGraphic}
-              alt="Shared costs get messy fast"
+              alt="Shared costs get messy"
               className="relative z-10 h-auto w-full max-w-[560px] object-contain sm:max-w-[680px] lg:max-w-[760px] cursor-pointer select-none"
               draggable="false"
               whileHover={{ scale: 1.03 }}
